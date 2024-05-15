@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sample : MonoBehaviour
+public class SceneLoad : MonoBehaviour
 {
+    public LoadSceneSO startGamesSL_EventChannel;
+    public LoadSceneSO initialSL_EventChannel;
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Hello World");
+        
     }
 
     // Update is called once per frame

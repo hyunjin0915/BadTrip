@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d64fcbb8774d9b445a3fdb3bbea7db9a, type: 3}
-  m_Name: StartSceneLoadEvent_Channel
+  m_Name: NewGameSL_EventChannel
   m_EditorClassIdentifier: 

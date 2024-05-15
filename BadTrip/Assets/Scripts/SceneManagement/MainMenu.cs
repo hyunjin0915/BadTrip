@@ -8,27 +8,29 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField]
-    private LoadSceneSO startSceneEvent_Channel;
+    private LoadSceneSO NewGameSL_EventChannel;
     List<AsyncOperation> scenesToLoad = new List<AsyncOperation>();
 
     private void OnEnable()
     {
-        startSceneEvent_Channel.OnLoadingScene += StartGame;
+        NewGameSL_EventChannel.OnLoadingScene += StartGame;
     }
     private void OnDisable()
     {
-        startSceneEvent_Channel.OnLoadingScene -= StartGame;
+        NewGameSL_EventChannel.OnLoadingScene -= StartGame;
     }
     public void OnClickStartBtn()
     {
-        startSceneEvent_Channel.RaiseEvent();
+        NewGameSL_EventChannel.RaiseEvent();
     }
     public void StartGame()
     {
         ShowLoadingScreen();
-        scenesToLoad.Add(SceneManager.LoadSceneAsync("SampleScene"));
-        scenesToLoad.Add(SceneManager.LoadSceneAsync("PersistentMenuUI",LoadSceneMode.Additive));
+        scenesToLoad.Add(SceneManager.LoadSceneAsync("SampleScene",LoadSceneMode.Additive));
+        SceneManager.UnloadSceneAsync("Main");
+        //scenesToLoad.Add(SceneManager.LoadSceneAsync("PersistentMenuUI",LoadSceneMode.Additive));
         StartCoroutine(LoadingScreen());
+        
     }
    
    public void ShowLoadingScreen()

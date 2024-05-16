@@ -10,10 +10,13 @@ public class ActiveSecs : MonoBehaviour
     private GameObject eeee;
     [SerializeField]
     private GameObject dirInfo;
+    Renderer dirInfoRenderer;
 
     void Start()
     {
         StartCoroutine(ActiveForSeconds());
+        dirInfoRenderer = dirInfo.GetComponent<Renderer>();
+
     }
     void Update()
     {
@@ -32,7 +35,21 @@ public class ActiveSecs : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.A)||Input.GetKey(KeyCode.D))
         {
-            dirInfo.SetActive(false);
+            StartCoroutine(FadeOut());
+        }
+    }
+
+    private IEnumerator FadeOut()
+    {
+        float f = 1;
+        while(f>0)
+        {
+            f -= 0.1f;
+            Color c  = dirInfoRenderer.material.color;
+            c.a = f;
+            dirInfoRenderer.material.color = c;
+            yield return null;
+
         }
     }
 }

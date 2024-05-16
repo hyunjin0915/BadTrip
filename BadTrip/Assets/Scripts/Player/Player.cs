@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        pRigidbody.velocity = moveVec2.normalized * speed;
+        Move();
     }
 
     // Update is called once per frame
@@ -33,6 +33,6 @@ public class Player : MonoBehaviour
     // ¿Ãµø
     public void Move()
     {
-        
+        pRigidbody.velocity = moveVec2.normalized * speed;
     }
 }

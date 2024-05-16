@@ -37,6 +37,7 @@ public class ActiveSecs : MonoBehaviour
         {
             StartCoroutine(FadeOut());
         }
+        dirInfo.SetActive(false);
     }
 
     private IEnumerator FadeOut()

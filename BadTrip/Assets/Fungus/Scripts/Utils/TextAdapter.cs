@@ -4,6 +4,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Reflection;
+using TMPro;
 
 namespace Fungus
 {
@@ -12,9 +13,8 @@ namespace Fungus
     /// </summary>
     public class TextAdapter : IWriterTextDestination
     {
-        protected Text textUI;
+        protected TextMeshProUGUI textUI;
         protected InputField inputField;
-        protected TextMesh textMesh;
 #if UNITY_2018_1_OR_NEWER
         protected TMPro.TMP_Text tmpro;
 #endif
@@ -31,9 +31,8 @@ namespace Fungus
 
             if (!includeChildren)
             {
-                textUI = go.GetComponent<Text>();
+                textUI = go.GetComponent<TextMeshProUGUI>();
                 inputField = go.GetComponent<InputField>();
-                textMesh = go.GetComponent<TextMesh>();
 #if UNITY_2018_1_OR_NEWER
                 tmpro = go.GetComponent<TMPro.TMP_Text>();
 #endif
@@ -41,9 +40,8 @@ namespace Fungus
             }
             else
             {
-                textUI = go.GetComponentInChildren<Text>();
+                textUI = go.GetComponentInChildren<TextMeshProUGUI>();
                 inputField = go.GetComponentInChildren<InputField>();
-                textMesh = go.GetComponentInChildren<TextMesh>();
 #if UNITY_2018_1_OR_NEWER
                 tmpro = go.GetComponentInChildren<TMPro.TMP_Text>();
 #endif
@@ -51,7 +49,7 @@ namespace Fungus
             }
             
             // Try to find any component with a text property
-            if (textUI == null && inputField == null && textMesh == null && writerTextDestination == null)
+            if (textUI == null && inputField == null && writerTextDestination == null)
             {
                 Component[] allcomponents = null;
                 if (!includeChildren)
@@ -76,14 +74,7 @@ namespace Fungus
         {
             if (textUI != null)
             {
-                textUI.supportRichText = true;
-            }
-
-            // Input Field does not support rich text
-
-            if (textMesh != null)
-            {
-                textMesh.richText = true;
+                textUI.richText = true;
             }
 
 #if UNITY_2018_1_OR_NEWER
@@ -111,10 +102,6 @@ namespace Fungus
                 {
                     inputField.textComponent.color = textColor;
                 }
-            }
-            else if (textMesh != null)
-            {
-                textMesh.color = textColor;
             }
 #if UNITY_2018_1_OR_NEWER
             else if (tmpro != null)
@@ -145,12 +132,6 @@ namespace Fungus
                     inputField.textComponent.color = tempColor;
                 }
             }
-            else if (textMesh != null)
-            {
-                Color tempColor = textMesh.color;
-                tempColor.a = textAlpha;
-                textMesh.color = tempColor;
-            }
 #if UNITY_2018_1_OR_NEWER
             else if (tmpro != null)
             {
@@ -165,7 +146,7 @@ namespace Fungus
 
         public bool HasTextObject()
         {
-            return (textUI != null || inputField != null || textMesh != null || textComponent != null ||
+            return (textUI != null || inputField != null || textComponent != null ||
 #if UNITY_2018_1_OR_NEWER
                 tmpro != null ||
 #endif
@@ -176,15 +157,11 @@ namespace Fungus
         {
             if (textUI != null)
             {
-                return textUI.supportRichText;
+                return textUI.richText;
             }
             if (inputField != null)
             {
                 return false;
-            }
-            if (textMesh != null)
-            {
-                return textMesh.richText;
             }
 #if UNITY_2018_1_OR_NEWER
             if (tmpro != null)
@@ -280,10 +257,6 @@ namespace Fungus
                 {
                     return Text;
                 }
-                else if (textMesh != null)
-                {
-                    return textMesh.text;
-                }
 #if UNITY_2018_1_OR_NEWER
                 else if (tmpro != null)
                 {
@@ -311,10 +284,6 @@ namespace Fungus
                 else if (writerTextDestination != null)
                 {
                     Text = value;
-                }
-                else if (textMesh != null)
-                {
-                    textMesh.text = value;
                 }
 #if UNITY_2018_1_OR_NEWER
                 else if (tmpro != null)

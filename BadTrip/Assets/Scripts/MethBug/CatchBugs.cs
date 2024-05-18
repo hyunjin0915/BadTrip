@@ -1,0 +1,36 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CatchBugs : MonoBehaviour
+{
+    void Update()
+    {
+        Catching();
+    }
+
+    private void Catching()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(pos, Vector2.zero, 1.0f);
+
+            if(hit.collider != null)
+            {
+                GameObject hitBug = hit.transform.gameObject;
+                if(hitBug.tag == "Bug")
+                {
+                    if(hitBug.GetComponent<BugsCtrl>().speed == 0)
+                    {
+                        hitBug.SetActive(false);
+                    }
+                    else
+                    {
+                        hitBug.GetComponent<BugsCtrl>().speed = 0;
+                    }
+                }
+            }
+        }
+    }
+}

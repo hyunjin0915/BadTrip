@@ -4252,14 +4252,14 @@ MonoBehaviour:
     serializedVersion: 2
     x: 67
     y: 69
-    width: 110.759476
+    width: 113.29112
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 0
   blockName: LookMirror
   description: "\uD654\uC7A5\uC2E4\uC5D0\uC11C \uAC70\uC6B8 \uBD04"
-  eventHandler: {fileID: 0}
+  eventHandler: {fileID: 1884408074}
   commandList:
   - {fileID: 1884407982}
   - {fileID: 1884407976}
@@ -4304,7 +4304,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1884408073}
+  - {fileID: 1884408028}
   selectedCommands: []
   variables:
   - {fileID: 1884407977}
@@ -4764,7 +4764,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 265.80814
     y: 69.59976
-    width: 118.354416
+    width: 120.886055
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5279,7 +5279,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 264.58847
     y: 172.03871
-    width: 125.94935
+    width: 127.21517
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5653,7 +5653,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 486.5397
     y: 175.69724
-    width: 91.46341
+    width: 91.77214
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5884,7 +5884,7 @@ MonoBehaviour:
   rotTweenType: 4
 --- !u!114 &1884408062
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5900,7 +5900,7 @@ MonoBehaviour:
   commentText: 
 --- !u!114 &1884408063
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5927,7 +5927,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1884408064
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5955,7 +5955,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1884408065
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5983,7 +5983,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1884408066
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6011,7 +6011,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1884408067
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6039,7 +6039,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1884408068
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6067,7 +6067,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1884408069
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6084,7 +6084,7 @@ MonoBehaviour:
   commentText: 
 --- !u!114 &1884408070
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6101,7 +6101,7 @@ MonoBehaviour:
   commentText: 
 --- !u!114 &1884408071
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6128,7 +6128,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1884408072
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6158,14 +6158,14 @@ MonoBehaviour:
     serializedVersion: 2
     x: 64.588615
     y: 296.42896
-    width: 117.07316
+    width: 118.354416
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 155
   blockName: Termination
   description: "\uACC4\uC57D \uD30C\uAE30"
-  eventHandler: {fileID: 1884408074}
+  eventHandler: {fileID: 0}
   commandList:
   - {fileID: 1884408072}
   - {fileID: 1884408071}
@@ -6191,7 +6191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentBlock: {fileID: 1884408073}
+  parentBlock: {fileID: 1884407973}
   suppressBlockAutoSelect: 0
   waitForFrames: 1
 --- !u!1 &1906017031

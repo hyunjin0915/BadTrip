@@ -102,7 +102,7 @@ namespace Fungus
         /// <summary>
         /// Sets the active Say dialog with a reference to a Say Dialog object in the scene. This Say Dialog will be used whenever the character speaks.
         /// </summary>
-        public virtual SayDialog SetSayDialog { get { return setSayDialog; } }
+        public virtual SayDialog SetSayDialog { get { return setSayDialog; } set { setSayDialog = value; } }
 
         /// <summary>
         /// Returns the name of the game object.

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CatchBugs : MonoBehaviour
 {
+    GameObject hitBug;
     void Update()
     {
         Catching();
@@ -18,7 +19,7 @@ public class CatchBugs : MonoBehaviour
 
             if(hit.collider != null)
             {
-                GameObject hitBug = hit.transform.gameObject;
+                hitBug = hit.transform.gameObject;
                 if(hitBug.tag == "Bug")
                 {
                     if(hitBug.GetComponent<BugsCtrl>().speed == 0)
@@ -28,9 +29,15 @@ public class CatchBugs : MonoBehaviour
                     else
                     {
                         hitBug.GetComponent<BugsCtrl>().speed = 0;
+                        StartCoroutine(MoveAgainBug());
                     }
                 }
             }
         }
+    }
+    public IEnumerator MoveAgainBug()
+    {
+        yield return new WaitForSeconds(5.0f);
+        hitBug.GetComponent<BugsCtrl>().speed  = 5;
     }
 }

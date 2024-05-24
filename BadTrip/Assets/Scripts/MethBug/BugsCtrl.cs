@@ -25,7 +25,7 @@ public class BugsCtrl : MonoBehaviour
     }
     private void Moving()
     {
-        if(speed == 0) StartCoroutine(MoveAgainBug());
+        //if(speed == 0) StartCoroutine(MoveAgainBug());
         transform.position += MoveV*Time.deltaTime * speed;
         Vector2 front = new Vector2(transform.position.x + vec*0.5f, transform.position.y);
         Debug.DrawRay(front, MoveV, new Color(0, 1, 0));
@@ -41,7 +41,7 @@ public class BugsCtrl : MonoBehaviour
         MoveV.x = randomDir.x;
         MoveV.y = randomDir.y;
     }
-    IEnumerator MoveAgainBug()
+    public IEnumerator MoveAgainBug()
     {
         yield return new WaitForSeconds(5.0f);
         speed = 5;

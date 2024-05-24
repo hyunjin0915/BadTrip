@@ -15,9 +15,6 @@ public class ConversationEventManager : MonoBehaviour
     // 플로우 차트 관련 변수
     [SerializeField] private MessageReceived receiver;
 
-    // 환각 작용 관련 변수
-
-
 
     private void Start()
     {
@@ -27,20 +24,7 @@ public class ConversationEventManager : MonoBehaviour
 
             cha.SetSayDialog = sayDialogSO.dialogs[dialogType];
         }
-    }
-
-    public void OnHallucinationEffect() // 환각 효과 on
-    {
-        // 후에 내용 추가
-        // 여기에 환각 작용 적용 내용 추가
-        Debug.Log("환각 효과 ON");
-    }
-
-    public void OffHallucinationEffect() // 환각 효과 off
-    {
-        // 후에 내용 추가
-        // 여기에 환각 작용 취소 내용 추가
-        Debug.Log("환각 효과 OFF");
+                 
     }
 
     public void ShowCutscene(int viewNum) // 컷씬 이동

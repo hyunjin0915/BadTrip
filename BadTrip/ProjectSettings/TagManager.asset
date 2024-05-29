@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bug
   - VCam
+  - Hand
   layers:
   - Default
   - TransparentFX

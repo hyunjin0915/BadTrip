@@ -1,35 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
 public class BugsCtrl : MonoBehaviour
 {
-    Vector3 MoveV;
-    Vector2 randomDir;
     int vec;
     public int speed;
-    
-    // Start is called before the first frame update
-    void Awake()
+    private float randomAngle;
+    private Rigidbody2D myRigid;
+    SpriteRenderer spriteRenderer;
+    public Sprite afterImg;
+    public Sprite scarImg;
+    private bool isActive;
+    [SerializeField] 
+    GameObject gameManager;
+    [SerializeField]
+    private LoadSceneSO MethBugSL_EventChannel;
+    void Start()
     {
-        speed = 5;
+        myRigid = GetComponent<Rigidbody2D>();
+        speed = 6;
         vec = 1;
-        Vector2 rDir = Random.insideUnitCircle.normalized;
-        MoveV = new Vector3(rDir.x, rDir.y, 0);
+        randomAngle = Random.Range(-90f, 90f);
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        isActive = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Moving();
+        if(isActive)
+        {
+            Moving();
+        }
     }
     private void Moving()
     {
-        //if(speed == 0) StartCoroutine(MoveAgainBug());
-        transform.position += MoveV*Time.deltaTime * speed;
+        myRigid.MovePosition(transform.position + transform.up * speed * Time.deltaTime);
         Vector2 front = new Vector2(transform.position.x + vec*0.5f, transform.position.y);
-        Debug.DrawRay(front, MoveV, new Color(0, 1, 0));
-        RaycastHit2D rayHitBorder = Physics2D.Raycast(front, MoveV, 1, LayerMask.GetMask("Border"));
+        Debug.DrawRay(front, transform.up, new Color(0, 1, 0));
+        RaycastHit2D rayHitBorder = Physics2D.Raycast(front, transform.up, 4, LayerMask.GetMask("Border"));
         if(rayHitBorder.collider != null)
         {
             ChangeDir();
@@ -37,13 +48,38 @@ public class BugsCtrl : MonoBehaviour
     }
     private void ChangeDir()
     {
-        randomDir = Random.insideUnitCircle.normalized;
-        MoveV.x = randomDir.x;
-        MoveV.y = randomDir.y;
+        randomAngle = Random.Range(-90f, 90f);
+        transform.Rotate(0f,0f,randomAngle);
     }
     public IEnumerator MoveAgainBug()
     {
         yield return new WaitForSeconds(5.0f);
         speed = 5;
+    }
+    private void OnMouseDown()
+    {
+        if(isActive)
+        {
+            if(speed == 0)
+            {
+                StartCoroutine(ChangeBugImg());
+                int _bugCnt = --gameManager.GetComponent<MethBugManager>().BugCnt;
+                if(_bugCnt==0)
+                {
+                    MethBugSL_EventChannel.RaiseEvent();
+                } 
+            }
+            else
+            {
+                speed = 0;
+                StartCoroutine(MoveAgainBug());
+            }
+        }
+    }
+    private IEnumerator ChangeBugImg()
+    {
+        spriteRenderer.sprite = afterImg;
+        yield return new WaitForSeconds(1.0f);
+        isActive = false;
     }
 }

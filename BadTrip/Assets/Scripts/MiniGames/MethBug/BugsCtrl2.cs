@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
-public class BugsCtrl : MonoBehaviour
+public class BugsCtrl2 : MonoBehaviour
 {
     int vec;
     public int speed;
@@ -49,7 +49,7 @@ public class BugsCtrl : MonoBehaviour
     }
     private void ChangeDir()
     {
-        randomAngle = Random.Range(45f, 90f);
+        randomAngle = Random.Range(-90f, -45f);
         transform.Rotate(0f,0f,randomAngle);
         /*randomAngle2 = Random.Range(-90f, -45f);
         if(isTurn)

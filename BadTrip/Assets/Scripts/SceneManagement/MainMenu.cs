@@ -26,7 +26,7 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         ShowLoadingScreen();
-        scenesToLoad.Add(SceneManager.LoadSceneAsync("SampleScene",LoadSceneMode.Additive));
+        scenesToLoad.Add(SceneManager.LoadSceneAsync("OneRoom",LoadSceneMode.Additive));
         SceneManager.UnloadSceneAsync("Main");
         //scenesToLoad.Add(SceneManager.LoadSceneAsync("PersistentMenuUI",LoadSceneMode.Additive));
         StartCoroutine(LoadingScreen());

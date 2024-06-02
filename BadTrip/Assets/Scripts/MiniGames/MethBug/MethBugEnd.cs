@@ -18,7 +18,7 @@ public class MethBugEnd : MonoBehaviour
 
     private void EndGame()
     {
-        SceneManager.LoadSceneAsync("SampleScene", LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync("OneRoom", LoadSceneMode.Additive);
         SceneManager.UnloadSceneAsync("MethBug");
     }
 }

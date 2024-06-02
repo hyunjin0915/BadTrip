@@ -20,9 +20,9 @@ public class PostProcCtrl : MonoBehaviour
     {
         foreach (VolumeComponent volumeComponent in volumeSettings.m_Profile.components) {
             if (volumeComponent.name == "ChromaticAberration") chromaticAberration = volumeComponent as ChromaticAberration;
-            if (volumeComponent.name == "FilmGrain") filmGrain = volumeComponent as FilmGrain;
-            if (volumeComponent.name == "LensDistortion") lensDistortion = volumeComponent as LensDistortion;
-            if (volumeComponent.name == "DepthOfField") depthOfField = volumeComponent as DepthOfField;
+            else if (volumeComponent.name == "FilmGrain") filmGrain = volumeComponent as FilmGrain;
+            else if (volumeComponent.name == "LensDistortion") lensDistortion = volumeComponent as LensDistortion;
+            else if (volumeComponent.name == "DepthOfField") depthOfField = volumeComponent as DepthOfField;
         }
     }
 

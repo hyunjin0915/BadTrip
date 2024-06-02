@@ -7,7 +7,7 @@ using UnityEngine;
 public class ActiveSecs : MonoBehaviour
 {
     [SerializeField]
-    private GameObject eeee;
+    private GameObject dirInfoSpace;
     [SerializeField]
     private GameObject dirInfo;
     Renderer dirInfoRenderer;
@@ -26,7 +26,7 @@ public class ActiveSecs : MonoBehaviour
     private IEnumerator ActiveForSeconds()
     {
         yield return new WaitForSeconds(3.0f);
-        eeee.SetActive(false);
+        dirInfoSpace.SetActive(false);
         yield return new WaitForSeconds(1.0f);
         dirInfo.SetActive(true);
     }

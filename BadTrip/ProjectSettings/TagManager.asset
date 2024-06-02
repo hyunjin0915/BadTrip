@@ -50,3 +50,6 @@ TagManager:
   - name: Player
     uniqueID: 1898946129
     locked: 0
+  - name: Stuff
+    uniqueID: 1990344887
+    locked: 0

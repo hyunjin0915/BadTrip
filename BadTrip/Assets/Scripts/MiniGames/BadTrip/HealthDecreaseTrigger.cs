@@ -8,10 +8,13 @@ public class HealthDecreaseTrigger : MonoBehaviour
     private float helathDecreaseAmount = 10f;
     [SerializeField]
     private HealthScriptableObject healthManager;
-    private void OnCollisionEnter2D(Collision2D other)
+
+    void OnTriggerEnter(Collider other)
     {
+        Debug.Log("충돌");
         if (other.gameObject.CompareTag("Player"))
         {
+            Debug.Log("충돌");
             healthManager.DecreaseHealth(helathDecreaseAmount);
         }
     }

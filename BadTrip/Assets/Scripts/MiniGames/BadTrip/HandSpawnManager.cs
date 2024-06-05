@@ -12,67 +12,77 @@ public class HandSpawnManager : MonoBehaviour
     public GameObject Lefthand;
     public GameObject Righthand;
     public float handMoveSpeed = 5.0f;
-    private BoxCollider2D area;
+    public float handAttackSpeed = 20f;
 
-    [Tooltip("attack delay time")]
+    [Tooltip("Get Hand Position delay time")]
     public float delayTime = 4f;
+
+    [Tooltip("Hand attack delay time")]
+    public float attackDelay =10f;
+
+    Vector2 moveToPos;
+    public Vector2 attackPos = Vector2.down;
+    bool isLeft;
+    bool isAttack = false;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        area = GetComponent<BoxCollider2D>();
-        StartCoroutine("SpawnHands",delayTime);
+        leftHandRb = Lefthand.GetComponent<Rigidbody2D>();
+        rightHandRb = Righthand.GetComponent<Rigidbody2D>();
+        StartCoroutine("GetHandPos",delayTime);
 
     }
     void FixedUpdate()
     {
-        /*if(leftHandRb != null)
+        if(!isAttack)
         {
-            Vector2 moveToPos = new Vector2(playerPos.x,0);
-            leftHandRb.MovePosition(leftHandRb.position + moveToPos*handMoveSpeed*Time.fixedDeltaTime);
-        }*/ //외않되..
+            if(leftHandRb != null && playerPos.x<=0)
+            {
+                isLeft = true;
+                //if(playerPos.x - leftHandRb.position.x < 0.1f) =
+                moveToPos = (playerPos.x-leftHandRb.position.x)>0?Vector2.right:Vector2.left;
+                leftHandRb.MovePosition(leftHandRb.position + moveToPos*handMoveSpeed*Time.fixedDeltaTime);
+            }
+            else if(rightHandRb != null && playerPos.x>0)
+            {
+                isLeft = false;
+                moveToPos = (playerPos.x-rightHandRb.position.x)>0?Vector2.right:Vector2.left;
+                rightHandRb.MovePosition(rightHandRb.position + moveToPos.normalized*handMoveSpeed*Time.fixedDeltaTime);
+            }
+        }
+        else
+        {
+            if(leftHandRb != null && playerPos.x<=0)
+            {
+                leftHandRb.MovePosition(leftHandRb.position + attackPos*handAttackSpeed*Time.fixedDeltaTime);
+                if(leftHandRb.position.y<-10 || leftHandRb.position.y>25)
+                {
+                    attackPos *= -1;
+                }
+            }
+            else if(rightHandRb != null && playerPos.x>0)
+            {
+            }
+        }
     }
-    private IEnumerator SpawnHands(float delayTime)
+
+    private IEnumerator GetHandPos(float delayTime)
     {
-        Vector3 spawnPosL = GetRandomLPos();
-        Vector3 spawnPosR = GetRandomRPos();
         playerPos = player.transform.position;
-
-        Instantiate(Lefthand, spawnPosL,Quaternion.identity);
-        leftHandRb = Lefthand.GetComponent<Rigidbody2D>();
-        Instantiate(Righthand, spawnPosR,Quaternion.identity);
-        rightHandRb = Righthand.GetComponent<Rigidbody2D>();
-
-        //area.enabled = false;
         yield return new WaitForSeconds(delayTime);
-
-        //area.enabled = true;
-        Debug.Log(playerPos.x);
-
-        StartCoroutine("SpawnHands", delayTime);
+        //StartCoroutine("AttackHands", attackDelay);
+        StartCoroutine("GetHandPos", delayTime);
     }
 
-    private Vector2 GetRandomLPos()
+    private IEnumerator AttackHands()
     {
-        Vector2 basePos = transform.position;
-        Vector2 size = area.size;
-
-        float posX = basePos.x + Random.Range(-size.x/2f, 0);
-        float posY = basePos.y + Random.Range(-size.y/2f, 0);
-
-        Vector2 spawnPos = new Vector2(posX, posY);
-
-        return spawnPos;
+        isAttack = true;
+        yield return new WaitForSeconds(attackDelay);
+        isAttack = false;
+        yield return new WaitForSeconds(attackDelay);
+        
     }
-    private Vector2 GetRandomRPos()
-    {
-        Vector2 basePos = transform.position;
-        Vector2 size = area.size;
 
-        float posX = basePos.x + Random.Range(0, size.x/2f);
-        float posY = basePos.y + Random.Range(0, size.y/2f);
-
-        Vector2 spawnPos = new Vector2(posX, posY);
-
-        return spawnPos;
-    }}
+}

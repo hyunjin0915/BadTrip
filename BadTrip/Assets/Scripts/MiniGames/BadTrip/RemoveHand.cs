@@ -8,8 +8,7 @@ public class RemoveHand : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Hand"))
         {
-            Destroy(collision.gameObject);
-            //gameObject.SetActive(false);
+            //Destroy(collision.gameObject);
         }
     }
 }

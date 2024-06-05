@@ -6,18 +6,30 @@ using UnityEngine;
 [CreateAssetMenu( menuName ="Health")]
 public class HealthScriptableObject : ScriptableObject
 {
-    public float health = 100f;
+    public float PlayerHealth = 100f;
+    public float MonsterHealth = 1000f;
 
     public static event Action OnPlayerDamaged;
-
-    public void DecreaseHealth(float amount)
+    public static event Action OnMonsterDamaged;
+    public void PlayerDecreaseHealth(float amount)
     {
-        health -= amount;
+        PlayerHealth -= amount;
         OnPlayerDamaged?.Invoke();
 
-        if(health<=0)
+        if(PlayerHealth<=0) //플레이어 죽음
         {
             Debug.Log("게임 오버 이벤트 발생");
         }
     }
+    public void MonsterDecreaseHealth(float amount)
+    {
+        MonsterHealth -= amount;
+        OnMonsterDamaged?.Invoke();
+
+        if(MonsterHealth<=0)//몬스터 죽음
+        {
+            
+        }
+    }
+
 }

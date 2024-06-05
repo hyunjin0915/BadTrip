@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class RemoveHand : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(other.gameObject.CompareTag("Hand"))
+        if(collision.gameObject.CompareTag("Hand"))
         {
-            Destroy(other.gameObject);
+            Destroy(collision.gameObject);
             //gameObject.SetActive(false);
         }
     }

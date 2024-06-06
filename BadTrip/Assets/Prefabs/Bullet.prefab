@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonsterDamage: 100
-  Monster_healthManager: {fileID: 11400000, guid: 42a203061278b964cb60b7f4f054f7f1, type: 2}
+  Monster_healthManager: {fileID: 11400000, guid: 48f57964b7443ae44be8be08a7139fe1, type: 2}
 --- !u!58 &8549616671225271361
 CircleCollider2D:
   m_ObjectHideFlags: 0

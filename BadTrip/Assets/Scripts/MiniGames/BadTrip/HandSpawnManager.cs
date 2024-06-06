@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,38 +19,41 @@ public class HandSpawnManager : MonoBehaviour
     public float delayTime = 4f;
 
     [Tooltip("Hand attack delay time")]
-    public float attackDelay =10f;
+    public float attackDelay =3f;
 
     Vector2 moveToPos;
-    public Vector2 attackPos = Vector2.down;
+    public Vector2 attackPos;
     bool isLeft;
-    bool isAttack = false;
+    public bool isAttack;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        attackPos = Vector2.down;
+        isAttack = false;
         leftHandRb = Lefthand.GetComponent<Rigidbody2D>();
         rightHandRb = Righthand.GetComponent<Rigidbody2D>();
         StartCoroutine("GetHandPos",delayTime);
-
+        //StartCoroutine("AttackHands");
     }
     void FixedUpdate()
     {
-        if(!isAttack)
+        //if(Math.Abs(playerPos.x - leftHandRb.position.x) < 0.1f) isAttack = true;
+
+        if(!isAttack && Math.Abs(playerPos.x - leftHandRb.position.x) >= 0.1f && Math.Abs(playerPos.x - rightHandRb.position.x) >= 0.1f)
         {
             if(leftHandRb != null && playerPos.x<=0)
             {
                 isLeft = true;
-                //if(playerPos.x - leftHandRb.position.x < 0.1f) =
-                moveToPos = (playerPos.x-leftHandRb.position.x)>0?Vector2.right:Vector2.left;
-                leftHandRb.MovePosition(leftHandRb.position + moveToPos*handMoveSpeed*Time.fixedDeltaTime);
+                moveToPos = (playerPos.x-leftHandRb.position.x) > 0 ? Vector2.right : Vector2.left;
+                leftHandRb.MovePosition(leftHandRb.position + moveToPos * handMoveSpeed * Time.fixedDeltaTime);
             }
             else if(rightHandRb != null && playerPos.x>0)
             {
                 isLeft = false;
-                moveToPos = (playerPos.x-rightHandRb.position.x)>0?Vector2.right:Vector2.left;
-                rightHandRb.MovePosition(rightHandRb.position + moveToPos.normalized*handMoveSpeed*Time.fixedDeltaTime);
+                moveToPos = (playerPos.x-rightHandRb.position.x) > 0 ? Vector2.right:Vector2.left;
+                rightHandRb.MovePosition(rightHandRb.position + moveToPos.normalized * handMoveSpeed * Time.fixedDeltaTime);
             }
         }
         else
@@ -59,7 +63,12 @@ public class HandSpawnManager : MonoBehaviour
                 leftHandRb.MovePosition(leftHandRb.position + attackPos*handAttackSpeed*Time.fixedDeltaTime);
                 if(leftHandRb.position.y<-10 || leftHandRb.position.y>25)
                 {
-                    attackPos *= -1;
+                    attackPos.y = 1;
+                }
+                else if(leftHandRb.position.y == 25) 
+                {
+                    isAttack =  false;
+                     attackPos.y = -1;
                 }
             }
             else if(rightHandRb != null && playerPos.x>0)
@@ -79,10 +88,9 @@ public class HandSpawnManager : MonoBehaviour
     private IEnumerator AttackHands()
     {
         isAttack = true;
-        yield return new WaitForSeconds(attackDelay);
-        isAttack = false;
-        yield return new WaitForSeconds(attackDelay);
-        
+        yield return new WaitForSeconds(attackDelay);     
+        StartCoroutine("AttackHands");
+   
     }
 
 }

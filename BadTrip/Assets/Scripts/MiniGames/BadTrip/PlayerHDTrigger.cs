@@ -8,7 +8,7 @@ public class PlayerHDTrigger : MonoBehaviour
     private float PlayerDamage = 10f;
 
     [SerializeField]
-    private HealthScriptableObject Player_healthManager;
+    private PlayerHPSO Player_healthManager;
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))

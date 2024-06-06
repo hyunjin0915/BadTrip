@@ -7,7 +7,7 @@ public class UI_MonHP : MonoBehaviour
 {
     public Image MonHPBar;
     [SerializeField]
-    private HealthScriptableObject Monster_healthManager;
+    private MonsterHPSO Monster_healthManager;
     private void OnEnable()
     {
         HealthScriptableObject.OnMonsterDamaged += ChangeHPBar;

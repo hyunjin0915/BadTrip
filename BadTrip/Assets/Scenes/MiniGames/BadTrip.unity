@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonHPBar: {fileID: 1617147072}
-  Monster_healthManager: {fileID: 11400000, guid: 42a203061278b964cb60b7f4f054f7f1, type: 2}
+  Monster_healthManager: {fileID: 11400000, guid: 48f57964b7443ae44be8be08a7139fe1, type: 2}
 --- !u!1 &69470297
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,6 +365,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3448799643850294260, guid: 46bb3212a33d06745af9efa22b18d940, type: 3}
+      propertyPath: Player_healthManager
+      value: 
+      objectReference: {fileID: 11400000, guid: a4edd596afaff2a459fade11f00fd49d, type: 2}
     - target: {fileID: 3815614945554727915, guid: 46bb3212a33d06745af9efa22b18d940, type: 3}
       propertyPath: m_Name
       value: LeftHand
@@ -1624,10 +1628,11 @@ MonoBehaviour:
   Lefthand: {fileID: 517384786}
   Righthand: {fileID: 1632180979}
   handMoveSpeed: 20
-  handAttackSpeed: 5
+  handAttackSpeed: 10
   delayTime: 2
-  attackDelay: 10
+  attackDelay: 2
   attackPos: {x: 0, y: 0}
+  isAttack: 0
 --- !u!61 &1202842889
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2277,8 +2282,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 222246531888200458, guid: 4f7b05455de2e7f46bb31c35d9d23f8a, type: 3}
       propertyPath: m_Constraints
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2519301753853628550, guid: 4f7b05455de2e7f46bb31c35d9d23f8a, type: 3}
+      propertyPath: Player_healthManager
+      value: 
+      objectReference: {fileID: 11400000, guid: a4edd596afaff2a459fade11f00fd49d, type: 2}
     - target: {fileID: 3815614945554727915, guid: 4f7b05455de2e7f46bb31c35d9d23f8a, type: 3}
       propertyPath: m_Name
       value: RightHand

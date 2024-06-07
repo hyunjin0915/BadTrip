@@ -1518,6 +1518,7 @@ GameObject:
   - component: {fileID: 575933936}
   - component: {fileID: 575933935}
   - component: {fileID: 575933934}
+  - component: {fileID: 575933937}
   m_Layer: 0
   m_Name: OneRoomFlowchart
   m_TagString: Untagged
@@ -3071,6 +3072,7 @@ MonoBehaviour:
   variables:
   - {fileID: 575933863}
   - {fileID: 575933828}
+  - {fileID: 575933937}
   description: 
   stepPause: 0
   colorCommands: 1
@@ -3892,6 +3894,21 @@ MonoBehaviour:
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
   fadeTexture: {fileID: 0}
   fadeTweenType: 4
+--- !u!114 &575933937
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575933788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 2
+  key: isStudent
+  value: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0

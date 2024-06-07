@@ -3,14 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu( menuName ="Health")]
-public class HealthScriptableObject : ScriptableObject
+[CreateAssetMenu( menuName ="ScriptableObject/Health/PlayerHPSO")]
+public class PlayerHPSO : ScriptableObject
 {
     public float PlayerHealth = 100f;
-    public float MonsterHealth = 1000f;
-
     public static event Action OnPlayerDamaged;
-    public static event Action OnMonsterDamaged;
+
     public void PlayerDecreaseHealth(float amount)
     {
         PlayerHealth -= amount;
@@ -21,15 +19,5 @@ public class HealthScriptableObject : ScriptableObject
             Debug.Log("게임 오버 이벤트 발생");
         }
     }
-    public void MonsterDecreaseHealth(float amount)
-    {
-        MonsterHealth -= amount;
-        OnMonsterDamaged?.Invoke();
-
-        if(MonsterHealth<=0)//몬스터 죽음
-        {
-            
-        }
-    }
-
+    
 }

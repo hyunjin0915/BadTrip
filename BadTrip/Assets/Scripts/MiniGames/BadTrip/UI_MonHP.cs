@@ -10,11 +10,11 @@ public class UI_MonHP : MonoBehaviour
     private MonsterHPSO Monster_healthManager;
     private void OnEnable()
     {
-        HealthScriptableObject.OnMonsterDamaged += ChangeHPBar;
+        MonsterHPSO.OnMonsterDamaged += ChangeHPBar;
     }
     private void OnDisable()
     {
-        HealthScriptableObject.OnMonsterDamaged -= ChangeHPBar;
+        MonsterHPSO.OnMonsterDamaged -= ChangeHPBar;
     }
 
     private void ChangeHPBar()

@@ -1628,11 +1628,10 @@ MonoBehaviour:
   Lefthand: {fileID: 517384786}
   Righthand: {fileID: 1632180979}
   handMoveSpeed: 20
-  handAttackSpeed: 10
+  handAttackSpeed: 20
   delayTime: 2
-  attackDelay: 2
-  attackPos: {x: 0, y: 0}
-  isAttack: 0
+  isLAttack: 0
+  isRAttack: 0
 --- !u!61 &1202842889
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2012,6 +2011,7 @@ GameObject:
   - component: {fileID: 1624328136}
   - component: {fileID: 1624328140}
   - component: {fileID: 1624328141}
+  - component: {fileID: 1624328142}
   m_Layer: 7
   m_Name: BTPlayer
   m_TagString: Player
@@ -2192,6 +2192,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bullet: {fileID: 7570155020928645223, guid: 78afa8a61b6a6494a8bce79ce1656c21, type: 3}
   FirePos: {fileID: 1475700980}
+--- !u!114 &1624328142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624328135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95813043325a300418124ab6803e7146, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player_healthManager: {fileID: 11400000, guid: a4edd596afaff2a459fade11f00fd49d, type: 2}
+  prfHPBar: {fileID: 7181993803969224335, guid: 8f58cd90c99ba40479cfc75560a70e32, type: 3}
+  canvas: {fileID: 424003823}
+  PlayerHPBar: {fileID: 0}
+  height: 8
 --- !u!1 &1632180979 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3815614945554727915, guid: 4f7b05455de2e7f46bb31c35d9d23f8a, type: 3}
@@ -2497,7 +2514,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1279852069
   m_SortingLayer: 1
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 88bf431f7cfded240b770a62a7b52889, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -15,8 +15,6 @@ public class ActiveSecs : MonoBehaviour
     void Start()
     {
         StartCoroutine(ActiveForSeconds());
-        dirInfoRenderer = dirInfo.GetComponent<Renderer>();
-
     }
     void Update()
     {
@@ -28,16 +26,18 @@ public class ActiveSecs : MonoBehaviour
         yield return new WaitForSeconds(3.0f);
         dirInfoSpace.SetActive(false);
         yield return new WaitForSeconds(1.0f);
+        Debug.Log("실행");
         dirInfo.SetActive(true);
+        dirInfoRenderer = dirInfo.GetComponent<Renderer>();
     }
 
     private void ShowDirInfo()
     {
-        if(Input.GetKey(KeyCode.A)||Input.GetKey(KeyCode.D))
+        if((Input.GetKey(KeyCode.A)||Input.GetKey(KeyCode.D)) && dirInfo.activeSelf)
         {
             StartCoroutine(FadeOut());
         }
-        dirInfo.SetActive(false);
+        
     }
 
     private IEnumerator FadeOut()
@@ -45,12 +45,13 @@ public class ActiveSecs : MonoBehaviour
         float f = 1;
         while(f>0)
         {
-            f -= 0.1f;
+            f -= 0.01f;
             Color c  = dirInfoRenderer.material.color;
             c.a = f;
             dirInfoRenderer.material.color = c;
             yield return null;
-
         }
+        dirInfo.SetActive(false);
+
     }
 }

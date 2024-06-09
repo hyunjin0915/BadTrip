@@ -28,18 +28,15 @@ public class PostProcCtrl : MonoBehaviour
 
     public void OnHallucinationEffect() // 환각 효과 on
     {
-        // 후에 내용 추가
-        // 여기에 환각 작용 적용 내용 추가
         chromaticAberration.intensity.overrideState = true;
         filmGrain.intensity.overrideState = true;
         lensDistortion.intensity.overrideState = true;
         depthOfField.mode.overrideState = true;
+        StartCoroutine(FadeIn());
         Debug.Log("환각 효과 ON");
     }
     public void OffHallucinationEffect() // 환각 효과 off
     {
-        // 후에 내용 추가
-        // 여기에 환각 작용 취소 내용 추가
         chromaticAberration.intensity.overrideState = false;
         filmGrain.intensity.overrideState = false;
         lensDistortion.intensity.overrideState = false;
@@ -47,4 +44,17 @@ public class PostProcCtrl : MonoBehaviour
         Debug.Log("환각 효과 OFF");
     }
 
+    private IEnumerator FadeIn()
+    {
+        float f = 0;
+        while(f==1)
+        {
+            f += 0.01f;
+            chromaticAberration.intensity.value = f;
+            filmGrain.intensity.value = f;
+            lensDistortion.intensity.value = f;
+            //depthOfField.intensity.value = f;
+            yield return null;
+        }
+    }
 }

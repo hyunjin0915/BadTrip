@@ -48,7 +48,7 @@ public class ConversationEventManager : MonoBehaviour
 
     public void SendFlowchartMessage(string message) // 플로우차트 블록 메시지로 부르기
     {
-        receiver.OnSendFungusMessage(message);
+        receiver?.OnSendFungusMessage(message);
     }
 
     public void SetPlayerAnimLayer()

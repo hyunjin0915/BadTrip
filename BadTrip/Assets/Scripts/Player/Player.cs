@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
+using System;
 
 public class Player : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private SpriteRenderer playerSP;
     private Vector2 moveVec2;
+    private bool canMove = false;
     //private bool isStudent = false;
     private bool IsMoving
     {
@@ -18,8 +20,8 @@ public class Player : MonoBehaviour
         }
     }
 
-    [Header ("Property")]
-    public float speed = 0.5f;
+    [Header("Property")]
+    public float speed = 1.5f;
     
     // Start is called before the first frame update
     void Start()
@@ -29,7 +31,10 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Move();
+        if (canMove)
+        {
+            Move();
+        }
     }
 
     // Update is called once per frame
@@ -79,9 +84,24 @@ public class Player : MonoBehaviour
 
     public void ActivateLayer(int layerIndex)
     {
-        int otherLayer = (layerIndex == 0) ? 1 : 0;
+        int otherLayer = (layerIndex == 1) ? 2 : 1;
 
         playerAnimator.SetLayerWeight(layerIndex, 1);
         playerAnimator.SetLayerWeight(otherLayer, 0);
+    }
+
+    public void SetPlayerAnim(string boolName, bool b)
+    {
+        playerAnimator.SetBool(boolName, b);
+    }
+
+    public void SetCanMove(bool b)
+    {
+        canMove = b;
+    }
+
+    public void SetCanMoveInt(int i)
+    {
+        canMove = Convert.ToBoolean(i);
     }
 }

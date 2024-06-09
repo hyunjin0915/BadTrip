@@ -50,4 +50,19 @@ public class ConversationEventManager : MonoBehaviour
     {
         receiver.OnSendFungusMessage(message);
     }
+
+    public void SetPlayerAnimLayer()
+    {
+        sayDialogSO.SetPlayerAnimLayer();
+    }
+
+    public void SetPlayerAnim(string boolName, bool b)
+    {
+        sayDialogSO.SetPlayerAnim(boolName, b);
+    }
+
+    public  void SetCanMove(bool b)
+    {
+        sayDialogSO.SetCanMove(b);
+    }
 }

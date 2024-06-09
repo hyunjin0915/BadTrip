@@ -9,9 +9,14 @@ public class ConversationManager : MonoBehaviour
 
     [SerializeField] private SayDialogSO SayDialogSO;
 
+    [SerializeField] private Player player;
+
     private void Awake()
     {
         SayDialogSO.dialogs = sayDialogs;
+        SayDialogSO.SetPlayerAnimLayer += player.SetAnimLayer;
+        SayDialogSO.SetPlayerAnim += player.SetPlayerAnim;
+        SayDialogSO.SetCanMove += player.SetCanMove;
     }
 
 }

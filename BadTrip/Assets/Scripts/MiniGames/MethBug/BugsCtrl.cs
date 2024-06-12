@@ -51,17 +51,6 @@ public class BugsCtrl : MonoBehaviour
     {
         randomAngle = Random.Range(45f, 90f);
         transform.Rotate(0f,0f,randomAngle);
-        /*randomAngle2 = Random.Range(-90f, -45f);
-        if(isTurn)
-        {
-            transform.Rotate(0f,0f,randomAngle);
-            isTurn = false;
-        }
-        else
-        {
-            transform.Rotate(0f,0f,randomAngle2);
-            isTurn = true;
-        }*/
     }
     public IEnumerator MoveAgainBug()
     {

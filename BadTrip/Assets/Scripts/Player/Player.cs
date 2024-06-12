@@ -17,6 +17,9 @@ public class Player : MonoBehaviour
     private Vector2 interPos; // 상호작용 위치
     [SerializeField] private float rayLength = 10f;
     //private bool isStudent = false;
+
+    [SerializeField] private AudioSource footstepAS;
+
     private bool IsMoving
     {
         get
@@ -73,9 +76,11 @@ public class Player : MonoBehaviour
         if (IsMoving)
         {
             playerAnimator.SetBool("IsWalking", true);
+            footstepAS.enabled = true;
         } else
         {
             playerAnimator.SetBool("IsWalking", false);
+            footstepAS.enabled = false;
         }
     }
 
@@ -130,5 +135,10 @@ public class Player : MonoBehaviour
     public void SetCanMoveInt(int i)
     {
         canMove = Convert.ToBoolean(i);
+    }
+
+    public void SetFootstepVolume(float v)
+    {
+        footstepAS.volume = v;
     }
 }

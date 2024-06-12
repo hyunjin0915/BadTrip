@@ -224,6 +224,8 @@ GameObject:
   - component: {fileID: 148524004}
   - component: {fileID: 148524049}
   - component: {fileID: 148524048}
+  - component: {fileID: 148524051}
+  - component: {fileID: 148524050}
   m_Layer: 0
   m_Name: StreetFlowchart
   m_TagString: Untagged
@@ -424,6 +426,7 @@ MonoBehaviour:
   description: "\uB9C8\uC57D\uC744 \uAD6C\uD55C \uD604\uC900\uACFC \uB300\uD654"
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 148524051}
   - {fileID: 148523994}
   - {fileID: 148523974}
   - {fileID: 148523973}
@@ -464,9 +467,12 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
-  variables: []
+  selectedBlocks:
+  - {fileID: 148523995}
+  selectedCommands:
+  - {fileID: 148524051}
+  variables:
+  - {fileID: 148524050}
   description: 
   stepPause: 0
   colorCommands: 1
@@ -1394,6 +1400,38 @@ MonoBehaviour:
   indentLevel: 0
   commenterName: "\uC74C\uB8CC\uC218 \uB9C8\uC2DC\uB294 \uC18C\uB9AC"
   commentText: 
+--- !u!114 &148524050
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148523951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4580f28dd8581476b810b38eea2f1316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 1
+  key: playerName
+  value: 
+--- !u!114 &148524051
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148523951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca6897dad662ca047a1e1002f5f1772d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 97
+  indentLevel: 0
+  playerDataSO: {fileID: 11400000, guid: 6dc9d063a98fe0340bfc447550d25e4e, type: 2}
+  paramName: playerName
+  variable: {fileID: 148524050}
 --- !u!1 &319948879
 GameObject:
   m_ObjectHideFlags: 0

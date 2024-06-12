@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f83cb08432ac0a64384532e4671346ab, type: 3}
   m_Name: PlayerDataSO
   m_EditorClassIdentifier: 
-  playerName: 
-  isFemale: 0
+  playerName: fghfg
+  isFemale: 1
   isStudent: 0

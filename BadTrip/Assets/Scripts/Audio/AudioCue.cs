@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class AudioCue : MonoBehaviour
 {
-    [SerializeField] private AudioInfoSO audioInfo = default;
+    [SerializeField] private AudioInfoSO[] audioInfos = default;
     [SerializeField] private AudioEventChannelSO audioEventChannel = default;
 
-    public void PlayAudio()
+    public void PlayAudio(int num)
     {
-        audioEventChannel.RaisePlayEvent(audioInfo, this.transform.position);
+        audioEventChannel.RaisePlayEvent(audioInfos[num], this.transform.position);
     }
 
-    public void StopAudio()
+    public void StopAudio(int num)
     {
-        audioEventChannel.RaiseStopEvent(audioInfo);
+        audioEventChannel.RaiseStopEvent(audioInfos[num]);
     }
 }

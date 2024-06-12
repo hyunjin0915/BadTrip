@@ -1584,6 +1584,8 @@ GameObject:
   - component: {fileID: 1736043905}
   - component: {fileID: 1736043904}
   - component: {fileID: 1736043903}
+  - component: {fileID: 1736043911}
+  - component: {fileID: 1736043910}
   m_Layer: 0
   m_Name: HomeFlowchart
   m_TagString: Untagged
@@ -1769,6 +1771,7 @@ MonoBehaviour:
   description: "\uCC98\uC74C \uC544\uBC84\uC9C0 \uC695\uC124\n"
   eventHandler: {fileID: 1736043909}
   commandList:
+  - {fileID: 1736043911}
   - {fileID: 1736043900}
   - {fileID: 1736043908}
   - {fileID: 1736043898}
@@ -1805,11 +1808,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1736043901}
-  selectedCommands:
-  - {fileID: 1736043903}
-  variables: []
+  selectedBlocks: []
+  selectedCommands: []
+  variables:
+  - {fileID: 1736043910}
   description: 
   stepPause: 0
   colorCommands: 1
@@ -1822,7 +1824,7 @@ MonoBehaviour:
   luaBindingName: flowchart
 --- !u!114 &1736043903
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1849,7 +1851,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1736043904
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1878,7 +1880,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1736043905
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1906,7 +1908,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1736043906
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1934,7 +1936,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1736043907
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1962,7 +1964,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1736043908
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1979,7 +1981,7 @@ MonoBehaviour:
     \uB358\uC9C4\uB2E4."
 --- !u!114 &1736043909
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1991,6 +1993,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentBlock: {fileID: 1736043901}
   suppressBlockAutoSelect: 0
+--- !u!114 &1736043910
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736043860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4580f28dd8581476b810b38eea2f1316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: playerName
+  value: 
+--- !u!114 &1736043911
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736043860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca6897dad662ca047a1e1002f5f1772d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 100
+  indentLevel: 0
+  playerDataSO: {fileID: 11400000, guid: 6dc9d063a98fe0340bfc447550d25e4e, type: 2}
+  paramName: playerName
+  variable: {fileID: 1736043910}
 --- !u!1 &1894939071
 GameObject:
   m_ObjectHideFlags: 0

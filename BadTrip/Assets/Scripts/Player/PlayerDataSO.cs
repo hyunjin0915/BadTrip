@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(menuName = "Data/PlayerDataSO")]
 public class PlayerDataSO : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public string playerName;
+    public bool isFemale;
+    public bool isStudent;
 
-    // Update is called once per frame
-    void Update()
+    /*public void SetNameSex(string name, bool isF)
     {
-        
-    }
+        playerName = name;
+        isFemale = isF;
+    }*/
 }

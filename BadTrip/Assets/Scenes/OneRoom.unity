@@ -736,7 +736,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &365977427
 Transform:
   m_ObjectHideFlags: 0
@@ -1249,89 +1249,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 462888307}
   m_CullTransparentMesh: 1
---- !u!1 &534082676
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 534082680}
-  - component: {fileID: 534082679}
-  - component: {fileID: 534082678}
-  - component: {fileID: 534082677}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &534082677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534082676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d49b7c1bcd2e07499844da127be038d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_ForceModuleActive: 0
---- !u!114 &534082678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534082676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &534082679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534082676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 5
---- !u!4 &534082680
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534082676}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &563336909
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,7 +1455,6 @@ GameObject:
   - component: {fileID: 575933827}
   - component: {fileID: 575933826}
   - component: {fileID: 575933825}
-  - component: {fileID: 575933824}
   - component: {fileID: 575933823}
   - component: {fileID: 575933822}
   - component: {fileID: 575933821}
@@ -1612,6 +1528,10 @@ GameObject:
   - component: {fileID: 575933947}
   - component: {fileID: 575933946}
   - component: {fileID: 575933945}
+  - component: {fileID: 575933949}
+  - component: {fileID: 575933951}
+  - component: {fileID: 575933952}
+  - component: {fileID: 575933953}
   m_Layer: 0
   m_Name: OneRoomFlowchart
   m_TagString: Untagged
@@ -2229,8 +2149,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 944.67865
-    y: 73.371826
+    x: 943.36285
+    y: 74.687614
     width: 90.78946
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -2252,6 +2172,7 @@ MonoBehaviour:
   - {fileID: 575933804}
   - {fileID: 575933803}
   - {fileID: 575933802}
+  - {fileID: 575933952}
   suppressAllAutoSelections: 0
 --- !u!114 &575933816
 MonoBehaviour:
@@ -2383,33 +2304,6 @@ MonoBehaviour:
   targetTextObject: {fileID: 1884000116}
   stringVariable: {fileID: 575933863}
   _textObjectObsolete: {fileID: 0}
---- !u!114 &575933824
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 575933788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 107
-  indentLevel: 0
-  storyText: "\uD750\uD750\uD750. \uADF8\uB798.. \uC798\uD588\uB2E4."
-  description: 
-  character: {fileID: 1724408258}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
 --- !u!114 &575933825
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2475,9 +2369,11 @@ MonoBehaviour:
   - {fileID: 575933928}
   - {fileID: 575933823}
   - {fileID: 575933822}
+  - {fileID: 575933949}
+  - {fileID: 575933953}
   - {fileID: 575933924}
   - {fileID: 575933825}
-  - {fileID: 575933824}
+  - {fileID: 575933951}
   - {fileID: 575933821}
   - {fileID: 575933816}
   - {fileID: 575933817}
@@ -2496,7 +2392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scope: 2
+  scope: 1
   key: isFemale
   value: 0
 --- !u!114 &575933829
@@ -3101,7 +2997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4580f28dd8581476b810b38eea2f1316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scope: 2
+  scope: 1
   key: playerName
   value: "\uB098"
 --- !u!114 &575933864
@@ -3151,7 +3047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 3.9063034, y: 381.39926}
+  scrollPos: {x: -331.61996, y: 178.76765}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 485.66666
@@ -3162,10 +3058,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 575933815}
-  selectedCommands:
-  - {fileID: 575933809}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 575933863}
   - {fileID: 575933828}
@@ -3509,7 +3403,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 264.78516
-    y: 69.36426
+    y: 68.04847
     width: 121.05261
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -4027,7 +3921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scope: 2
+  scope: 1
   key: isStudent
   value: 0
 --- !u!114 &575933938
@@ -4363,6 +4257,88 @@ MonoBehaviour:
   returnValueType: System.Collections.IEnumerator
   showInherited: 0
   callMode: 1
+--- !u!114 &575933949
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575933788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a3be5afa55279439f63308f6acc6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 259
+  indentLevel: 0
+  playerDataSO: {fileID: 11400000, guid: 6dc9d063a98fe0340bfc447550d25e4e, type: 2}
+  paramName: playerName
+  variable: {fileID: 575933863}
+--- !u!114 &575933951
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575933788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 260
+  indentLevel: 0
+  storyText: "\uD750\uD750\uD750. \uADF8\uB798.. \uC798\uD588\uB2E4."
+  description: 
+  character: {fileID: 1724408258}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &575933952
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575933788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 261
+  indentLevel: 0
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 0}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
+--- !u!114 &575933953
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575933788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a3be5afa55279439f63308f6acc6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 262
+  indentLevel: 0
+  playerDataSO: {fileID: 11400000, guid: 6dc9d063a98fe0340bfc447550d25e4e, type: 2}
+  paramName: isFemale
+  variable: {fileID: 575933828}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -7263,4 +7239,3 @@ SceneRoots:
   - {fileID: 33578496}
   - {fileID: 2091271584}
   - {fileID: 1754067278}
-  - {fileID: 534082680}

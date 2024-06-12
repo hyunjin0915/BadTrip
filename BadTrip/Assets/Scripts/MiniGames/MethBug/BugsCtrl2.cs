@@ -20,6 +20,9 @@ public class BugsCtrl2 : MonoBehaviour
     GameObject gameManager;
     [SerializeField]
     private LoadSceneSO MethBugSL_EventChannel;
+
+    [SerializeField] private AudioCue audioCue;
+
     void Start()
     {
         myRigid = GetComponent<Rigidbody2D>();
@@ -61,7 +64,9 @@ public class BugsCtrl2 : MonoBehaviour
     {
         if(isActive)
         {
-            if(speed == 0)
+            audioCue.PlayAudio(0);
+
+            if (speed == 0)
             {
                 StartCoroutine(ChangeBugImg());
                 int _bugCnt = --gameManager.GetComponent<MethBugManager>().BugCnt;

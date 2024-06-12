@@ -8,6 +8,18 @@ public class BTPlayer : MonoBehaviour
     [SerializeField]
     private Rigidbody2D PlayerRB;
     private Vector2 moveVec2;
+    [SerializeField]
+    private SpriteRenderer playerSP;
+    [SerializeField]
+    private Animator playerAnimator;
+    private bool canMove = false;
+    private bool IsMoving
+    {
+        get
+        {
+            return moveVec2.x != 0 || moveVec2.y != 0;
+        }
+    }
 
     [Header ("Property")]
     public float speed = 3f;
@@ -39,7 +51,10 @@ public class BTPlayer : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Move();
+        if (canMove)
+        {
+            Move();
+        }
     }
 
     // Update is called once per frame
@@ -58,12 +73,30 @@ public class BTPlayer : MonoBehaviour
         {
             KeySpace.GetComponent<Image>().sprite = beforeImg_Space;
         }
-        
+
+        // 애니메이션
+        if (IsMoving)
+        {
+            playerAnimator.SetBool("IsWalking", true);
+        }
+        else
+        {
+            playerAnimator.SetBool("IsWalking", false);
+        }
+
     }
 
     public void Move()
     {
         PlayerRB.velocity = moveVec2.normalized * speed;
+        if (moveVec2.x > 0) // 오른쪽
+        {
+            playerSP.flipX = true;
+        }
+        else if (moveVec2.x < 0)// 왼쪽
+        {
+            playerSP.flipX = false;
+        }
     }
 
     void ChangeUIImage()
@@ -95,6 +128,15 @@ public class BTPlayer : MonoBehaviour
             KeyDown.GetComponent<Image>().sprite = beforeImg_Down;
             KeyUP.GetComponent<Image>().sprite = beforeImg_UP;
         }
+    }
 
+    public void SetPlayerAnim(string boolName, bool b)
+    {
+        playerAnimator.SetBool(boolName, b);
+    }
+
+    public void SetCanMove(bool b)
+    {
+        canMove = b;
     }
 }

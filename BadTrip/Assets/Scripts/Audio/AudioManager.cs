@@ -26,7 +26,7 @@ public class AudioManager : MonoBehaviour
         audioMixer.SetFloat(parameterName, volume);
     }
 
-    void Start()
+    void Awake()
     {
         sfxEventChannel.audioSourcePlay += PlayAudio;
         bgmEventChannel.audioSourcePlay += PlayAudio;
@@ -37,16 +37,21 @@ public class AudioManager : MonoBehaviour
 
     public void PlayAudio(AudioInfoSO audioInfo, Vector2 audioPos)
     {
-        AudioSource audioSource = asPool.EnableAS(audioSources, audioInfo.audioNum);
-        audioInfo.ApplyTo(audioSource);
-        audioSource.transform.position = audioPos;
-        audioSource.Play();
+        audioInfo.ApplyTo(audioSources[audioInfo.audioNum]);
+        audioSources[audioInfo.audioNum].transform.position = audioPos;
+
+        if (audioInfo.isOneShot)
+        {
+            audioSources[audioInfo.audioNum].PlayOneShot(audioInfo.clip);
+        } else
+        {
+            audioSources[audioInfo.audioNum].Play();
+        }
     }
 
     public void StopAudio(AudioInfoSO audioInfo)
     {
-        AudioSource audioSource = asPool.EnableAS(audioSources, audioInfo.audioNum);
-        audioSource.Stop();
+        audioSources[audioInfo.audioNum].Stop();
     }
 
     public void ResetAudioSource(AudioSource[] audioSources) // 오디오 소스 오브젝트 모두 비활성화

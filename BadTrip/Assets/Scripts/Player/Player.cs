@@ -6,12 +6,20 @@ using System;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private PlayerDataSO playerDataSO;
     [SerializeField] private Rigidbody2D pRigidbody;
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private SpriteRenderer playerSP;
     private Vector2 moveVec2;
     private bool canMove = false;
+
+    private RaycastHit2D hit;
+    private Vector2 interPos; // 상호작용 위치
+    [SerializeField] private float rayLength = 10f;
     //private bool isStudent = false;
+
+    [SerializeField] private AudioSource footstepAS;
+
     private bool IsMoving
     {
         get
@@ -43,12 +51,36 @@ public class Player : MonoBehaviour
         moveVec2.x = Input.GetAxis("Horizontal");
         moveVec2.y = Input.GetAxis("Vertical");
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+
+            if (playerSP.flipX) // 오른쪽
+            {
+                interPos = Vector2.right;
+            } else
+            {
+                interPos = Vector2.left;
+            }
+
+            Debug.DrawRay(transform.position, interPos * rayLength, Color.blue); // 임시 레이어 표시
+
+            hit = Physics2D.Raycast(transform.position, interPos, rayLength, 1 << 9);
+
+            // 상호작용
+            if (hit.collider != null)
+            {
+                // 오브젝트와 상호작용 했을 때
+            }
+        }
+
         if (IsMoving)
         {
             playerAnimator.SetBool("IsWalking", true);
+            footstepAS.enabled = true;
         } else
         {
             playerAnimator.SetBool("IsWalking", false);
+            footstepAS.enabled = false;
         }
     }
 
@@ -75,10 +107,10 @@ public class Player : MonoBehaviour
     {
         if (FungusManager.Instance.GlobalVariables.GetVariable("isStudent"))
         {
-            ActivateLayer(1);
+            ActivateLayer(2);
         } else
         {
-            ActivateLayer(0);
+            ActivateLayer(1);
         }
     }
 
@@ -103,5 +135,10 @@ public class Player : MonoBehaviour
     public void SetCanMoveInt(int i)
     {
         canMove = Convert.ToBoolean(i);
+    }
+
+    public void SetFootstepVolume(float v)
+    {
+        footstepAS.volume = v;
     }
 }

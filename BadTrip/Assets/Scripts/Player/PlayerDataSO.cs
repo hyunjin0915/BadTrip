@@ -8,6 +8,7 @@ public class PlayerDataSO : ScriptableObject
     public string playerName;
     public bool isFemale;
     public bool isStudent;
+    public int animLayer;
 
     /*public void SetNameSex(string name, bool isF)
     {

@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64fcbb8774d9b445a3fdb3bbea7db9a, type: 3}
   m_Name: NewGameSL_EventChannel
   m_EditorClassIdentifier: 
+  loadSceneInfo: {fileID: 11400000, guid: f78ae979132017e44868f1d169931d9a, type: 2}

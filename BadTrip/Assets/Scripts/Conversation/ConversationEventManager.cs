@@ -15,6 +15,9 @@ public class ConversationEventManager : MonoBehaviour
     // 플로우 차트 관련 변수
     [SerializeField] private MessageReceived receiver;
 
+    // 사운드 관련 변수
+    [SerializeField] private AudioCue audioCue;
+
 
     private void Start()
     {
@@ -64,5 +67,15 @@ public class ConversationEventManager : MonoBehaviour
     public  void SetCanMove(bool b)
     {
         sayDialogSO.SetCanMove(b);
+    }
+
+    public void PlayAudio(int num)
+    {
+        audioCue.PlayAudio(num);
+    }
+
+    public void StopAudio(int num)
+    {
+        audioCue.StopAudio(num);
     }
 }

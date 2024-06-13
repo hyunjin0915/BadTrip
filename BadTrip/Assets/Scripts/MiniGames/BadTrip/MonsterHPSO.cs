@@ -9,9 +9,12 @@ public class MonsterHPSO : ScriptableObject
     public float MonsterHealth = 1000f;
 
     public static event Action OnMonsterDamaged;
+    public static event Action<int> PlaySound; 
 
     public void MonsterDecreaseHealth(float amount)
     {
+        PlaySound?.Invoke(1);
+
         MonsterHealth -= amount;
         OnMonsterDamaged?.Invoke();
 

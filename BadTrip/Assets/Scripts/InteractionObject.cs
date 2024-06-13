@@ -9,6 +9,9 @@ public class ConversationInteractionObject : MonoBehaviour
     [SerializeField] private Sprite exitSprite;
     [SerializeField] private Sprite enterSprite;
 
+    [SerializeField] private AudioCue audioCue;
+    [SerializeField] private int audioNum;
+
     public UnityEvent clickEvent;
     
     private void OnMouseEnter()
@@ -23,6 +26,7 @@ public class ConversationInteractionObject : MonoBehaviour
 
     private void OnMouseUp()
     {
+        audioCue.PlayAudio(audioNum);
         clickEvent.Invoke();
     }
 

@@ -10,6 +10,7 @@ TagManager:
   - Monster
   - Door
   - SceneSetting
+  - Border
   layers:
   - Default
   - TransparentFX

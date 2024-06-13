@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     private Vector2 interPos; // 상호작용 위치
     [SerializeField] private float rayLength = 10f;
     //private bool isStudent = false;
-
+    private GameObject scanObj;
     [SerializeField] private AudioSource footstepAS;
 
     private bool IsMoving
@@ -50,31 +50,17 @@ public class Player : MonoBehaviour
     {
         moveVec2.x = Input.GetAxis("Horizontal");
         moveVec2.y = Input.GetAxis("Vertical");
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (playerSP.flipX) // 오른쪽
         {
-
-            if (playerSP.flipX) // 오른쪽
-            {
-                interPos = Vector2.right;
-            } else
-            {
-                interPos = Vector2.left;
-            }
-
-            Debug.DrawRay(transform.position, interPos * rayLength, Color.blue); // 임시 레이어 표시
-
-            hit = Physics2D.Raycast(transform.position, interPos, rayLength, 1 << 9);
-
-            // 상호작용
-            if (hit.collider != null)
-            {
-                if(hit.collider.gameObject.CompareTag("Door"))
-                {
-                    gameObject.transform.position = hit.collider.gameObject.GetComponent<MoveToPos>().moveToPos.transform.position;
-                }
-            }
+            interPos = Vector2.right;
+        } else
+        {
+            interPos = Vector2.left;
         }
+        if(moveVec2.y>0) interPos = Vector2.up;
+        else if(moveVec2.y<0) interPos = Vector2.down;
+
+        DrawRay();
 
         if (IsMoving)
         {
@@ -87,6 +73,29 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void DrawRay()
+    {
+        Debug.DrawRay(transform.position, interPos * rayLength, Color.blue); // 임시 레이어 표시
+
+        hit = Physics2D.Raycast(transform.position, interPos, rayLength, 1 << 9);
+        if(hit.collider != null)
+        {
+            scanObj = hit.collider.gameObject;
+            if(scanObj.CompareTag("Border"))
+            {
+                moveVec2 = Vector2.zero;
+            }
+            if(Input.GetKeyDown(KeyCode.Space))
+            {
+                if(hit.collider.gameObject.CompareTag("Door"))
+                {
+                    gameObject.transform.position = hit.collider.gameObject.GetComponent<MoveToPos>().moveToPos.transform.position;
+                }
+            }
+        }
+        else
+            scanObj = null;
+    }
     // 이동
     public void Move()
     {

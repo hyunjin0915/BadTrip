@@ -8,8 +8,6 @@ public class BugsCtrl2 : MonoBehaviour
     int vec;
     public int speed;
     private float randomAngle;
-    private float randomAngle2;
-    private bool isTurn = false;
 
     private Rigidbody2D myRigid;
     SpriteRenderer spriteRenderer;
@@ -17,11 +15,19 @@ public class BugsCtrl2 : MonoBehaviour
     public Sprite scarImg;
     private bool isActive;
     [SerializeField] 
-    GameObject gameManager;
+    MethBugManager gameManager;
     [SerializeField]
     private LoadSceneSO MethBugSL_EventChannel;
 
     [SerializeField] private AudioCue audioCue;
+    private void OnEnable()
+    {
+        gameManager.ChangeScarImg += ChangeScarImg;
+    }
+    private void OnDisable()
+    {
+        gameManager.ChangeScarImg -= ChangeScarImg;
+    }
 
     void Start()
     {
@@ -64,15 +70,17 @@ public class BugsCtrl2 : MonoBehaviour
     {
         if(isActive)
         {
-            audioCue.PlayAudio(0);
+            //audioCue.PlayAudio(0);
 
             if (speed == 0)
             {
-                StartCoroutine(ChangeBugImg());
-                int _bugCnt = --gameManager.GetComponent<MethBugManager>().BugCnt;
+                spriteRenderer.sprite = afterImg;
+                isActive = false;
+                int _bugCnt = --gameManager.BugCnt;
                 if(_bugCnt==0)
                 {
-                    MethBugSL_EventChannel.RaiseEvent();
+                    gameManager.ChangeScarImg();
+                    StartCoroutine(EndMethBug());
                 } 
             }
             else
@@ -82,10 +90,14 @@ public class BugsCtrl2 : MonoBehaviour
             }
         }
     }
-    private IEnumerator ChangeBugImg()
+    private void ChangeScarImg()
     {
-        spriteRenderer.sprite = afterImg;
-        yield return new WaitForSeconds(1.0f);
-        isActive = false;
+        spriteRenderer.sprite = scarImg;
+    }
+
+    private IEnumerator EndMethBug()
+    {
+        yield return new WaitForSeconds(4.0f);
+        MethBugSL_EventChannel.RaiseEvent();
     }
 }

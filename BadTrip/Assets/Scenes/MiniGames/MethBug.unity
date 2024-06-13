@@ -324,9 +324,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 772838696}
     m_Modifications:
     - target: {fileID: -4343706508275548938, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
+      propertyPath: scarImg
+      value: 
+      objectReference: {fileID: 21300000, guid: 925247abaace13b469e741ed98921f90, type: 3}
+    - target: {fileID: -4343706508275548938, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
       propertyPath: gameManager
       value: 
-      objectReference: {fileID: 1209004593}
+      objectReference: {fileID: 1209004595}
     - target: {fileID: 4963363297092503678, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.5
@@ -371,6 +375,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bug 1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5865386852498891486, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -385,9 +393,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 772838696}
     m_Modifications:
     - target: {fileID: 2747133408837304578, guid: 1eaa59a2eebb65142aa9dd247e2580ec, type: 3}
+      propertyPath: scarImg
+      value: 
+      objectReference: {fileID: 21300000, guid: 4cc8a1bde33bad0488d56b0e70d40f8e, type: 3}
+    - target: {fileID: 2747133408837304578, guid: 1eaa59a2eebb65142aa9dd247e2580ec, type: 3}
       propertyPath: gameManager
       value: 
-      objectReference: {fileID: 1209004593}
+      objectReference: {fileID: 1209004595}
     - target: {fileID: 4963363297092503678, guid: 1eaa59a2eebb65142aa9dd247e2580ec, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.7
@@ -530,9 +542,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 772838696}
     m_Modifications:
     - target: {fileID: -4343706508275548938, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
+      propertyPath: scarImg
+      value: 
+      objectReference: {fileID: 21300000, guid: 445ec79272efe524d95858f5b7677a6b, type: 3}
+    - target: {fileID: -4343706508275548938, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
       propertyPath: gameManager
       value: 
-      objectReference: {fileID: 1209004593}
+      objectReference: {fileID: 1209004595}
     - target: {fileID: 4963363297092503678, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.9
@@ -576,6 +592,10 @@ PrefabInstance:
     - target: {fileID: 5865386852498891486, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
       propertyPath: m_Name
       value: Bug 1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865386852498891486, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1264,9 +1284,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 772838696}
     m_Modifications:
     - target: {fileID: -4343706508275548938, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
+      propertyPath: scarImg
+      value: 
+      objectReference: {fileID: 21300000, guid: 3cbbc47dd5e13c644af550222bf0f639, type: 3}
+    - target: {fileID: -4343706508275548938, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
       propertyPath: gameManager
       value: 
-      objectReference: {fileID: 1209004593}
+      objectReference: {fileID: 1209004595}
     - target: {fileID: 4963363297092503678, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.12642
@@ -1310,6 +1334,10 @@ PrefabInstance:
     - target: {fileID: 5865386852498891486, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
       propertyPath: m_Name
       value: Bug 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865386852498891486, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1481,9 +1509,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 772838696}
     m_Modifications:
     - target: {fileID: -4343706508275548938, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
+      propertyPath: scarImg
+      value: 
+      objectReference: {fileID: 21300000, guid: bde2d711c837a1742bd654f2c77aeb33, type: 3}
+    - target: {fileID: -4343706508275548938, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
       propertyPath: gameManager
       value: 
-      objectReference: {fileID: 1209004593}
+      objectReference: {fileID: 1209004595}
     - target: {fileID: 4963363297092503678, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.8
@@ -1528,6 +1560,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bug 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5865386852498891486, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1542,9 +1578,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 772838696}
     m_Modifications:
     - target: {fileID: 2747133408837304578, guid: 1eaa59a2eebb65142aa9dd247e2580ec, type: 3}
+      propertyPath: scarImg
+      value: 
+      objectReference: {fileID: 21300000, guid: 925247abaace13b469e741ed98921f90, type: 3}
+    - target: {fileID: 2747133408837304578, guid: 1eaa59a2eebb65142aa9dd247e2580ec, type: 3}
       propertyPath: gameManager
       value: 
-      objectReference: {fileID: 1209004593}
+      objectReference: {fileID: 1209004595}
     - target: {fileID: 4963363297092503678, guid: 1eaa59a2eebb65142aa9dd247e2580ec, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.3
@@ -1678,6 +1718,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1672723922
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1672723924}
+  - component: {fileID: 1672723923}
+  m_Layer: 0
+  m_Name: _FungusState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1672723923
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672723922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedFlowchart: {fileID: 0}
+--- !u!4 &1672723924
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672723922}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1713347523 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4963363297092503678, guid: 1eaa59a2eebb65142aa9dd247e2580ec, type: 3}
@@ -1697,9 +1782,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 772838696}
     m_Modifications:
     - target: {fileID: 2747133408837304578, guid: 1eaa59a2eebb65142aa9dd247e2580ec, type: 3}
+      propertyPath: scarImg
+      value: 
+      objectReference: {fileID: 21300000, guid: 445ec79272efe524d95858f5b7677a6b, type: 3}
+    - target: {fileID: 2747133408837304578, guid: 1eaa59a2eebb65142aa9dd247e2580ec, type: 3}
       propertyPath: gameManager
       value: 
-      objectReference: {fileID: 1209004593}
+      objectReference: {fileID: 1209004595}
     - target: {fileID: 4963363297092503678, guid: 1eaa59a2eebb65142aa9dd247e2580ec, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.2
@@ -1865,9 +1954,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 772838696}
     m_Modifications:
     - target: {fileID: 2747133408837304578, guid: 1eaa59a2eebb65142aa9dd247e2580ec, type: 3}
+      propertyPath: scarImg
+      value: 
+      objectReference: {fileID: 21300000, guid: bde2d711c837a1742bd654f2c77aeb33, type: 3}
+    - target: {fileID: 2747133408837304578, guid: 1eaa59a2eebb65142aa9dd247e2580ec, type: 3}
       propertyPath: gameManager
       value: 
-      objectReference: {fileID: 1209004593}
+      objectReference: {fileID: 1209004595}
     - target: {fileID: 4963363297092503678, guid: 1eaa59a2eebb65142aa9dd247e2580ec, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.1
@@ -1934,3 +2027,4 @@ SceneRoots:
   - {fileID: 1209004594}
   - {fileID: 1990218766}
   - {fileID: 935866591}
+  - {fileID: 1672723924}

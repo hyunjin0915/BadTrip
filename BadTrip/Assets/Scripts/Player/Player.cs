@@ -69,7 +69,10 @@ public class Player : MonoBehaviour
             // 상호작용
             if (hit.collider != null)
             {
-                // 오브젝트와 상호작용 했을 때
+                if(hit.collider.gameObject.CompareTag("Door"))
+                {
+                    gameObject.transform.position = hit.collider.gameObject.GetComponent<MoveToPos>().moveToPos.transform.position;
+                }
             }
         }
 

@@ -7,14 +7,18 @@ using UnityEngine;
 public class ActiveSecs : MonoBehaviour
 {
     [SerializeField]
-    private GameObject dirInfoSpace;
+    private GameObject speechBubble;
+
     [SerializeField]
     private GameObject dirInfo;
+    Renderer speechBubbleRenderer;
     Renderer dirInfoRenderer;
 
     void Start()
     {
         StartCoroutine(ActiveForSeconds());
+        speechBubbleRenderer = speechBubble.GetComponent<Renderer>();
+
     }
     void Update()
     {
@@ -24,9 +28,8 @@ public class ActiveSecs : MonoBehaviour
     private IEnumerator ActiveForSeconds()
     {
         yield return new WaitForSeconds(3.0f);
-        dirInfoSpace.SetActive(false);
-        yield return new WaitForSeconds(1.0f);
-        Debug.Log("실행");
+        StartCoroutine(speechBubbleFadeOut());
+        yield return new WaitForSeconds(3.0f);
         dirInfo.SetActive(true);
         dirInfoRenderer = dirInfo.GetComponent<Renderer>();
     }
@@ -35,12 +38,12 @@ public class ActiveSecs : MonoBehaviour
     {
         if((Input.GetKey(KeyCode.A)||Input.GetKey(KeyCode.D)) && dirInfo.activeSelf)
         {
-            StartCoroutine(FadeOut());
+            StartCoroutine(dirInfoFadeOut());
         }
         
     }
 
-    private IEnumerator FadeOut()
+    private IEnumerator dirInfoFadeOut()
     {
         float f = 1;
         while(f>0)
@@ -52,6 +55,20 @@ public class ActiveSecs : MonoBehaviour
             yield return null;
         }
         dirInfo.SetActive(false);
+
+    }
+    private IEnumerator speechBubbleFadeOut()
+    {
+        float f = 1;
+        while(f>0)
+        {
+            f -= 0.01f;
+            Color c  = speechBubbleRenderer.material.color;
+            c.a = f;
+            speechBubbleRenderer.material.color = c;
+            yield return null;
+        }
+        speechBubble.SetActive(false);
 
     }
 }

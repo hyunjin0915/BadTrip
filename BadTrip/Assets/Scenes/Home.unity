@@ -845,8 +845,9 @@ MonoBehaviour:
   - {fileID: 1397898153}
   - {fileID: 0}
   conVCam: {fileID: 1390189883}
-  receiver: {fileID: 0}
+  receiver: {fileID: 1736043913}
   audioCue: {fileID: 0}
+  playerData: {fileID: 11400000, guid: 6dc9d063a98fe0340bfc447550d25e4e, type: 2}
 --- !u!1 &940430237
 GameObject:
   m_ObjectHideFlags: 0
@@ -1204,7 +1205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: "\uC544\uBC84\uC9C0"
-  nameColor: {r: 0, g: 0, b: 0, a: 1}
+  nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
   portraits: []
   portraitsFace: 0
@@ -1952,7 +1953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: '{$playerName}'
+  nameText: "\uC288\uB2C8"
   nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
   portraits: []
@@ -2118,6 +2119,8 @@ GameObject:
   - component: {fileID: 1736043903}
   - component: {fileID: 1736043911}
   - component: {fileID: 1736043910}
+  - component: {fileID: 1736043912}
+  - component: {fileID: 1736043913}
   m_Layer: 0
   m_Name: HomeFlowchart
   m_TagString: Untagged
@@ -2294,7 +2297,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 65
     y: 80
-    width: 99.484535
+    width: 100
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2329,19 +2332,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 23.876276, y: 40.47423}
+  scrollPos: {x: 85.28866, y: 299.16666}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.97
+  zoom: 1
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 1736043901}
+  selectedCommands:
+  - {fileID: 1736043911}
   variables:
   - {fileID: 1736043910}
   description: 
@@ -2539,7 +2544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scope: 0
   key: playerName
-  value: 
+  value: "\uC288\uB2C8"
 --- !u!114 &1736043911
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2557,6 +2562,47 @@ MonoBehaviour:
   playerDataSO: {fileID: 11400000, guid: 6dc9d063a98fe0340bfc447550d25e4e, type: 2}
   paramName: playerName
   variable: {fileID: 1736043910}
+--- !u!114 &1736043912
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736043860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 244.71133
+    y: 73.83334
+    width: 113.33333
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 101
+  blockName: New Block
+  description: 
+  eventHandler: {fileID: 1736043913}
+  commandList: []
+  suppressAllAutoSelections: 0
+--- !u!114 &1736043913
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736043860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 1736043912}
+  suppressBlockAutoSelect: 0
+  message: dddd
 --- !u!1 &1790557736
 GameObject:
   m_ObjectHideFlags: 0

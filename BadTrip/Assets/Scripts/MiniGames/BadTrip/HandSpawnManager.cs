@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fungus;
 
 public class HandSpawnManager : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class HandSpawnManager : MonoBehaviour
     public bool isLAttack;
     public bool isRAttack;
 
+    public bool gameStart = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,44 +46,49 @@ public class HandSpawnManager : MonoBehaviour
     }
     void FixedUpdate()
     {
+        gameStart = FungusManager.Instance.GlobalVariables.GetVariable("gameStart");
+
         LHandAbs = Math.Abs(playerPos.x - leftHandRb.position.x);
         RHandAbs = Math.Abs(playerPos.x - rightHandRb.position.x);
 
-        if(LHandAbs < 1f) isLAttack = true;
-        if(RHandAbs < 1f) isRAttack = true;
-
-        if(!isLAttack && !isRAttack && LHandAbs >= 1f && RHandAbs >= 1f)
-        {
-            if(leftHandRb != null && playerPos.x<=0)
+        
+            if(LHandAbs < 1f) isLAttack = true;
+            if(RHandAbs < 1f) isRAttack = true;
+            
+            if(!isLAttack && !isRAttack && LHandAbs >= 1f && RHandAbs >= 1f)
             {
-                moveToPos = (playerPos.x-leftHandRb.position.x) > 0 ? Vector2.right : Vector2.left;
-                leftHandRb.MovePosition(leftHandRb.position + moveToPos * handMoveSpeed * Time.fixedDeltaTime);
-            }
-            else if(rightHandRb != null && playerPos.x>0)
-            {
-                moveToPos = (playerPos.x-rightHandRb.position.x) > 0 ? Vector2.right:Vector2.left;
-                rightHandRb.MovePosition(rightHandRb.position + moveToPos.normalized * handMoveSpeed * Time.fixedDeltaTime);
-            }
-        }
-        else
-        {
-            if(leftHandRb != null && playerPos.x<=0) //플레이어가 왼쪽에 있을 때
-            {
-                if(isRAttack)
+                if(leftHandRb != null && playerPos.x<=0)
                 {
-                    AttackRHand();
+                    moveToPos = (playerPos.x-leftHandRb.position.x) > 0 ? Vector2.right : Vector2.left;
+                    leftHandRb.MovePosition(leftHandRb.position + moveToPos * handMoveSpeed * Time.fixedDeltaTime);
                 }
-                AttackLHand();
-            }
-            else if(rightHandRb != null && playerPos.x>0) //플레이어가 오른쪽에 있을 때
-            {
-                if(isLAttack)
+                else if(rightHandRb != null && playerPos.x>0)
                 {
+                    moveToPos = (playerPos.x-rightHandRb.position.x) > 0 ? Vector2.right:Vector2.left;
+                    rightHandRb.MovePosition(rightHandRb.position + moveToPos.normalized * handMoveSpeed * Time.fixedDeltaTime);
+                }
+            }
+            else
+            {
+                if(leftHandRb != null && playerPos.x<=0) //플레이어가 왼쪽에 있을 때
+                {
+                    if(isRAttack)
+                    {
+                        AttackRHand();
+                    }
                     AttackLHand();
                 }
-                AttackRHand();
+                else if(rightHandRb != null && playerPos.x>0) //플레이어가 오른쪽에 있을 때
+                {
+                    if(isLAttack)
+                    {
+                        AttackLHand();
+                    }
+                    AttackRHand();
+                }
             }
-        }
+        
+        
     }
 
     private IEnumerator GetHandPos(float delayTime)

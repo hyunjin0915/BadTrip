@@ -1275,7 +1275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66094c87746b2874290b7000e9f1eeb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BugCnt: 1
+  BugCnt: 2
 --- !u!1 &1213404493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1998,7 +1998,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5865386852498891486, guid: 1eaa59a2eebb65142aa9dd247e2580ec, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

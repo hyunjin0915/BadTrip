@@ -135,6 +135,7 @@ public class Player : MonoBehaviour
 
         playerAnimator.SetLayerWeight(layerIndex, 1);
         playerAnimator.SetLayerWeight(otherLayer, 0);
+        playerAnimator.SetLayerWeight(0, 0);
     }
 
     public void SetPlayerAnim(string boolName, bool b)

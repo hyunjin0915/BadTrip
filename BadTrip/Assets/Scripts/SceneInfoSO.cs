@@ -10,6 +10,7 @@ public class SceneInfoSO : ScriptableObject
     public bool isDialog = true;
     /*public bool useReceiver = false;
     public string message;*/
+    public bool isStPlayer = false;
 
     public int eventNum;
 

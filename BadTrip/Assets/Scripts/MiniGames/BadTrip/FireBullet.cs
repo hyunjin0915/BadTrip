@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fungus;
 
 public class FireBullet : MonoBehaviour
 {
@@ -9,14 +10,21 @@ public class FireBullet : MonoBehaviour
 
     [SerializeField] private AudioCue audioCue;
 
+    public bool gameStart = true;
+
+
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            audioCue.PlayAudio(0);
-            Instantiate(Bullet, FirePos.transform.position,Quaternion.identity);
-        }    
+        gameStart = FungusManager.Instance.GlobalVariables.GetVariable("gameStart");
+
+        
+            if(Input.GetKeyDown(KeyCode.Space))
+            {
+                audioCue.PlayAudio(0);
+                Instantiate(Bullet, FirePos.transform.position,Quaternion.identity);
+            }    
+        
         
     }
 }

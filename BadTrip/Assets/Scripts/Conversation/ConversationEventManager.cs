@@ -34,6 +34,11 @@ public class ConversationEventManager : MonoBehaviour
             Debug.Log(111);
 
             receiver.gameObject.SetActive(true);
+        } else if(playerData.eventNum == 2){
+            //SetPlayerAnimLayer();
+            receiver.gameObject.SetActive(true);
+            
+
         }
 
     }

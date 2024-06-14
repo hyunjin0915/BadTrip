@@ -7,6 +7,7 @@ public class SceneSetting : MonoBehaviour
 {
     [Header("Objects Setting")]
     public GameObject player;
+    public GameObject stplayer;
     public GameObject dialogs;
     public GameObject audioListener;
     public PlayerDataSO playerData;
@@ -16,6 +17,7 @@ public class SceneSetting : MonoBehaviour
         player.SetActive(sceneInfo.isPlayer);
         dialogs.SetActive(sceneInfo.isDialog);
         audioListener.SetActive(!sceneInfo.isPlayer);
+        stplayer.SetActive(sceneInfo.isStPlayer);
 
         player.transform.position = sceneInfo.playerPos;
         playerData.eventNum = sceneInfo.eventNum;

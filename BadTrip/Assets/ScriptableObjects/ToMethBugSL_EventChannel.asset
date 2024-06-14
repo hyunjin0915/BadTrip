@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d64fcbb8774d9b445a3fdb3bbea7db9a, type: 3}
-  m_Name: MethBugSL_EventChannel
+  m_Name: ToMethBugSL_EventChannel
   m_EditorClassIdentifier: 
-  loadSceneInfo: {fileID: 11400000, guid: a286c9f73f1ec5b429326deb63d91e68, type: 2}
+  loadSceneInfo: {fileID: 11400000, guid: 47659afd8c6624b4c831f9045b9b26e6, type: 2}

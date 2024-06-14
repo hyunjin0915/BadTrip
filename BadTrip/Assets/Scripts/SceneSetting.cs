@@ -1,3 +1,4 @@
+using Fungus;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class SceneSetting : MonoBehaviour
     public GameObject player;
     public GameObject dialogs;
     public GameObject audioListener;
+    public PlayerDataSO playerData;
 
     public void SetScene(SceneInfoSO sceneInfo)
     {
@@ -16,6 +18,13 @@ public class SceneSetting : MonoBehaviour
         audioListener.SetActive(!sceneInfo.isPlayer);
 
         player.transform.position = sceneInfo.playerPos;
+        playerData.eventNum = sceneInfo.eventNum;
+
+        /*if (sceneInfo.useReceiver)
+        {
+            GameObject.FindGameObjectWithTag("Flowchart").GetComponent<MessageReceived>().OnSendFungusMessage(sceneInfo.message);
+        }*/
+
     }
 
 }

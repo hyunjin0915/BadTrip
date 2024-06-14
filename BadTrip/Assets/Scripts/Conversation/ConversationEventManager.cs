@@ -18,9 +18,17 @@ public class ConversationEventManager : MonoBehaviour
     // 사운드 관련 변수
     [SerializeField] private AudioCue audioCue;
 
+    [SerializeField] private PlayerDataSO playerData;
 
     private void Start()
     {
+        if (playerData.eventNum == 1)
+        {
+            Debug.Log(1111);
+            
+            receiver.OnSendFungusMessage("LookMirror");
+        }
+
         foreach (Character cha in characters)
         {
             int dialogType = cha.GetComponent<CharacterInfo>().dialogType;

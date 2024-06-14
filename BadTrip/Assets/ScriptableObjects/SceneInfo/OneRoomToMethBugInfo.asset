@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d64fcbb8774d9b445a3fdb3bbea7db9a, type: 3}
-  m_Name: MethBugSL_EventChannel
+  m_Script: {fileID: 11500000, guid: 10411dad2169fbe4dbfd0cc4e9989478, type: 3}
+  m_Name: OneRoomToMethBugInfo
   m_EditorClassIdentifier: 
-  loadSceneInfo: {fileID: 11400000, guid: a286c9f73f1ec5b429326deb63d91e68, type: 2}
+  isPlayer: 0
+  isDialog: 0
+  playerPos: {x: 0, y: 0}

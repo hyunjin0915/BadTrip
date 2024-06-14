@@ -11,6 +11,7 @@ TagManager:
   - Door
   - SceneSetting
   - Border
+  - Interaction
   layers:
   - Default
   - TransparentFX

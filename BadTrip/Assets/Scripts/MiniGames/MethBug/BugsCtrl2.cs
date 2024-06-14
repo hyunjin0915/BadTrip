@@ -20,6 +20,7 @@ public class BugsCtrl2 : MonoBehaviour
     private LoadSceneSO MethBugSL_EventChannel;
 
     [SerializeField] private AudioCue audioCue;
+    [SerializeField] Texture2D cursorTexture;
     private void OnEnable()
     {
         gameManager.ChangeScarImg += ChangeScarImg;
@@ -70,7 +71,7 @@ public class BugsCtrl2 : MonoBehaviour
     {
         if(isActive)
         {
-            //audioCue.PlayAudio(0);
+            audioCue.PlayAudio(0);
 
             if (speed == 0)
             {
@@ -98,6 +99,7 @@ public class BugsCtrl2 : MonoBehaviour
     private IEnumerator EndMethBug()
     {
         yield return new WaitForSeconds(4.0f);
+        Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
         MethBugSL_EventChannel.RaiseEvent();
     }
 }

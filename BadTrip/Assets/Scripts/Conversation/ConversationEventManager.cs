@@ -22,20 +22,20 @@ public class ConversationEventManager : MonoBehaviour
 
     private void Start()
     {
-        if (playerData.eventNum == 1)
-        {
-            Debug.Log(1111);
-            
-            receiver.OnSendFungusMessage("LookMirror");
-        }
-
         foreach (Character cha in characters)
         {
             int dialogType = cha.GetComponent<CharacterInfo>().dialogType;
 
             cha.SetSayDialog = sayDialogSO.dialogs[dialogType];
         }
-                 
+
+        if (playerData.eventNum == 1)
+        {
+            Debug.Log(111);
+
+            receiver.gameObject.SetActive(true);
+        }
+
     }
 
     public void ShowCutscene(int viewNum) // ÄÆ¾À ÀÌµ¿

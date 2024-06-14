@@ -6367,7 +6367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 8.776993, y: 89.144745}
+  scrollPos: {x: -14.223007, y: 153.14474}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 485.66666
@@ -6607,7 +6607,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 68
     y: 69.06
-    width: 111
+    width: 112.4
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7080,7 +7080,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 64.588615
     y: 296.42896
-    width: 117
+    width: 118.8
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7211,7 +7211,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2112762648501348693
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -7815,7 +7815,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 694.8208
     y: 69.71326
-    width: 126
+    width: 126.8
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8408,7 +8408,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 510.13617
     y: 69.5498
-    width: 119
+    width: 120.4
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8826,7 +8826,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 264.78516
     y: 68.04847
-    width: 125
+    width: 126.8
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -9024,12 +9024,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2050051285376147212}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ff5d850a887844fe87ae7d366d3ab5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parentBlock: {fileID: 331654545752709268}
   suppressBlockAutoSelect: 0
-  message: LookMirror
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -10,21 +10,24 @@ public class FireBullet : MonoBehaviour
 
     [SerializeField] private AudioCue audioCue;
 
-    public bool gameStart = true;
+    public bool gameStart = false;
 
 
     // Update is called once per frame
     void Update()
     {
-        gameStart = FungusManager.Instance.GlobalVariables.GetVariable("gameStart");
-
-        
+        if (gameStart)
+        {
             if(Input.GetKeyDown(KeyCode.Space))
             {
                 audioCue.PlayAudio(0);
-                Instantiate(Bullet, FirePos.transform.position,Quaternion.identity);
-            }    
-        
-        
+                Instantiate(Bullet, FirePos.transform.position, Quaternion.identity);
+            }
+        }
+    }
+
+    public void SetGameStart(bool b)
+    {
+        gameStart = b;
     }
 }

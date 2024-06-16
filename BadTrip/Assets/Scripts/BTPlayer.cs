@@ -81,7 +81,6 @@ public class BTPlayer : MonoBehaviour
         if (IsMoving)
         {
             playerAnimator.SetBool("IsWalking", true);
-            playerAnimator.SetBool("CanPMove", true);
         }
         else
         {

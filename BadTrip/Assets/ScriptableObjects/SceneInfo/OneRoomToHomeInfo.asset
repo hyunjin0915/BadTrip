@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10411dad2169fbe4dbfd0cc4e9989478, type: 3}
   m_Name: OneRoomToHomeInfo
   m_EditorClassIdentifier: 
-  isPlayer: 0
+  isPlayer: 1
   isDialog: 1
-  isStPlayer: 1
+  playerRen: 1
   eventNum: 2
   playerPos: {x: 46.5, y: -7.2}

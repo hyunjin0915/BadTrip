@@ -8,9 +8,7 @@ public class SceneInfoSO : ScriptableObject
 {
     public bool isPlayer = true;
     public bool isDialog = true;
-    /*public bool useReceiver = false;
-    public string message;*/
-    public bool isStPlayer = false;
+    public int playerRen = 1;
 
     public int eventNum;
 

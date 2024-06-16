@@ -17,8 +17,7 @@ public class SceneSetting : MonoBehaviour
         player.SetActive(sceneInfo.isPlayer);
         dialogs.SetActive(sceneInfo.isDialog);
         audioListener.SetActive(!sceneInfo.isPlayer);
-        stplayer.SetActive(sceneInfo.isStPlayer);
-
+        player.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, sceneInfo.playerRen);
         player.transform.position = sceneInfo.playerPos;
         playerData.eventNum = sceneInfo.eventNum;
 

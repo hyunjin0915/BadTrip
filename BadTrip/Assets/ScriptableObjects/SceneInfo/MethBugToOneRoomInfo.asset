@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10411dad2169fbe4dbfd0cc4e9989478, type: 3}
   m_Name: MethBugToOneRoomInfo
   m_EditorClassIdentifier: 
-  isPlayer: 0
+  isPlayer: 1
   isDialog: 1
+  playerRen: 0
   eventNum: 1
-  playerPos: {x: 37, y: -11}
+  playerPos: {x: -155, y: -10}

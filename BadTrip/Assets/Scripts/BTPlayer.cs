@@ -12,7 +12,7 @@ public class BTPlayer : MonoBehaviour
     private SpriteRenderer playerSP;
     [SerializeField]
     private Animator playerAnimator;
-    private bool canMove = true;
+    private bool canMove = false;
     private bool IsMoving
     {
         get
@@ -63,15 +63,18 @@ public class BTPlayer : MonoBehaviour
         moveVec2.x = Input.GetAxis("Horizontal");
         moveVec2.y = Input.GetAxis("Vertical");
         ChangeUIImage();
-        
-        if(Input.GetKeyDown(KeyCode.Space))
+
+        if (canMove)
         {
-            //공격
-            KeySpace.GetComponent<Image>().sprite = afterImg_Space;
-        }
-        if(Input.GetKeyUp(KeyCode.Space))
-        {
-            KeySpace.GetComponent<Image>().sprite = beforeImg_Space;
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                //공격
+                KeySpace.GetComponent<Image>().sprite = afterImg_Space;
+            }
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                KeySpace.GetComponent<Image>().sprite = beforeImg_Space;
+            }
         }
 
         // 애니메이션

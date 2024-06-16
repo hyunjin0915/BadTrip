@@ -31,8 +31,6 @@ public class ConversationEventManager : MonoBehaviour
 
         if (playerData.eventNum == 1)
         {
-            Debug.Log(111);
-
             receiver.gameObject.SetActive(true);
         } else if(playerData.eventNum == 2){
             

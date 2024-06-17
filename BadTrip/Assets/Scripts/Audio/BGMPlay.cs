@@ -8,6 +8,10 @@ public class BGMPlay : MonoBehaviour
 
     private void OnEnable()
     {
-        audioCue.PlayAudio(0);
+        if (!audioCue.IsSameClip(0))
+        {
+            audioCue.PlayAudio(0);
+        }
+
     }
 }

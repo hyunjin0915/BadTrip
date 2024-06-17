@@ -102,7 +102,7 @@ public class Player : MonoBehaviour
     // 이동
     public void Move()
     {
-        pRigidbody.velocity = moveVec2.normalized * speed;
+        pRigidbody.velocity = moveVec2.normalized * speed * Time.deltaTime;
         if (moveVec2.x > 0) // 오른쪽
         {
             playerSP.flipX = true;
@@ -118,24 +118,28 @@ public class Player : MonoBehaviour
         isStudent = FungusManager.Instance.GlobalVariables.GetVariable("isStudent");
     }*/
 
-    public void SetAnimLayer()
+    public void SetAnimLayer(int num)
     {
-        if (FungusManager.Instance.GlobalVariables.GetVariable("isStudent"))
+        if (num == 0)
         {
-            ActivateLayer(2);
-        } else
+            ActivateLayer(0);
+        } else if (num == 1)
         {
             ActivateLayer(1);
+        } else if (num == 2)
+        {
+            ActivateLayer(2);
         }
     }
 
     public void ActivateLayer(int layerIndex)
     {
-        int otherLayer = (layerIndex == 1) ? 2 : 1;
+        for (int i = 0; i < 3; i++)
+        {
+            playerAnimator.SetLayerWeight(i, 0);
+        }
 
         playerAnimator.SetLayerWeight(layerIndex, 1);
-        playerAnimator.SetLayerWeight(otherLayer, 0);
-        playerAnimator.SetLayerWeight(0, 0);
     }
 
     public void SetPlayerAnim(string boolName, bool b)

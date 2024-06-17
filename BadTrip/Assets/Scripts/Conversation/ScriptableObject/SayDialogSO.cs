@@ -8,7 +8,8 @@ using Fungus;
 public class SayDialogSO : ScriptableObject
 {
     public SayDialog[] dialogs;
-    public Action SetPlayerAnimLayer;
+    public Action<int> SetPlayerAnimLayer;
     public Action<string, bool> SetPlayerAnim;
     public Action<bool> SetCanMove;
+    public Action<float> SetFootstepVolume;
 }

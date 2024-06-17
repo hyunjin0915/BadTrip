@@ -33,6 +33,8 @@ public class AudioManager : MonoBehaviour
 
         sfxEventChannel.audioSourceStop += StopAudio;
         bgmEventChannel.audioSourceStop += StopAudio;
+
+        bgmEventChannel.getAudioName += GetAudioClipName;
     }
 
     public void PlayAudio(AudioInfoSO audioInfo, Vector2 audioPos)
@@ -57,5 +59,10 @@ public class AudioManager : MonoBehaviour
     public void ResetAudioSource(AudioSource[] audioSources) // 오디오 소스 오브젝트 모두 비활성화
     {
         asPool.DisableAS(audioSources);
+    }
+
+    public string GetAudioClipName(int num)
+    {
+        return audioSources[num].isPlaying ? audioSources[num].clip.name : "0";
     }
 }

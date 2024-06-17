@@ -17,6 +17,7 @@ public class ConversationManager : MonoBehaviour
         SayDialogSO.SetPlayerAnimLayer += player.SetAnimLayer;
         SayDialogSO.SetPlayerAnim += player.SetPlayerAnim;
         SayDialogSO.SetCanMove += player.SetCanMove;
+        SayDialogSO.SetFootstepVolume += player.SetFootstepVolume;
     }
 
 }

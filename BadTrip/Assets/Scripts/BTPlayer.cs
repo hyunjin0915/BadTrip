@@ -91,7 +91,7 @@ public class BTPlayer : MonoBehaviour
 
     public void Move()
     {
-        PlayerRB.velocity = moveVec2.normalized * speed;
+        PlayerRB.velocity = moveVec2.normalized * speed * Time.deltaTime;
         if (moveVec2.x > 0) // 오른쪽
         {
             playerSP.flipX = true;

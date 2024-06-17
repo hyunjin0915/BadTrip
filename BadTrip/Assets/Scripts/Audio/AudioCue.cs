@@ -16,4 +16,9 @@ public class AudioCue : MonoBehaviour
     {
         audioEventChannel.RaiseStopEvent(audioInfos[num]);
     }
+
+    public bool IsSameClip(int num)
+    {
+        return audioInfos[num].clip.name == audioEventChannel.getAudioName(audioInfos[num].audioNum);
+    }
 }

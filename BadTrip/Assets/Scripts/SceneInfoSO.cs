@@ -9,6 +9,7 @@ public class SceneInfoSO : ScriptableObject
     public bool isPlayer = true;
     public bool isDialog = true;
     public int playerRen = 1;
+    public bool isRight = false;
 
     public int eventNum;
 

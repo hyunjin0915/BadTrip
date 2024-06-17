@@ -29,12 +29,16 @@ public class ConversationEventManager : MonoBehaviour
             cha.SetSayDialog = sayDialogSO.dialogs[dialogType];
         }
 
-        if (playerData.eventNum == 1)
+        if (playerData.eventNum == 0)
+        {
+            SetPlayerAnimLayer(1);
+        }
+        else if (playerData.eventNum == 1)
         {
             receiver.gameObject.SetActive(true);
         } else if(playerData.eventNum == 2){
             
-            //receiver.gameObject.SetActive(true);
+            
 
         }
 
@@ -64,9 +68,9 @@ public class ConversationEventManager : MonoBehaviour
         receiver?.OnSendFungusMessage(message);
     }
 
-    public void SetPlayerAnimLayer()
+    public void SetPlayerAnimLayer(int num)
     {
-        sayDialogSO.SetPlayerAnimLayer();
+        sayDialogSO.SetPlayerAnimLayer(num);
     }
 
     public void SetPlayerAnim(string boolName, bool b)
@@ -74,9 +78,14 @@ public class ConversationEventManager : MonoBehaviour
         sayDialogSO.SetPlayerAnim(boolName, b);
     }
 
-    public  void SetCanMove(bool b)
+    public void SetCanMove(bool b)
     {
         sayDialogSO.SetCanMove(b);
+    }
+
+    public void SetFootstepVolume(float v)
+    {
+        sayDialogSO.SetFootstepVolume(v);
     }
 
     public void PlayAudio(int num)
@@ -88,4 +97,6 @@ public class ConversationEventManager : MonoBehaviour
     {
         audioCue.StopAudio(num);
     }
+
+    
 }

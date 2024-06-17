@@ -12,6 +12,7 @@ TagManager:
   - SceneSetting
   - Border
   - Interaction
+  - BGM
   layers:
   - Default
   - TransparentFX

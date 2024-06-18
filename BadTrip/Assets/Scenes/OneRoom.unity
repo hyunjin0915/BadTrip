@@ -2606,6 +2606,7 @@ GameObject:
   - component: {fileID: 789993210}
   - component: {fileID: 789993209}
   - component: {fileID: 789993211}
+  - component: {fileID: 789993212}
   m_Layer: 9
   m_Name: bang
   m_TagString: Door
@@ -2701,6 +2702,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveToPos: {fileID: 1108547716}
+--- !u!114 &789993212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789993207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8442042acf3483a49a13849c8938ed6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1441572990}
+        m_TargetAssemblyTypeName: AudioCue, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &821756416
 GameObject:
   m_ObjectHideFlags: 0
@@ -3329,7 +3357,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1068745251
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4431,6 +4459,7 @@ MonoBehaviour:
   audioInfos:
   - {fileID: 11400000, guid: a9ab2d76506f14a4fa42d8940d5a47d5, type: 2}
   - {fileID: 11400000, guid: 23d1d674a6e95014eb3d7efd6297f08b, type: 2}
+  - {fileID: 11400000, guid: 32e50d83dc043414597843e85a5e09e5, type: 2}
   audioEventChannel: {fileID: 11400000, guid: 9a1eb40afe0f2fd4da69258d085cf8f0, type: 2}
 --- !u!4 &1441572991
 Transform:
@@ -6457,7 +6486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -26.239544, y: 135.31361}
+  scrollPos: {x: -74.47483, y: 143.54889}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 485.66666
@@ -6471,7 +6500,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 6476130302269169497}
   selectedCommands:
-  - {fileID: 8652688022700720463}
+  - {fileID: 9212409255950443891}
   variables:
   - {fileID: 184252191652599404}
   - {fileID: 5459493506307113615}
@@ -7309,6 +7338,7 @@ GameObject:
   - component: {fileID: 9212409255950443888}
   - component: {fileID: 9212409255950443889}
   - component: {fileID: 9212409255950443890}
+  - component: {fileID: 9212409255950443891}
   m_Layer: 0
   m_Name: OneRoomFlowchart
   m_TagString: Untagged
@@ -8459,7 +8489,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 508.9597
-    y: 68.37333
+    y: 67.19686
     width: 120.58823
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -8508,6 +8538,7 @@ MonoBehaviour:
   - {fileID: 9212409255950443872}
   - {fileID: 2951573201896268400}
   - {fileID: 9212409255950443871}
+  - {fileID: 9212409255950443891}
   - {fileID: 3375311924916934282}
   suppressAllAutoSelections: 0
 --- !u!114 &6572149131046714102
@@ -9844,7 +9875,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &9212409255950443889
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9906,7 +9937,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &9212409255950443890
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9960,6 +9991,27 @@ MonoBehaviour:
   stringEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &9212409255950443891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050051285376147212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 303
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 1068745250}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  targetGameObjectOLD: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

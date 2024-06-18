@@ -486,6 +486,7 @@ GameObject:
   - component: {fileID: 241434769}
   - component: {fileID: 241434770}
   - component: {fileID: 241434771}
+  - component: {fileID: 241434772}
   m_Layer: 0
   m_Name: BadTripFlowchart
   m_TagString: Untagged
@@ -700,6 +701,7 @@ MonoBehaviour:
   eventHandler: {fileID: 241434770}
   commandList:
   - {fileID: 241434765}
+  - {fileID: 241434772}
   - {fileID: 241434759}
   - {fileID: 241434764}
   - {fileID: 241434746}
@@ -743,7 +745,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 241434748}
   selectedCommands:
-  - {fileID: 241434764}
+  - {fileID: 241434772}
   variables:
   - {fileID: 241434751}
   description: 
@@ -1087,6 +1089,26 @@ MonoBehaviour:
   returnValueType: System.Void
   showInherited: 0
   callMode: 0
+--- !u!114 &241434772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241434740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 40
+  indentLevel: 0
+  duration: 0.5
+  targetAlpha: 0
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
 --- !u!1 &415706328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,6 +1328,7 @@ MonoBehaviour:
   receiver: {fileID: 0}
   audioCue: {fileID: 0}
   playerData: {fileID: 11400000, guid: 6dc9d063a98fe0340bfc447550d25e4e, type: 2}
+  mark: {fileID: 0}
 --- !u!114 &435059130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2398,7 +2421,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1990344887
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
@@ -2963,7 +2986,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1898946129
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 436fff2353d32d94d8a29eb301546d80, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

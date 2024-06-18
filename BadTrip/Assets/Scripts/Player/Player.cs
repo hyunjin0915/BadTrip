@@ -89,6 +89,7 @@ public class Player : MonoBehaviour
             {
                 if(hit.collider.gameObject.CompareTag("Door"))
                 {
+                    hit.collider.gameObject.GetComponent<MapInteractionObject>()?.OnInteraction();
                     gameObject.transform.position = hit.collider.gameObject.GetComponent<MoveToPos>().moveToPos.transform.position;
 
                 } else if (hit.collider.gameObject.CompareTag("Interaction"))

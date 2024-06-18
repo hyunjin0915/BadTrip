@@ -20,6 +20,9 @@ public class ConversationEventManager : MonoBehaviour
 
     [SerializeField] private PlayerDataSO playerData;
 
+    // 퀘스트 관련 변수 // 후에 정리, 수정 필요
+    [SerializeField] private GameObject mark;
+
     private void Start()
     {
         foreach (Character cha in characters)
@@ -35,7 +38,9 @@ public class ConversationEventManager : MonoBehaviour
         }
         else if (playerData.eventNum == 1)
         {
+            mark.SetActive(false);
             receiver.gameObject.SetActive(true);
+
         } else if(playerData.eventNum == 2){
             
             

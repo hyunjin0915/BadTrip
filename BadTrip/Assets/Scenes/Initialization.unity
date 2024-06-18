@@ -2972,7 +2972,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1898946129
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 36f22349b3c550f4092c84debe892791, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3757,7 +3757,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 33.75
+  orthographic size: 33.749
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3782,7 +3782,7 @@ Transform:
   m_GameObject: {fileID: 1363665731}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0.0017777774, y: -0.0010000002, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5806,7 +5806,7 @@ Transform:
   m_GameObject: {fileID: 6858215238848761065}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.8, y: -10, z: 0}
+  m_LocalPosition: {x: -5, y: -7.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5894,7 +5894,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1898946129
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 174c8c85e3c9bfc41925331cd2a9d142, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -90,9 +90,10 @@ public class Player : MonoBehaviour
                 if(hit.collider.gameObject.CompareTag("Door"))
                 {
                     gameObject.transform.position = hit.collider.gameObject.GetComponent<MoveToPos>().moveToPos.transform.position;
+
                 } else if (hit.collider.gameObject.CompareTag("Interaction"))
                 {
-                    hit.collider.gameObject.GetComponent<MapInteractionObject>().OnInteraction();
+                    hit.collider.gameObject.GetComponent<MapInteractionObject>()?.OnInteraction();
                 }
             }
         }

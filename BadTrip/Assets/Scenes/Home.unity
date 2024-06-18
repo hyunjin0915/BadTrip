@@ -2939,7 +2939,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1026142048}
         m_TargetAssemblyTypeName: AudioCue, Assembly-CSharp
-        m_MethodName: StopAudio
+        m_MethodName: PlayAudio
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

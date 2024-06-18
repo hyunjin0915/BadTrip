@@ -3007,6 +3007,7 @@ MonoBehaviour:
   PlayerRB: {fileID: 1624328136}
   playerSP: {fileID: 1624328138}
   playerAnimator: {fileID: 1624328143}
+  canMove: 1
   speed: 550
   KeySpace: {fileID: 1140124457}
   KeyUP: {fileID: 1589111118}

@@ -12,7 +12,7 @@ public class BTPlayer : MonoBehaviour
     private SpriteRenderer playerSP;
     [SerializeField]
     private Animator playerAnimator;
-    private bool canMove = false;
+    public bool canMove = false;
     private bool IsMoving
     {
         get

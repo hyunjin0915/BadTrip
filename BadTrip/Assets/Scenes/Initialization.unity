@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogInput: {fileID: 1850203893}
+  dialogInputWhite: {fileID: 0}
 --- !u!114 &22940655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2972,7 +2973,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1898946129
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 36f22349b3c550f4092c84debe892791, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3588,6 +3589,7 @@ Transform:
   - {fileID: 743968505}
   - {fileID: 688008902}
   - {fileID: 455233618}
+  - {fileID: 1673281747}
   m_Father: {fileID: 1969765295}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1311770914
@@ -4278,6 +4280,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1571846161}
   m_CullTransparentMesh: 1
+--- !u!1 &1673281746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1673281747}
+  - component: {fileID: 1673281748}
+  m_Layer: 0
+  m_Name: ToSchool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1673281747
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673281746}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1311770913}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1673281748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673281746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43d0e0fd43f3537459ac4277f86d1d97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toSchoolSL_EventChannel: {fileID: 11400000, guid: 69e76e9cb3eff72479907566d9acff16, type: 2}
 --- !u!1 &1679993538
 GameObject:
   m_ObjectHideFlags: 0
@@ -5894,7 +5941,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1898946129
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 174c8c85e3c9bfc41925331cd2a9d142, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

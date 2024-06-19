@@ -632,6 +632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadSceneInfo: {fileID: 11400000, guid: 5e393f743b2dff64bb08e0da40e8de91, type: 2}
+  CutSceneVcam: {fileID: 365977426}
 --- !u!4 &126417864
 Transform:
   m_ObjectHideFlags: 0

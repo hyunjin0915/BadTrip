@@ -15,5 +15,6 @@ MonoBehaviour:
   isPlayer: 0
   isDialog: 1
   playerRen: 1
-  eventNum: 3
+  isRight: 0
+  eventNum: 4
   playerPos: {x: 0, y: 0}

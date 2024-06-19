@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class ConversationInput : MonoBehaviour
 {
     [SerializeField] private DialogInput dialogInput;
+    [SerializeField] private DialogInput dialogInputWhite;
 
     // Start is called before the first frame update
     void Start()
@@ -17,11 +18,15 @@ public class ConversationInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (dialogInput.gameObject.activeSelf)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            if(Input.GetKeyDown(KeyCode.Space)){
+            if (dialogInput.gameObject.activeSelf)
+            {
                 dialogInput.SetDialogClickedFlag();
+            } else if (dialogInputWhite.gameObject.activeSelf)
+            {
+                dialogInputWhite.SetDialogClickedFlag();
             }
-        } 
+        }
     }
 }

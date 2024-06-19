@@ -14,6 +14,9 @@ public class ActiveSecs : MonoBehaviour
     Renderer speechBubbleRenderer;
     Renderer dirInfoRenderer;
 
+    [SerializeField]
+    private ConversationEventManager conEvenMng;
+
     void Start()
     {
         StartCoroutine(ActiveForSeconds());
@@ -32,6 +35,8 @@ public class ActiveSecs : MonoBehaviour
         yield return new WaitForSeconds(3.0f);
         dirInfo.SetActive(true);
         dirInfoRenderer = dirInfo.GetComponent<Renderer>();
+        conEvenMng.SetPlayerAnim("CanPMove", true);
+
     }
 
     private void ShowDirInfo()

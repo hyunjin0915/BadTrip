@@ -5206,6 +5206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speechBubble: {fileID: 450793044}
   dirInfo: {fileID: 1771335852}
+  conEvenMng: {fileID: 696800759}
 --- !u!1 &1705914456
 GameObject:
   m_ObjectHideFlags: 0

@@ -2965,7 +2965,7 @@ SpriteRenderer:
   m_SortingLayerID: 1898946129
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 436fff2353d32d94d8a29eb301546d80, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9254a923fb9b4b94ab8261ad8d008183, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3007,7 +3007,7 @@ MonoBehaviour:
   PlayerRB: {fileID: 1624328136}
   playerSP: {fileID: 1624328138}
   playerAnimator: {fileID: 1624328143}
-  canMove: 1
+  canMove: 0
   speed: 550
   KeySpace: {fileID: 1140124457}
   KeyUP: {fileID: 1589111118}

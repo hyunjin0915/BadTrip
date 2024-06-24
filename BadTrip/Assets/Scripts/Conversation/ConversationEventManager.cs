@@ -13,15 +13,11 @@ public class ConversationEventManager : MonoBehaviour
     private GameObject playerVCam;
 
     // 플로우 차트 관련 변수
-    [SerializeField] private MessageReceived receiver;
+    [SerializeField] private Receivers receivers;
+    private int fcIndex = 0;
 
     // 사운드 관련 변수
     [SerializeField] private AudioCue audioCue;
-
-    [SerializeField] private PlayerDataSO playerData;
-
-    // 퀘스트 관련 변수 // 후에 정리, 수정 필요
-    [SerializeField] private GameObject mark;
 
     private void Start()
     {
@@ -30,23 +26,6 @@ public class ConversationEventManager : MonoBehaviour
             int dialogType = cha.GetComponent<CharacterInfo>().dialogType;
 
             cha.SetSayDialog = sayDialogSO.dialogs[dialogType];
-        }
-
-        if (playerData.eventNum == 0)
-        {
-            SetPlayerAnimLayer(1);
-            // 플레이어 움직임, 플레이어 애니메이션 멈추기
-            SetPlayerAnim("CanPMove", false);
-        }
-        else if (playerData.eventNum == 1)
-        {
-            mark.SetActive(false);
-            receiver.gameObject.SetActive(true);
-
-        } else if(playerData.eventNum == 2){
-            
-            
-
         }
 
     }
@@ -70,9 +49,19 @@ public class ConversationEventManager : MonoBehaviour
     }
 
 
+    public void SendFlowchartMessage(int i, string message) // 플로우차트 블록 메시지로 부르기
+    {
+        receivers.SendFlowchartMessage(i, message);
+    }
+
     public void SendFlowchartMessage(string message) // 플로우차트 블록 메시지로 부르기
     {
-        receiver?.OnSendFungusMessage(message);
+        receivers.SendFlowchartMessage(fcIndex, message);
+    }
+
+    public void SelectFlowchartIndex(int i)
+    {
+        fcIndex = i;
     }
 
     public void SetPlayerAnimLayer(int num)
@@ -104,6 +93,5 @@ public class ConversationEventManager : MonoBehaviour
     {
         audioCue.StopAudio(num);
     }
-
     
 }

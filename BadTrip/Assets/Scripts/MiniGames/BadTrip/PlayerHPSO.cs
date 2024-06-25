@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu( menuName ="ScriptableObject/Health/PlayerHPSO")]
@@ -10,6 +8,8 @@ public class PlayerHPSO : ScriptableObject
     private LoadSceneSO BadTripSL_EventChannel;
 
     public float PlayerHealth = 100f;
+    public float PlayerMaxHealth = 100f;
+    
     public static event Action OnPlayerDamaged;
 
     public void PlayerDecreaseHealth(float amount)

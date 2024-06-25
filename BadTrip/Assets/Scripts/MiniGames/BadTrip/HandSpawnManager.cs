@@ -1,8 +1,6 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Fungus;
 
 public class HandSpawnManager : MonoBehaviour
 {
@@ -25,6 +23,7 @@ public class HandSpawnManager : MonoBehaviour
     private Vector2 moveToPos;
     private Vector2 LattackPos;
     private Vector2 RattackPos;
+
     public bool isLAttack;
     public bool isRAttack;
 
@@ -96,7 +95,6 @@ public class HandSpawnManager : MonoBehaviour
     {
         playerPos = player.transform.position;
         yield return new WaitForSeconds(delayTime);
-        //StartCoroutine("AttackHands", attackDelay);
         StartCoroutine("GetHandPos", delayTime);
     }
 

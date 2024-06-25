@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CatchBugs : MonoBehaviour
@@ -20,7 +19,7 @@ public class CatchBugs : MonoBehaviour
             if(hit.collider != null)
             {
                 hitBug = hit.transform.gameObject;
-                if(hitBug.tag == "Bug")
+                if(hitBug.CompareTag("Bug"))
                 {
                     if(hitBug.GetComponent<BugsCtrl>().speed == 0)
                     {

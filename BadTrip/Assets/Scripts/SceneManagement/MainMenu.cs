@@ -1,7 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -28,7 +26,6 @@ public class MainMenu : MonoBehaviour
         ShowLoadingScreen();
         scenesToLoad.Add(SceneManager.LoadSceneAsync("OneRoom",LoadSceneMode.Additive));
         SceneManager.UnloadSceneAsync("Main");
-        //scenesToLoad.Add(SceneManager.LoadSceneAsync("PersistentMenuUI",LoadSceneMode.Additive));
         StartCoroutine(LoadingScreen());
         
     }

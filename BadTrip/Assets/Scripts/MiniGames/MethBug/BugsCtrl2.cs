@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
 public class BugsCtrl2 : MonoBehaviour
@@ -14,6 +12,7 @@ public class BugsCtrl2 : MonoBehaviour
     public Sprite afterImg;
     public Sprite scarImg;
     private bool isActive;
+
     [SerializeField] 
     MethBugManager gameManager;
     [SerializeField]
@@ -21,6 +20,7 @@ public class BugsCtrl2 : MonoBehaviour
 
     [SerializeField] private AudioCue audioCue;
     [SerializeField] Texture2D cursorTexture;
+    
     private void OnEnable()
     {
         gameManager.ChangeScarImg += ChangeScarImg;

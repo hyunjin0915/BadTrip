@@ -1,12 +1,11 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu( menuName ="ScriptableObject/Health/MonsterHPSO")]
 public class MonsterHPSO : ScriptableObject
 {
     public float MonsterHealth = 1000f;
+    public float MonsterMaxHealth = 1000f;
 
     public static event Action OnMonsterDamaged;
     public static event Action<int> PlaySound; 

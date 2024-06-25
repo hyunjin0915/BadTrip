@@ -1,9 +1,7 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu( menuName ="Health")]
+[CreateAssetMenu( menuName ="ScriptableObject/Health")]
 public class HealthScriptableObject : ScriptableObject
 {
     public float PlayerHealth = 100f;

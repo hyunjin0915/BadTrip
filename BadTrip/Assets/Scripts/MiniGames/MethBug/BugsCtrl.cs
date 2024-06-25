@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
 public class BugsCtrl : MonoBehaviour
@@ -13,7 +11,9 @@ public class BugsCtrl : MonoBehaviour
     SpriteRenderer spriteRenderer;
     public Sprite afterImg;
     public Sprite scarImg;
+
     private bool isActive;
+
     [SerializeField] 
     MethBugManager gameManager;
     [SerializeField]
@@ -72,8 +72,7 @@ public class BugsCtrl : MonoBehaviour
         if(isActive)
         {
             audioCue.PlayAudio(0);
-
-
+            
             if (speed == 0)
             {
                 spriteRenderer.sprite = afterImg;

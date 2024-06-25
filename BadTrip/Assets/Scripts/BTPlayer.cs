@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,7 +10,9 @@ public class BTPlayer : MonoBehaviour
     private SpriteRenderer playerSP;
     [SerializeField]
     private Animator playerAnimator;
+
     public bool canMove = false;
+
     private bool IsMoving
     {
         get
@@ -31,7 +31,7 @@ public class BTPlayer : MonoBehaviour
     public GameObject KeyLeft;
     public GameObject KeyRight;
 
-
+    #region 필요한 ui 스프라이트들
     public Sprite afterImg_Space;
     public Sprite beforeImg_Space;
     public Sprite afterImg_UP;
@@ -42,12 +42,7 @@ public class BTPlayer : MonoBehaviour
     public Sprite beforeImg_Left;
     public Sprite afterImg_Right;
     public Sprite beforeImg_Right;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    #endregion
 
     private void FixedUpdate()
     {
@@ -68,7 +63,6 @@ public class BTPlayer : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                //공격
                 KeySpace.GetComponent<Image>().sprite = afterImg_Space;
             }
             if (Input.GetKeyUp(KeyCode.Space))

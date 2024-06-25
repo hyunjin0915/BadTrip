@@ -1,7 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using Fungus;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class ActiveSecs : MonoBehaviour
@@ -21,8 +18,8 @@ public class ActiveSecs : MonoBehaviour
     {
         StartCoroutine(ActiveForSeconds());
         speechBubbleRenderer = speechBubble.GetComponent<Renderer>();
-
     }
+    
     void Update()
     {
         ShowDirInfo();

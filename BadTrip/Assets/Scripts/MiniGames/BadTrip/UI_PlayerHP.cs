@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -39,6 +36,6 @@ public class UI_PlayerHP : MonoBehaviour
     }
     private void ChangeHPBar()
     {
-        PlayerHPBar.fillAmount = Player_healthManager.PlayerHealth/100f;
+        PlayerHPBar.fillAmount = Player_healthManager.PlayerHealth/Player_healthManager.PlayerMaxHealth;
     }
 }

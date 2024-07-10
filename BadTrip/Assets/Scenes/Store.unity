@@ -1060,7 +1060,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 91.91746, y: 67.278366}
+  scrollPos: {x: 239.34021, y: 67.27837}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -1071,7 +1071,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
+  selectedBlocks:
+  - {fileID: 148524005}
   selectedCommands: []
   variables:
   - {fileID: 148524050}
@@ -3897,10 +3898,8 @@ MonoBehaviour:
   - {fileID: 1683181454}
   - {fileID: 756425953}
   conVCam: {fileID: 319948880}
-  receiver: {fileID: 0}
+  receivers: {fileID: 0}
   audioCue: {fileID: 0}
-  playerData: {fileID: 11400000, guid: 6dc9d063a98fe0340bfc447550d25e4e, type: 2}
-  mark: {fileID: 0}
 --- !u!114 &1739570105
 MonoBehaviour:
   m_ObjectHideFlags: 0

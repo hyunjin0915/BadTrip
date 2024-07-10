@@ -7,18 +7,25 @@ using System;
 public class Player : MonoBehaviour
 {
     [SerializeField] private PlayerDataSO playerDataSO;
+
+    // 플레이어 Move
     [SerializeField] private Rigidbody2D pRigidbody;
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private SpriteRenderer playerSP;
     private Vector2 moveVec2;
-    private bool canMove = false;
-
+    
+    // 상호작용
     private RaycastHit2D hit;
     private Vector2 interPos; // 상호작용 위치
     [SerializeField] private float rayLength = 10f;
-    //private bool isStudent = false;
     private GameObject scanObj;
+
+    // 발소리
     [SerializeField] private AudioSource footstepAS;
+    public AudioClip footstepClip;
+
+    // 플레이어 Move Control
+    private bool canMove = false;
 
     private bool IsMoving
     {
@@ -65,17 +72,17 @@ public class Player : MonoBehaviour
         if (IsMoving)
         {
             playerAnimator.SetBool("IsWalking", true);
-            footstepAS.enabled = true;
+            //footstepAS.enabled = true;
         } else
         {
             playerAnimator.SetBool("IsWalking", false);
-            footstepAS.enabled = false;
+            //footstepAS.enabled = false;
         }
     }
 
     private void DrawRay()
     {
-        Debug.DrawRay(transform.position, interPos * rayLength, Color.blue); // 임시 레이어 표시
+        Debug.DrawRay(transform.position, interPos * rayLength, Color.blue); // 임시 레이 표시
 
         hit = Physics2D.Raycast(transform.position, interPos, rayLength, 1 << 9);
         if(hit.collider != null)
@@ -120,6 +127,7 @@ public class Player : MonoBehaviour
         isStudent = FungusManager.Instance.GlobalVariables.GetVariable("isStudent");
     }*/
 
+    #region Animation
     public void SetAnimLayer(int num)
     {
         if (num == 0)
@@ -149,6 +157,9 @@ public class Player : MonoBehaviour
         playerAnimator.SetBool(boolName, b);
     }
 
+    #endregion
+
+    #region PlayerMoveControl
     public void SetCanMove(bool b)
     {
         canMove = b;
@@ -158,9 +169,18 @@ public class Player : MonoBehaviour
     {
         canMove = Convert.ToBoolean(i);
     }
+    #endregion
+
+    #region PlayerFootstepAudio
 
     public void SetFootstepVolume(float v)
     {
         footstepAS.volume = v;
     }
+
+    public void PlayFootstepAudio()
+    {
+        footstepAS?.PlayOneShot(footstepClip);
+    }
+    #endregion
 }

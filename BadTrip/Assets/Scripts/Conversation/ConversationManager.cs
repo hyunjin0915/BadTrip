@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
 
-public class ConversationManager : MonoBehaviour
+public class ConversationManager : MonoBehaviour // ¸Ê ¾À°ú Initialization ¾À ¿¬°á
 {
     [SerializeField] private SayDialog[] sayDialogs;
 

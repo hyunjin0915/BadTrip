@@ -2906,6 +2906,7 @@ MonoBehaviour:
   playerSP: {fileID: 1055599530}
   rayLength: 15
   footstepAS: {fileID: 1055599524}
+  footstepClip: {fileID: 0}
   speed: 5
 --- !u!50 &1055599529
 Rigidbody2D:
@@ -5901,6 +5902,7 @@ MonoBehaviour:
   playerSP: {fileID: 8168485374627576410}
   rayLength: 15
   footstepAS: {fileID: 8168485374627576415}
+  footstepClip: {fileID: 8300000, guid: b4579a645c475234b8e7a69619c02a4a, type: 3}
   speed: 300
 --- !u!212 &8168485374627576410
 SpriteRenderer:
@@ -6131,10 +6133,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b4579a645c475234b8e7a69619c02a4a, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

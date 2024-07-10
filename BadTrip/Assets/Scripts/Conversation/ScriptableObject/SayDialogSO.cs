@@ -5,7 +5,7 @@ using UnityEngine;
 using Fungus;
 
 [CreateAssetMenu(menuName = "Conversation/SayDialogSO")]
-public class SayDialogSO : ScriptableObject
+public class SayDialogSO : ScriptableObject // Initialization 내용 중 맵 씬에서 사용될 것들
 {
     public SayDialog[] dialogs;
     public Action<int> SetPlayerAnimLayer;

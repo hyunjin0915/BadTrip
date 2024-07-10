@@ -21,6 +21,7 @@ public class ConversationEventManager : MonoBehaviour
 
     private void Start()
     {
+        // 씬 내 캐릭터 및 대화창 초기화
         foreach (Character cha in characters)
         {
             int dialogType = cha.GetComponent<CharacterInfo>().dialogType;
@@ -30,6 +31,7 @@ public class ConversationEventManager : MonoBehaviour
 
     }
 
+    #region Cutscene
     public void ShowCutscene(int viewNum) // 컷씬 이동
     {
         conVCam.Follow = viewTrs[viewNum];
@@ -47,51 +49,59 @@ public class ConversationEventManager : MonoBehaviour
         conVCam.gameObject.SetActive(false);
         playerVCam = null;
     }
+    #endregion
 
-
+    #region Flowchart Call
     public void SendFlowchartMessage(int i, string message) // 플로우차트 블록 메시지로 부르기
     {
-        receivers.SendFlowchartMessage(i, message);
+        receivers.SendFlowchartMessage(i, message); // 플로우차트 index, 메시지
     }
 
     public void SendFlowchartMessage(string message) // 플로우차트 블록 메시지로 부르기
     {
-        receivers.SendFlowchartMessage(fcIndex, message);
+        receivers.SendFlowchartMessage(fcIndex, message); // 플로우차트 index, 메시지
     }
 
     public void SelectFlowchartIndex(int i)
     {
         fcIndex = i;
     }
+    #endregion
 
-    public void SetPlayerAnimLayer(int num)
+    #region Player Animation Setting
+    public void SetPlayerAnimLayer(int num) // Player 애니메이터 layer 설정
     {
         sayDialogSO.SetPlayerAnimLayer(num);
     }
 
-    public void SetPlayerAnim(string boolName, bool b)
+    public void SetPlayerAnim(string boolName, bool b) // Player 애니메이션 설정
     {
         sayDialogSO.SetPlayerAnim(boolName, b);
     }
+    #endregion
 
-    public void SetCanMove(bool b)
+    #region Player Setting
+    public void SetCanMove(bool b) // 플레이어 Move Control
     {
         sayDialogSO.SetCanMove(b);
     }
 
-    public void SetFootstepVolume(float v)
+    public void SetFootstepVolume(float v) // 플레이어 발소리 볼륨 조절
     {
         sayDialogSO.SetFootstepVolume(v);
     }
+    #endregion
 
-    public void PlayAudio(int num)
+    #region Scene Sound Setting
+    public void PlayAudio(int num) // SFX 재생
     {
         audioCue.PlayAudio(num);
     }
 
-    public void StopAudio(int num)
+    public void StopAudio(int num) // SFX 중지
     {
         audioCue.StopAudio(num);
     }
-    
+    #endregion
+
 }

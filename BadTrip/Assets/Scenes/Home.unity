@@ -216,6 +216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 63709487}
+  - component: {fileID: 63709488}
   m_Layer: 0
   m_Name: ConversationObjects
   m_TagString: Untagged
@@ -245,6 +246,20 @@ Transform:
   - {fileID: 1379682134}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &63709488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63709486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8760669dfe994da499453e83328fe8c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mReceivers:
+  - {fileID: 1736043915}
 --- !u!1 &66375312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1357,10 +1372,8 @@ MonoBehaviour:
   - {fileID: 1397898153}
   - {fileID: 0}
   conVCam: {fileID: 1390189883}
-  receiver: {fileID: 0}
+  receivers: {fileID: 0}
   audioCue: {fileID: 0}
-  playerData: {fileID: 11400000, guid: 6dc9d063a98fe0340bfc447550d25e4e, type: 2}
-  mark: {fileID: 0}
 --- !u!1 &826802610
 GameObject:
   m_ObjectHideFlags: 3
@@ -3074,10 +3087,10 @@ MonoBehaviour:
   interactionEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 821756703}
-        m_TargetAssemblyTypeName: ConversationEventManager, Assembly-CSharp
-        m_MethodName: SendFlowchartMessage
-        m_Mode: 5
+      - m_Target: {fileID: 1716680100}
+        m_TargetAssemblyTypeName: BangActive, Assembly-CSharp
+        m_MethodName: DisappearMark
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3086,10 +3099,22 @@ MonoBehaviour:
           m_StringArgument: DadTalk
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1716680100}
-        m_TargetAssemblyTypeName: BangActive, Assembly-CSharp
-        m_MethodName: DisappearMark
-        m_Mode: 1
+      - m_Target: {fileID: 821756703}
+        m_TargetAssemblyTypeName: ConversationEventManager, Assembly-CSharp
+        m_MethodName: SelectFlowchartIndex
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: DadTalk
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 821756703}
+        m_TargetAssemblyTypeName: ConversationEventManager, Assembly-CSharp
+        m_MethodName: SendFlowchartMessage
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3419,8 +3444,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1736043901}
-  selectedCommands:
-  - {fileID: 1736043928}
+  selectedCommands: []
   variables:
   - {fileID: 1736043910}
   description: 
@@ -4049,7 +4073,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &1736043928
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4066,7 +4090,7 @@ MonoBehaviour:
   waitUntilFinished: 0
 --- !u!114 &1736043929
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4257,7 +4281,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1894559233
 MonoBehaviour:
   m_ObjectHideFlags: 0

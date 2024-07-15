@@ -14,6 +14,7 @@ public class PostProcCtrl : MonoBehaviour
     private FilmGrain filmGrain;
     private LensDistortion lensDistortion;
     private DepthOfField depthOfField;
+    private Bloom bloom;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class PostProcCtrl : MonoBehaviour
             else if (volumeComponent.name == "FilmGrain") filmGrain = volumeComponent as FilmGrain;
             else if (volumeComponent.name == "LensDistortion") lensDistortion = volumeComponent as LensDistortion;
             else if (volumeComponent.name == "DepthOfField") depthOfField = volumeComponent as DepthOfField;
+            else if (volumeComponent.name == "Bloom") bloom = volumeComponent as Bloom;
         }
     }
 
@@ -34,15 +36,26 @@ public class PostProcCtrl : MonoBehaviour
         filmGrain.intensity.overrideState = true;
         lensDistortion.intensity.overrideState = true;
         depthOfField.mode.overrideState = true;
-        StartCoroutine(FadeIn());
+        bloom.intensity.overrideState = true;
+
+        StartCoroutine(LensDistortion());
+        StartCoroutine(DepthOfField());
+        StartCoroutine(LensCenter());
     }
     public void OffHallucinationEffect() // 환각 효과 off
     {
         isPostON = false;
+
+        StopAllCoroutines();
+
+        lensDistortion.intensity.value = 0;
+        depthOfField.gaussianMaxRadius.value = 0;
+
         chromaticAberration.intensity.overrideState = false;
         filmGrain.intensity.overrideState = false;
         lensDistortion.intensity.overrideState = false;
         depthOfField.mode.overrideState = false;
+        bloom.intensity.overrideState = false;
     }
 
     private IEnumerator RepeatFade()
@@ -86,4 +99,114 @@ public class PostProcCtrl : MonoBehaviour
             yield return null;
         }
     }
+
+    public IEnumerator LensDistortion()
+    {
+        float f = 0;
+        bool isOn = true; // true : 내려가야 함. false : 올라가야 함
+
+        while (f < 0.71)
+        {
+            f += 0.007f;
+            lensDistortion.intensity.value = f;
+            yield return null;
+        }
+
+        while (isPostON)
+        {
+            if (isOn)
+            {
+                f -= 0.007f;
+
+                if (f <= -0.5f)
+                {
+                    isOn = false;
+                }
+            }
+            else
+            {
+                f += 0.007f;
+
+                if (f >= 0.7f)
+                {
+                    isOn = true;
+                }
+            }
+
+            lensDistortion.intensity.value = f;
+            yield return null;
+        }
+    }
+    public IEnumerator DepthOfField()
+    {
+        float f = 0;
+        bool isOn = false; // true : 내려가야 함. false : 올라가야 함
+
+        while (f < 0.81f)
+        {
+            f += 0.01f;
+            depthOfField.gaussianMaxRadius.value = f;
+            yield return null;
+        }
+
+        while (isPostON)
+        {
+            if (isOn)
+            {
+                f -= 0.01f;
+
+                if (f <= 0.8f)
+                {
+                    isOn = false;
+                }
+            }
+            else
+            {
+                f += 0.01f;
+
+                if (f >= 1.5)
+                {
+                    isOn = true;
+                }
+            }
+
+            depthOfField.gaussianMaxRadius.value = f;
+
+            yield return null;
+        }
+    }
+
+    public IEnumerator LensCenter()
+    {
+        float xf = 0.5f;
+
+        bool isOn = true; // true : 내려가야 함. false : 올라가야 함
+
+        while (isPostON)
+        {
+            if (isOn)
+            {
+                xf -= 0.001f;
+
+                if (xf <= 0.4f)
+                {
+                    isOn = false;
+                }
+            }
+            else
+            {
+                xf += 0.001f;
+
+                if (xf >= 0.6f)
+                {
+                    isOn = true;
+                }
+            }
+
+            lensDistortion.center.value = new Vector2(xf, 0.5f);
+
+            yield return null;
+        }
+    }
+
 }

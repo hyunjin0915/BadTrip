@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public Animator transition;
     [SerializeField]
     private LoadSceneSO NewGameSL_EventChannel;
     List<AsyncOperation> scenesToLoad = new List<AsyncOperation>();
@@ -23,18 +24,25 @@ public class MainMenu : MonoBehaviour
     }
     public void StartGame()
     {
-        ShowLoadingScreen();
-        scenesToLoad.Add(SceneManager.LoadSceneAsync("OneRoom",LoadSceneMode.Additive));
+        StartCoroutine(ShowLoadingScreen());
+        SceneManager.LoadSceneAsync("OneRoom",LoadSceneMode.Additive);
+        //scenesToLoad.Add(SceneManager.LoadSceneAsync("OneRoom",LoadSceneMode.Additive));
         SceneManager.UnloadSceneAsync("Main");
-        StartCoroutine(LoadingScreen());
-        
+        //StartCoroutine(LoadingScreen());
+        StartCoroutine(EndLoadingScreen());
     }
    
-   public void ShowLoadingScreen()
+   IEnumerator ShowLoadingScreen()
    {
-    //로딩화면
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(3.0f);
+        Debug.Log("뿡");
    }
-
+   IEnumerator EndLoadingScreen()
+   {
+        transition.SetTrigger("End");
+        yield return new WaitForSeconds(1.0f);
+   }
    IEnumerator LoadingScreen()
    {
         float totalProgress = 0f;

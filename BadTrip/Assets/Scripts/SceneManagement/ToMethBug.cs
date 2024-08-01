@@ -20,19 +20,15 @@ public class ToMethBug : MonoBehaviour
     private void GoGame()
     {
         StartCoroutine(ShowLoadingScreen());
-        SceneManager.LoadSceneAsync("MethBug", LoadSceneMode.Additive);
-        SceneManager.UnloadSceneAsync("OneRoom");
-        StartCoroutine(EndLoadingScreen());
     }
     IEnumerator ShowLoadingScreen()
    {
         transition.SetTrigger("Start");
+        yield return new WaitForSeconds(2.0f);
+        SceneManager.LoadSceneAsync("MethBug", LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync("OneRoom");
         yield return new WaitForSeconds(1.0f);
-   }
-   IEnumerator EndLoadingScreen()
-   {
         transition.SetTrigger("End");
-        yield return new WaitForSeconds(1.0f);
    }
-
+   
 }

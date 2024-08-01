@@ -20,18 +20,15 @@ public class ToSchool : MonoBehaviour
     private void GoGame()
     {
         StartCoroutine(ShowLoadingScreen());
-        SceneManager.LoadSceneAsync("School", LoadSceneMode.Additive);
-        SceneManager.UnloadSceneAsync("BadTrip");
-        StartCoroutine(EndLoadingScreen());
     }
     IEnumerator ShowLoadingScreen()
    {
         transition.SetTrigger("Start");
+        yield return new WaitForSeconds(2.0f);
+        SceneManager.LoadSceneAsync("School", LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync("BadTrip");
         yield return new WaitForSeconds(1.0f);
-   }
-   IEnumerator EndLoadingScreen()
-   {
         transition.SetTrigger("End");
-        yield return new WaitForSeconds(1.0f);
    }
+ 
 }

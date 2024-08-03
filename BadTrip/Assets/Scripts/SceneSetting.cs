@@ -23,10 +23,7 @@ public class SceneSetting : MonoBehaviour
         player.transform.position = sceneInfo.playerPos;
         playerData.eventNum = sceneInfo.eventNum;
 
-        /*if (sceneInfo.useReceiver)
-        {
-            GameObject.FindGameObjectWithTag("Flowchart").GetComponent<MessageReceived>().OnSendFungusMessage(sceneInfo.message);
-        }*/
+        
 
     }
 

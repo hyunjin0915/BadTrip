@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Rendering;
-
+using URPGlitch.Runtime.AnalogGlitch;
 
 public class PostProcCtrl : MonoBehaviour
 {
@@ -15,16 +15,23 @@ public class PostProcCtrl : MonoBehaviour
     private LensDistortion lensDistortion;
     private DepthOfField depthOfField;
     private Bloom bloom;
+    private AnalogGlitchVolume agVolume;
+    [SerializeField]
+    private GameObject mask;
+    [SerializeField]
+    private SpriteRenderer maskSR;
 
     // Start is called before the first frame update
     void Start()
     {
+
         foreach (VolumeComponent volumeComponent in volumeSettings.m_Profile.components) {
             if (volumeComponent.name == "ChromaticAberration") chromaticAberration = volumeComponent as ChromaticAberration;
             else if (volumeComponent.name == "FilmGrain") filmGrain = volumeComponent as FilmGrain;
             else if (volumeComponent.name == "LensDistortion") lensDistortion = volumeComponent as LensDistortion;
             else if (volumeComponent.name == "DepthOfField") depthOfField = volumeComponent as DepthOfField;
             else if (volumeComponent.name == "Bloom") bloom = volumeComponent as Bloom;
+            else if (volumeComponent.name == "AnalogGlitchVolume") agVolume = volumeComponent as AnalogGlitchVolume;
         }
     }
 
@@ -32,28 +39,32 @@ public class PostProcCtrl : MonoBehaviour
     {
         isPostON = true;
 
-        chromaticAberration.intensity.overrideState = true;
+        /*chromaticAberration.intensity.overrideState = true;
         filmGrain.intensity.overrideState = true;
-        lensDistortion.intensity.overrideState = true;
+        lensDistortion.intensity.overrideState = true;*/
         depthOfField.mode.overrideState = true;
         bloom.intensity.overrideState = true;
+        agVolume.colorDrift.overrideState = true;
 
-        StartCoroutine(LensDistortion());
+        //StartCoroutine(LensDistortion());
         StartCoroutine(DepthOfField());
-        StartCoroutine(LensCenter());
+        StartCoroutine(OnChromaticAberration());
+        StartCoroutine(OnMask());
+        //StartCoroutine(LensCenter());
     }
     public void OffHallucinationEffect() // 환각 효과 off
     {
         isPostON = false;
 
-        StopAllCoroutines();
+        StartCoroutine(OffChromaticAberration());
+        StartCoroutine(OffMask());
 
-        lensDistortion.intensity.value = 0;
+        //lensDistortion.intensity.value = 0;
         depthOfField.gaussianMaxRadius.value = 0;
 
-        chromaticAberration.intensity.overrideState = false;
+        /*chromaticAberration.intensity.overrideState = false;
         filmGrain.intensity.overrideState = false;
-        lensDistortion.intensity.overrideState = false;
+        lensDistortion.intensity.overrideState = false;*/
         depthOfField.mode.overrideState = false;
         bloom.intensity.overrideState = false;
     }
@@ -207,6 +218,62 @@ public class PostProcCtrl : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    public IEnumerator OnChromaticAberration()
+    {
+        float f = 0;
+        
+        while (f <= 0.6f)
+        {
+            f += 0.001f;
+            agVolume.colorDrift.value = f;
+            yield return null;
+        }
+    }
+
+    public IEnumerator OffChromaticAberration()
+    {
+        float f = 0.6f;
+
+        while (f > 0f)
+        {
+            f -= 0.001f;
+            agVolume.colorDrift.value = f;
+            yield return null;
+        }
+
+        agVolume.colorDrift.overrideState = false;
+    }
+
+    public IEnumerator OnMask()
+    {
+        mask.SetActive(true);
+
+        float f = 0;
+
+        while (f <= 1f)
+        {
+            f += 0.005f;
+            //maskSR.material.SetFloat("_Speed", f);
+            maskSR.color = new Vector4(1, 1, 1, f);
+            yield return null;
+        }
+    }
+
+    public IEnumerator OffMask()
+    {
+        float f = 1;
+
+        while (f >= 0f)
+        {
+            f -= 0.005f;
+            //maskSR.material.SetFloat("_Speed", f);
+            maskSR.color = new Vector4(1, 1, 1, f);
+            yield return null;
+        }
+
+        mask.SetActive(false);
     }
 
 }

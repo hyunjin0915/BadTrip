@@ -65,3 +65,6 @@ TagManager:
   - name: Stuff
     uniqueID: 1990344887
     locked: 0
+  - name: Mask
+    uniqueID: 313059095
+    locked: 0

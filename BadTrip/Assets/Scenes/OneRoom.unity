@@ -665,7 +665,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadSceneInfo: {fileID: 11400000, guid: 5e393f743b2dff64bb08e0da40e8de91, type: 2}
   CutSceneVcam: {fileID: 365977426}
-  audioCue: {fileID: 1441572990}
 --- !u!4 &126417864
 Transform:
   m_ObjectHideFlags: 0
@@ -2239,7 +2238,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 0000000025fe484c519e2f71f5d426e9
+  m_ApplyToSortingLayers: 0000000025fe484c519e2f71f5d426e917e7a812
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -2586,6 +2585,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volumeSettings: {fileID: 365977429}
+  mask: {fileID: 761492016}
+  maskSR: {fileID: 761492018}
 --- !u!1 &702811490
 GameObject:
   m_ObjectHideFlags: 0
@@ -2709,6 +2710,90 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741110107}
   m_CullTransparentMesh: 1
+--- !u!1 &761492016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 761492017}
+  - component: {fileID: 761492018}
+  m_Layer: 0
+  m_Name: Mask
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &761492017
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761492016}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.0066, y: -0.0147, z: 0}
+  m_LocalScale: {x: 120.08063, y: 67.585655, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1475809281}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &761492018
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761492016}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -876546973899608171, guid: 9d30d3848a864d94a9cc5f0b42b6c919, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 313059095
+  m_SortingLayer: 6
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &789993207
 GameObject:
   m_ObjectHideFlags: 0
@@ -4750,6 +4835,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 761492017}
   - {fileID: 1407347760}
   - {fileID: 1578820208}
   - {fileID: 178144151}
@@ -6615,21 +6701,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -368.51483, y: 104.466736}
+  scrollPos: {x: 35.717255, y: 86.29158}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 485.66666
-  zoom: 0.9100001
+  zoom: 0.79150033
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 3871633729192183902}
-  selectedCommands:
-  - {fileID: 9212409255950443896}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 184252191652599404}
   - {fileID: 5459493506307113615}
@@ -6856,7 +6940,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 68
     y: 69.06
-    width: 110.43956
+    width: 111.65506
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7297,7 +7381,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 64.588615
     y: 296.42896
-    width: 115.93406
+    width: 117.71949
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7454,6 +7538,8 @@ GameObject:
   - component: {fileID: 9212409255950443894}
   - component: {fileID: 9212409255950443895}
   - component: {fileID: 9212409255950443896}
+  - component: {fileID: 9212409255950443897}
+  - component: {fileID: 9212409255950443898}
   m_Layer: 0
   m_Name: OneRoomFlowchart
   m_TagString: Untagged
@@ -8064,7 +8150,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 694.8208
     y: 70.889725
-    width: 125.824165
+    width: 126.81614
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8085,6 +8171,7 @@ MonoBehaviour:
   - {fileID: 9212409255950443885}
   - {fileID: 990325723786202535}
   - {fileID: 6202772539756636338}
+  - {fileID: 9212409255950443898}
   - {fileID: 9212409255950443870}
   - {fileID: 4951770237984921392}
   - {fileID: 9212409255950443896}
@@ -8606,7 +8693,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 508.9597
     y: 67.19686
-    width: 117.03296
+    width: 119.74097
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -9041,7 +9128,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 264.78516
     y: 68.04847
-    width: 124.725266
+    width: 125.805405
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -9055,9 +9142,10 @@ MonoBehaviour:
   - {fileID: 8070237031965437307}
   - {fileID: 895799793497446880}
   - {fileID: 568350431428916966}
+  - {fileID: 9212409255950443897}
+  - {fileID: 9212409255950443894}
   - {fileID: 9212409255950443858}
   - {fileID: 96198887836962384}
-  - {fileID: 9212409255950443894}
   - {fileID: 8908980126042184524}
   - {fileID: 3754363726766242488}
   - {fileID: 3096987299985213821}
@@ -10207,7 +10295,7 @@ MonoBehaviour:
   targetGameObjectOLD: {fileID: 0}
 --- !u!114 &9212409255950443896
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10261,6 +10349,90 @@ MonoBehaviour:
   stringEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &9212409255950443897
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050051285376147212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 309
+  indentLevel: 0
+  description: 
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 696800761}
+        m_TargetAssemblyTypeName: PostProcCtrl, Assembly-CSharp
+        m_MethodName: OnMask
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &9212409255950443898
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050051285376147212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 310
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 696800758}
+  targetComponentAssemblyName: PostProcCtrl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: PostProcCtrl
+  targetMethod: OffHallucinationEffect
+  targetMethodText: 'OffHallucinationEffect (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

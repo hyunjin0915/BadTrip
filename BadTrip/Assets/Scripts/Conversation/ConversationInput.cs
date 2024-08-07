@@ -23,6 +23,7 @@ public class ConversationInput : MonoBehaviour
             if (dialogInput.gameObject.activeSelf)
             {
                 dialogInput.SetDialogClickedFlag();
+                Debug.Log("스페이스바");
             } else if (dialogInputWhite.gameObject.activeSelf)
             {
                 dialogInputWhite.SetDialogClickedFlag();

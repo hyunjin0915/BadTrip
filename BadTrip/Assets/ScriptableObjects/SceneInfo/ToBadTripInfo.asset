@@ -17,4 +17,5 @@ MonoBehaviour:
   playerRen: 1
   isRight: 0
   eventNum: 4
+  sceneName: BadTrip
   playerPos: {x: 0, y: 0}

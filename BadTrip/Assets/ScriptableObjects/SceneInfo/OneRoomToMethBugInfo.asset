@@ -14,4 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isDialog: 0
+  playerRen: 1
+  isRight: 0
+  eventNum: 0
+  sceneName: MethBug
   playerPos: {x: 0, y: 0}

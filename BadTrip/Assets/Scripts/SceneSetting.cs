@@ -11,6 +11,7 @@ public class SceneSetting : MonoBehaviour
     public GameObject dialogs;
     public GameObject audioListener;
     public PlayerDataSO playerData;
+    public SettingManager settingManager;
 
     public void SetScene(SceneInfoSO sceneInfo)
     {
@@ -22,8 +23,9 @@ public class SceneSetting : MonoBehaviour
 
         player.transform.position = sceneInfo.playerPos;
         playerData.eventNum = sceneInfo.eventNum;
+        settingManager.sceneName = sceneInfo.sceneName;
 
-        
+
 
     }
 

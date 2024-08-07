@@ -61,6 +61,7 @@ public class PostProcCtrl : MonoBehaviour
 
         //lensDistortion.intensity.value = 0;
         depthOfField.gaussianMaxRadius.value = 0;
+        agVolume.speed.value = 3;
 
         /*chromaticAberration.intensity.overrideState = false;
         filmGrain.intensity.overrideState = false;
@@ -227,6 +228,7 @@ public class PostProcCtrl : MonoBehaviour
         while (f <= 0.6f)
         {
             f += 0.001f;
+
             agVolume.colorDrift.value = f;
             yield return null;
         }
@@ -234,16 +236,18 @@ public class PostProcCtrl : MonoBehaviour
 
     public IEnumerator OffChromaticAberration()
     {
-        float f = 0.6f;
+        float f = agVolume.colorDrift.value;
 
         while (f > 0f)
         {
             f -= 0.001f;
+
             agVolume.colorDrift.value = f;
             yield return null;
         }
 
         agVolume.colorDrift.overrideState = false;
+        agVolume.colorDrift.value = 0;
     }
 
     public IEnumerator OnMask()
@@ -252,28 +256,65 @@ public class PostProcCtrl : MonoBehaviour
 
         float f = 0;
 
-        while (f <= 1f)
+        while (f <= 16f)
         {
-            f += 0.005f;
-            //maskSR.material.SetFloat("_Speed", f);
-            maskSR.color = new Vector4(1, 1, 1, f);
+            f += 0.01f;
+
+            if (f <= 13f)
+            {
+               maskSR.material.SetFloat("_Scale", f);
+            }
+            maskSR.material.SetFloat("_Speed", f);
             yield return null;
         }
     }
 
     public IEnumerator OffMask()
     {
-        float f = 1;
+        float f = 16;
 
         while (f >= 0f)
         {
-            f -= 0.005f;
-            //maskSR.material.SetFloat("_Speed", f);
-            maskSR.color = new Vector4(1, 1, 1, f);
+            f -= 0.01f;
+
+            if (f <= 13f)
+            {
+                maskSR.material.SetFloat("_Scale", f);
+            }
+            maskSR.material.SetFloat("_Speed", f);
             yield return null;
         }
 
+        maskSR.material.SetFloat("_Scale", 0);
+        maskSR.material.SetFloat("_Speed", 0);
+
         mask.SetActive(false);
+    }
+
+    public void ShutDown()
+    {
+        maskSR.material.SetFloat("_Scale", 0);
+        maskSR.material.SetFloat("_Speed", 0);
+        mask.SetActive(false);
+
+        agVolume.colorDrift.overrideState = false;
+        agVolume.colorDrift.value = 0;
+    }
+
+    public IEnumerator SetMask()
+    {
+        float f = agVolume.colorDrift.value;
+
+        while (f > 0.3f)
+        {
+            f -= 0.001f;
+
+            agVolume.colorDrift.value = f;
+            yield return null;
+        }
+
+        agVolume.colorDrift.value = 0.3f;
+        agVolume.speed.value = 1f;
     }
 
 }

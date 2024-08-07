@@ -17,4 +17,5 @@ MonoBehaviour:
   playerRen: 1
   isRight: 0
   eventNum: 0
+  sceneName: Main
   playerPos: {x: 0, y: 0}

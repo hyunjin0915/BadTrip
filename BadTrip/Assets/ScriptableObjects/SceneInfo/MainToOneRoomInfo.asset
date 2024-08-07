@@ -14,4 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 1
   isDialog: 1
+  playerRen: 1
+  isRight: 0
+  eventNum: 0
+  sceneName: OneRoom
   playerPos: {x: 37.17, y: -11.5}

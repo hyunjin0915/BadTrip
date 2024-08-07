@@ -17,4 +17,5 @@ MonoBehaviour:
   playerRen: 1
   isRight: 0
   eventNum: 3
+  sceneName: Store
   playerPos: {x: -5.7, y: -8.3}

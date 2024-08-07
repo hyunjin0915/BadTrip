@@ -12,6 +12,7 @@ public class SceneInfoSO : ScriptableObject
     public bool isRight = false;
 
     public int eventNum;
+    public string sceneName;
 
     public Vector2 playerPos = Vector2.zero;
 }

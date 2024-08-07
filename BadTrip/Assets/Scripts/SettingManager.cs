@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SettingManager : MonoBehaviour
 {
     public AudioManager audioMng;
+    public string sceneName;
 
     [SerializeField]
     private LoadSceneSO backToMainSL_EventChannel;
@@ -40,8 +41,8 @@ public class SettingManager : MonoBehaviour
 
     public void BackToMain()
     {
-        SceneManager.LoadSceneAsync("School", LoadSceneMode.Additive); // 현재 맵 불러오기
-        SceneManager.UnloadSceneAsync("BadTrip");
+        SceneManager.LoadSceneAsync("Main", LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync(sceneName);
         GameObject.FindGameObjectWithTag("SceneSetting").GetComponent<SceneSetting>().SetScene(loadSceneInfo);
     }
 }

@@ -17,4 +17,5 @@ MonoBehaviour:
   playerRen: 1
   isRight: 0
   eventNum: 2
+  sceneName: Home
   playerPos: {x: 34.5, y: -7.2}

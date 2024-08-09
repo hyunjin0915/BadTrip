@@ -45,11 +45,13 @@ public class PostProcCtrl : MonoBehaviour
         depthOfField.mode.overrideState = true;
         bloom.intensity.overrideState = true;
         agVolume.colorDrift.overrideState = true;
+        agVolume.scanLineJitter.overrideState = true;
 
         //StartCoroutine(LensDistortion());
         StartCoroutine(DepthOfField());
         StartCoroutine(OnChromaticAberration());
         StartCoroutine(OnMask());
+        StartCoroutine(OnJitter());
         //StartCoroutine(LensCenter());
     }
     public void OffHallucinationEffect() // 환각 효과 off
@@ -60,14 +62,13 @@ public class PostProcCtrl : MonoBehaviour
         StartCoroutine(OffMask());
 
         //lensDistortion.intensity.value = 0;
-        depthOfField.gaussianMaxRadius.value = 0;
-        agVolume.speed.value = 3;
 
         /*chromaticAberration.intensity.overrideState = false;
         filmGrain.intensity.overrideState = false;
-        lensDistortion.intensity.overrideState = false;*/
+        lensDistortion.intensity.overrideState = false;*//*
+        depthOfField.gaussianMaxRadius.value = 0;
         depthOfField.mode.overrideState = false;
-        bloom.intensity.overrideState = false;
+        bloom.intensity.overrideState = false;*/
     }
 
     private IEnumerator RepeatFade()
@@ -221,9 +222,28 @@ public class PostProcCtrl : MonoBehaviour
         }
     }
 
+    public IEnumerator OnJitter()
+    {
+
+        yield return new WaitForSeconds(6.0f);
+
+        while (isPostON)
+        {
+
+            agVolume.scanLineJitter.value = 0.3f;
+
+            yield return new WaitForSeconds(3.0f);
+
+            agVolume.scanLineJitter.value = 0f;
+
+            yield return new WaitForSeconds(3.0f);
+        }
+    }
+
     public IEnumerator OnChromaticAberration()
     {
         float f = 0;
+        float jf = 0;
         
         while (f <= 0.6f)
         {
@@ -291,30 +311,68 @@ public class PostProcCtrl : MonoBehaviour
         mask.SetActive(false);
     }
 
-    public void ShutDown()
+    public void ShutDown() // 바로 끄기
     {
+        StopAllCoroutines();
+        
         maskSR.material.SetFloat("_Scale", 0);
         maskSR.material.SetFloat("_Speed", 0);
         mask.SetActive(false);
 
         agVolume.colorDrift.overrideState = false;
         agVolume.colorDrift.value = 0;
+
+        agVolume.verticalJump.overrideState = false;
+        agVolume.verticalJump.value = 0;
+
+        agVolume.colorDrift.overrideState = false;
+        agVolume.colorDrift.value = 0;
+
+        agVolume.scanLineJitter.overrideState = false;
+        agVolume.scanLineJitter.value = 0;
+
+        depthOfField.gaussianMaxRadius.value = 0;
+        depthOfField.mode.overrideState = false;
+        bloom.intensity.overrideState = false;
     }
 
-    public IEnumerator SetMask()
+    public IEnumerator SetMask() // 정도 조절
     {
         float f = agVolume.colorDrift.value;
 
         while (f > 0.3f)
         {
             f -= 0.001f;
-
+            
             agVolume.colorDrift.value = f;
             yield return null;
         }
 
         agVolume.colorDrift.value = 0.3f;
         agVolume.speed.value = 1f;
+    }
+
+    public IEnumerator PastHallucinationEffect()
+    {
+        isPostON = false;
+
+        agVolume.verticalJump.overrideState = true;
+        agVolume.verticalJump.value = 0;
+        agVolume.scanLineJitter.value = 1;
+
+        float f = 0;
+
+        while (f < 1.0f)
+        {
+            f += 0.001f;
+
+            agVolume.verticalJump.value = f;
+            //agVolume.scanLineJitter.value = f;
+            yield return null;
+        }
+
+        agVolume.verticalJump.overrideState = false;
+        agVolume.verticalJump.value = 0;
     }
 
 }

@@ -9,6 +9,7 @@ public class AudioInfoSO : ScriptableObject
     public int audioNum; // 오디오 번호. 가능하면 여러 맵에 공통으로 들어가는 오디오의 경우 1 이나 2 같이 작게 설정. 배경 음악의 경우 0으로 설정, oneShot은 앞번호
     public AudioClip clip;
     public float vol;
+    public float pch = 1;
     public bool isLoop;
     public bool isOneShot;
     public float spread;
@@ -22,6 +23,7 @@ public class AudioInfoSO : ScriptableObject
     {
         audioSource.clip = this.clip;
         audioSource.volume = vol;
+        audioSource.pitch = pch;
         audioSource.loop = isLoop;
         audioSource.spread = this.spread;
         audioSource.outputAudioMixerGroup = audioMixerGroup;

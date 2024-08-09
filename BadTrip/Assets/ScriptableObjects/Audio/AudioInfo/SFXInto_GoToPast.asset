@@ -15,6 +15,7 @@ MonoBehaviour:
   audioNum: 1
   clip: {fileID: 8300000, guid: f0cadb6b282da5e44b1deff75f99ed7a, type: 3}
   vol: 0.3
+  pch: 0.5
   isLoop: 0
   isOneShot: 1
   spread: 0

@@ -22,6 +22,8 @@ public class OneRoom : MonoBehaviour
         else if (playerData.eventNum == 1)
         {
             mark.SetActive(false);
+            receivers.SendFlowchartMessage(0, "LookMirror");
+            Debug.Log("LookMirror");
             receivers.SetReceiverActive(0, true);
 
         }

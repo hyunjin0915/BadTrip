@@ -23,8 +23,6 @@ public class OneRoom : MonoBehaviour
         {
             mark.SetActive(false);
             receivers.SendFlowchartMessage(0, "LookMirror");
-            Debug.Log("LookMirror");
-            receivers.SetReceiverActive(0, true);
 
         }
     }

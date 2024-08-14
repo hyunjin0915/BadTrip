@@ -469,6 +469,51 @@ Transform:
   - {fileID: 1441572991}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &83735965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 83735966}
+  - component: {fileID: 83735967}
+  m_Layer: 0
+  m_Name: Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &83735966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83735965}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1434857966}
+  m_Father: {fileID: 1475809281}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &83735967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83735965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cace9b43c35a59448fe41f9e7aa49a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &106775254
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,7 +768,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -2
-  m_Sprite: {fileID: 21300000, guid: 64a66e3f620c72542bdbfe0f9382cc5a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f413b1e34ba894b46a427a9981d8b1a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3146,6 +3191,7 @@ GameObject:
   - component: {fileID: 859112459}
   - component: {fileID: 859112458}
   - component: {fileID: 859112460}
+  - component: {fileID: 859112462}
   - component: {fileID: 859112461}
   m_Layer: 0
   m_Name: Injection
@@ -3252,31 +3298,7 @@ MonoBehaviour:
   audioNum: 1
   clickEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 696800759}
-        m_TargetAssemblyTypeName: ConversationEventManager, Assembly-CSharp
-        m_MethodName: SelectFlowchartIndex
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 696800759}
-        m_TargetAssemblyTypeName: ConversationEventManager, Assembly-CSharp
-        m_MethodName: SendFlowchartMessage
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: AfterInjection
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!70 &859112461
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -3312,6 +3334,21 @@ CapsuleCollider2D:
   m_Offset: {x: -19.98795, y: -28.249208}
   m_Size: {x: 17.989683, y: 3.0170445}
   m_Direction: 1
+--- !u!114 &859112462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859112455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc03961113fa349c09cb06ef2911013d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickEnabled: 1
+  hoverCursor: {fileID: 0}
+  useEventSystem: 0
 --- !u!1 &940877942
 GameObject:
   m_ObjectHideFlags: 0
@@ -4588,6 +4625,112 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.0550785, y: 33.660606}
   m_EdgeRadius: 0
+--- !u!1 &1434857964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1434857966}
+  - component: {fileID: 1434857965}
+  - component: {fileID: 1434857967}
+  m_Layer: 0
+  m_Name: HandCatch00
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1434857965
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434857964}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: 80555496d2a3149429da17e2454408a9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 28, y: 41.375}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1434857966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434857964}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.25, y: -9.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 83735966}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1434857967
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434857964}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 53606cd18e2bbc24e969a72495cd0a0a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1441572989
 GameObject:
   m_ObjectHideFlags: 0
@@ -4785,6 +4928,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 761492017}
+  - {fileID: 83735966}
   - {fileID: 1407347760}
   - {fileID: 1578820208}
   - {fileID: 178144151}
@@ -6650,11 +6794,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 35.717255, y: 86.29158}
+  scrollPos: {x: -66.22076, y: 39.289795}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 880
-  zoom: 0.79150033
+  zoom: 1
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -6662,9 +6806,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 331654545752709268}
-  selectedCommands:
-  - {fileID: 9212409255950443889}
+  - {fileID: 8561547176557279774}
+  selectedCommands: []
   variables:
   - {fileID: 184252191652599404}
   - {fileID: 5459493506307113615}
@@ -6790,36 +6933,6 @@ MonoBehaviour:
   scope: 1
   key: playerName
   value: "\uB098"
---- !u!114 &224638359180773016
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2050051285376147212}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 256
-  indentLevel: 0
-  description: "\uD658\uAC01 \uC791\uC6A9 \uD568\uC218 \uC774\uBCA4\uD2B8 \uCD94\uAC00(\uB9E4\uAC1C\uBCC0\uC218
-    \uD558\uB098 \uC774\uC0C1\uC77C \uACBD\uC6B0 \uB610\uB294 \uBC18\uD658\uAC12\uC774
-    \uC788\uB294 \uACBD\uC6B0)"
-  targetObject: {fileID: 696800758}
-  targetComponentAssemblyName: PostProcCtrl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: PostProcCtrl
-  targetMethod: FadeOut
-  targetMethodText: 'FadeOut (): IEnumerator'
-  methodParameters: []
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Collections.IEnumerator
-  showInherited: 0
-  callMode: 1
 --- !u!114 &225037299600432658
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6890,8 +7003,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 62.946312
-    y: 69.06
-    width: 113.17117
+    y: 68.06
+    width: 111
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6915,6 +7028,7 @@ MonoBehaviour:
   - {fileID: 1714547159761193007}
   - {fileID: 9212409255950443864}
   - {fileID: 4934369218128994982}
+  - {fileID: 9212409255950443919}
   suppressAllAutoSelections: 0
 --- !u!114 &433322425725867803
 MonoBehaviour:
@@ -7331,7 +7445,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 64.588615
     y: 296.42896
-    width: 118.22486
+    width: 117
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7438,10 +7552,6 @@ GameObject:
   - component: {fileID: 978654412880028771}
   - component: {fileID: 7731214503639534939}
   - component: {fileID: 294866644907720413}
-  - component: {fileID: 3575458848827593402}
-  - component: {fileID: 3224260634984777740}
-  - component: {fileID: 224638359180773016}
-  - component: {fileID: 3357170020809916744}
   - component: {fileID: 749927324603131864}
   - component: {fileID: 990325723786202535}
   - component: {fileID: 5713812589950990647}
@@ -7493,7 +7603,12 @@ GameObject:
   - component: {fileID: 9212409255950443904}
   - component: {fileID: 9212409255950443905}
   - component: {fileID: 9212409255950443906}
-  - component: {fileID: 9212409255950443907}
+  - component: {fileID: 9212409255950443919}
+  - component: {fileID: 9212409255950443921}
+  - component: {fileID: 9212409255950443924}
+  - component: {fileID: 9212409255950443923}
+  - component: {fileID: 9212409255950443922}
+  - component: {fileID: 9212409255950443925}
   m_Layer: 0
   m_Name: OneRoomFlowchart
   m_TagString: Untagged
@@ -7701,36 +7816,6 @@ MonoBehaviour:
   returnValueType: System.Void
   showInherited: 0
   callMode: 0
---- !u!114 &3224260634984777740
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2050051285376147212}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 255
-  indentLevel: 0
-  description: "\uD658\uAC01 \uC791\uC6A9 \uD568\uC218 \uC774\uBCA4\uD2B8 \uCD94\uAC00(\uB9E4\uAC1C\uBCC0\uC218
-    \uD558\uB098 \uC774\uC0C1\uC77C \uACBD\uC6B0 \uB610\uB294 \uBC18\uD658\uAC12\uC774
-    \uC788\uB294 \uACBD\uC6B0)"
-  targetObject: {fileID: 696800758}
-  targetComponentAssemblyName: PostProcCtrl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: PostProcCtrl
-  targetMethod: FadeIn
-  targetMethodText: 'FadeIn (): IEnumerator'
-  methodParameters: []
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Collections.IEnumerator
-  showInherited: 0
-  callMode: 1
 --- !u!114 &3323961688106938527
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -7747,36 +7832,6 @@ MonoBehaviour:
   indentLevel: 0
   commenterName: "\uC5D4\uB529 \uAD00\uB828 \uB123\uAE30"
   commentText: 
---- !u!114 &3357170020809916744
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2050051285376147212}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 257
-  indentLevel: 0
-  description: "\uD658\uAC01 \uC791\uC6A9 \uD568\uC218 \uC774\uBCA4\uD2B8 \uCD94\uAC00(\uB9E4\uAC1C\uBCC0\uC218
-    \uD558\uB098 \uC774\uC0C1\uC77C \uACBD\uC6B0 \uB610\uB294 \uBC18\uD658\uAC12\uC774
-    \uC788\uB294 \uACBD\uC6B0)"
-  targetObject: {fileID: 696800758}
-  targetComponentAssemblyName: PostProcCtrl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: PostProcCtrl
-  targetMethod: FadeIn
-  targetMethodText: 'FadeIn (): IEnumerator'
-  methodParameters: []
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Collections.IEnumerator
-  showInherited: 0
-  callMode: 1
 --- !u!114 &3375311924916934282
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -7867,36 +7922,6 @@ MonoBehaviour:
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
   fadeTexture: {fileID: 0}
   fadeTweenType: 4
---- !u!114 &3575458848827593402
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2050051285376147212}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 254
-  indentLevel: 0
-  description: "\uD658\uAC01 \uC791\uC6A9 \uD568\uC218 \uC774\uBCA4\uD2B8 \uCD94\uAC00(\uB9E4\uAC1C\uBCC0\uC218
-    \uD558\uB098 \uC774\uC0C1\uC77C \uACBD\uC6B0 \uB610\uB294 \uBC18\uD658\uAC12\uC774
-    \uC788\uB294 \uACBD\uC6B0)"
-  targetObject: {fileID: 696800758}
-  targetComponentAssemblyName: PostProcCtrl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: PostProcCtrl
-  targetMethod: FadeOut
-  targetMethodText: 'FadeOut (): IEnumerator'
-  methodParameters: []
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Collections.IEnumerator
-  showInherited: 0
-  callMode: 1
 --- !u!114 &3691101664760695850
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -8089,7 +8114,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 694.8208
     y: 70.889725
-    width: 127.068825
+    width: 126
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8635,7 +8660,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 508.9597
     y: 68.46029
-    width: 120.75171
+    width: 119
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -9069,17 +9094,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 263.52173
+    x: 262.52173
     y: 69.31189
-    width: 125.805405
+    width: 125
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 197
   blockName: AfterInjection
   description: "\uD654\uC7A5\uC2E4\uC5D0\uC11C \uAC70\uC6B8 \uBD04"
-  eventHandler: {fileID: 9212409255950443907}
+  eventHandler: {fileID: 9212409255950443925}
   commandList:
+  - {fileID: 9212409255950443923}
+  - {fileID: 9212409255950443924}
+  - {fileID: 9212409255950443922}
+  - {fileID: 9212409255950443921}
   - {fileID: 9212409255950443905}
   - {fileID: 9212409255950443895}
   - {fileID: 7136533530716943580}
@@ -9096,14 +9125,10 @@ MonoBehaviour:
   - {fileID: 9212409255950443866}
   - {fileID: 4844173524035253300}
   - {fileID: 6463654973044665396}
-  - {fileID: 3575458848827593402}
   - {fileID: 9009420386103965449}
-  - {fileID: 3224260634984777740}
   - {fileID: 136144523044009754}
   - {fileID: 1813703375156199913}
-  - {fileID: 224638359180773016}
   - {fileID: 1585160248899339069}
-  - {fileID: 3357170020809916744}
   - {fileID: 8880100947896108642}
   - {fileID: 9212409255950443868}
   - {fileID: 7934644796124071576}
@@ -10414,7 +10439,7 @@ MonoBehaviour:
   parentBlock: {fileID: 331654545752709268}
   suppressBlockAutoSelect: 0
   message: LookMirror
---- !u!114 &9212409255950443907
+--- !u!114 &9212409255950443919
 MonoBehaviour:
   m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10423,12 +10448,154 @@ MonoBehaviour:
   m_GameObject: {fileID: 2050051285376147212}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 334
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 83735965}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  targetGameObjectOLD: {fileID: 0}
+--- !u!114 &9212409255950443921
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050051285376147212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 336
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 83735965}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  targetGameObjectOLD: {fileID: 0}
+--- !u!114 &9212409255950443922
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050051285376147212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 339
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1.2
+  durationOLD: 0
+--- !u!114 &9212409255950443923
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050051285376147212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 338
+  indentLevel: 0
+  description: 
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 83735967}
+        m_TargetAssemblyTypeName: MirrorHandControl, Assembly-CSharp
+        m_MethodName: SetIsPlaying
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &9212409255950443924
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050051285376147212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 337
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 1434857967}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: IsCatching
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &9212409255950443925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050051285376147212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49012bdc794e429686c1eff7d9ced90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parentBlock: {fileID: 8561547176557279774}
   suppressBlockAutoSelect: 0
-  message: AfterInjection
+  clickableObject: {fileID: 859112462}
+  waitFrames: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

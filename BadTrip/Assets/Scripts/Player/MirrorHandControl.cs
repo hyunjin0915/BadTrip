@@ -43,5 +43,6 @@ public class MirrorHandControl : MonoBehaviour
     private void OnDisable()
     {
         Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 }

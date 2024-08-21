@@ -31,7 +31,6 @@ public class PlayerMove : MonoBehaviour
     {
         DrawingRay();
         movement.x = Input.GetAxisRaw("Horizontal");
-        //movement.y = Input.GetAxisRaw("Vertical");
     }
 
     private void FixedUpdate()
@@ -42,7 +41,8 @@ public class PlayerMove : MonoBehaviour
     }
     void Move()
     {
-        myRigid.MovePosition(myRigid.position + movement * (walkSpeed+applyRunSpeed) * Time.fixedDeltaTime);
+        myRigid.velocity = new Vector2(movement.x *(walkSpeed+applyRunSpeed), myRigid.velocity.y);
+        //myRigid.MovePosition(myRigid.position + movement * (walkSpeed+applyRunSpeed) * Time.fixedDeltaTime);
     }
 
     void Run()
@@ -57,7 +57,6 @@ public class PlayerMove : MonoBehaviour
         if(Input.GetKey(KeyCode.Space) && isGround)
         {
             myRigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            Debug.Log("점프");
         }
     }
     void DrawingRay()

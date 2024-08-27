@@ -2614,7 +2614,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 6dc9d063a98fe0340bfc447550d25e4e, type: 2}
   conEventMng: {fileID: 696800759}
-  receivers: {fileID: 0}
   mark: {fileID: 686818376}
 --- !u!1 &702811490
 GameObject:
@@ -6746,7 +6745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -327.8276, y: 68.327446}
+  scrollPos: {x: 226.28992, y: 183.62155}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 880
@@ -6758,9 +6757,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 3871633729192183902}
-  selectedCommands:
-  - {fileID: 9212409255950443860}
+  - {fileID: 331654545752709268}
+  selectedCommands: []
   variables:
   - {fileID: 184252191652599404}
   - {fileID: 5459493506307113615}

@@ -6,7 +6,6 @@ public class OneRoom : MonoBehaviour
 {
     [SerializeField] private PlayerDataSO playerData;
     [SerializeField] private ConversationEventManager conEventMng;
-    [SerializeField] private Receivers receivers;
 
     // 퀘스트 관련 변수 // 후에 정리, 수정 필요
     [SerializeField] private GameObject mark;
@@ -22,7 +21,7 @@ public class OneRoom : MonoBehaviour
         else if (playerData.eventNum == 1)
         {
             mark.SetActive(false);
-            receivers.SendFlowchartMessage(0, "LookMirror");
+            Fungus.Flowchart.BroadcastFungusMessage("LookMirror");
 
         }
     }

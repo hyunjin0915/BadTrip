@@ -23,7 +23,7 @@ public class SceneSetting : MonoBehaviour
 
         player.transform.position = sceneInfo.playerPos;
         playerData.eventNum = sceneInfo.eventNum;
-        settingManager.sceneName = sceneInfo.sceneName;
+        settingManager.SetSceneName(sceneInfo.sceneName);
 
 
 

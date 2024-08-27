@@ -31,6 +31,8 @@ public class PlayerMove : MonoBehaviour
     {
         DrawingRay();
         movement.x = Input.GetAxisRaw("Horizontal");
+
+        DrawRay();
     }
 
     private void FixedUpdate()
@@ -71,5 +73,17 @@ public class PlayerMove : MonoBehaviour
         {
             isGround = false;
         }
+    }
+
+
+
+    ////
+    ///
+    private void DrawRay()
+    {
+        Debug.DrawRay(transform.position, Vector2.right * 2, Color.blue); // 임시 레이 표시
+
+        Physics2D.Raycast(transform.position, Vector2.right, 2);
+        
     }
 }

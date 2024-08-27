@@ -12,10 +12,6 @@ public class ConversationEventManager : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera conVCam;
     private GameObject playerVCam;
 
-    // 플로우 차트 관련 변수
-    [SerializeField] private Receivers receivers;
-    private int fcIndex = 0;
-
     // 사운드 관련 변수
     [SerializeField] private AudioCue audioCue;
 
@@ -52,19 +48,9 @@ public class ConversationEventManager : MonoBehaviour
     #endregion
 
     #region Flowchart Call
-    public void SendFlowchartMessage(int i, string message) // 플로우차트 블록 메시지로 부르기
-    {
-        receivers.SendFlowchartMessage(i, message); // 플로우차트 index, 메시지
-    }
-
     public void SendFlowchartMessage(string message) // 플로우차트 블록 메시지로 부르기
     {
-        receivers.SendFlowchartMessage(fcIndex, message); // 플로우차트 index, 메시지
-    }
-
-    public void SelectFlowchartIndex(int i)
-    {
-        fcIndex = i;
+        Fungus.Flowchart.BroadcastFungusMessage(message);
     }
     #endregion
 

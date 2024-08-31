@@ -3388,6 +3388,7 @@ MonoBehaviour:
   playerAnimator: {fileID: 1055599526}
   playerSP: {fileID: 1055599530}
   rayLength: 15
+  questManager: {fileID: 0}
   footstepAS: {fileID: 1055599524}
   footstepClip: {fileID: 0}
   speed: 5
@@ -4238,6 +4239,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180516152}
   m_CullTransparentMesh: 1
+--- !u!1 &1192241923
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1192241924}
+  - component: {fileID: 1192241925}
+  m_Layer: 0
+  m_Name: QuestManager
+  m_TagString: QuestManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1192241924
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192241923}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1969765295}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1192241925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192241923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a6f0ef1478580140859f9c529899894, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneMove: {fileID: 1311770915}
+  questSet:
+  - {fileID: 11400000, guid: 37ea56d2e0c0a1b48ac4fdd2d4ad8315, type: 2}
+  curQuestId: 0
+  info: {fileID: 0}
+  interactionObjects: {fileID: 11400000, guid: 2775824826291714696efc8e5cd6e7ae, type: 2}
 --- !u!1 &1195944486
 GameObject:
   m_ObjectHideFlags: 0
@@ -4637,7 +4688,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 1105300911}
+  loadSceneInfos:
+    key_value:
+    - key: Main
+      value: {fileID: 11400000, guid: 32847593c77322d42ad8b2a392696f54, type: 2}
+    - key: OneRoom
+      value: {fileID: 11400000, guid: f78ae979132017e44868f1d169931d9a, type: 2}
+    - key: MethBug
+      value: {fileID: 11400000, guid: 47659afd8c6624b4c831f9045b9b26e6, type: 2}
+    - key: '[Default String Key]'
+      value: {fileID: 0}
+  curSceneName: Main
   sceneload_EventChannel: {fileID: 11400000, guid: 88353211a4d7054468d078bf3ab2ad81, type: 2}
+  questManager: {fileID: 1192241925}
 --- !u!1 &1327683513
 GameObject:
   m_ObjectHideFlags: 0
@@ -6870,6 +6933,7 @@ Transform:
   - {fileID: 1311770913}
   - {fileID: 1093252711}
   - {fileID: 889023844}
+  - {fileID: 1192241924}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1976548362
@@ -7546,6 +7610,7 @@ MonoBehaviour:
   playerAnimator: {fileID: 8168485374627576412}
   playerSP: {fileID: 8168485374627576410}
   rayLength: 15
+  questManager: {fileID: 1192241925}
   footstepAS: {fileID: 8168485374627576415}
   footstepClip: {fileID: 8300000, guid: b4579a645c475234b8e7a69619c02a4a, type: 3}
   speed: 300

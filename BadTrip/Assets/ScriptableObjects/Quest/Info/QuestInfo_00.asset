@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2e19c0907e1eab48a0e2f2dff776234, type: 3}
+  m_Name: QuestInfo_00
+  m_EditorClassIdentifier: 
+  explain: "\uACFC\uAC70 \uC6D0\uB8F8\uC5D0\uC11C \uD654\uC7A5\uC2E4 \uBB38, \uAC70\uC6B8\uACFC
+    \uC0C1\uD638\uC791\uC6A9"
+  questId: 0
+  sceneName: OneRoom
+  questCount: 2
+  clearCount: 0
+  isLast: 0
+  moveQuests:
+  - isClear: 0
+    interactionId: 100
+    message: 
+  - isClear: 0
+    interactionId: 101
+    message: 
+  conQuests: []

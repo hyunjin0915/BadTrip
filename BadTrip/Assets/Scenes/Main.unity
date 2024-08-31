@@ -485,10 +485,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: a2d03e6668d7e2a4186a79e82e6f5946, type: 2}
-        m_TargetAssemblyTypeName: LoadSceneSO, Assembly-CSharp
-        m_MethodName: RaiseEvent
-        m_Mode: 1
+      - m_Target: {fileID: 362420366}
+        m_TargetAssemblyTypeName: MainUIManager, Assembly-CSharp
+        m_MethodName: LoadQuest
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -507,6 +507,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 362420368}
+        m_TargetAssemblyTypeName: MapInteractionSetting, Assembly-CSharp
+        m_MethodName: GoScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: OneRoom
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &292700599
@@ -587,6 +599,7 @@ GameObject:
   - component: {fileID: 362420365}
   - component: {fileID: 362420367}
   - component: {fileID: 362420366}
+  - component: {fileID: 362420368}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -638,6 +651,22 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3bf6034ae639d8a4e8de243a10d64ad2, type: 2}
   - {fileID: 11400000, guid: d79d9e9cf5863c74d97ecc1c24104845, type: 2}
   audioEventChannel: {fileID: 11400000, guid: 9a1eb40afe0f2fd4da69258d085cf8f0, type: 2}
+--- !u!114 &362420368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362420364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c948ab6e6e9e8ad478f550c5a875a056, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionObjs: []
+  sceneNum: 0
+  interactionObjectsSO: {fileID: 11400000, guid: 2775824826291714696efc8e5cd6e7ae, type: 2}
+  sceneload_EventChannel: {fileID: 11400000, guid: 88353211a4d7054468d078bf3ab2ad81, type: 2}
 --- !u!1 &429022270
 GameObject:
   m_ObjectHideFlags: 0

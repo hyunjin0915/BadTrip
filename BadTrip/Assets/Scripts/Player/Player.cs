@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     private Vector2 interPos; // 상호작용 위치
     [SerializeField] private float rayLength = 10f;
     private GameObject scanObj;
+    [SerializeField] private QuestManager questManager;
 
     // 발소리
     [SerializeField] private AudioSource footstepAS;
@@ -96,12 +97,16 @@ public class Player : MonoBehaviour
             {
                 if(hit.collider.gameObject.CompareTag("Door"))
                 {
-                    hit.collider.gameObject.GetComponent<MapInteractionObject>()?.OnInteraction();
+                    MapInteractionObject mapInteractionObject = hit.collider.gameObject.GetComponent<MapInteractionObject>();
+                    mapInteractionObject?.OnInteraction();
+                    questManager.UpdateQuestState(mapInteractionObject?.interactionId);
                     gameObject.transform.position = hit.collider.gameObject.GetComponent<MoveToPos>().moveToPos.transform.position;
 
                 } else if (hit.collider.gameObject.CompareTag("Interaction"))
                 {
-                    hit.collider.gameObject.GetComponent<MapInteractionObject>()?.OnInteraction();
+                    MapInteractionObject mapInteractionObject = hit.collider.gameObject.GetComponent<MapInteractionObject>();
+                    mapInteractionObject?.OnInteraction();
+                    questManager.UpdateQuestState(mapInteractionObject?.interactionId);
                 }
             }
         }

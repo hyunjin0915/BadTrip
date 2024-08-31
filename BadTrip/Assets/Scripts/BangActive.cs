@@ -24,5 +24,10 @@ public class BangActive : MonoBehaviour
         spaceMark.SetActive(false);
     }
 
+    public void AppearMark()
+    {
+
+    }
+
 
 }

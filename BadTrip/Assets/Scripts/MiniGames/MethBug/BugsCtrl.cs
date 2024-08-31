@@ -17,6 +17,7 @@ public class BugsCtrl : MonoBehaviour
     [SerializeField] 
     MethBugManager gameManager;
     [SerializeField]
+    private MapInteractionSetting mapInteractionSetting;
     private LoadSceneSO MethBugSL_EventChannel;
 
     [SerializeField] private AudioCue audioCue;
@@ -100,6 +101,7 @@ public class BugsCtrl : MonoBehaviour
     {
         yield return new WaitForSeconds(4.0f);
         Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
-        MethBugSL_EventChannel.RaiseEvent();
+        //MethBugSL_EventChannel.RaiseEvent();
+        mapInteractionSetting.GoScene("OneRoom");
     }
 }

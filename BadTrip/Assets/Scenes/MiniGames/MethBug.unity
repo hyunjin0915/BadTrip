@@ -434,6 +434,10 @@ PrefabInstance:
       propertyPath: cursorTexture
       value: 
       objectReference: {fileID: 2800000, guid: 1c67b513f27408f4982ff79e023d47d1, type: 3}
+    - target: {fileID: -4343706508275548938, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
+      propertyPath: mapInteractionSetting
+      value: 
+      objectReference: {fileID: 1209004596}
     - target: {fileID: 4963363297092503678, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.5
@@ -519,6 +523,10 @@ PrefabInstance:
       propertyPath: cursorTexture
       value: 
       objectReference: {fileID: 2800000, guid: 1c67b513f27408f4982ff79e023d47d1, type: 3}
+    - target: {fileID: 2747133408837304578, guid: 1eaa59a2eebb65142aa9dd247e2580ec, type: 3}
+      propertyPath: mapInteractionSetting
+      value: 
+      objectReference: {fileID: 1209004596}
     - target: {fileID: 4963363297092503678, guid: 1eaa59a2eebb65142aa9dd247e2580ec, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.7
@@ -691,6 +699,10 @@ PrefabInstance:
       propertyPath: cursorTexture
       value: 
       objectReference: {fileID: 2800000, guid: 1c67b513f27408f4982ff79e023d47d1, type: 3}
+    - target: {fileID: -4343706508275548938, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
+      propertyPath: mapInteractionSetting
+      value: 
+      objectReference: {fileID: 1209004596}
     - target: {fileID: 4963363297092503678, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.9
@@ -1433,6 +1445,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1209004594}
   - component: {fileID: 1209004595}
+  - component: {fileID: 1209004596}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -1468,6 +1481,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BugCnt: 2
+--- !u!114 &1209004596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209004593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c948ab6e6e9e8ad478f550c5a875a056, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneload_EventChannel: {fileID: 11400000, guid: 88353211a4d7054468d078bf3ab2ad81, type: 2}
 --- !u!1 &1213404493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1576,6 +1602,10 @@ PrefabInstance:
       propertyPath: cursorTexture
       value: 
       objectReference: {fileID: 2800000, guid: 1c67b513f27408f4982ff79e023d47d1, type: 3}
+    - target: {fileID: -4343706508275548938, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
+      propertyPath: mapInteractionSetting
+      value: 
+      objectReference: {fileID: 1209004596}
     - target: {fileID: 4963363297092503678, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.12642
@@ -1817,6 +1847,10 @@ PrefabInstance:
       propertyPath: cursorTexture
       value: 
       objectReference: {fileID: 2800000, guid: 1c67b513f27408f4982ff79e023d47d1, type: 3}
+    - target: {fileID: -4343706508275548938, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
+      propertyPath: mapInteractionSetting
+      value: 
+      objectReference: {fileID: 1209004596}
     - target: {fileID: 4963363297092503678, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.8
@@ -1917,6 +1951,10 @@ PrefabInstance:
       propertyPath: cursorTexture
       value: 
       objectReference: {fileID: 2800000, guid: 1c67b513f27408f4982ff79e023d47d1, type: 3}
+    - target: {fileID: 2747133408837304578, guid: 1eaa59a2eebb65142aa9dd247e2580ec, type: 3}
+      propertyPath: mapInteractionSetting
+      value: 
+      objectReference: {fileID: 1209004596}
     - target: {fileID: 4963363297092503678, guid: 1eaa59a2eebb65142aa9dd247e2580ec, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.3
@@ -2144,6 +2182,10 @@ PrefabInstance:
       propertyPath: cursorTexture
       value: 
       objectReference: {fileID: 2800000, guid: 1c67b513f27408f4982ff79e023d47d1, type: 3}
+    - target: {fileID: 2747133408837304578, guid: 1eaa59a2eebb65142aa9dd247e2580ec, type: 3}
+      propertyPath: mapInteractionSetting
+      value: 
+      objectReference: {fileID: 1209004596}
     - target: {fileID: 4963363297092503678, guid: 1eaa59a2eebb65142aa9dd247e2580ec, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.2
@@ -2354,6 +2396,10 @@ PrefabInstance:
       propertyPath: cursorTexture
       value: 
       objectReference: {fileID: 2800000, guid: 1c67b513f27408f4982ff79e023d47d1, type: 3}
+    - target: {fileID: 2747133408837304578, guid: 1eaa59a2eebb65142aa9dd247e2580ec, type: 3}
+      propertyPath: mapInteractionSetting
+      value: 
+      objectReference: {fileID: 1209004596}
     - target: {fileID: 4963363297092503678, guid: 1eaa59a2eebb65142aa9dd247e2580ec, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.1

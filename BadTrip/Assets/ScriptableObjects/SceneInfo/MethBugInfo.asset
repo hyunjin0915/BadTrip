@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10411dad2169fbe4dbfd0cc4e9989478, type: 3}
-  m_Name: MainToOneRoomInfo
+  m_Name: MethBugInfo
   m_EditorClassIdentifier: 
-  isPlayer: 1
-  isDialog: 1
+  isPlayer: 0
+  isDialog: 0
   playerRen: 1
   isRight: 0
   eventNum: 0
-  sceneName: OneRoom
-  playerPos: {x: 37.17, y: -11.5}
+  sceneName: MethBug
+  playerPos: {x: 0, y: 0}

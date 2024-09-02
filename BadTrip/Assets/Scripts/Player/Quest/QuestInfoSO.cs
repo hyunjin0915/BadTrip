@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Quest/QuestInfoSO")]
@@ -15,8 +16,8 @@ public class QuestInfoSO : ScriptableObject
     public int clearCount; // 클리어한 퀘스트 개수
     public bool isLast; // 순서가 있는 퀘스트인지. 순서가 있는 퀘스트의 경우 마지막 퀘스트만 클리어 하면 됨.
 
+    public Quest_Interaction[] InterQuest;
     public Quest_Move[] moveQuests;
-    public Quest_Conversation[] conQuests;
 
     public QuestBase[] allQuests;
 }

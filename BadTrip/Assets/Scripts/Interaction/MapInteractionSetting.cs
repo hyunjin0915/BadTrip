@@ -19,7 +19,13 @@ public class MapInteractionSetting : MonoBehaviour
             interactionObjectsSO.interactionObjs.Add(i + sceneNum, interactionObjs[i]);
         }
 
+        //interactionObjectsSO.RaiseEvent();
+    }
+
+    private void Start()
+    {
         interactionObjectsSO.RaiseEvent();
+
     }
 
     public void GoScene(string moveSceneName)

@@ -4286,6 +4286,7 @@ MonoBehaviour:
   sceneMove: {fileID: 1311770915}
   questSet:
   - {fileID: 11400000, guid: 37ea56d2e0c0a1b48ac4fdd2d4ad8315, type: 2}
+  - {fileID: 11400000, guid: b91a23c4217a76848abb886105a06d0a, type: 2}
   curQuestId: 0
   info: {fileID: 0}
   interactionObjects: {fileID: 11400000, guid: 2775824826291714696efc8e5cd6e7ae, type: 2}

@@ -6093,7 +6093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 209.81932, y: 127.15097}
+  scrollPos: {x: 72.17229, y: 128.32744}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 880
@@ -9937,7 +9937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentBlock: {fileID: 331654545752709268}
   suppressBlockAutoSelect: 0
-  message: LookMirror
+  message: 100_LookMirror
 --- !u!114 &9212409255950443919
 MonoBehaviour:
   m_ObjectHideFlags: 2

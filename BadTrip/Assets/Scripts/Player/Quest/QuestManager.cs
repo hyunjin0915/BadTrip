@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class QuestManager : MonoBehaviour
@@ -22,11 +23,13 @@ public class QuestManager : MonoBehaviour
 
     private void OnEnable()
     {
+        interactionObjects.UpdateQuestScene += UpdateQuestState;
         interactionObjects.UpdateQuestScene += UpdateQuestScene;
     }
 
     private void OnDisable()
     {
+        interactionObjects.UpdateQuestScene -= UpdateQuestState;
         interactionObjects.UpdateQuestScene -= UpdateQuestScene;
     }
 
@@ -37,11 +40,11 @@ public class QuestManager : MonoBehaviour
             QuestInfoSO questinfoCopy = Instantiate(questInfo);
 
             List<QuestBase> allQuests = new List<QuestBase>();
-            foreach (QuestBase questBase in questinfoCopy.moveQuests)
+            foreach (QuestBase questBase in questinfoCopy.InterQuest)
             {
                 allQuests.Add(questBase);
             }
-            foreach (QuestBase questBase in questinfoCopy.conQuests)
+            foreach (QuestBase questBase in questinfoCopy.moveQuests)
             {
                 allQuests.Add(questBase);
             }
@@ -61,8 +64,11 @@ public class QuestManager : MonoBehaviour
 
     public void CompleteQuest()
     {
-        // 퀘스트 갱신
-        LoadQuest(++curQuestId);
+        curQuestId++;
+        if (curQuestId < questSet.Count)
+        {
+            LoadQuest(curQuestId);
+        }
     }
 
     public void UpdateQuestState(int? objId) // 퀘스트 상태 업데이트. 플레이어가 상호작용을 할 때 호출됨.
@@ -75,12 +81,32 @@ public class QuestManager : MonoBehaviour
                 // 상호작용 행동.
                 info.allQuests[i].QuestFunction();
                 info.clearCount++;
-                info.allQuests[i].isClear = true;
             }
         }
 
         // 모든 미니퀘스트가 클리어되면
         if ((info.isLast && info.allQuests[--info.questCount].isClear) || info.clearCount == info.questCount)
+        {
+            CompleteQuest();
+        }
+    }
+
+    public void UpdateQuestState() // 퀘스트 상태 업데이트. 플레이어가 씬을 이동할 때 호출됨.
+    {
+        // 이동한 씬과 퀘스트 씬을 비교
+        if (info == null)
+        {
+            return;
+        }
+
+        if (info.sceneName == sceneMove.curSceneName && info.allQuests[0].questType == 1 && !info.allQuests[0].isClear)
+        {
+            info.allQuests[0].QuestFunction();
+            info.clearCount++;
+        }
+
+            // 모든 미니퀘스트가 클리어되면
+        if ((info.isLast && info.allQuests[info.questCount -1].isClear) || info.clearCount == info.questCount)
         {
             CompleteQuest();
         }
@@ -97,7 +123,7 @@ public class QuestManager : MonoBehaviour
         {
             for (int i = 0; i < info.allQuests.Length; i++)
             {
-                if (!info.allQuests[i].isClear)
+                if (info.allQuests[i].questType == 0 && !info.allQuests[i].isClear)
                 {
                     interactionObjects.interactionObjs[info.allQuests[i].interactionId]?.GetComponent<MapInteractionObject>().SetBang(true);
                 }

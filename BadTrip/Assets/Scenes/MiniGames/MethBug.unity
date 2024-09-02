@@ -1493,6 +1493,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c948ab6e6e9e8ad478f550c5a875a056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionObjs: []
+  sceneNum: 0
+  interactionObjectsSO: {fileID: 11400000, guid: 2775824826291714696efc8e5cd6e7ae, type: 2}
   sceneload_EventChannel: {fileID: 11400000, guid: 88353211a4d7054468d078bf3ab2ad81, type: 2}
 --- !u!1 &1213404493
 GameObject:

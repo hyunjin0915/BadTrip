@@ -18,6 +18,15 @@ public class ConversationManager : MonoBehaviour // ¸Ê ¾À°ú Initialization ¾À ¿¬
         SayDialogSO.SetPlayerAnim += player.SetPlayerAnim;
         SayDialogSO.SetCanMove += player.SetCanMove;
         SayDialogSO.SetFootstepVolume += player.SetFootstepVolume;
+        SayDialogSO.movePlayerPos += player.SetPlayerPos;
     }
 
+    private void OnDisable()
+    {
+        SayDialogSO.SetPlayerAnimLayer -= player.SetAnimLayer;
+        SayDialogSO.SetPlayerAnim -= player.SetPlayerAnim;
+        SayDialogSO.SetCanMove -= player.SetCanMove;
+        SayDialogSO.SetFootstepVolume -= player.SetFootstepVolume;
+        SayDialogSO.movePlayerPos -= player.SetPlayerPos;
+    }
 }

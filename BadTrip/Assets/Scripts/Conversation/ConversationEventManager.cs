@@ -76,6 +76,11 @@ public class ConversationEventManager : MonoBehaviour
     {
         sayDialogSO.SetFootstepVolume(v);
     }
+
+    public void SetPlayerPos(Vector2 pos) // 플레이어 위치 설정
+    {
+        sayDialogSO.movePlayerPos(pos); 
+    }
     #endregion
 
     #region Scene Sound Setting

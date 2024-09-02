@@ -75,6 +75,7 @@ public class QuestManager : MonoBehaviour
                 // 상호작용 행동.
                 info.allQuests[i].QuestFunction();
                 info.clearCount++;
+                info.allQuests[i].isClear = true;
             }
         }
 

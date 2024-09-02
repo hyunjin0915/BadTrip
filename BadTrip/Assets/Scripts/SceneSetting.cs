@@ -21,7 +21,6 @@ public class SceneSetting : MonoBehaviour
         player.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, sceneInfo.playerRen);
         player.GetComponent<SpriteRenderer>().flipX = sceneInfo.isRight;
 
-        player.transform.position = sceneInfo.playerPos;
         playerData.eventNum = sceneInfo.eventNum;
         settingManager.SetSceneName(sceneInfo.sceneName);
 

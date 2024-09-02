@@ -13,6 +13,4 @@ public class SceneInfoSO : ScriptableObject
 
     public int eventNum;
     public string sceneName;
-
-    public Vector2 playerPos = Vector2.zero;
 }

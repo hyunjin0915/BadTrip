@@ -5,11 +5,12 @@ using System.Collections;
 
 public class ConversationEventManager : MonoBehaviour
 {
-    // 대화창, 씬 이동 관련 변수
+    // 대화창, 컷씬 이동, 퀘스트 관련 변수
     [SerializeField] private Character[] characters;
     [SerializeField] private SayDialogSO sayDialogSO;
     [SerializeField] private Transform[] viewTrs;
     [SerializeField] private CinemachineVirtualCamera conVCam;
+    [SerializeField] private InteractionObjectsSO interactionObjectsSO;
     private GameObject playerVCam;
 
     // 사운드 관련 변수
@@ -95,4 +96,10 @@ public class ConversationEventManager : MonoBehaviour
     }
     #endregion
 
+    #region QuestComplete
+    public void CompleteQuest() // 퀘스트 종료(대화 끝에 사용)
+    {
+        interactionObjectsSO.CompleteConQuest();
+    }
+    #endregion
 }

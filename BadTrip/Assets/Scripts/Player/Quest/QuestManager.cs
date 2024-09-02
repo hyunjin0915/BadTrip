@@ -25,12 +25,15 @@ public class QuestManager : MonoBehaviour
     {
         interactionObjects.UpdateQuestScene += UpdateQuestState;
         interactionObjects.UpdateQuestScene += UpdateQuestScene;
+        interactionObjects.UpdateQuestScene += CompleteQuest;
+        
     }
 
     private void OnDisable()
     {
         interactionObjects.UpdateQuestScene -= UpdateQuestState;
         interactionObjects.UpdateQuestScene -= UpdateQuestScene;
+        interactionObjects.UpdateQuestScene -= CompleteQuest;
     }
 
     private void LoadAllQuestData() // 게임 실행 시 처음 모든 퀘스트 데이터 사본을 만듦.

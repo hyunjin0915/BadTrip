@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Quest/QuestInfoSO")]
 public class QuestInfoSO : ScriptableObject
 {
-    [TextArea]
+    [TextArea(2, 8)]
     public string explain;
     
     public int questId;

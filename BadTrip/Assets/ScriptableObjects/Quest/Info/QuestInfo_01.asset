@@ -15,7 +15,7 @@ MonoBehaviour:
   explain: "\uBA54\uC2A4\uBC84\uADF8 \uC644\uB8CC"
   questId: 1
   sceneName: OneRoom
-  questCount: 1
+  questCount: 2
   clearCount: 0
   isLast: 0
   InterQuest: []

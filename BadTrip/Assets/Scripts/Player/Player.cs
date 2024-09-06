@@ -52,13 +52,6 @@ public class Player : MonoBehaviour
     {
         moveVec2.x = Input.GetAxis("Horizontal");
         moveVec2.y = Input.GetAxis("Vertical");
-        if (playerSP.flipX) // 오른쪽
-        {
-            interPos = Vector2.right;
-        } else
-        {
-            interPos = Vector2.left;
-        }
         if(moveVec2.y>0) interPos = Vector2.up;
         else if(moveVec2.y<0) interPos = Vector2.down;
 
@@ -114,9 +107,11 @@ public class Player : MonoBehaviour
         if (moveVec2.x > 0) // 오른쪽
         {
             playerSP.flipX = true;
+            interPos = Vector2.right;
         } else if (moveVec2.x < 0)// 왼쪽
         {
             playerSP.flipX = false;
+            interPos = Vector2.left;
         }
     }
 

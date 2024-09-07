@@ -218,6 +218,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 362420366}
+        m_TargetAssemblyTypeName: MainUIManager, Assembly-CSharp
+        m_MethodName: LoadData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 362420366}
+        m_TargetAssemblyTypeName: MainUIManager, Assembly-CSharp
+        m_MethodName: GoScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &129969590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -487,18 +511,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 362420366}
         m_TargetAssemblyTypeName: MainUIManager, Assembly-CSharp
-        m_MethodName: LoadQuest
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 362420366}
-        m_TargetAssemblyTypeName: MainUIManager, Assembly-CSharp
         m_MethodName: PlayClickBtn
         m_Mode: 1
         m_Arguments:
@@ -635,6 +647,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioCue: {fileID: 362420367}
+  mapInteractionSetting: {fileID: 0}
+  playerDataSO: {fileID: 0}
 --- !u!114 &362420367
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -144,6 +144,7 @@ public class Player : MonoBehaviour
         }
 
         playerAnimator.SetLayerWeight(layerIndex, 1);
+        playerDataSO.animLayer = layerIndex;
     }
 
     public void SetPlayerAnim(string boolName, bool b)

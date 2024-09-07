@@ -15,6 +15,7 @@ TagManager:
   - BGM
   - InteractionObjSetting
   - QuestManager
+  - SaveManager
   layers:
   - Default
   - TransparentFX

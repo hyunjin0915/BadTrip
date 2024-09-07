@@ -7,15 +7,10 @@ using UnityEngine;
 [Serializable]
 public class JsonData
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public string playerName;
+    public int questId;
+    public bool[] questPro;
+    public string sceneName;
+    public Vector2 playerPos;
+    public int animLayer;
 }

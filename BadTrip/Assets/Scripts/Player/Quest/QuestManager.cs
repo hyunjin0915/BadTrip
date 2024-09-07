@@ -16,16 +16,20 @@ public class QuestManager : MonoBehaviour
     [SerializeField]
     private InteractionObjectsSO interactionObjects;
 
+    [SerializeField]
+    private PlayerDataSO playerDataSO;
+
     private void Start()
     {
         LoadAllQuestData();
+        LoadQuest(curQuestId);
     }
 
     private void OnEnable()
     {
         interactionObjects.UpdateQuestScene += UpdateQuestState;
         interactionObjects.UpdateQuestScene += UpdateQuestScene;
-        interactionObjects.UpdateQuestScene += CompleteQuest;
+        interactionObjects.CompleteQuest += CompleteQuest;
         
     }
 
@@ -33,7 +37,7 @@ public class QuestManager : MonoBehaviour
     {
         interactionObjects.UpdateQuestScene -= UpdateQuestState;
         interactionObjects.UpdateQuestScene -= UpdateQuestScene;
-        interactionObjects.UpdateQuestScene -= CompleteQuest;
+        interactionObjects.CompleteQuest -= CompleteQuest;
     }
 
     private void LoadAllQuestData() // 게임 실행 시 처음 모든 퀘스트 데이터 사본을 만듦.
@@ -61,7 +65,7 @@ public class QuestManager : MonoBehaviour
     public void LoadQuest(int questId)
     {
         info = questDic[questId];
-        
+
         UpdateQuestScene();
     }
 
@@ -131,6 +135,28 @@ public class QuestManager : MonoBehaviour
                     interactionObjects.interactionObjs[info.allQuests[i].interactionId]?.GetComponent<MapInteractionObject>().SetBang(true);
                 }
             }
+        }
+    }
+
+    public List<bool> GetQuestPro()
+    {
+        List<bool> pro = new List<bool>();
+
+        foreach (QuestBase q in info.allQuests)
+        {
+            pro.Add(q.isClear);
+        }
+
+        return pro;
+    }
+
+    public void SetQuestPro(bool[] pro)
+    {
+        info = questDic[curQuestId];
+        
+        for (int i = 0; i < pro.Length; i++)
+        {
+            info.allQuests[i].isClear = pro[i];
         }
     }
 }

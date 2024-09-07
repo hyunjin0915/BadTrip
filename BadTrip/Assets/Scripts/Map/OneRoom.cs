@@ -12,17 +12,6 @@ public class OneRoom : MonoBehaviour
 
     void Start()
     {
-        if (playerData.eventNum == 0)
-        {
-            conEventMng.SetPlayerAnimLayer(1);
-            // 플레이어 움직임, 플레이어 애니메이션 멈추기
-            conEventMng.SetPlayerAnim("CanPMove", false);
-        }
-        else if (playerData.eventNum == 1)
-        {
-            mark.SetActive(false);
-            Fungus.Flowchart.BroadcastFungusMessage("LookMirror");
-
-        }
+        
     }
 }

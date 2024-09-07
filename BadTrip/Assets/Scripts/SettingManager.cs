@@ -17,6 +17,9 @@ public class SettingManager : MonoBehaviour
     public GameObject settingWindow;
     //public Slider bgmSlider;
 
+    [SerializeField]
+    private GameObject player;
+
 
 
     /*// Start is called before the first frame update
@@ -66,6 +69,8 @@ public class SettingManager : MonoBehaviour
             SceneManager.LoadSceneAsync("Main", LoadSceneMode.Additive);
             SceneManager.UnloadSceneAsync(sceneName);
             GameObject.FindGameObjectWithTag("SceneSetting").GetComponent<SceneSetting>().SetScene(loadSceneInfo);
+            player.transform.position = new Vector2(31.6f, -9.2f);
+            player.GetComponent<Player>().SetAnimLayer(0);
         }
     }
 

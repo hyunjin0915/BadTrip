@@ -11,6 +11,6 @@ public class SceneInfoSO : ScriptableObject
     public int playerRen = 1;
     public bool isRight = false;
 
-    public int eventNum;
+    //public int eventNum;
     public string sceneName;
 }

@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
     public AudioClip footstepClip;
 
     // 플레이어 Move Control
-    private bool canMove = false;
+    public bool canMove = false;
 
     private bool IsMoving
     {
@@ -78,7 +78,7 @@ public class Player : MonoBehaviour
             scanObj = hit.collider.gameObject;
             if(scanObj.CompareTag("Border"))
             {
-                moveVec2 = Vector2.zero;
+                //moveVec2 = Vector2.zero; // 요거 ray 벽에 닿으면 플레이어가 안움직여서 잠시 주석처리
             }
             if(Input.GetKeyDown(KeyCode.Space))
             {

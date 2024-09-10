@@ -3440,6 +3440,7 @@ MonoBehaviour:
   questManager: {fileID: 0}
   footstepAS: {fileID: 1055599524}
   footstepClip: {fileID: 0}
+  canMove: 0
   speed: 5
 --- !u!50 &1055599529
 Rigidbody2D:
@@ -4335,7 +4336,9 @@ MonoBehaviour:
   sceneMove: {fileID: 1311770915}
   questSet:
   - {fileID: 11400000, guid: 37ea56d2e0c0a1b48ac4fdd2d4ad8315, type: 2}
+  - {fileID: 11400000, guid: dcd30203cb55e434a93d1ff3a5deaac3, type: 2}
   - {fileID: 11400000, guid: b91a23c4217a76848abb886105a06d0a, type: 2}
+  - {fileID: 11400000, guid: 12935c20695bc554f9fbd6294f1b740f, type: 2}
   curQuestId: 0
   info: {fileID: 0}
   interactionObjects: {fileID: 11400000, guid: 2775824826291714696efc8e5cd6e7ae, type: 2}
@@ -4747,12 +4750,16 @@ MonoBehaviour:
       value: {fileID: 11400000, guid: f78ae979132017e44868f1d169931d9a, type: 2}
     - key: MethBug
       value: {fileID: 11400000, guid: 47659afd8c6624b4c831f9045b9b26e6, type: 2}
-    - key: '[Default String Key]'
-      value: {fileID: 0}
+    - key: Home
+      value: {fileID: 11400000, guid: 5e393f743b2dff64bb08e0da40e8de91, type: 2}
   loadPlayerPos:
     key_value:
     - key: OneRoomHome
+      value: {x: 17.96, y: -14.9}
+    - key: OneRoomMethBug
       value: {x: 0, y: 0}
+    - key: MethBugOneRoom
+      value: {x: -110.8, y: -10.9}
   curSceneName: Main
   sceneload_EventChannel: {fileID: 11400000, guid: 88353211a4d7054468d078bf3ab2ad81, type: 2}
   player: {fileID: 6858215238848761065}
@@ -7670,6 +7677,7 @@ MonoBehaviour:
   questManager: {fileID: 1192241925}
   footstepAS: {fileID: 8168485374627576415}
   footstepClip: {fileID: 8300000, guid: b4579a645c475234b8e7a69619c02a4a, type: 3}
+  canMove: 0
   speed: 300
 --- !u!212 &8168485374627576410
 SpriteRenderer:

@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2e19c0907e1eab48a0e2f2dff776234, type: 3}
-  m_Name: QuestInfo_00
+  m_Name: QuestInfo_03
   m_EditorClassIdentifier: 
-  explain: "\uAC8C\uC784 \uCC98\uC74C \uC2DC\uC791\uD588\uC744 \uB54C"
-  questId: 0
-  sceneName: OneRoom
-  questCount: 1
+  explain: "\uAC70\uC6B8\uB85C \uC545\uB9C8\uC640 \uB300\uD654 \uD6C4 \uACFC\uAC70
+    \uC9D1\uC73C\uB85C \uC774\uB3D9"
+  questId: 3
+  sceneName: Home
+  questCount: 2
   clearCount: 0
   isLast: 0
   InterQuest: []
@@ -24,4 +25,4 @@ MonoBehaviour:
     isClear: 0
     interactionId: 0
     player: {fileID: 0}
-    message: 100_FirstStart
+    message: 200_LookMirror

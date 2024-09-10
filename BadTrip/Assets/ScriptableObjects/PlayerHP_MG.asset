@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PlayerHP_MG
   m_EditorClassIdentifier: 
   BadTripSL_EventChannel: {fileID: 0}
-  PlayerHealth: 100
+  PlayerHealth: 70
   PlayerMaxHealth: 100

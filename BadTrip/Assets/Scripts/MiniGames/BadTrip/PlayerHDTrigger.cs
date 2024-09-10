@@ -4,14 +4,27 @@ public class PlayerHDTrigger : MonoBehaviour
 {
     [SerializeField, Tooltip("How much should the player's health Decrease")]
     private float PlayerDamage = 10f;
+    private Rigidbody2D myRigid;
 
     [SerializeField]
     private PlayerHPSO Player_healthManager;
-    void OnTriggerEnter2D(Collider2D collision)
+    void Start()
+    {
+        myRigid = GetComponent<Rigidbody2D>();
+    }
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Player_healthManager.PlayerDecreaseHealth(PlayerDamage);
+            if(collision.rigidbody.velocity.y<0 && transform.position.y < collision.transform.position.y)
+            {
+                Debug.Log("밟기!");
+            }
+            else
+            {
+                Player_healthManager.PlayerDecreaseHealth(PlayerDamage);
+            }
+            
         }
     }
 }

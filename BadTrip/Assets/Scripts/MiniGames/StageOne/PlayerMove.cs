@@ -59,6 +59,8 @@ public class PlayerMove : MonoBehaviour
             myAnimator.SetBool("IsWalking", false);
         }
     }
+   
+
     void Move()
     {
         myRigid.velocity = new Vector2(movement.x *(walkSpeed+applyRunSpeed), myRigid.velocity.y);

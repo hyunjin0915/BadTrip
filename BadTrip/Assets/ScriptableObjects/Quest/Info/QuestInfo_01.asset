@@ -20,7 +20,7 @@ MonoBehaviour:
     \uD018\uC2A4\uD2B8\uAC00 \uB05D\uB098\uB294 \uACBD\uC6B0 +1\uC744 \uD55C\uB2E4."
   questId: 1
   sceneName: OneRoom
-  questCount: 2
+  questCount: 3
   clearCount: 0
   isLast: 1
   InterQuest:

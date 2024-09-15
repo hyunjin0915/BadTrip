@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class SettingManager : MonoBehaviour
 {
     public AudioManager audioMng;
-    private string sceneName = "Main";
 
     [SerializeField]
     /*private LoadSceneSO backToMainSL_EventChannel;
@@ -19,6 +18,9 @@ public class SettingManager : MonoBehaviour
 
     [SerializeField]
     private GameObject player;
+
+    [SerializeField]
+    private SceneMove sceneMove;
 
 
 
@@ -64,10 +66,11 @@ public class SettingManager : MonoBehaviour
 
     public void BackToMain()
     {
-        if (!sceneName.Equals("Main"))
+        if (!sceneMove.curSceneName.Equals("Main"))
         {
             SceneManager.LoadSceneAsync("Main", LoadSceneMode.Additive);
-            SceneManager.UnloadSceneAsync(sceneName);
+            SceneManager.UnloadSceneAsync(sceneMove.curSceneName);
+            sceneMove.curSceneName = "Main";
             GameObject.FindGameObjectWithTag("SceneSetting").GetComponent<SceneSetting>().SetScene(loadSceneInfo);
             player.transform.position = new Vector2(31.6f, -9.2f);
             player.GetComponent<Player>().SetAnimLayer(0);
@@ -79,8 +82,4 @@ public class SettingManager : MonoBehaviour
         settingWindow.SetActive(b);
     }
 
-    public void SetSceneName(string name)
-    {
-        sceneName = name;
-    }
 }

@@ -54,6 +54,6 @@ public class SaveManager : MonoBehaviour
         questManager.SetQuestPro(jsonData.questPro);
         //sceneMove.curSceneName = jsonData.sceneName;
         player.transform.position = jsonData.playerPos;
-        player.GetComponent<Player>().SetAnimLayer(jsonData.animLayer);
+        playerDataSO.animLayer = jsonData.animLayer;
     }
 }

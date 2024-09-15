@@ -33,7 +33,6 @@ public class SceneMove : MonoBehaviour
 
     IEnumerator LoadSceneCor(string moveSceneName)
     {
-        Debug.Log(moveSceneName + "00" + curSceneName);
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(2.0f);
         SceneManager.LoadSceneAsync(moveSceneName, LoadSceneMode.Additive);
@@ -42,11 +41,9 @@ public class SceneMove : MonoBehaviour
         if(!curSceneName.Equals("Main")){
             player.transform.position = loadPlayerPos[curSceneName + moveSceneName];
         }
+        player.SetActive(true);
         curSceneName = moveSceneName;
-        Debug.Log(moveSceneName + "01");
         yield return new WaitForSeconds(1.0f);
-        Debug.Log(moveSceneName + "02");
         transition.SetTrigger("End");
-        Debug.Log(moveSceneName + "03");
     }
 }

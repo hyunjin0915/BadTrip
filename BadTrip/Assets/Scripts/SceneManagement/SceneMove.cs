@@ -41,6 +41,7 @@ public class SceneMove : MonoBehaviour
         if(!curSceneName.Equals("Main")){
             player.transform.position = loadPlayerPos[curSceneName + moveSceneName];
         }
+        player.SetActive(true);
         curSceneName = moveSceneName;
         yield return new WaitForSeconds(1.0f);
         transition.SetTrigger("End");

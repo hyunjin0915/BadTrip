@@ -9,7 +9,7 @@ public class SceneSetting : MonoBehaviour
     public GameObject player;
     public GameObject stplayer;
     public GameObject dialogs;
-    public GameObject audioListener;
+    //public GameObject audioListener;
     public PlayerDataSO playerData;
     public SettingManager settingManager;
 
@@ -17,12 +17,10 @@ public class SceneSetting : MonoBehaviour
     {
         player.SetActive(sceneInfo.isPlayer);
         dialogs.SetActive(sceneInfo.isDialog);
-        audioListener.SetActive(!sceneInfo.isPlayer);
+        //audioListener.SetActive(!sceneInfo.isPlayer);
         player.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, sceneInfo.playerRen);
         player.GetComponent<SpriteRenderer>().flipX = sceneInfo.isRight;
-
-        //playerData.eventNum = sceneInfo.eventNum;
-        settingManager.SetSceneName(sceneInfo.sceneName);
+        player.GetComponent<Player>().SetAnimLayer(playerData.animLayer);
 
 
 

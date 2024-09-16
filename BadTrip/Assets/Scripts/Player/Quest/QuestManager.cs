@@ -88,6 +88,7 @@ public class QuestManager : MonoBehaviour
                 // 상호작용 행동.
                 info.allQuests[i].QuestFunction();
                 info.clearCount++;
+                Debug.Log("퀘스트 번호" + info.questId + " 퀘스트 클리어 개수"+ info.clearCount);
             }
         }
 

@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
     // 플레이어 Move Control
     public bool canMove = false;
 
-    private bool IsMoving
+    public bool IsMoving
     {
         get
         {

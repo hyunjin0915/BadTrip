@@ -5549,7 +5549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -172.53363, y: 195.38641}
+  scrollPos: {x: -52.746758, y: 160.0307}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 880
@@ -5560,7 +5560,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
+  selectedBlocks:
+  - {fileID: 9212409255950443932}
   selectedCommands: []
   variables:
   - {fileID: 184252191652599404}
@@ -5757,7 +5758,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 62.946312
-    y: 68.06
+    y: 72.76588
     width: 109.999985
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -5843,7 +5844,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 202
   indentLevel: 0
-  duration: 0.5
+  duration: 1
   targetAlpha: 1
   waitUntilFinished: 1
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
@@ -6478,6 +6479,7 @@ GameObject:
   - component: {fileID: 9212409255950443930}
   - component: {fileID: 9212409255950443933}
   - component: {fileID: 9212409255950443934}
+  - component: {fileID: 9212409255950443935}
   m_Layer: 0
   m_Name: OneRoomFlowchart
   m_TagString: Untagged
@@ -6857,7 +6859,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 204
   indentLevel: 0
-  duration: 0.5
+  duration: 1
   targetAlpha: 0
   waitUntilFinished: 1
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
@@ -7998,7 +8000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 262.52173
+    x: 263.6982
     y: 69.31189
     width: 125.294106
     height: 40
@@ -9698,6 +9700,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 9212409255950443931}
   commandList:
+  - {fileID: 9212409255950443935}
   - {fileID: 9212409255950443930}
   suppressAllAutoSelections: 0
 --- !u!114 &9212409255950443933
@@ -9776,6 +9779,51 @@ MonoBehaviour:
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
   fadeTexture: {fileID: 0}
   fadeTweenType: 4
+--- !u!114 &9212409255950443935
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050051285376147212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 348
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 696800758}
+  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ConversationEventManager
+  targetMethod: SetCanMove
+  targetMethodText: 'SetCanMove (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

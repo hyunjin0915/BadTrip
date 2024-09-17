@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
@@ -87,13 +88,15 @@ public class PlayerMove : MonoBehaviour
         if(Input.GetKey(KeyCode.Space) && isGround)
         {
             myAnimator.SetBool("IsJumping", true);
+            myRigid.velocity = Vector2.zero;
             myRigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            GetComponent<CapsuleCollider2D>().isTrigger=true;
         }
     }
     void DrawingRay()
     {
-        Debug.DrawRay(transform.position,Vector2.down * 2, new Color(0, 1, 0));
-        RaycastHit2D rayHitBorder = Physics2D.Raycast(transform.position,Vector2.down, 2, LayerMask.GetMask("Ground"));
+        Debug.DrawRay(transform.position,Vector2.down * 7, new Color(0, 1, 0));
+        RaycastHit2D rayHitBorder = Physics2D.Raycast(transform.position,Vector2.down,7, LayerMask.GetMask("Ground"));
         if(rayHitBorder.collider!=null)
         {
             isGround = true;
@@ -105,10 +108,19 @@ public class PlayerMove : MonoBehaviour
 
         if (myRigid.velocity.y < 0)
         {
+            GetComponent<CapsuleCollider2D>().isTrigger=false;
             if (rayHitBorder.distance < 0.5f)
             {
                 myAnimator.SetBool("IsJumping", false);
             }
         }
     }
+    /*void OnTriggerEnter2D(Collider2D collision)
+    {
+        GetComponent<CapsuleCollider2D>().isTrigger=true;
+    }
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        GetComponent<CapsuleCollider2D>().isTrigger=false;
+    }*/
 }

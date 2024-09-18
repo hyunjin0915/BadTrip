@@ -1,3 +1,4 @@
+using Fungus;
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
@@ -55,5 +56,6 @@ public class SaveManager : MonoBehaviour
         //sceneMove.curSceneName = jsonData.sceneName;
         player.transform.position = jsonData.playerPos;
         playerDataSO.animLayer = jsonData.animLayer;
+        GlobalVariables.variables["playerName"].SetValue(playerDataSO.name);
     }
 }

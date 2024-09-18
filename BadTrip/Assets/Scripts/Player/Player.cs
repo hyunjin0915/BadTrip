@@ -133,12 +133,15 @@ public class Player : MonoBehaviour
         } else if (num == 2)
         {
             ActivateLayer(2);
+        } else if(num == 3)
+        {
+            ActivateLayer(3);
         }
     }
 
     public void ActivateLayer(int layerIndex)
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 4; i++)
         {
             playerAnimator.SetLayerWeight(i, 0);
         }

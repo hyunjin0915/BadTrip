@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
+using UnityEngine.TextCore.LowLevel;
 
 namespace Fungus
 {
@@ -62,7 +63,14 @@ namespace Fungus
                 }
             }
 
-            Debug.Log(variable.GetValue());
+            /*foreach (KeyValuePair<string, Variable> v in GlobalVariables.variables)
+            {
+                Debug.Log(v.Value.GetValue());
+                v.Value.SetValue("아아아아");
+                Debug.Log(v.Value.GetValue());
+            }*/
+
+            //Debug.Log(GlobalVariables.variables["playerName"].GetValue());
 
             Continue();
         }

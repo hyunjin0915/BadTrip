@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3643386833839507656}
   - component: {fileID: 2770913251734501470}
-  - component: {fileID: 2595379308964364155}
+  - component: {fileID: 1396415459071006671}
   m_Layer: 10
   m_Name: 1_Clouds_8
   m_TagString: Untagged
@@ -85,8 +85,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2595379308964364155
-BoxCollider2D:
+--- !u!70 &1396415459071006671
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -117,16 +117,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.18735123}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9, y: 5.25}
-    newSize: {x: 9, y: 5.25}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 9, y: 4.8752975}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.0000000049915343, y: -0.04187203}
+  m_Size: {x: 9.000002, y: 4.7754636}
+  m_Direction: 1

@@ -4435,6 +4435,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: dcd30203cb55e434a93d1ff3a5deaac3, type: 2}
   - {fileID: 11400000, guid: b91a23c4217a76848abb886105a06d0a, type: 2}
   - {fileID: 11400000, guid: 12935c20695bc554f9fbd6294f1b740f, type: 2}
+  - {fileID: 11400000, guid: 0ce1bcaf039fb4645bbb66b7273b118e, type: 2}
+  - {fileID: 11400000, guid: 226cfd90dcb86b54e9e6bb09f7316bff, type: 2}
   curQuestId: 0
   info: {fileID: 0}
   interactionObjects: {fileID: 11400000, guid: 2775824826291714696efc8e5cd6e7ae, type: 2}
@@ -4980,17 +4982,22 @@ MonoBehaviour:
       value: {fileID: 11400000, guid: 47659afd8c6624b4c831f9045b9b26e6, type: 2}
     - key: Home
       value: {fileID: 11400000, guid: 5e393f743b2dff64bb08e0da40e8de91, type: 2}
+    - key: Store
+      value: {fileID: 11400000, guid: 14c47b10f0a69994792819f6f529c5b3, type: 2}
   loadPlayerPos:
     key_value:
     - key: OneRoomHome
-      value: {x: 17.96, y: -14.9}
+      value: {x: 17.96, y: -14.9, z: 0}
     - key: OneRoomMethBug
-      value: {x: 0, y: 0}
+      value: {x: 0, y: 0, z: 0}
     - key: MethBugOneRoom
-      value: {x: -110.8, y: -10.9}
+      value: {x: -110.8, y: -10.9, z: 0}
+    - key: HomeStore
+      value: {x: -455.5, y: -14.3, z: 1}
   curSceneName: Main
   sceneload_EventChannel: {fileID: 11400000, guid: 88353211a4d7054468d078bf3ab2ad81, type: 2}
   player: {fileID: 6858215238848761065}
+  playerDataSO: {fileID: 11400000, guid: 6dc9d063a98fe0340bfc447550d25e4e, type: 2}
 --- !u!1 &1327683513
 GameObject:
   m_ObjectHideFlags: 0
@@ -7826,7 +7833,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6858215238848761065}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
@@ -7900,12 +7907,12 @@ MonoBehaviour:
   pRigidbody: {fileID: 231560891358456099}
   playerAnimator: {fileID: 8168485374627576412}
   playerSP: {fileID: 8168485374627576410}
-  rayLength: 15
+  rayLength: 10
   questManager: {fileID: 1192241925}
   footstepAS: {fileID: 8168485374627576415}
   footstepClip: {fileID: 8300000, guid: b4579a645c475234b8e7a69619c02a4a, type: 3}
   canMove: 1
-  speed: 300
+  speed: 500
 --- !u!212 &8168485374627576410
 SpriteRenderer:
   m_ObjectHideFlags: 0

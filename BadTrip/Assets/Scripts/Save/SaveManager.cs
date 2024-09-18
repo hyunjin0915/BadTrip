@@ -56,6 +56,6 @@ public class SaveManager : MonoBehaviour
         //sceneMove.curSceneName = jsonData.sceneName;
         player.transform.position = jsonData.playerPos;
         playerDataSO.animLayer = jsonData.animLayer;
-        GlobalVariables.variables["playerName"].SetValue(playerDataSO.name);
+        
     }
 }

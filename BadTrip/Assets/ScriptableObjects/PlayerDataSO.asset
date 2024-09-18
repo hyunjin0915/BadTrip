@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: fgh
   isStudent: 0
-  animLayer: 1
+  animLayer: 0

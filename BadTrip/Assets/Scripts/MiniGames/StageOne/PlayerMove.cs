@@ -19,6 +19,10 @@ public class PlayerMove : MonoBehaviour
     private Animator myAnimator;
     private SpriteRenderer mySpriteRenderer;
 
+    // 발소리
+    [SerializeField] private AudioSource footstepAS;
+    public AudioClip footstepClip;
+
     Vector2 movement;
 
     private bool isGround = true;
@@ -115,6 +119,12 @@ public class PlayerMove : MonoBehaviour
             }
         }
     }
+
+    public void PlayFootstepAudio()
+    {
+        footstepAS?.PlayOneShot(footstepClip);
+    }
+
     /*void OnTriggerEnter2D(Collider2D collision)
     {
         GetComponent<CapsuleCollider2D>().isTrigger=true;

@@ -74,6 +74,7 @@ public class SettingManager : MonoBehaviour
             GameObject.FindGameObjectWithTag("SceneSetting").GetComponent<SceneSetting>().SetScene(loadSceneInfo);
             player.transform.position = new Vector2(31.6f, -9.2f);
             player.GetComponent<Player>().SetAnimLayer(0);
+            OnOffSetting(false);
         }
     }
 

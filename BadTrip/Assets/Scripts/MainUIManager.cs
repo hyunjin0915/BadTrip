@@ -35,4 +35,11 @@ public class MainUIManager : MonoBehaviour
     {
         mapInteractionSetting.GoScene(data.sceneName);
     }
+
+    public void NewGame()
+    {
+        playerDataSO.playerName = "³ª";
+        playerDataSO.animLayer = 0;
+        
+    }
 }

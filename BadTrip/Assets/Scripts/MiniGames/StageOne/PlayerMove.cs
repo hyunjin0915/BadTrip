@@ -23,6 +23,15 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private AudioSource footstepAS;
     public AudioClip footstepClip;
 
+    // 상호작용
+    private RaycastHit2D hit;
+    private Vector2 interPos; // 상호작용 위치
+    [SerializeField] private float rayLength = 10f;
+    private GameObject scanObj;
+
+    // 플레이어 Move Control
+    public bool canMove = false;
+
     Vector2 movement;
 
     private bool isGround = true;
@@ -47,14 +56,18 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         DrawingRay();
+        DrawRay();
         movement.x = Input.GetAxisRaw("Horizontal");
     }
 
     private void FixedUpdate()
     {
-        Move();
-        Run();
-        Jump();
+        if (canMove)
+        {
+            Move();
+            Run();
+            Jump();
+        }
 
         if (IsMoving)
         {
@@ -73,10 +86,12 @@ public class PlayerMove : MonoBehaviour
         if (movement.x > 0) // 오른쪽
         {
             mySpriteRenderer.flipX = true;
+            interPos = Vector2.right;
         }
         else if (movement.x < 0)// 왼쪽
         {
             mySpriteRenderer.flipX = false;
+            interPos = Vector2.left;
         }
     }
 
@@ -89,7 +104,7 @@ public class PlayerMove : MonoBehaviour
     }
     void Jump()
     {
-        if(Input.GetKey(KeyCode.Space) && isGround)
+        if((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) && isGround)
         {
             myAnimator.SetBool("IsJumping", true);
             myRigid.velocity = Vector2.zero;
@@ -120,9 +135,38 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
+    private void DrawRay()
+    {
+        Debug.DrawRay(transform.position, interPos * rayLength, Color.blue); // 임시 레이 표시
+
+        hit = Physics2D.Raycast(transform.position, interPos, rayLength, 1 << 9);
+        if (hit.collider != null)
+        {
+            scanObj = hit.collider.gameObject;
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                if (hit.collider.gameObject.CompareTag("Interaction"))
+                {
+                    MapInteractionObject mapInteractionObject = hit.collider.gameObject.GetComponent<MapInteractionObject>();
+                    mapInteractionObject?.OnInteraction();
+                    //questManager.UpdateQuestState(mapInteractionObject?.interactionId);
+
+                    // if 상호작용한 오브젝트가 드림캐쳐면 ~~
+                }
+            }
+        }
+        else
+            scanObj = null;
+    }
+
     public void PlayFootstepAudio()
     {
         footstepAS?.PlayOneShot(footstepClip);
+    }
+
+    public void SetCanMove(bool b)
+    {
+        canMove = b;
     }
 
     /*void OnTriggerEnter2D(Collider2D collision)

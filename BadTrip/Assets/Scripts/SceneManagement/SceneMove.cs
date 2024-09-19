@@ -34,7 +34,7 @@ public class SceneMove : MonoBehaviour
         StartCoroutine(LoadSceneCor(moveSceneName));
     }
 
-    IEnumerator LoadSceneCor(string moveSceneName)
+    IEnumerator LoadSceneCor(string moveSceneName) // bool : 불러오기인지.
     {
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(2.0f);

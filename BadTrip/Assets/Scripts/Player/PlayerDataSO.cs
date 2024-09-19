@@ -7,7 +7,6 @@ using UnityEngine;
 public class PlayerDataSO : ScriptableObject
 {
     public string playerName;
-    public bool isStudent;
     public int animLayer;
 
     /*public void SetNameSex(string name, bool isF)

@@ -16,8 +16,8 @@ public class ToStore : MonoBehaviour
 
     private void GoGame()
     {
-        SceneManager.LoadSceneAsync("Store", LoadSceneMode.Additive);
-        SceneManager.UnloadSceneAsync("OneRoom");
+        SceneManager.LoadSceneAsync("StageOne", LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync("Home");
         GameObject.FindGameObjectWithTag("SceneSetting").GetComponent<SceneSetting>().SetScene(loadSceneInfo);
     }
 }

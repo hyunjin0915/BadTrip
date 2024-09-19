@@ -5549,11 +5549,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 108.67025, y: 114.65963}
+  scrollPos: {x: -542.2948, y: 135.17513}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 880
-  zoom: 0.97
+  blockViewHeight: 402.8
+  zoom: 0.94000006
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -5561,9 +5561,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 9212409255950443932}
+  - {fileID: 3871633729192183902}
   selectedCommands:
-  - {fileID: 9212409255950443938}
+  - {fileID: 9212409255950443939}
   variables:
   - {fileID: 184252191652599404}
   - {fileID: 1293176261644672755}
@@ -5759,7 +5759,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 61.915382
     y: 72.76588
-    width: 112.8866
+    width: 111.276596
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5866,7 +5866,6 @@ MonoBehaviour:
   indentLevel: 0
   playerDataSO: {fileID: 11400000, guid: 6dc9d063a98fe0340bfc447550d25e4e, type: 2}
   paramName: playerName
-  variable: {fileID: 184252191652599404}
 --- !u!114 &872177865537847322
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6309,7 +6308,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 64.588615
     y: 296.42896
-    width: 119.07217
+    width: 117.23404
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6480,6 +6479,7 @@ GameObject:
   - component: {fileID: 9212409255950443936}
   - component: {fileID: 9212409255950443938}
   - component: {fileID: 9212409255950443937}
+  - component: {fileID: 9212409255950443939}
   m_Layer: 0
   m_Name: OneRoomFlowchart
   m_TagString: Untagged
@@ -6494,7 +6494,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2050051285376147212}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e889853a4ba0b446d97008a78fa4cf1e, type: 3}
   m_Name: 
@@ -7055,9 +7055,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 694.8208
-    y: 72.06619
-    width: 128.35051
+    x: 699.0762
+    y: 71.002365
+    width: 126.59574
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7069,6 +7069,7 @@ MonoBehaviour:
   - {fileID: 5826151035353291292}
   - {fileID: 7397878940786189426}
   - {fileID: 2112762648501348693}
+  - {fileID: 9212409255950443939}
   - {fileID: 749927324603131864}
   - {fileID: 4728943362538181152}
   - {fileID: 1718734030780063557}
@@ -7553,7 +7554,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 508.9597
     y: 68.46029
-    width: 121.13402
+    width: 118.936165
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7969,7 +7970,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 263.6982
     y: 69.31189
-    width: 127.31959
+    width: 125.744675
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -9658,7 +9659,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 58.998066
     y: -36.70836
-    width: 102.57732
+    width: 101.91489
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -9795,7 +9796,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &9212409255950443937
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9840,7 +9841,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &9212409255950443938
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9900,6 +9901,22 @@ MonoBehaviour:
   returnValueType: System.Void
   showInherited: 0
   callMode: 0
+--- !u!114 &9212409255950443939
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050051285376147212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de8024b38837a54481b25aea73e180b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 352
+  indentLevel: 0
+  targetTextObject: {fileID: 1884000116}
+  stringVariable: playerName
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

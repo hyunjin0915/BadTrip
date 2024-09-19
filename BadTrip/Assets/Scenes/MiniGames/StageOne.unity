@@ -918,12 +918,21 @@ GameObject:
   - component: {fileID: 491238074}
   - component: {fileID: 491238073}
   - component: {fileID: 491238076}
-  - component: {fileID: 491238078}
   - component: {fileID: 491238077}
   - component: {fileID: 491238082}
   - component: {fileID: 491238081}
-  - component: {fileID: 491238080}
   - component: {fileID: 491238079}
+  - component: {fileID: 491238083}
+  - component: {fileID: 491238088}
+  - component: {fileID: 491238087}
+  - component: {fileID: 491238086}
+  - component: {fileID: 491238085}
+  - component: {fileID: 491238084}
+  - component: {fileID: 491238093}
+  - component: {fileID: 491238092}
+  - component: {fileID: 491238091}
+  - component: {fileID: 491238090}
+  - component: {fileID: 491238089}
   m_Layer: 0
   m_Name: NPCFlowchart
   m_TagString: Untagged
@@ -947,16 +956,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 76
     y: 120
-    width: 111
+    width: 112.4
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 0
   blockName: New Block
   description: 
-  eventHandler: {fileID: 491238078}
+  eventHandler: {fileID: 491238083}
   commandList:
+  - {fileID: 491238092}
+  - {fileID: 491238091}
   - {fileID: 491238077}
+  - {fileID: 491238090}
+  - {fileID: 491238089}
+  - {fileID: 491238093}
   suppressAllAutoSelections: 0
 --- !u!114 &491238074
 MonoBehaviour:
@@ -982,10 +996,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 491238082}
-  selectedCommands:
-  - {fileID: 491238080}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 491238079}
   description: 
@@ -1007,7 +1019,7 @@ Transform:
   m_GameObject: {fileID: 491238071}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 203.5, y: -20.9, z: 0}
+  m_LocalPosition: {x: 246.6, y: -27.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1042,10 +1054,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 12.174774, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1056,7 +1068,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5, y: 5}
+  m_Size: {x: 29.349548, y: 5}
   m_EdgeRadius: 0
 --- !u!114 &491238077
 MonoBehaviour:
@@ -1086,24 +1098,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &491238078
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 491238071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c23faba06619da442a984c0c71a87df4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentBlock: {fileID: 491238073}
-  suppressBlockAutoSelect: 0
-  tagFilter:
-  - Player
-  FireOn: 1
-  collisionVar: {fileID: 0}
 --- !u!114 &491238079
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1119,33 +1113,6 @@ MonoBehaviour:
   scope: 2
   key: playerName
   value: "\uB098"
---- !u!114 &491238080
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 491238071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 3
-  indentLevel: 0
-  storyText: "\uB4DC\uB9BC\uCE90\uCCD0\uB97C \uC5BB\uC5C8\uB2E4."
-  description: 
-  character: {fileID: 1240735521}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
 --- !u!114 &491238081
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1177,7 +1144,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 79
     y: 30
-    width: 150
+    width: 151.6
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1186,8 +1153,358 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 491238081}
   commandList:
-  - {fileID: 491238080}
+  - {fileID: 491238085}
+  - {fileID: 491238084}
+  - {fileID: 491238087}
+  - {fileID: 491238088}
+  - {fileID: 491238086}
   suppressAllAutoSelections: 0
+--- !u!114 &491238083
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491238071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78c1a9f24ac376a47838385391f83acc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 491238073}
+  suppressBlockAutoSelect: 0
+  tagFilter:
+  - Player
+  FireOn: 1
+  colliderVar: {fileID: 0}
+--- !u!114 &491238084
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491238071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 8
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1898860421}
+  targetComponentAssemblyName: PlayerMove, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: PlayerMove
+  targetMethod: SetCanMove
+  targetMethodText: 'SetCanMove (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &491238085
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491238071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 7
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 1898860427}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: CanPMove
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &491238086
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491238071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 6
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1898860421}
+  targetComponentAssemblyName: PlayerMove, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: PlayerMove
+  targetMethod: SetCanMove
+  targetMethodText: 'SetCanMove (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 1
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &491238087
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491238071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 5
+  indentLevel: 0
+  storyText: "\uB4DC\uB9BC\uCE90\uCCD0\uB97C \uC5BB\uC5C8\uB2E4."
+  description: 
+  character: {fileID: 1240735521}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &491238088
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491238071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 4
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 1898860427}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: CanPMove
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &491238089
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491238071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 14
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 1898860427}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: CanPMove
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &491238090
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491238071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 13
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1898860421}
+  targetComponentAssemblyName: PlayerMove, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: PlayerMove
+  targetMethod: SetCanMove
+  targetMethodText: 'SetCanMove (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 1
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &491238091
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491238071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 12
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 1898860427}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: CanPMove
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &491238092
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491238071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 11
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1898860421}
+  targetComponentAssemblyName: PlayerMove, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: PlayerMove
+  targetMethod: SetCanMove
+  targetMethodText: 'SetCanMove (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &491238093
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491238071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 10
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 491238071}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  targetGameObjectOLD: {fileID: 0}
 --- !u!1 &499766479
 GameObject:
   m_ObjectHideFlags: 0
@@ -1791,7 +2108,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 5.4731665}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1802,7 +2119,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3, y: 5.875}
+  m_Size: {x: 3, y: 16.821335}
   m_EdgeRadius: 0
 --- !u!1001 &596245469
 PrefabInstance:
@@ -4331,7 +4648,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc165211933fc2b49bc7b4c046b040d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioInfos: []
+  audioInfos:
+  - {fileID: 11400000, guid: 17dffc5fa360c6345b61189596b46e20, type: 2}
   audioEventChannel: {fileID: 11400000, guid: 5f1f11dc6a883c04fa42e19cea1a7c4b, type: 2}
 --- !u!1001 &1676289939
 PrefabInstance:
@@ -4630,6 +4948,8 @@ MonoBehaviour:
   jumpForce: 40
   footstepAS: {fileID: 1898860432}
   footstepClip: {fileID: 8300000, guid: b4579a645c475234b8e7a69619c02a4a, type: 3}
+  rayLength: 10
+  canMove: 1
 --- !u!95 &1898860427
 Animator:
   serializedVersion: 5
@@ -5310,8 +5630,8 @@ PolygonCollider2D:
     m_Paths:
     - - {x: -60, y: 33.75}
       - {x: -60, y: -33.75}
-      - {x: 298.77905, y: -33.372784}
-      - {x: 298.40182, y: 33.750004}
+      - {x: 300, y: -33.75}
+      - {x: 300, y: 33.75}
   m_UseDelaunayMesh: 0
 --- !u!212 &1999254573
 SpriteRenderer:

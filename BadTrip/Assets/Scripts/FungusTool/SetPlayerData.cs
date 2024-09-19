@@ -7,18 +7,18 @@ namespace Fungus
 {
     [CommandInfo("Custom",
                      "SetPlayerData",
-                     "PlayerDataSO 설정")]
+                     "PlayerDataSO 설정(Global 변수)")]
     [AddComponentMenu("")]
     public class SetPlayerData : Command
     {
         [SerializeField] protected PlayerDataSO playerDataSO;
         [SerializeField] protected string paramName = "";
 
-        [VariableProperty(typeof(BooleanVariable),
+        /*[VariableProperty(typeof(BooleanVariable),
                           typeof(IntegerVariable),
                           typeof(FloatVariable),
-                          typeof(StringVariable))]
-        [SerializeField] protected Variable variable;
+                          typeof(StringVariable))]*/
+        //[SerializeField] protected Variable variable;
 
         public override void OnEnter()
         {
@@ -26,7 +26,7 @@ namespace Fungus
 
             if (fieldInfo != null)
             {
-                fieldInfo.SetValue(playerDataSO, variable.GetValue());
+                fieldInfo.SetValue(playerDataSO, GlobalVariables.variables[paramName].GetValue());
             }
 
             Continue();

@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f83cb08432ac0a64384532e4671346ab, type: 3}
   m_Name: PlayerDataSO
   m_EditorClassIdentifier: 
-  playerName: fgh
-  isStudent: 0
-  animLayer: 0
+  playerName: "\uB098"
+  animLayer: 3

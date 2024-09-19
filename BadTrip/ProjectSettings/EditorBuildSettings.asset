@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/School.unity
     guid: 23518972944fa4f4eba01bcf7c3b1627
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/StageOne.unity
+    guid: 2ec3f9ce069f5ea408e29cb4b0043ed8
   m_configObjects: {}

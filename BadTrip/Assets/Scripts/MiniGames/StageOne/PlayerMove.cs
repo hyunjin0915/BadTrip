@@ -40,7 +40,15 @@ public class PlayerMove : MonoBehaviour
     {
         get
         {
-            return movement.x != 0 || movement.y != 0;
+            return movement.x != 0;
+        }
+    }
+
+    private bool IsJumping
+    {
+        get
+        {
+            return myRigid.velocity.y != 0;
         }
     }
 
@@ -106,10 +114,17 @@ public class PlayerMove : MonoBehaviour
     {
         if((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) && isGround)
         {
-            myAnimator.SetBool("IsJumping", true);
             myRigid.velocity = Vector2.zero;
             myRigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             GetComponent<CapsuleCollider2D>().isTrigger=true;
+        }
+
+        if (IsJumping)
+        {
+            myAnimator.SetBool("IsJumping", true);
+        } else
+        {
+            myAnimator.SetBool("IsJumping", false);
         }
     }
     void DrawingRay()
@@ -128,10 +143,6 @@ public class PlayerMove : MonoBehaviour
         if (myRigid.velocity.y < 0)
         {
             GetComponent<CapsuleCollider2D>().isTrigger=false;
-            if (rayHitBorder.distance < 0.5f)
-            {
-                myAnimator.SetBool("IsJumping", false);
-            }
         }
     }
 

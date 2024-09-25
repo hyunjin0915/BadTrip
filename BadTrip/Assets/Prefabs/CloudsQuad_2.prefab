@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6926751972525207460}
   - component: {fileID: 2787988035285211232}
   m_Layer: 6
-  m_Name: CloudsQuad
+  m_Name: CloudsQuad_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 28263bad0f5fd394381e588c94b20ac2, type: 2}
+  - {fileID: 2100000, guid: a9d9ca89550145a4aacc91aaeec17d62, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

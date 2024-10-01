@@ -19,6 +19,7 @@ public class ConversationManager : MonoBehaviour // ¸Ê ¾À°ú Initialization ¾À ¿¬
         SayDialogSO.SetCanMove += player.SetCanMove;
         SayDialogSO.SetFootstepVolume += player.SetFootstepVolume;
         SayDialogSO.movePlayerPos += player.SetPlayerPos;
+        SayDialogSO.StopPlayer += player.StopPlayer;
     }
 
     private void OnDisable()
@@ -28,5 +29,6 @@ public class ConversationManager : MonoBehaviour // ¸Ê ¾À°ú Initialization ¾À ¿¬
         SayDialogSO.SetCanMove -= player.SetCanMove;
         SayDialogSO.SetFootstepVolume -= player.SetFootstepVolume;
         SayDialogSO.movePlayerPos -= player.SetPlayerPos;
+        SayDialogSO.StopPlayer -= player.StopPlayer;
     }
 }

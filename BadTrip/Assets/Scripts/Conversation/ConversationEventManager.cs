@@ -78,9 +78,14 @@ public class ConversationEventManager : MonoBehaviour
         sayDialogSO.SetFootstepVolume(v);
     }
 
-    public void SetPlayerPos(Vector2 pos) // 플레이어 위치 설정
+    public void SetPlayerPos(Vector2 pos, bool isFlip = false) // 플레이어 위치 설정
     {
-        sayDialogSO.movePlayerPos(pos); 
+        sayDialogSO.movePlayerPos(pos, isFlip); 
+    }
+
+    public void StopPlayer()
+    {
+        sayDialogSO.StopPlayer();
     }
     #endregion
 

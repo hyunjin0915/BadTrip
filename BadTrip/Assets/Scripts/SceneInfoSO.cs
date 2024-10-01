@@ -8,7 +8,7 @@ public class SceneInfoSO : ScriptableObject
 {
     public bool isPlayer = true;
     public bool isDialog = true;
-    public int playerRen = 1;
+    public int playerRen = 1; // 플레이어 투명도
     //public bool isRight = false;
 
     //public int eventNum;

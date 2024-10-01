@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
 using System;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float rayLength = 10f;
     private GameObject scanObj;
     [SerializeField] private QuestManager questManager;
+    [SerializeField] private SceneMove sceneManager;
 
     // 惯家府
     [SerializeField] private AudioSource footstepAS;
@@ -86,8 +88,12 @@ public class Player : MonoBehaviour
                 {
                     MapInteractionObject mapInteractionObject = hit.collider.gameObject.GetComponent<MapInteractionObject>();
                     mapInteractionObject?.OnInteraction();
+                    MoveToPos moveToPos = hit.collider.gameObject.GetComponent<MoveToPos>();
+                    if (moveToPos != null)
+                    {
+                        sceneManager.LoadMap(moveToPos.moveToPos.transform.position);
+                    }
                     questManager.UpdateQuestState(mapInteractionObject?.interactionId);
-                    gameObject.transform.position = hit.collider.gameObject.GetComponent<MoveToPos>().moveToPos.transform.position;
 
                 } else if (hit.collider.gameObject.CompareTag("Interaction"))
                 {
@@ -167,6 +173,18 @@ public class Player : MonoBehaviour
     {
         canMove = Convert.ToBoolean(i);
     }
+
+    public void StopPlayer()
+    {
+        pRigidbody.velocity = Vector3.zero;
+    }
+
+    public void SetPlayerPos(Vector2 pos, bool isFlip = false)
+    {
+        gameObject.transform.position = pos;
+        playerSP.flipX = isFlip; // true : 坷弗率 false : 哭率
+
+    }
     #endregion
 
     #region PlayerFootstepAudio
@@ -182,8 +200,4 @@ public class Player : MonoBehaviour
     }
     #endregion
 
-    public void SetPlayerPos(Vector2 pos)
-    {
-        gameObject.transform.position = pos;    
-    }
 }

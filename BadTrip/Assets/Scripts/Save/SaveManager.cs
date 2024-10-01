@@ -40,7 +40,7 @@ public class SaveManager : MonoBehaviour
     public void SetJsonData()
     {
         jsonData = new JsonData();
-        jsonData.playerName = playerDataSO.name;
+        jsonData.playerName = playerDataSO.playerName;
         jsonData.questId = questManager.curQuestId;
         jsonData.questPro = questManager.GetQuestPro().ToArray();
         jsonData.sceneName = sceneMove.curSceneName;
@@ -50,7 +50,7 @@ public class SaveManager : MonoBehaviour
 
     public void GetJsonData()
     {
-        playerDataSO.name = jsonData.playerName;
+        playerDataSO.playerName = jsonData.playerName;
         questManager.curQuestId = jsonData.questId;
         questManager.SetQuestPro(jsonData.questPro);
         //sceneMove.curSceneName = jsonData.sceneName;

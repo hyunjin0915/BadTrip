@@ -34,6 +34,11 @@ public class SceneMove : MonoBehaviour
         StartCoroutine(LoadSceneCor(moveSceneName));
     }
 
+    public void LoadMap(Vector2 playerPos)
+    {
+        StartCoroutine(LoadMapCor(playerPos));
+    }
+
     IEnumerator LoadSceneCor(string moveSceneName) // bool : 불러오기인지.
     {
         transition.SetTrigger("Start");
@@ -57,5 +62,17 @@ public class SceneMove : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         transition.SetTrigger("End");
         GlobalVariables.variables["playerName"].SetValue(playerDataSO.playerName);
+        player.SetActive(loadSceneInfos[moveSceneName].isPlayer);
+    }
+
+    IEnumerator LoadMapCor(Vector2 playerPos)
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(2.0f);
+
+        player.transform.position = playerPos;
+
+        yield return new WaitForSeconds(1.0f);
+        transition.SetTrigger("End");
     }
 }

@@ -14,11 +14,12 @@ public class PlayerHDTrigger : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("SOPlayer"))
         {
             if(collision.rigidbody.velocity.y<0 && transform.position.y < collision.transform.position.y)
             {
                 Debug.Log("밟기!");
+                transform.gameObject.SetActive(false);
             }
             else
             {

@@ -35,6 +35,17 @@ MonoBehaviour:
         m_PreInfinity: 0
         m_PostInfinity: 0
         m_RotationOrder: 0
+  - m_From: CamTwoVCam
+    m_To: CamThreeVCam
+    m_Blend:
+      m_Style: 2
+      m_Time: 2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
   - m_From: CamThreeVCam
     m_To: CamThreeZoom
     m_Blend:
@@ -48,6 +59,28 @@ MonoBehaviour:
         m_RotationOrder: 0
   - m_From: CamThreeZoom
     m_To: CamFourVCam
+    m_Blend:
+      m_Style: 4
+      m_Time: 2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamFourVCam
+    m_To: CamFiveVCam
+    m_Blend:
+      m_Style: 6
+      m_Time: 2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamFiveVCam
+    m_To: CamSixVCam
     m_Blend:
       m_Style: 4
       m_Time: 2

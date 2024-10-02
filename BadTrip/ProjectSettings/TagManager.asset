@@ -60,6 +60,9 @@ TagManager:
   - name: NPC
     uniqueID: 3461544199
     locked: 0
+  - name: TempLayer
+    uniqueID: 2730894923
+    locked: 0
   - name: Background_Front_P_Back
     uniqueID: 4231921047
     locked: 0

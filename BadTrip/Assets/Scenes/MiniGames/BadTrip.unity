@@ -1493,7 +1493,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   conVCam: {fileID: 0}
-  interactionObjectsSO: {fileID: 0}
+  interactionObjectsSO: {fileID: 11400000, guid: 2775824826291714696efc8e5cd6e7ae, type: 2}
   audioCue: {fileID: 0}
 --- !u!114 &435059130
 MonoBehaviour:
@@ -1502,7 +1502,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 435059128}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f2b3187b7f83c545a06dfb8fc8690a0, type: 3}
   m_Name: 
@@ -2589,7 +2589,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1990344887
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
@@ -3046,6 +3046,7 @@ GameObject:
   - component: {fileID: 1624328142}
   - component: {fileID: 1624328143}
   - component: {fileID: 1624328144}
+  - component: {fileID: 1624328145}
   m_Layer: 7
   m_Name: BTPlayer
   m_TagString: Player
@@ -3154,9 +3155,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1898946129
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9254a923fb9b4b94ab8261ad8d008183, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b467110b3a25a80429993059addfe8d4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3284,6 +3285,14 @@ MonoBehaviour:
   audioInfos:
   - {fileID: 11400000, guid: a3352cf349bc92a4d89509076ee8557d, type: 2}
   audioEventChannel: {fileID: 11400000, guid: 9a1eb40afe0f2fd4da69258d085cf8f0, type: 2}
+--- !u!81 &1624328145
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624328135}
+  m_Enabled: 1
 --- !u!1 &1632180979 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3815614945554727915, guid: 4f7b05455de2e7f46bb31c35d9d23f8a, type: 3}
@@ -3535,7 +3544,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2085561590
 MonoBehaviour:
   m_ObjectHideFlags: 0

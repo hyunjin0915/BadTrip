@@ -4446,7 +4446,7 @@ Transform:
   m_GameObject: {fileID: 1523534561}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.880157, y: -15.96, z: 0}
+  m_LocalPosition: {x: 28.250153, y: -16.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4728,7 +4728,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ef4b7c73ca0aa884f97a76ff49e77bea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 618846c31266ca04088c45cd02f93c5e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5240,8 +5240,6 @@ GameObject:
   - component: {fileID: 1736044033}
   - component: {fileID: 1736044032}
   - component: {fileID: 1736044031}
-  - component: {fileID: 1736044039}
-  - component: {fileID: 1736044040}
   - component: {fileID: 1736044046}
   - component: {fileID: 1736044045}
   - component: {fileID: 1736044044}
@@ -5252,6 +5250,9 @@ GameObject:
   - component: {fileID: 1736044047}
   - component: {fileID: 1736044050}
   - component: {fileID: 1736044049}
+  - component: {fileID: 1736044051}
+  - component: {fileID: 1736044053}
+  - component: {fileID: 1736044052}
   m_Layer: 0
   m_Name: HomeFlowchart
   m_TagString: Untagged
@@ -6461,14 +6462,15 @@ MonoBehaviour:
   - {fileID: 1736044038}
   - {fileID: 1736044037}
   - {fileID: 1736044036}
+  - {fileID: 1736044051}
   - {fileID: 1736044035}
   - {fileID: 1736044034}
   - {fileID: 1736044033}
   - {fileID: 1736044032}
   - {fileID: 1736044031}
   - {fileID: 1736044048}
-  - {fileID: 1736044040}
-  - {fileID: 1736044039}
+  - {fileID: 1736044053}
+  - {fileID: 1736044052}
   - {fileID: 1736044046}
   - {fileID: 1736044045}
   - {fileID: 1736044047}
@@ -6814,7 +6816,7 @@ MonoBehaviour:
       objectValue: {fileID: 0}
       spriteValue: {fileID: 0}
       textureValue: {fileID: 0}
-      vector2Value: {x: 158.36, y: -15.96}
+      vector2Value: {x: 169.73, y: -16.44}
       vector3Value: {x: 0, y: 0, z: 0}
     variableKey: 
   - objValue:
@@ -7272,55 +7274,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &1736044039
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 246
-  indentLevel: 0
-  description: 
-  targetObject: {fileID: 821756700}
-  targetComponentAssemblyName: PostProcCtrl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: PostProcCtrl
-  targetMethod: OnHallucinationEffect
-  targetMethodText: 'OnHallucinationEffect (): Void'
-  methodParameters: []
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
---- !u!114 &1736044040
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 247
-  indentLevel: 0
-  _targetGameObject:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 1523534561}
-  activeState:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  targetGameObjectOLD: {fileID: 0}
 --- !u!114 &1736044041
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -7624,6 +7577,72 @@ MonoBehaviour:
   returnValueType: System.Void
   showInherited: 0
   callMode: 0
+--- !u!114 &1736044051
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736043860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f6be51b3d7490ba5633ee095d0391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 258
+  indentLevel: 0
+  soundClip: {fileID: 8300000, guid: e2f5fbd61c438d3478cae9d36f2a45b1, type: 3}
+  volume: 0.5
+  waitUntilFinished: 0
+--- !u!114 &1736044052
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736043860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 260
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 821756700}
+  targetComponentAssemblyName: PostProcCtrl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: PostProcCtrl
+  targetMethod: OnHallucinationEffect
+  targetMethodText: 'OnHallucinationEffect (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1736044053
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736043860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 259
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 1523534561}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  targetGameObjectOLD: {fileID: 0}
 --- !u!1 &1790557736
 GameObject:
   m_ObjectHideFlags: 0

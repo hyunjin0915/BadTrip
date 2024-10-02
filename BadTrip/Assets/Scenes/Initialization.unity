@@ -4901,6 +4901,8 @@ MonoBehaviour:
       value: {fileID: 11400000, guid: 14c47b10f0a69994792819f6f529c5b3, type: 2}
     - key: StageOne
       value: {fileID: 11400000, guid: 9e4641d7c6dd9224c94ee007aad5ea87, type: 2}
+    - key: BadTrip
+      value: {fileID: 11400000, guid: 9aeb329f9e0d6fe4d849b35dc87eeec2, type: 2}
   loadPlayerPos:
     key_value:
     - key: OneRoomHome
@@ -4913,6 +4915,10 @@ MonoBehaviour:
       value: {x: -450.3439, y: -13.80675, z: 1}
     - key: StoreHome
       value: {x: -291.5, y: -17, z: 1}
+    - key: HomeStageOne
+      value: {x: 0, y: 0, z: 0}
+    - key: StageOneBadTrip
+      value: {x: 0, y: 0, z: 0}
   curSceneName: Main
   sceneload_EventChannel: {fileID: 11400000, guid: 88353211a4d7054468d078bf3ab2ad81, type: 2}
   player: {fileID: 6858215238848761065}
@@ -5142,7 +5148,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 17.466427
+  orthographic size: 33.749
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5167,7 +5173,7 @@ Transform:
   m_GameObject: {fileID: 1363665731}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.294847, y: -0.4635002, z: -32.519344}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

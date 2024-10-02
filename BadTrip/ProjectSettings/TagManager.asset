@@ -16,6 +16,7 @@ TagManager:
   - InteractionObjSetting
   - QuestManager
   - SaveManager
+  - SOPlayer
   layers:
   - Default
   - TransparentFX

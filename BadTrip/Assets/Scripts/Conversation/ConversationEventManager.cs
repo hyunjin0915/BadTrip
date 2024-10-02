@@ -87,6 +87,11 @@ public class ConversationEventManager : MonoBehaviour
     {
         sayDialogSO.StopPlayer();
     }
+
+    public void PlayerSetActiveOFF()
+    {
+        sayDialogSO.PlayerSetActiveOFF();
+    }
     #endregion
 
     #region Scene Sound Setting

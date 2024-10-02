@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10411dad2169fbe4dbfd0cc4e9989478, type: 3}
-  m_Name: ToBadTripInfo
+  m_Name: BadTripInfo
   m_EditorClassIdentifier: 
   isPlayer: 0
   isDialog: 1

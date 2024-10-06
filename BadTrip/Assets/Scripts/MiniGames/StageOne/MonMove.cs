@@ -26,7 +26,7 @@ public class MonMove : MonoBehaviour
     float speed = 3.0f;
 
     public bool isFollow = false;
-    Vector2 pos;
+
     [SerializeField]
     float FindRange = 4f; 
     void Start()
@@ -38,28 +38,42 @@ public class MonMove : MonoBehaviour
         rightMax_Apply = currentPosition.x+rightMax;
         leftMax_Apply = currentPosition.x + leftMax;
 
-        pos = transform.position;
+        //pos = transform.position;
         rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        if(!isFollow) Move();
+        if(!isFollow)
+        {
+            Move();
+        } 
         FollowingPlayer();
+
     }
     void FollowingPlayer()
     {
         Collider2D playerCollider = Physics2D.OverlapCircle(transform.position, FindRange,LayerMask.GetMask("Player"));
         if(playerCollider!=null)
         {
+            if(transform.position.x >= playerCollider.transform.position.x) LeftTurn();
+            if(transform.position.x < playerCollider.transform.position.x) RightTurn();
+
             isFollow = true;
-            rb.velocity = new Vector2 ((target.position - rb.position).x * speed, rb.velocity.y);
-            pos = rb.position;
+            Vector2 directionToPlayer = (target.position - rb.position).normalized;
+            rb.velocity = new Vector2(directionToPlayer.x * speed, rb.velocity.y);
         }
         else
         {
-            isFollow = false;
+            if(isFollow)
+            {
+                isFollow = false;
+                rightMax_Apply = transform.position.x + rightMax;
+                leftMax_Apply = transform.position.x + leftMax;
+            }
+            rb.velocity = Vector2.zero;
         }
+        
     }
     void OnDrawGizmos()
     {
@@ -69,8 +83,8 @@ public class MonMove : MonoBehaviour
 
     void Move()
     {
-        Vector2 v = pos;
-        currentPosition = pos; //?
+        //Vector2 v = pos;
+        currentPosition = transform.position; 
         currentPosition.x += Time.deltaTime * direction * velocity;
 
         if (currentPosition.x >= rightMax_Apply)		//현재 위치가 rightMax보다 크거나 같다면

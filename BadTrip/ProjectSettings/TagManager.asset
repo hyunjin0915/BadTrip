@@ -17,6 +17,7 @@ TagManager:
   - QuestManager
   - SaveManager
   - SOPlayer
+  - BTPlayer
   layers:
   - Default
   - TransparentFX

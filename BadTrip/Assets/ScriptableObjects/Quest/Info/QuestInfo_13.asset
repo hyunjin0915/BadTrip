@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2e19c0907e1eab48a0e2f2dff776234, type: 3}
-  m_Name: QuestInfo_08
+  m_Name: QuestInfo_13
   m_EditorClassIdentifier: 
-  explain: "\uC9D1\uC73C\uB85C \uB3CC\uC544\uAC10"
-  questId: 8
+  explain: "\uC0C1\uAC00 \uD018\uC2A4\uD2B8\uC5D0 \uC54C\uB9DE\uAC8C \uC5C5\uB370\uC774\uD2B8"
+  questId: 13
   sceneName: Store
-  questCount: 1
+  questCount: 2
   clearCount: 0
   isLast: 0
-  InterQuest:
+  InterQuest: []
+  moveQuests:
   - questType: 0
     isClear: 0
-    interactionId: 602
+    interactionId: 0
     player: {fileID: 0}
-    message: 
-  moveQuests: []
+    message: 600_BeforeHeesuDrug

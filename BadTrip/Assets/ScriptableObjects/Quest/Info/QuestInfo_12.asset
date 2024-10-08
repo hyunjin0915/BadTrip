@@ -10,18 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2e19c0907e1eab48a0e2f2dff776234, type: 3}
-  m_Name: QuestInfo_08
+  m_Name: QuestInfo_12
   m_EditorClassIdentifier: 
-  explain: "\uC9D1\uC73C\uB85C \uB3CC\uC544\uAC10"
-  questId: 8
-  sceneName: Store
-  questCount: 1
+  explain: "\uD76C\uC218\uD615\uC744 \uB9CC\uB098\uAE30 \uC704\uD574 \uC0C1\uAC00\uB85C
+    \uC774\uB3D9"
+  questId: 12
+  sceneName: Home
+  questCount: 2
   clearCount: 0
   isLast: 0
   InterQuest:
   - questType: 0
     isClear: 0
-    interactionId: 602
+    interactionId: 205
+    player: {fileID: 0}
+    message: 
+  - questType: 0
+    isClear: 0
+    interactionId: 203
     player: {fileID: 0}
     message: 
   moveQuests: []

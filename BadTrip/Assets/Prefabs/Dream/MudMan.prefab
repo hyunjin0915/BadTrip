@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 8899949922192876134}
   - component: {fileID: 583022566506654969}
   - component: {fileID: 40163756596257692}
-  - component: {fileID: 9086493682947572546}
   m_Layer: 0
-  m_Name: MMonster
+  m_Name: MudMan
   m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1990344887
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 84bdba2e4e7ad4c4da1a6af45aba3bfd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -107,18 +106,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &9086493682947572546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7149073597846684655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 773b970b6332fc345b82eb38a2f2570e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rightMax: 7
-  leftMax: -7
-  velocity: 8

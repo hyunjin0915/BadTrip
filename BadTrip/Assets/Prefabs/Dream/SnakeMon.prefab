@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 982689104231367992}
   - component: {fileID: 1245292657722639572}
   - component: {fileID: 2087036022306017495}
-  - component: {fileID: 3908631517664616159}
   - component: {fileID: 4122288883924666431}
   m_Layer: 0
   m_Name: SnakeMon
@@ -77,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1990344887
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 296392d1647a5f743981332cf79a8a9f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -236,7 +235,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3908631517664616159
+--- !u!114 &4122288883924666431
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,30 +244,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5200748158730733864}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6277b0899be502341821810dacdf02e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  maxMoving: 7
-  FindRange: 12
-  speed: 1
-  isFollow: 0
---- !u!114 &4122288883924666431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5200748158730733864}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54bd731f4ffbc3b41b9eea52a5e26c9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rightMax: 5
   leftMax: -5
-  velocity: 2
+  velocity: 6
   target: {fileID: 0}
-  speed: 3
+  speed: 6
   isFollow: 0
-  FindRange: 4
+  FindRange: 20

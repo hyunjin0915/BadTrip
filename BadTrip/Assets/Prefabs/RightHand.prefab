@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3379253777864962564}
   - component: {fileID: 222246531888200458}
   - component: {fileID: 7081372535801662041}
-  - component: {fileID: 2519301753853628550}
+  - component: {fileID: 6582606124830162810}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: Hand
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1898946129
-  m_SortingLayer: 2
+  m_SortingLayer: 5
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 56626e34610ad844db790e09f34b44bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -244,7 +244,7 @@ PolygonCollider2D:
       - {x: 0.4375, y: -4.84375}
       - {x: 1.0625, y: -4.96875}
   m_UseDelaunayMesh: 0
---- !u!114 &2519301753853628550
+--- !u!114 &6582606124830162810
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -253,11 +253,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3815614945554727915}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de87ab6a1d98aa94abf9c15821cb6131, type: 3}
+  m_Script: {fileID: 11500000, guid: cbdf9523e220bc744b55f6d92591666b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerDamage: 10
-  Player_healthManager: {fileID: 11400000, guid: 63328f75278dbd743a241be15a663366, type: 2}
+  Player_healthManager: {fileID: 0}
 --- !u!1 &5861435338686824612
 GameObject:
   m_ObjectHideFlags: 0

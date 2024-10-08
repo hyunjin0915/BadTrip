@@ -400,6 +400,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2238210243854351583, guid: 46bb3212a33d06745af9efa22b18d940, type: 3}
+      propertyPath: Player_healthManager
+      value: 
+      objectReference: {fileID: 11400000, guid: a4edd596afaff2a459fade11f00fd49d, type: 2}
     - target: {fileID: 3448799643850294260, guid: 46bb3212a33d06745af9efa22b18d940, type: 3}
       propertyPath: Player_healthManager
       value: 
@@ -3393,6 +3397,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RightHand
       objectReference: {fileID: 0}
+    - target: {fileID: 6582606124830162810, guid: 4f7b05455de2e7f46bb31c35d9d23f8a, type: 3}
+      propertyPath: Player_healthManager
+      value: 
+      objectReference: {fileID: 11400000, guid: a4edd596afaff2a459fade11f00fd49d, type: 2}
     - target: {fileID: 6705171151518198564, guid: 4f7b05455de2e7f46bb31c35d9d23f8a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20

@@ -839,10 +839,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 32
+  m_ReferencePixelsPerUnit: 16
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1600, y: 1200}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -4305,9 +4305,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0ce1bcaf039fb4645bbb66b7273b118e, type: 2}
   - {fileID: 11400000, guid: 226cfd90dcb86b54e9e6bb09f7316bff, type: 2}
   - {fileID: 11400000, guid: a2347f9467147b44b899bde5ac242a38, type: 2}
+  - {fileID: 11400000, guid: 4a9d630787aee094b8d578f4dc16052e, type: 2}
   - {fileID: 11400000, guid: c9043c57699772e4b8dbad40499d04fa, type: 2}
   - {fileID: 11400000, guid: 8b819893628377142bc64cc55b0e919c, type: 2}
   - {fileID: 11400000, guid: bfbfa5e101c60fd40bda06326e741184, type: 2}
+  - {fileID: 11400000, guid: 3b5107aee5971404690531fb897f4bb3, type: 2}
+  - {fileID: 11400000, guid: 4776fe65902773b4cad233f7b88d114c, type: 2}
+  - {fileID: 11400000, guid: f9034afdf3a0a534a9deac672bc67747, type: 2}
   curQuestId: 0
   info: {fileID: 0}
   interactionObjects: {fileID: 11400000, guid: 2775824826291714696efc8e5cd6e7ae, type: 2}
@@ -4827,6 +4831,7 @@ MonoBehaviour:
   player: {fileID: 6858215238848761065}
   stplayer: {fileID: 1055599522}
   dialogs: {fileID: 442392186}
+  menuDialog: {fileID: 350860364}
   playerData: {fileID: 11400000, guid: 6dc9d063a98fe0340bfc447550d25e4e, type: 2}
   settingManager: {fileID: 889023845}
 --- !u!114 &1311770915
@@ -5130,7 +5135,7 @@ Transform:
   m_GameObject: {fileID: 1363665731}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: -181.42094, y: 5.8989997, z: -0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

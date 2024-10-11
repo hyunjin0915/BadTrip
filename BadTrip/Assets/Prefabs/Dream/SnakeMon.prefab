@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 982689104231367992}
   - component: {fileID: 1245292657722639572}
   - component: {fileID: 2087036022306017495}
-  - component: {fileID: 4122288883924666431}
+  - component: {fileID: 2857059022750851396}
   m_Layer: 0
   m_Name: SnakeMon
   m_TagString: Monster
@@ -235,7 +235,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4122288883924666431
+--- !u!114 &2857059022750851396
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -244,13 +244,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5200748158730733864}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54bd731f4ffbc3b41b9eea52a5e26c9d, type: 3}
+  m_Script: {fileID: 11500000, guid: ce98cf0b787a5a745a16efcd51f40f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rightMax: 5
   leftMax: -5
-  velocity: 6
+  velocity: 3
   target: {fileID: 0}
-  speed: 6
+  FollowingSpeed: 8
   isFollow: 0
-  FindRange: 20
+  FindRange: 12

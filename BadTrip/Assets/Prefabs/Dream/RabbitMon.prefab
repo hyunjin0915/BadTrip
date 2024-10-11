@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2957395318464154046}
   - component: {fileID: 7751838764647453564}
   - component: {fileID: 904006676287860310}
-  - component: {fileID: 1208408155991490787}
+  - component: {fileID: 9009426871441980865}
   m_Layer: 0
   m_Name: RabbitMon
   m_TagString: Monster
@@ -257,7 +257,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1208408155991490787
+--- !u!114 &9009426871441980865
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -266,13 +266,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 327511800121348170}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54bd731f4ffbc3b41b9eea52a5e26c9d, type: 3}
+  m_Script: {fileID: 11500000, guid: ce98cf0b787a5a745a16efcd51f40f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rightMax: 5
   leftMax: -5
-  velocity: 5
+  velocity: 4
   target: {fileID: 0}
-  speed: 5
+  FollowingSpeed: 6
   isFollow: 0
-  FindRange: 20
+  FindRange: 10

@@ -39,7 +39,8 @@ public class SerializedDictionary<K, V> : Dictionary<K, V>, ISerializationCallba
                 if (key is string)
                 {
                     key = (K)(object)"[Default String Key]";
-                } else
+                }
+                else
                 {
                     key = default;
                 }

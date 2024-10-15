@@ -1608,7 +1608,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 8.115385, y: 22.5}
+  m_Size: {x: 2.17, y: 6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4143,10 +4143,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1736043946}
-  selectedCommands:
-  - {fileID: 1736043950}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 1736043910}
   description: 
@@ -4575,7 +4573,7 @@ MonoBehaviour:
   suppressAllAutoSelections: 0
 --- !u!114 &1736043948
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4600,7 +4598,7 @@ MonoBehaviour:
   parameterNameOLD: 
 --- !u!114 &1736043949
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4617,7 +4615,7 @@ MonoBehaviour:
   waitUntilFinished: 0
 --- !u!114 &1736043950
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4644,7 +4642,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1736043951
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

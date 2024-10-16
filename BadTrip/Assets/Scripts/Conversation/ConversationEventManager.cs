@@ -112,4 +112,19 @@ public class ConversationEventManager : MonoBehaviour
         interactionObjectsSO.CompleteConQuest();
     }
     #endregion
+
+    public void SetSortingLayer(SpriteRenderer sp, string layer, int order) {
+        sp.sortingLayerName = layer;
+        sp.sortingOrder = order;
+    }
+
+    public void SetPlayerSortingLayer(string layer, int order)
+    {
+        sayDialogSO.SetPlayerSortingLayer(layer, order);
+    }
+
+    public void SetActiveMenuBg(bool b)
+    {
+        sayDialogSO.menuBackground.SetActive(b);
+    }
 }

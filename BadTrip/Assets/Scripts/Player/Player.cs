@@ -205,4 +205,10 @@ public class Player : MonoBehaviour
     }
     #endregion
 
+    public void SetSortingLayer(string layer, int order)
+    {
+        playerSP.sortingLayerName = layer;
+        playerSP.sortingOrder = order;
+    }
+
 }

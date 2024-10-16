@@ -11,9 +11,12 @@ public class ConversationManager : MonoBehaviour // ¸Ê ¾À°ú Initialization ¾À ¿¬
 
     [SerializeField] private Player player;
 
+    [SerializeField] private GameObject menuBackground;
+
     private void Awake()
     {
         SayDialogSO.dialogs = sayDialogs;
+        SayDialogSO.menuBackground = menuBackground;
         SayDialogSO.SetPlayerAnimLayer += player.SetAnimLayer;
         SayDialogSO.SetPlayerAnim += player.SetPlayerAnim;
         SayDialogSO.SetCanMove += player.SetCanMove;
@@ -21,6 +24,7 @@ public class ConversationManager : MonoBehaviour // ¸Ê ¾À°ú Initialization ¾À ¿¬
         SayDialogSO.movePlayerPos += player.SetPlayerPos;
         SayDialogSO.StopPlayer += player.StopPlayer;
         SayDialogSO.PlayerSetActiveOFF += player.PlayerSetActiveOFF;
+        SayDialogSO.SetPlayerSortingLayer += player.SetSortingLayer;
     }
 
     private void OnDisable()
@@ -32,5 +36,6 @@ public class ConversationManager : MonoBehaviour // ¸Ê ¾À°ú Initialization ¾À ¿¬
         SayDialogSO.movePlayerPos -= player.SetPlayerPos;
         SayDialogSO.StopPlayer -= player.StopPlayer;
         SayDialogSO.PlayerSetActiveOFF -= player.PlayerSetActiveOFF;
+        SayDialogSO.SetPlayerSortingLayer -= player.SetSortingLayer;
     }
 }

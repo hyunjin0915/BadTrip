@@ -14,4 +14,6 @@ public class SayDialogSO : ScriptableObject // Initialization ³»¿ë Áß ¸Ê ¾À¿¡¼­ 
     public Action<float> SetFootstepVolume;
     public Action<Vector2, bool> movePlayerPos;
     public Action StopPlayer, PlayerSetActiveOFF;
+    public Action<string, int> SetPlayerSortingLayer;
+    public GameObject menuBackground;
 }

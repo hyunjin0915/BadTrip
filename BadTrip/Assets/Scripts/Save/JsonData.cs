@@ -13,4 +13,5 @@ public class JsonData
     public string sceneName;
     public Vector2 playerPos;
     public int animLayer;
+    public bool isflip;
 }

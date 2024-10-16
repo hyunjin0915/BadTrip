@@ -46,6 +46,7 @@ public class SaveManager : MonoBehaviour
         jsonData.sceneName = sceneMove.curSceneName;
         jsonData.playerPos = player.transform.position;
         jsonData.animLayer = playerDataSO.animLayer;
+        jsonData.isflip = playerDataSO.isFlip;
     }
 
     public void GetJsonData()
@@ -56,6 +57,6 @@ public class SaveManager : MonoBehaviour
         //sceneMove.curSceneName = jsonData.sceneName;
         player.transform.position = jsonData.playerPos;
         playerDataSO.animLayer = jsonData.animLayer;
-        
+        player.GetComponent<SpriteRenderer>().flipX = jsonData.isflip;
     }
 }

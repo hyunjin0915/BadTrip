@@ -70,6 +70,7 @@ public class ConversationEventManager : MonoBehaviour
     #region Player Setting
     public void SetCanMove(bool b) // 플레이어 Move Control
     {
+        StopPlayer();
         sayDialogSO.SetCanMove(b);
     }
 

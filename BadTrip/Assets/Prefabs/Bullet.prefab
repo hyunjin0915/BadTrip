@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1990344887
-  m_SortingLayer: 3
+  m_SortingLayer: 7
   m_SortingOrder: 5
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca8617a91a21a3f46ae5a2631944e258, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonsterDamage: 100
+  MonsterDamage: 1
   Monster_healthManager: {fileID: 11400000, guid: 48f57964b7443ae44be8be08a7139fe1, type: 2}
 --- !u!58 &8549616671225271361
 CircleCollider2D:

@@ -15,7 +15,7 @@ MonoBehaviour:
   explain: "StageOne\uC5D0 \uB4E4\uC5B4\uAC10"
   questId: 10
   sceneName: StageOne
-  questCount: 2
+  questCount: 1
   clearCount: 0
   isLast: 0
   InterQuest: []

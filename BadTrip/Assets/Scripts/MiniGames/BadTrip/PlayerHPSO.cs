@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerHPSO : ScriptableObject
 {
     [SerializeField]
-    private LoadSceneSO BadTripSL_EventChannel;
 
     public float PlayerHealth = 100f;
     public float PlayerMaxHealth = 100f;
@@ -19,8 +18,10 @@ public class PlayerHPSO : ScriptableObject
 
         if(PlayerHealth<=0) //플레이어 죽음
         {
-            BadTripSL_EventChannel.RaiseEvent();
+            
             Debug.Log("게임 오버 이벤트 발생");
+
+            Fungus.Flowchart.BroadcastFungusMessage("PlayerDead");
         }
     }
     

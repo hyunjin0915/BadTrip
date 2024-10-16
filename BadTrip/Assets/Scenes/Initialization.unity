@@ -3983,6 +3983,8 @@ MonoBehaviour:
       value: {fileID: 11400000, guid: 9e4641d7c6dd9224c94ee007aad5ea87, type: 2}
     - key: BadTrip
       value: {fileID: 11400000, guid: 9aeb329f9e0d6fe4d849b35dc87eeec2, type: 2}
+    - key: SchoolRestroom
+      value: {fileID: 11400000, guid: 23f13c274277252479eb2b62aa5f2f66, type: 2}
   loadPlayerPos:
     key_value:
     - key: OneRoomHome
@@ -4001,6 +4003,8 @@ MonoBehaviour:
       value: {x: 0, y: 0, z: 0}
     - key: BadTripHome
       value: {x: 169.73, y: -16.44, z: 0}
+    - key: HomeSchoolRestroom
+      value: {x: -33.1, y: -19, z: 1}
   curSceneName: Main
   sceneload_EventChannel: {fileID: 11400000, guid: 88353211a4d7054468d078bf3ab2ad81, type: 2}
   player: {fileID: 6858215238848761065}
@@ -4231,7 +4235,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 33.75
+  orthographic size: 33.749
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4256,7 +4260,7 @@ Transform:
   m_GameObject: {fileID: 1363665731}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4705,10 +4709,10 @@ MonoBehaviour:
     m_ColorMultiplier: 2
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 888feb4a32e3b564fb7e6f9b28cc8e10, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 2e33a3f531b6adc4f9d8a99c83e2ba2d, type: 3}
-    m_SelectedSprite: {fileID: 21300000, guid: 888feb4a32e3b564fb7e6f9b28cc8e10, type: 3}
-    m_DisabledSprite: {fileID: 21300000, guid: 49d5ccdda7b99e24787c2abc3891294c, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: e2d8dc6d79f38a040a5995b05f47d08b, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 64ea87eca1dda27498a2cefbccb35e18, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: e2d8dc6d79f38a040a5995b05f47d08b, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: e2d8dc6d79f38a040a5995b05f47d08b, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -4847,10 +4851,10 @@ MonoBehaviour:
     m_ColorMultiplier: 2
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 888feb4a32e3b564fb7e6f9b28cc8e10, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 2e33a3f531b6adc4f9d8a99c83e2ba2d, type: 3}
-    m_SelectedSprite: {fileID: 21300000, guid: 888feb4a32e3b564fb7e6f9b28cc8e10, type: 3}
-    m_DisabledSprite: {fileID: 21300000, guid: 49d5ccdda7b99e24787c2abc3891294c, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: e2d8dc6d79f38a040a5995b05f47d08b, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 64ea87eca1dda27498a2cefbccb35e18, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: e2d8dc6d79f38a040a5995b05f47d08b, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: e2d8dc6d79f38a040a5995b05f47d08b, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -6866,7 +6870,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2132874302
 RectTransform:
   m_ObjectHideFlags: 0

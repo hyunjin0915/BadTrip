@@ -11,6 +11,9 @@ public class RespawnMon : MonoBehaviour
     [SerializeField]
     private GameObject mudMan;
     BoxCollider2D rangeCollider;
+
+    // 스폰된 몬스터의 parent. <- 이거 설정 안하면 initialization에 몬스터가 생성되어서... StageOne, BadTrip을 벗어나도 ...몬스터가 존재해서 설정할게!
+    [SerializeField] Transform monParent;
     
     private void Awake()
     {
@@ -40,9 +43,9 @@ public class RespawnMon : MonoBehaviour
         {
             yield return new WaitForSeconds(7f);
 
-            GameObject instantMon = Instantiate(mudMon, GetRPos(), Quaternion.identity);
+            GameObject instantMon = Instantiate(mudMon, GetRPos(), Quaternion.identity, monParent);
             yield return new WaitForSeconds(2f);
-            GameObject instantMan = Instantiate(mudMan, GetRPos(), Quaternion.identity);
+            GameObject instantMan = Instantiate(mudMan, GetRPos(), Quaternion.identity, monParent);
         }
     }
 }

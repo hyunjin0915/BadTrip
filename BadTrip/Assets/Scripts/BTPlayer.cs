@@ -136,4 +136,9 @@ public class BTPlayer : MonoBehaviour
     {
         canMove = b;
     }
+
+    public void StopPlayer()
+    {
+        PlayerRB.velocity = Vector3.zero;
+    }
 }

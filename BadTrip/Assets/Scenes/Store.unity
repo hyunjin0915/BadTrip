@@ -1367,7 +1367,6 @@ GameObject:
   - component: {fileID: 148524102}
   - component: {fileID: 148524148}
   - component: {fileID: 148524147}
-  - component: {fileID: 148524146}
   - component: {fileID: 148524144}
   - component: {fileID: 148524117}
   - component: {fileID: 148524111}
@@ -1420,6 +1419,7 @@ GameObject:
   - component: {fileID: 148524194}
   - component: {fileID: 148524193}
   - component: {fileID: 148524196}
+  - component: {fileID: 148524197}
   m_Layer: 0
   m_Name: StreetFlowchart
   m_TagString: Untagged
@@ -1455,7 +1455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 158.34077, y: -26.415848}
+  scrollPos: {x: 245.34076, y: -15.415848}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 880
@@ -1467,8 +1467,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 148524196}
-  selectedCommands: []
+  - {fileID: 148524179}
+  selectedCommands:
+  - {fileID: 148524190}
   variables:
   - {fileID: 148524050}
   description: 
@@ -3005,68 +3006,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &148524146
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148523951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 152
-  indentLevel: 0
-  description: 
-  targetObject: {fileID: 1739570103}
-  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: ConversationEventManager
-  targetMethod: SetPlayerAnim
-  targetMethodText: 'SetPlayerAnim (String, Boolean): Void'
-  methodParameters:
-  - objValue:
-      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.String
-      intValue: 0
-      boolValue: 0
-      floatValue: 0
-      stringValue: CanPMove
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
-  - objValue:
-      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Boolean
-      intValue: 0
-      boolValue: 0
-      floatValue: 0
-      stringValue: 
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
 --- !u!114 &148524147
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3138,7 +3077,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -134.0224
-    y: 373.2171
+    y: 372.2171
     width: 113
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -3148,8 +3087,8 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 148524107}
   commandList:
+  - {fileID: 148524196}
   - {fileID: 148524147}
-  - {fileID: 148524146}
   - {fileID: 148524152}
   - {fileID: 148524144}
   - {fileID: 148524151}
@@ -3911,7 +3850,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "(\uBE68\uB9AC \uB0B4 \uBC29\uC5D0\uC11C \uAC00\uC11C \uBA39\uC5B4\uC57C\uACA0\uB2E4.)"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1975362331}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3998,7 +3937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 143.65923
+    x: 144.65923
     y: 89.41585
     width: 113
     height: 40
@@ -4009,17 +3948,18 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 148524178}
   commandList:
-  - {fileID: 148524183}
   - {fileID: 148524180}
   - {fileID: 148524188}
   - {fileID: 148524187}
   - {fileID: 148524186}
   - {fileID: 148524185}
   - {fileID: 148524184}
-  - {fileID: 148524189}
+  - {fileID: 148524197}
   - {fileID: 148524181}
   - {fileID: 148524182}
+  - {fileID: 148524189}
   - {fileID: 148524176}
+  - {fileID: 148524183}
   - {fileID: 148524177}
   - {fileID: 148524191}
   - {fileID: 148524190}
@@ -4153,7 +4093,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 148523951}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
   m_Name: 
@@ -4589,32 +4529,32 @@ MonoBehaviour:
     Culture=neutral, PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
   targetComponentText: ConversationEventManager
-  targetMethod: SetPlayerSortingLayer
-  targetMethodText: 'SetPlayerSortingLayer (String, Int32): Void'
+  targetMethod: SetPlayerPos
+  targetMethodText: 'SetPlayerPos (Vector2, Boolean): Void'
   methodParameters:
   - objValue:
-      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.String
+      typeAssemblyname: UnityEngine.Vector2, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      typeFullname: UnityEngine.Vector2
       intValue: 0
       boolValue: 0
       floatValue: 0
-      stringValue: Default
+      stringValue: 
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       gameObjectValue: {fileID: 0}
       materialValue: {fileID: 0}
       objectValue: {fileID: 0}
       spriteValue: {fileID: 0}
       textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
+      vector2Value: {x: -26, y: -14.1}
       vector3Value: {x: 0, y: 0, z: 0}
     variableKey: 
   - objValue:
-      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Int32
-      intValue: 3
-      boolValue: 0
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 1
       floatValue: 0
       stringValue: 
       colorValue: {r: 0, g: 0, b: 0, a: 0}
@@ -4638,7 +4578,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 148523951}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
   m_Name: 
@@ -4726,7 +4666,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &148524193
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4788,7 +4728,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &148524194
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4833,7 +4773,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &148524195
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4878,30 +4818,128 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &148524196
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 148523951}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: -108.340775
-    y: 76.41585
-    width: 111
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
   itemId: 239
-  blockName: New Block
+  indentLevel: 0
   description: 
-  eventHandler: {fileID: 0}
-  commandList: []
-  suppressAllAutoSelections: 0
+  targetObject: {fileID: 1739570103}
+  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ConversationEventManager
+  targetMethod: SetPlayerAnim
+  targetMethodText: 'SetPlayerAnim (String, Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: CanPMove
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &148524197
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148523951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 240
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1739570103}
+  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ConversationEventManager
+  targetMethod: SetPlayerSortingLayer
+  targetMethodText: 'SetPlayerSortingLayer (String, Int32): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: Default
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 3
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!1 &179978612
 GameObject:
   m_ObjectHideFlags: 0
@@ -5533,8 +5571,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -1.5358, y: -4.76685, z: 0}
-    m_Extent: {x: 12.315, y: 8.935551, z: 0}
+    m_Center: {x: -1.5408502, y: -4.7667, z: 0}
+    m_Extent: {x: 12.315451, y: 8.9406, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5974,8 +6012,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.91080046, y: -4.6136503, z: 0}
-    m_Extent: {x: 15.3522, y: 9.82695, z: 0}
+    m_Center: {x: 0.9137497, y: -4.6055, z: 0}
+    m_Extent: {x: 15.34585, y: 9.8258, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6679,8 +6717,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.57994986, y: -1.01295, z: 0}
-    m_Extent: {x: 14.46055, y: 11.50465, z: 0}
+    m_Center: {x: 0.5746002, y: -1.0191002, z: 0}
+    m_Extent: {x: 14.4626, y: 11.4977, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7211,8 +7249,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.09034991, y: -2.08145, z: 0}
-    m_Extent: {x: 4.16905, y: 5.09585, z: 0}
+    m_Center: {x: 0.0778501, y: -2.0769, z: 0}
+    m_Extent: {x: 4.1686497, y: 5.0951, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7970,8 +8008,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.20605016, y: 0.71819973, z: 0}
-    m_Extent: {x: 6.42465, y: 19.3037, z: 0}
+    m_Center: {x: 0.21149993, y: 0.71805, z: 0}
+    m_Extent: {x: 6.4301996, y: 19.29805, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -8094,8 +8132,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.95525026, y: -0.0467999, z: 0}
-    m_Extent: {x: 15.181551, y: 4.9821997, z: 0}
+    m_Center: {x: -0.9507499, y: -0.04675007, z: 0}
+    m_Extent: {x: 15.178249, y: 4.97765, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -9706,8 +9744,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 2.55935, y: 0.07764959, z: 0}
-    m_Extent: {x: 31.403751, y: 10.660851, z: 0}
+    m_Center: {x: 2.5655994, y: 0.08109999, z: 0}
+    m_Extent: {x: 31.401, y: 10.650101, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -10095,7 +10133,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 901073911}
+  - {fileID: 1373041103}
   - {fileID: 2143993491}
   - {fileID: 1298729491}
   - {fileID: 123432600}
@@ -10103,8 +10141,8 @@ SceneRoots:
   - {fileID: 1349901676}
   - {fileID: 1380823174}
   - {fileID: 210944304}
-  - {fileID: 1373041103}
   - {fileID: 719732319}
   - {fileID: 2077980241}
   - {fileID: 282596713}
   - {fileID: 1661185276}
+  - {fileID: 901073911}

@@ -114,10 +114,12 @@ public class Player : MonoBehaviour
         {
             playerSP.flipX = true;
             interPos = Vector2.right;
+            playerDataSO.isFlip = true;
         } else if (moveVec2.x < 0)// ¿ÞÂÊ
         {
             playerSP.flipX = false;
             interPos = Vector2.left;
+            playerDataSO.isFlip = false;
         }
     }
 

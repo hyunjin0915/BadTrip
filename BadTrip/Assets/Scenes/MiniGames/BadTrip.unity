@@ -2503,8 +2503,8 @@ MonoBehaviour:
   player: {fileID: 1624328135}
   Lefthand: {fileID: 517384786}
   Righthand: {fileID: 1632180979}
-  handMoveSpeed: 30
-  handAttackSpeed: 30
+  handMoveSpeed: 50
+  handAttackSpeed: 50
   delayTime: 2
   isLAttack: 0
   isRAttack: 0

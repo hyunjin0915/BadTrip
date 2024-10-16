@@ -18,15 +18,15 @@ public class MainMenu : MonoBehaviour
     {
         NewGameSL_EventChannel.OnLoadingScene -= StartGame;
     }
-    public void OnClickStartBtn()
-    {
-        NewGameSL_EventChannel.RaiseEvent();
-    }
+    
     public void StartGame()
     {
         StartCoroutine(ShowLoadingScreen());
     }
-   
+   public void OnClickStartBtn()
+    {
+        NewGameSL_EventChannel.RaiseEvent();
+    }
  
    IEnumerator ShowLoadingScreen()
    {

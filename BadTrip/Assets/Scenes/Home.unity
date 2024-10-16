@@ -6107,7 +6107,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 226
     y: 87
-    width: 98
+    width: 100
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6172,9 +6172,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1736043901}
+  - {fileID: 1736043962}
   selectedCommands:
-  - {fileID: 1736044104}
+  - {fileID: 1736044045}
   variables:
   - {fileID: 1736043910}
   description: 
@@ -6358,7 +6358,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -12.288666
     y: 85.83334
-    width: 126
+    width: 128
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7128,7 +7128,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -7.5889378
     y: 191.93634
-    width: 109
+    width: 110.66667
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8388,7 +8388,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 226.44113
     y: 190.6222
-    width: 121
+    width: 122.666664
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -9549,7 +9549,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -5.138962
     y: 303.51865
-    width: 124
+    width: 126
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -9605,7 +9605,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1736044103
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9667,7 +9667,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1736044104
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9723,7 +9723,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &1736044105
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9785,7 +9785,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1736044106
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

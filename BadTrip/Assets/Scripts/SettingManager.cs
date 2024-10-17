@@ -22,6 +22,24 @@ public class SettingManager : MonoBehaviour
     [SerializeField]
     private SceneMove sceneMove;
 
+    private bool isActive = false;
+
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            if (isActive)
+            {
+                isActive = false;
+                OnOffSetting(isActive);
+            } else
+            {
+                isActive = true;
+                OnOffSetting(isActive);
+            }
+        }
+    }
+
 
 
     /*// Start is called before the first frame update

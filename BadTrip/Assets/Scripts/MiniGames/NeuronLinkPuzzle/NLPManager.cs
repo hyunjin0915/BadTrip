@@ -16,6 +16,10 @@ public class NLPManager : MonoBehaviour
     public Node sourceNode;
     public Node preNode;
 
+    public int nodeCount = 0;
+
+    public int successCount = 0;
+
     private void Start()
     {
         SetAllNodes();
@@ -35,5 +39,19 @@ public class NLPManager : MonoBehaviour
             }
         }    
     }
+
+    public void addSuccessCount()
+    {
+        successCount++;
+        nodeCount = 0;
+    }
     
+    public void CheckSuccesse()
+    {
+        if (successCount >= 5)
+        {
+            // 완전 성공
+            // 게임 클리어시 실행 부분 추가
+        }
+    }
 }

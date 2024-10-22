@@ -22,6 +22,8 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
     public bool[] connectedEdgesIndex = new bool[4]; // 0 : up, 1 : down, 2 : left, 3 : right
     public Node[] connectedEdgesNodes = new Node[4]; // 0 : up, 1 : down, 2 : left, 3 : right
 
+    public int nodeNum;
+
     public List<GameObject> connectedNodes = new List<GameObject>();
 
     public Vector2 pos2D { get; set; }
@@ -69,7 +71,6 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
             nlpManager.preNode = this;
             nlpManager.sourceNode = this;
             isActive = true;
-            //nlpManager.curNode.connectedNodes.Add(this);
         }
     }
 
@@ -109,13 +110,30 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
                 connectedEdges[nlpManager.preNode].SetActive(true);
                 connectedEdges[nlpManager.preNode].GetComponent<SpriteRenderer>().color = nlpManager.colors[nlpManager.sourceNode.colorId];
                 nlpManager.sourceNode.connectedNodes.Add(connectedEdges[nlpManager.preNode]);
+                nlpManager.nodeCount++;
                 nlpManager.preNode = this;
                 isActive = true;
             }
 
-            if (isPoint)
+            if (isPoint) // ¼º°ø
             {
                 nlpManager.isDragging = false;
+
+                nlpManager.addSuccessCount();
+                nlpManager.CheckSuccesse();
+            }
+
+        }
+
+        if (nlpManager.isDragging && isActive)
+        {
+            if (connectedEdges.ContainsKey(nlpManager.preNode) && nlpManager.sourceNode.connectedNodes[nlpManager.nodeCount - 2].GetComponentInParent<Node>().nodeNum == nodeNum)
+            {
+                nlpManager.preNode.GetComponentInParent<Node>().isActive = false;
+                nlpManager.preNode.connectedEdges[this].SetActive(false);
+                nlpManager.sourceNode.connectedNodes.RemoveAt(nlpManager.nodeCount - 1);
+                nlpManager.nodeCount--;
+                nlpManager.preNode = this;
             }
         }
     }
@@ -138,5 +156,6 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
         }
 
         nlpManager.sourceNode.isActive = false;
+        nlpManager.nodeCount = 0;
     }
 }

@@ -21,7 +21,9 @@ public class BugsCtrl2 : MonoBehaviour
 
     [SerializeField] private AudioCue audioCue;
     [SerializeField] Texture2D cursorTexture;
-    
+
+    [SerializeField] EndMethBug endMethBug;
+
     private void OnEnable()
     {
         gameManager.ChangeScarImg += ChangeScarImg;
@@ -99,7 +101,8 @@ public class BugsCtrl2 : MonoBehaviour
 
     private IEnumerator EndMethBug()
     {
-        yield return new WaitForSeconds(4.0f);
+        yield return StartCoroutine(endMethBug.activeBugs());
+        yield return new WaitForSeconds(1.0f);
         Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
         //MethBugSL_EventChannel.RaiseEvent();
         mapInteractionSetting.GoScene("OneRoom");

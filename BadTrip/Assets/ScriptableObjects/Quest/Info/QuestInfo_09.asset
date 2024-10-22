@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e19c0907e1eab48a0e2f2dff776234, type: 3}
   m_Name: QuestInfo_09
   m_EditorClassIdentifier: 
-  explain: "\uB0B4 \uBC29\uC73C\uB85C \uB4E4\uC5B4\uAC10"
+  explain: "\uD76C\uC218\uD615\uC744 \uB9CC\uB098\uAE30 \uC704\uD574 \uC0C1\uAC00\uB85C
+    \uC774\uB3D9"
   questId: 9
   sceneName: Home
   questCount: 2
@@ -21,7 +22,12 @@ MonoBehaviour:
   InterQuest:
   - questType: 0
     isClear: 0
-    interactionId: 200
+    interactionId: 205
     player: {fileID: 0}
-    message: 200_RoomDrug
+    message: 
+  - questType: 0
+    isClear: 0
+    interactionId: 203
+    player: {fileID: 0}
+    message: 
   moveQuests: []

@@ -12,13 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e19c0907e1eab48a0e2f2dff776234, type: 3}
   m_Name: QuestInfo_06
   m_EditorClassIdentifier: 
-  explain: "\uC0C1\uAC00 \uD018\uC2A4\uD2B8\uC5D0 \uC54C\uB9DE\uAC8C \uC5C5\uB370\uC774\uD2B8"
+  explain: "\uC0C1\uAC00\uC5D0\uC11C \uCE5C\uAD6C\uB4E4\uC744 \uB9CC\uB0A8"
   questId: 6
   sceneName: Store
-  questCount: 2
+  questCount: 3
   clearCount: 0
   isLast: 0
-  InterQuest: []
+  InterQuest:
+  - questType: 0
+    isClear: 0
+    interactionId: 604
+    player: {fileID: 0}
+    message: 600_HyunjunDrug
   moveQuests:
   - questType: 1
     isClear: 0

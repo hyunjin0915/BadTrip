@@ -1148,7 +1148,7 @@ Transform:
   m_GameObject: {fileID: 123432597}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.9, y: -10.16, z: 0}
+  m_LocalPosition: {x: -269.62, y: -10.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1216,7 +1216,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -2.3702059}
+  m_Offset: {x: -0.4212036, y: -1.8085861}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1227,7 +1227,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.153846, y: 28.471182}
+  m_Size: {x: 15.114868, y: 31.092075}
   m_EdgeRadius: 0
 --- !u!1001 &143654478
 PrefabInstance:
@@ -1364,7 +1364,6 @@ GameObject:
   - component: {fileID: 148524106}
   - component: {fileID: 148524105}
   - component: {fileID: 148524104}
-  - component: {fileID: 148524102}
   - component: {fileID: 148524148}
   - component: {fileID: 148524147}
   - component: {fileID: 148524144}
@@ -1373,7 +1372,6 @@ GameObject:
   - component: {fileID: 148524107}
   - component: {fileID: 148524156}
   - component: {fileID: 148524155}
-  - component: {fileID: 148524154}
   - component: {fileID: 148524153}
   - component: {fileID: 148524149}
   - component: {fileID: 148524152}
@@ -1455,7 +1453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 245.34076, y: -15.415848}
+  scrollPos: {x: 225.34076, y: -8.415848}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 880
@@ -1469,7 +1467,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 148524179}
   selectedCommands:
-  - {fileID: 148524190}
+  - {fileID: 148524189}
   variables:
   - {fileID: 148524050}
   description: 
@@ -2805,34 +2803,6 @@ MonoBehaviour:
   soundClip: {fileID: 8300000, guid: e2f5fbd61c438d3478cae9d36f2a45b1, type: 3}
   volume: 0.5
   waitUntilFinished: 0
---- !u!114 &148524102
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148523951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 148
-  indentLevel: 0
-  description: 
-  targetObject: {fileID: 1739570103}
-  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: ConversationEventManager
-  targetMethod: CompleteQuest
-  targetMethodText: 'CompleteQuest (): Void'
-  methodParameters: []
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
 --- !u!114 &148524103
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2860,7 +2830,6 @@ MonoBehaviour:
   commandList:
   - {fileID: 148524105}
   - {fileID: 148524104}
-  - {fileID: 148524102}
   suppressAllAutoSelections: 0
 --- !u!114 &148524104
 MonoBehaviour:
@@ -3228,34 +3197,6 @@ MonoBehaviour:
   parentBlock: {fileID: 148524156}
   suppressBlockAutoSelect: 0
   message: 600_BeforeHeesuDrug
---- !u!114 &148524154
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148523951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 195
-  indentLevel: 0
-  description: 
-  targetObject: {fileID: 1739570103}
-  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: ConversationEventManager
-  targetMethod: CompleteQuest
-  targetMethodText: 'CompleteQuest (): Void'
-  methodParameters: []
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
 --- !u!114 &148524155
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3303,7 +3244,6 @@ MonoBehaviour:
   eventHandler: {fileID: 148524153}
   commandList:
   - {fileID: 148524155}
-  - {fileID: 148524154}
   suppressAllAutoSelections: 0
 --- !u!114 &148524157
 MonoBehaviour:
@@ -4546,7 +4486,7 @@ MonoBehaviour:
       objectValue: {fileID: 0}
       spriteValue: {fileID: 0}
       textureValue: {fileID: 0}
-      vector2Value: {x: -26, y: -14.1}
+      vector2Value: {x: -281.2, y: -14.1}
       vector3Value: {x: 0, y: 0, z: 0}
     variableKey: 
   - objValue:
@@ -5215,7 +5155,7 @@ Transform:
   m_GameObject: {fileID: 282596712}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -248.72, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5571,8 +5511,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -1.5408502, y: -4.7667, z: 0}
-    m_Extent: {x: 12.315451, y: 8.9406, z: 0}
+    m_Center: {x: -1.5402503, y: -4.7711, z: 0}
+    m_Extent: {x: 12.31175, y: 8.9473, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6012,8 +5952,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.9137497, y: -4.6055, z: 0}
-    m_Extent: {x: 15.34585, y: 9.8258, z: 0}
+    m_Center: {x: 0.91429996, y: -4.6067, z: 0}
+    m_Extent: {x: 15.3546, y: 9.8196, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6717,8 +6657,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.5746002, y: -1.0191002, z: 0}
-    m_Extent: {x: 14.4626, y: 11.4977, z: 0}
+    m_Center: {x: 0.5798001, y: -1.0144496, z: 0}
+    m_Extent: {x: 14.4688, y: 11.50065, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7249,8 +7189,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0778501, y: -2.0769, z: 0}
-    m_Extent: {x: 4.1686497, y: 5.0951, z: 0}
+    m_Center: {x: 0.08395004, y: -2.06985, z: 0}
+    m_Extent: {x: 4.16285, y: 5.09245, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -8008,8 +7948,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.21149993, y: 0.71805, z: 0}
-    m_Extent: {x: 6.4301996, y: 19.29805, z: 0}
+    m_Center: {x: 0.21630001, y: 0.7209501, z: 0}
+    m_Extent: {x: 6.4308, y: 19.305248, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -8132,8 +8072,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.9507499, y: -0.04675007, z: 0}
-    m_Extent: {x: 15.178249, y: 4.97765, z: 0}
+    m_Center: {x: -0.94795036, y: -0.042999983, z: 0}
+    m_Extent: {x: 15.17275, y: 4.9732, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -9744,8 +9684,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 2.5655994, y: 0.08109999, z: 0}
-    m_Extent: {x: 31.401, y: 10.650101, z: 0}
+    m_Center: {x: 2.5591002, y: 0.078999996, z: 0}
+    m_Extent: {x: 31.401798, y: 10.6646, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

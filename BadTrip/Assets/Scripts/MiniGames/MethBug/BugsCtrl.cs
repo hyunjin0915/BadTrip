@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -22,6 +23,8 @@ public class BugsCtrl : MonoBehaviour
 
     [SerializeField] private AudioCue audioCue;
     [SerializeField] Texture2D cursorTexture;
+
+    [SerializeField] EndMethBug endMethBug;
 
     private void OnEnable()
     {
@@ -60,7 +63,7 @@ public class BugsCtrl : MonoBehaviour
     }
     private void ChangeDir()
     {
-        randomAngle = Random.Range(45f, 90f);
+        randomAngle = UnityEngine.Random.Range(45f, 90f);
         transform.Rotate(0f,0f,randomAngle);
     }
     public IEnumerator MoveAgainBug()
@@ -99,7 +102,8 @@ public class BugsCtrl : MonoBehaviour
     }
     private IEnumerator EndMethBug()
     {
-        yield return new WaitForSeconds(4.0f);
+        yield return StartCoroutine(endMethBug.activeBugs());
+        yield return new WaitForSeconds(1.0f);
         Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
         //MethBugSL_EventChannel.RaiseEvent();
         mapInteractionSetting.GoScene("OneRoom");

@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e19c0907e1eab48a0e2f2dff776234, type: 3}
   m_Name: QuestInfo_11
   m_EditorClassIdentifier: 
-  explain: "StageOne / BadTrip\uC5D0\uC11C \uB098\uC634"
+  explain: "\uB9C8\uC57D\uD558\uAE30 \uC704\uD574 \uC9D1\uC73C\uB85C \uB3CC\uC544\uAC10"
   questId: 11
-  sceneName: Home
-  questCount: 2
+  sceneName: Store
+  questCount: 1
   clearCount: 0
   isLast: 0
-  InterQuest: []
-  moveQuests:
-  - questType: 1
+  InterQuest:
+  - questType: 0
     isClear: 0
-    interactionId: 0
+    interactionId: 602
     player: {fileID: 0}
-    message: 200_AfterBadTrip
+    message: 
+  moveQuests: []

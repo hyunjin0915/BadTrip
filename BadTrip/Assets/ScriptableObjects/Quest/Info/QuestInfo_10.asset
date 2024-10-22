@@ -12,16 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e19c0907e1eab48a0e2f2dff776234, type: 3}
   m_Name: QuestInfo_10
   m_EditorClassIdentifier: 
-  explain: "StageOne\uC5D0 \uB4E4\uC5B4\uAC10"
+  explain: "\uD76C\uC218\uD615\uACFC \uB9CC\uB0A8"
   questId: 10
-  sceneName: StageOne
-  questCount: 1
+  sceneName: Store
+  questCount: 3
   clearCount: 0
   isLast: 0
-  InterQuest: []
+  InterQuest:
+  - questType: 0
+    isClear: 0
+    interactionId: 605
+    player: {fileID: 0}
+    message: 600_HeesuDrug
   moveQuests:
   - questType: 1
     isClear: 0
     interactionId: 0
     player: {fileID: 0}
-    message: 
+    message: 600_BeforeHeesuDrug

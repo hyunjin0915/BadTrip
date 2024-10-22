@@ -47,11 +47,11 @@ public class QuestManager : MonoBehaviour
             QuestInfoSO questinfoCopy = Instantiate(questInfo);
 
             List<QuestBase> allQuests = new List<QuestBase>();
-            foreach (QuestBase questBase in questinfoCopy.InterQuest)
+            foreach (QuestBase questBase in questinfoCopy.moveQuests)
             {
                 allQuests.Add(questBase);
             }
-            foreach (QuestBase questBase in questinfoCopy.moveQuests)
+            foreach (QuestBase questBase in questinfoCopy.InterQuest)
             {
                 allQuests.Add(questBase);
             }

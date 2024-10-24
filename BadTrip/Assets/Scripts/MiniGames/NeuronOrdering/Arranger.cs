@@ -49,6 +49,12 @@ public class Arranger : MonoBehaviour
         return result;
     }
 
+    public void SwapNeuron(int index01, int index02)
+    {
+        Central.SwapNeuron(children[index01], children[index02]);
+        UpdateChildren();
+    }
+
     // Update is called once per frame
     void Update()
     {

@@ -24,7 +24,8 @@ public class Central : MonoBehaviour
     {
         
     }
-    void SwapNeuronsInHierachy(Transform sour, Transform dest)
+
+    public static void SwapNeuron(Transform sour, Transform dest)
     {
         Transform sourParent = sour.parent;
         Transform destParent = dest.parent;
@@ -38,6 +39,10 @@ public class Central : MonoBehaviour
         dest.SetParent(sourParent);
         dest.SetSiblingIndex(sourIndex);
 
+    }
+    void SwapNeuronsInHierachy(Transform sour, Transform dest)
+    {
+        SwapNeuron(sour, dest);
         arrangers.ForEach(t=>t.UpdateChildren());
     }
 
@@ -55,11 +60,18 @@ public class Central : MonoBehaviour
 
         if(whichArrangerNeuron == null)
         {
-
+            
         }
         else
         {
-            Debug.Log(whichArrangerNeuron.GetIndexByPosition(Neuron, InvisibleNeuron.GetSiblingIndex()));
+            int invisibleNeuronIndex = InvisibleNeuron.GetSiblingIndex();
+            int targetIndex = whichArrangerNeuron.GetIndexByPosition(Neuron, invisibleNeuronIndex);
+
+            if(invisibleNeuronIndex != targetIndex)
+            {
+                whichArrangerNeuron.SwapNeuron(invisibleNeuronIndex,targetIndex);
+            }
+            
         }
     }
     void EndDrag(Transform Neuron)

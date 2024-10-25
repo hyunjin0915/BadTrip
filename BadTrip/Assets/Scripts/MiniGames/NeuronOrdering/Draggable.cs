@@ -19,7 +19,7 @@ public class Draggable : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHa
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        root.BroadcastMessage("BeginDrag", transform, SendMessageOptions.DontRequireReceiver);
+        root.BroadcastMessage("BeginDrag", transform, SendMessageOptions.DontRequireReceiver); //자식 객체들에게 함수 실행 메세지 전송
     }
 
     public void OnDrag(PointerEventData eventData)

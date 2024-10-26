@@ -127,13 +127,16 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
 
         if (nlpManager.isDragging && isActive)
         {
-            if (connectedEdges.ContainsKey(nlpManager.preNode) && nlpManager.sourceNode.connectedNodes[nlpManager.nodeCount - 2].GetComponentInParent<Node>().nodeNum == nodeNum)
+            if (connectedEdges.ContainsKey(nlpManager.preNode))
             {
-                nlpManager.preNode.GetComponentInParent<Node>().isActive = false;
-                nlpManager.preNode.connectedEdges[this].SetActive(false);
-                nlpManager.sourceNode.connectedNodes.RemoveAt(nlpManager.nodeCount - 1);
-                nlpManager.nodeCount--;
-                nlpManager.preNode = this;
+                if (nlpManager.nodeCount > 1 && nlpManager.sourceNode.connectedNodes[nlpManager.nodeCount - 2]?.GetComponentInParent<Node>().nodeNum == nodeNum)
+                {
+                    nlpManager.preNode.GetComponentInParent<Node>().isActive = false;
+                    nlpManager.preNode.connectedEdges[this].SetActive(false);
+                    nlpManager.sourceNode.connectedNodes.RemoveAt(nlpManager.nodeCount - 1);
+                    nlpManager.nodeCount--;
+                    nlpManager.preNode = this;
+                }
             }
         }
     }

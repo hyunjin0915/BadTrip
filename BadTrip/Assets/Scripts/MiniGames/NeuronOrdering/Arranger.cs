@@ -9,7 +9,7 @@ public class Arranger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        children = new List<Transform>();  
+        children = new List<Transform>(); //하나의 arranger 아래의 뉴런들
         UpdateChildren();  
     }
 
@@ -19,7 +19,7 @@ public class Arranger : MonoBehaviour
         {
             if(i == children.Count)
             {
-                children.Add(null);
+                children.Add(null); //사이즈 작으면 늘리기
             }
 
             var child = transform.GetChild(i);
@@ -29,9 +29,19 @@ public class Arranger : MonoBehaviour
                 children[i]=child;
             }
         }
-        children.RemoveRange(transform.childCount,children.Count - transform.childCount);
+        children.RemoveRange(transform.childCount,children.Count - transform.childCount); //개수유지 
     }
-
+    public bool CheckOrder()
+    {
+        for(int i=0;i<transform.childCount;i++)
+        {
+            if(transform.GetChild(i).name != ("Neuron"+i))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
     public int GetIndexByPosition(Transform neuron, int skipIndex = -1)
     {
         int result = 0;
@@ -49,9 +59,10 @@ public class Arranger : MonoBehaviour
         return result;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SwapNeuron(int index01, int index02)
     {
-        
+        Central.SwapNeuron(children[index01], children[index02]);
+        UpdateChildren();
     }
+
 }

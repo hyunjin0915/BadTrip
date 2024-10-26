@@ -6,6 +6,7 @@ public class Central : MonoBehaviour
 {
     public Transform InvisibleNeuron;
     List<Arranger> arrangers;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,9 @@ public class Central : MonoBehaviour
     {
         
     }
-    void SwapNeuronsInHierachy(Transform sour, Transform dest)
+
+
+    public static void SwapNeuron(Transform sour, Transform dest)
     {
         Transform sourParent = sour.parent;
         Transform destParent = dest.parent;
@@ -38,6 +41,10 @@ public class Central : MonoBehaviour
         dest.SetParent(sourParent);
         dest.SetSiblingIndex(sourIndex);
 
+    }
+    void SwapNeuronsInHierachy(Transform sour, Transform dest)
+    {
+        SwapNeuron(sour, dest);
         arrangers.ForEach(t=>t.UpdateChildren());
     }
 
@@ -47,7 +54,7 @@ public class Central : MonoBehaviour
     }
     void BeginDrag(Transform Neuron)
     {
-        SwapNeuronsInHierachy(InvisibleNeuron, Neuron);
+        SwapNeuronsInHierachy(InvisibleNeuron, Neuron); //드래그 시작되면 바꿔주기
     }
     void Drag(Transform Neuron)
     {
@@ -55,15 +62,23 @@ public class Central : MonoBehaviour
 
         if(whichArrangerNeuron == null)
         {
-
+            
         }
         else
         {
-            Debug.Log(whichArrangerNeuron.GetIndexByPosition(Neuron, InvisibleNeuron.GetSiblingIndex()));
+            int invisibleNeuronIndex = InvisibleNeuron.GetSiblingIndex();
+            int targetIndex = whichArrangerNeuron.GetIndexByPosition(Neuron, invisibleNeuronIndex);
+
+            if(invisibleNeuronIndex != targetIndex)
+            {
+                whichArrangerNeuron.SwapNeuron(invisibleNeuronIndex,targetIndex);
+            }
+            
         }
     }
     void EndDrag(Transform Neuron)
     {
-        SwapNeuronsInHierachy(InvisibleNeuron, Neuron);
+        SwapNeuronsInHierachy(InvisibleNeuron, Neuron); //끝나면 순서 바꿔주고 정답 정렬인지 체크 
+        if(arrangers[0].CheckOrder()) Debug.Log("순서 맞추기 성공");
     }
 }

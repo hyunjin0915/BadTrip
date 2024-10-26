@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class Draggable : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
 {
-    Transform root;
+    Transform root; //canvas를 넣어줌 - 부모에게 자신이 드래그 되고 있음을 알려줌
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +19,7 @@ public class Draggable : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHa
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        root.BroadcastMessage("BeginDrag",transform,SendMessageOptions.DontRequireReceiver);
+        root.BroadcastMessage("BeginDrag", transform, SendMessageOptions.DontRequireReceiver); //자식 객체들에게 함수 실행 메세지 전송
     }
 
     public void OnDrag(PointerEventData eventData)

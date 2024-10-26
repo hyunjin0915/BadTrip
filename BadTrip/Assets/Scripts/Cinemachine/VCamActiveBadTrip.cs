@@ -7,12 +7,19 @@ public class VCamActiveBadTrip : MonoBehaviour
 {
     public GameObject vCam;
     public GameObject spawn;
+
+    public GameObject[] camList;
     
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("SOPlayer") && !other.isTrigger)
         {
+           
+
+
             vCam.SetActive(true);
+
+
             if(vCam.gameObject.name.Equals("CamFiveVCam"))
             {
                 spawn.SetActive(true);

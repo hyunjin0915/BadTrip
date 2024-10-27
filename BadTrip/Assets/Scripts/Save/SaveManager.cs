@@ -47,6 +47,7 @@ public class SaveManager : MonoBehaviour
         jsonData.playerPos = player.transform.position;
         jsonData.animLayer = playerDataSO.animLayer;
         jsonData.isflip = playerDataSO.isFlip;
+        jsonData.getDreamcatcher = playerDataSO.getDC;
     }
 
     public void GetJsonData()
@@ -58,5 +59,6 @@ public class SaveManager : MonoBehaviour
         player.transform.position = jsonData.playerPos;
         playerDataSO.animLayer = jsonData.animLayer;
         player.GetComponent<SpriteRenderer>().flipX = jsonData.isflip;
+        playerDataSO.getDC = jsonData.getDreamcatcher;
     }
 }

@@ -1,3 +1,4 @@
+using Fungus;
 using UnityEngine;
 
 public class FireBullet : MonoBehaviour
@@ -6,9 +7,9 @@ public class FireBullet : MonoBehaviour
     public Transform FirePos;
 
     [SerializeField] private AudioCue audioCue;
+    [SerializeField] private PlayerDataSO playerDataSO;
 
     public bool gameStart = false;
-
 
     // Update is called once per frame
     void Update()

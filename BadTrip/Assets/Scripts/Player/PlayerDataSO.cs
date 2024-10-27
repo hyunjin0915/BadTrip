@@ -9,6 +9,7 @@ public class PlayerDataSO : ScriptableObject
     public string playerName;
     public int animLayer;
     public bool isFlip;
+    public bool getDC = false;
 
     /*public void SetNameSex(string name, bool isF)
     {

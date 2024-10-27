@@ -28,6 +28,7 @@ public class PlayerMove : MonoBehaviour
     private Vector2 interPos; // 상호작용 위치
     [SerializeField] private float rayLength = 10f;
     private GameObject scanObj;
+    [SerializeField] private PlayerDataSO playerDataSO;
 
     // 플레이어 Move Control
     public bool canMove = false;
@@ -188,4 +189,9 @@ public class PlayerMove : MonoBehaviour
     {
         GetComponent<CapsuleCollider2D>().isTrigger=false;
     }*/
+
+    public void SetDreamcatcher(bool b)
+    {
+        playerDataSO.getDC = b;
+    }
 }

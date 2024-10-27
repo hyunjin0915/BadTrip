@@ -794,10 +794,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 241434786}
-  selectedCommands:
-  - {fileID: 241434801}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 241434751}
   description: 
@@ -1027,7 +1025,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 241434740}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca6897dad662ca047a1e1002f5f1772d, type: 3}
   m_Name: 
@@ -4431,6 +4429,7 @@ MonoBehaviour:
   Bullet: {fileID: 7570155020928645223, guid: 78afa8a61b6a6494a8bce79ce1656c21, type: 3}
   FirePos: {fileID: 1475700980}
   audioCue: {fileID: 1624328144}
+  playerDataSO: {fileID: 0}
   gameStart: 0
 --- !u!114 &1624328142
 MonoBehaviour:

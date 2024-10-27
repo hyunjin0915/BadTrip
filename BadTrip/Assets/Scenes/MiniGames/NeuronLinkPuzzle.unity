@@ -5142,6 +5142,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Node (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5192970593801519713, guid: ac3244baa41883a428bd7746d6e5b53f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7241137600913394194, guid: ac3244baa41883a428bd7746d6e5b53f, type: 3}
       propertyPath: colorId
       value: -1

@@ -14,4 +14,5 @@ public class JsonData
     public Vector2 playerPos;
     public int animLayer;
     public bool isflip;
+    public bool getDreamcatcher;
 }

@@ -165,6 +165,7 @@ namespace Fungus
 
         /// ////////////// 플레이어 이름 데이터를 세이브 파일에서 가져와 fungus에 적용하기 위해 생성
         public abstract void SetValue(string s);
+        public abstract void SetValue(bool b);
         /// //////////////
 
 
@@ -239,6 +240,11 @@ namespace Fungus
         public override void SetValue(string s)
         {
             value = (T)(object)s;
+        }
+
+        public override void SetValue(bool b)
+        {
+            value = (T)(object)b;
         }
         /// /////////////
 

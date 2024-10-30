@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class ParallaxBackground : MonoBehaviour
 {
+    public CamCtrlSO camCtrlSO;
+
     [SerializeField]
     private Transform cameraTransfrom;
 
@@ -19,7 +21,26 @@ public class ParallaxBackground : MonoBehaviour
 
     private void Awake()
     {
-        //cameraTransfrom = GameObject.FindGameObjectWithTag("VCam").transform;
+        SetCamera();
+    }
+    
+    private void OnEnable()
+    {
+        camCtrlSO.OnVCamChanged+=UpdateCamera;
+    }
+    private void OnDisable()
+    {
+        camCtrlSO.OnVCamChanged-=UpdateCamera;
+    }
+
+    private void UpdateCamera()
+    {
+        cameraTransfrom = camCtrlSO.CurVCam.transform;
+        SetCamera();
+    }
+
+    private void SetCamera()
+    {
         cameraStartPos = cameraTransfrom.position;
 
         int backgroudCnt = transform.childCount;
@@ -33,7 +54,6 @@ public class ParallaxBackground : MonoBehaviour
             backgrounds[i] = transform.GetChild(i).gameObject;
             materials[i] = backgrounds[i].GetComponent<Renderer>().material;
         }
-
         CalculateMoveSpeedByLayer(backgrounds, backgroudCnt);
     }
 

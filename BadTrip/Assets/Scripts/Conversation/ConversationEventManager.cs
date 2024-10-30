@@ -112,6 +112,11 @@ public class ConversationEventManager : MonoBehaviour
     {
         interactionObjectsSO.CompleteConQuest();
     }
+
+    public void UpdateQuest()
+    {
+        interactionObjectsSO.RaiseEvent();
+    }
     #endregion
 
     public void SetSortingLayer(SpriteRenderer sp, string layer, int order) {

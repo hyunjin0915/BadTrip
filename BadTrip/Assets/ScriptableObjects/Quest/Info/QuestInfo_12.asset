@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e19c0907e1eab48a0e2f2dff776234, type: 3}
   m_Name: QuestInfo_12
   m_EditorClassIdentifier: 
-  explain: "\uBC29\uC73C\uB85C \uAC10"
+  explain: "\uC9D1\uC5D0\uC11C \uB9C8\uC57D"
   questId: 12
   sceneName: Home
   questCount: 2
   clearCount: 0
   isLast: 0
-  InterQuest:
-  - questType: 0
+  InterQuest: []
+  moveQuests:
+  - questType: 1
     isClear: 0
-    interactionId: 200
+    interactionId: 0
     player: {fileID: 0}
-    message: 200_RoomDrug02
-  moveQuests: []
+    message: 200_RoomDrug03

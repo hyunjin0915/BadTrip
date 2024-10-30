@@ -1578,6 +1578,8 @@ MonoBehaviour:
   volumeSettings: {fileID: 1221931843}
   mask: {fileID: 1406927597}
   maskSR: {fileID: 1406927599}
+  imageSR: {fileID: 0}
+  volumeProfiles: []
 --- !u!114 &821756703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4069,7 +4071,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.5, y: 22.076923}
+    oldSize: {x: 9.75, y: 20.5}
     newSize: {x: 24.0625, y: 37.1875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4262,8 +4264,7 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1736043912}
+  selectedBlocks: []
   selectedCommands: []
   variables:
   - {fileID: 1736043910}
@@ -5116,7 +5117,7 @@ MonoBehaviour:
   durationOLD: 0
 --- !u!114 &1736043963
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5146,7 +5147,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1736043964
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5175,7 +5176,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1736043966
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5203,7 +5204,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1736043967
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5231,7 +5232,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1736043968
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5258,7 +5259,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1736043969
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5285,7 +5286,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1736043970
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5312,7 +5313,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1736043971
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5339,7 +5340,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1736043972
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5366,7 +5367,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1736043973
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5384,7 +5385,7 @@ MonoBehaviour:
   durationOLD: 0
 --- !u!114 &1736043974
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5405,7 +5406,7 @@ MonoBehaviour:
   targetGameObjectOLD: {fileID: 0}
 --- !u!114 &1736043975
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5427,7 +5428,7 @@ MonoBehaviour:
   parameterNameOLD: 
 --- !u!114 &1736043976
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

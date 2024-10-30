@@ -23,6 +23,9 @@ public class PostProcCtrl : MonoBehaviour
     [SerializeField]
     private SpriteRenderer imageSR;
 
+    // volume
+    public VolumeProfile[] volumeProfiles;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -244,6 +247,7 @@ public class PostProcCtrl : MonoBehaviour
 
     public IEnumerator OnChromaticAberration()
     {
+        agVolume.speed.value = 2f;
         float f = 0;
         
         while (f <= 0.6f)
@@ -321,6 +325,9 @@ public class PostProcCtrl : MonoBehaviour
         agVolume.verticalJump.overrideState = false;
         agVolume.verticalJump.value = 0;
 
+        agVolume.horizontalShake.overrideState = false;
+        agVolume.horizontalShake.value = 0;
+
         agVolume.colorDrift.overrideState = false;
         agVolume.colorDrift.value = 0;
 
@@ -330,6 +337,8 @@ public class PostProcCtrl : MonoBehaviour
         depthOfField.gaussianMaxRadius.value = 0;
         depthOfField.mode.overrideState = false;
         bloom.intensity.overrideState = false;
+
+        agVolume.verticalJump.value = 2;
     }
 
     public IEnumerator SetMask() // 정도 조절
@@ -369,6 +378,30 @@ public class PostProcCtrl : MonoBehaviour
 
         agVolume.verticalJump.overrideState = false;
         agVolume.verticalJump.value = 0;
+    }
+
+    public IEnumerator SceneMoveEffect()
+    {
+        isPostON = false;
+
+        agVolume.horizontalShake.overrideState = true;
+        agVolume.horizontalShake.value = 0;
+        agVolume.scanLineJitter.value = 0;
+
+        float f = 0;
+
+        while (f < 1.0f)
+        {
+            f += 0.001f;
+
+            agVolume.horizontalShake.value = f;
+            agVolume.scanLineJitter.value = f;
+            yield return null;
+        }
+
+        agVolume.horizontalShake.overrideState = false;
+        agVolume.horizontalShake.value = 0;
+
     }
 
     public void OnRoomBloomEffect()
@@ -428,6 +461,21 @@ public class PostProcCtrl : MonoBehaviour
     public void SetIsPostON(bool b)
     {
         isPostON=b;
+    }
+
+    public void ChangeVolume(int i)
+    {
+        volumeSettings.m_Profile = volumeProfiles[i];
+
+        foreach (VolumeComponent volumeComponent in volumeSettings.m_Profile.components)
+        {
+            if (volumeComponent.name == "ChromaticAberration") chromaticAberration = volumeComponent as ChromaticAberration;
+            else if (volumeComponent.name == "FilmGrain") filmGrain = volumeComponent as FilmGrain;
+            else if (volumeComponent.name == "LensDistortion") lensDistortion = volumeComponent as LensDistortion;
+            else if (volumeComponent.name == "DepthOfField") depthOfField = volumeComponent as DepthOfField;
+            else if (volumeComponent.name == "Bloom") bloom = volumeComponent as Bloom;
+            else if (volumeComponent.name == "AnalogGlitchVolume") agVolume = volumeComponent as AnalogGlitchVolume;
+        }
     }
 
 }

@@ -34,7 +34,6 @@ public class Quest_Move : QuestBase // ¾À ÀÌµ¿ÇÏ´Â Äù½ºÆ®
 
     public override void QuestFunction() {
         Fungus.Flowchart.BroadcastFungusMessage(message);
-        isClear = true;
     }
 }
 

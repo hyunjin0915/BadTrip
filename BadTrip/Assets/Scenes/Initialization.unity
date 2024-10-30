@@ -3423,10 +3423,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8b819893628377142bc64cc55b0e919c, type: 2}
   - {fileID: 11400000, guid: 4776fe65902773b4cad233f7b88d114c, type: 2}
   - {fileID: 11400000, guid: f470dc37312d7614196a08db6c142326, type: 2}
-  - {fileID: 11400000, guid: 3013d17d2f10ba547b983ab9df740561, type: 2}
-  - {fileID: 11400000, guid: 7b89ae4493cc01e41bf68f3799e533f0, type: 2}
-  - {fileID: 11400000, guid: 71bfd012bfeb5344d8186796a03ba059, type: 2}
-  - {fileID: 11400000, guid: d3b87fa8a2272a34f8454c10a9e6d200, type: 2}
+  - {fileID: 11400000, guid: 76bd65490bcb38848ba8cf0f1473727f, type: 2}
+  - {fileID: 11400000, guid: 5923e48060ddeca40aa9c48be74c72a9, type: 2}
   - {fileID: 11400000, guid: 33f0e25e4217c4943923df8d4f0338d1, type: 2}
   curQuestId: 0
   info: {fileID: 0}
@@ -4231,7 +4229,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 33.749
+  orthographic size: 17.466427
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4256,7 +4254,7 @@ Transform:
   m_GameObject: {fileID: 1363665731}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 141.47984, y: 0, z: -1}
+  m_LocalPosition: {x: -2.294847, y: -0.4635002, z: -32.519344}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

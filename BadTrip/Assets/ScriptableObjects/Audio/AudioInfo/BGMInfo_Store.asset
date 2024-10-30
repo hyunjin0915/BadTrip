@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: BGMInfo_Store
   m_EditorClassIdentifier: 
   audioNum: 0
-  clip: {fileID: 8300000, guid: b5a3918aff436224aa44e471d93def8f, type: 3}
-  vol: 0.3
+  clip: {fileID: 8300000, guid: 55807f81c5285c448a0e2a21cda2f267, type: 3}
+  vol: 0.5
+  pch: 1
   isLoop: 1
   isOneShot: 0
   spread: 0

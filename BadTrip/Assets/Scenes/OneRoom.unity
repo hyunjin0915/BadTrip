@@ -2181,6 +2181,7 @@ MonoBehaviour:
   mask: {fileID: 761492016}
   maskSR: {fileID: 761492018}
   imageSR: {fileID: 0}
+  volumeProfiles: []
 --- !u!1 &702811490
 GameObject:
   m_ObjectHideFlags: 0
@@ -2368,6 +2369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioInfos:
   - {fileID: 11400000, guid: 240aeaad87ca3a64fa5cc4c10b075ca3, type: 2}
+  - {fileID: 11400000, guid: 9e1828bcdfac58846b24c895b8844722, type: 2}
   audioEventChannel: {fileID: 11400000, guid: 5f1f11dc6a883c04fa42e19cea1a7c4b, type: 2}
 --- !u!4 &821756419
 Transform:
@@ -5550,7 +5552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 135.29572, y: 164.97684}
+  scrollPos: {x: -65.73529, y: 194.87376}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 562
@@ -5561,10 +5563,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 331654545752709268}
-  selectedCommands:
-  - {fileID: 9212409255950443863}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 184252191652599404}
   - {fileID: 1293176261644672755}
@@ -5691,7 +5691,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 61.915382
-    y: 72.76588
+    y: 71.73495
     width: 112.8866
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -6403,6 +6403,9 @@ GameObject:
   - component: {fileID: 9212409255950443970}
   - component: {fileID: 9212409255950443969}
   - component: {fileID: 9212409255950443968}
+  - component: {fileID: 9212409255950443974}
+  - component: {fileID: 9212409255950443973}
+  - component: {fileID: 9212409255950443972}
   m_Layer: 0
   m_Name: OneRoomFlowchart
   m_TagString: Untagged
@@ -6890,9 +6893,9 @@ MonoBehaviour:
   staticEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 696800759}
-        m_TargetAssemblyTypeName: ConversationEventManager, Assembly-CSharp
-        m_MethodName: PlayAudio
+      - m_Target: {fileID: 821756418}
+        m_TargetAssemblyTypeName: AudioCue, Assembly-CSharp
+        m_MethodName: StopAudio
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7473,6 +7476,7 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 3435591974779618388}
+  - {fileID: 9212409255950443972}
   - {fileID: 3937591753620436816}
   - {fileID: 3437984696827156218}
   - {fileID: 9212409255950443967}
@@ -7806,7 +7810,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 263.6982
-    y: 70.37572
+    y: 71.40665
     width: 127.31959
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -7827,6 +7831,7 @@ MonoBehaviour:
   - {fileID: 9212409255950443927}
   - {fileID: 568350431428916966}
   - {fileID: 3754363726766242488}
+  - {fileID: 9212409255950443974}
   - {fileID: 3096987299985213821}
   - {fileID: 9212409255950443866}
   - {fileID: 4844173524035253300}
@@ -7838,6 +7843,7 @@ MonoBehaviour:
   - {fileID: 8880100947896108642}
   - {fileID: 9212409255950443868}
   - {fileID: 7934644796124071576}
+  - {fileID: 9212409255950443973}
   - {fileID: 3818195510508998777}
   suppressAllAutoSelections: 0
 --- !u!4 &8738169567203090018
@@ -9890,6 +9896,163 @@ MonoBehaviour:
   indentLevel: 0
   musicClip: {fileID: 8300000, guid: 4bb0ee71605544f429b7384d0e9243c2, type: 3}
   volume: 0.3
+--- !u!114 &9212409255950443972
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050051285376147212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 387
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 821756416}
+  targetComponentAssemblyName: AudioCue, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: AudioCue
+  targetMethod: PlayAudio
+  targetMethodText: 'PlayAudio (Int32): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 1
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 1
+--- !u!114 &9212409255950443973
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050051285376147212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 386
+  indentLevel: 0
+  description: "\uD658\uAC01 \uC791\uC6A9 \uC0AC\uC6B4\uB4DC Play"
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1441572990}
+        m_TargetAssemblyTypeName: AudioCue, Assembly-CSharp
+        m_MethodName: StopAudio
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &9212409255950443974
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050051285376147212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 385
+  indentLevel: 0
+  description: "\uD658\uAC01 \uC791\uC6A9 \uC0AC\uC6B4\uB4DC Play"
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 696800759}
+        m_TargetAssemblyTypeName: ConversationEventManager, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

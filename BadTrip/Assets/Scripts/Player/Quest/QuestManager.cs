@@ -100,11 +100,13 @@ public class QuestManager : MonoBehaviour
 
     public void UpdateQuestState() // 퀘스트 상태 업데이트. 플레이어가 씬을 이동할 때 호출됨.
     {
+
         // 이동한 씬과 퀘스트 씬을 비교
         if (info == null)
         {
             return;
         }
+
 
         if (info.sceneName == sceneMove.curSceneName && info.allQuests[0].questType == 1 && !info.allQuests[0].isClear)
         {
@@ -144,7 +146,10 @@ public class QuestManager : MonoBehaviour
 
         foreach (QuestBase q in info.allQuests)
         {
-            pro.Add(q.isClear);
+            if (q.questType != 1)
+            {
+                pro.Add(q.isClear);
+            }
         }
 
         return pro;
@@ -156,7 +161,14 @@ public class QuestManager : MonoBehaviour
         
         for (int i = 0; i < pro.Length; i++)
         {
-            info.allQuests[i].isClear = pro[i];
+            if (info.allQuests[i].questType != 1)
+            {
+                info.allQuests[i].isClear = pro[i];
+                if (pro[i])
+                {
+                    info.clearCount++;
+                }
+            }
         }
     }
 }

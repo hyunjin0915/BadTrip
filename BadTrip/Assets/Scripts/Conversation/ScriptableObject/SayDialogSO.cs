@@ -10,10 +10,10 @@ public class SayDialogSO : ScriptableObject // Initialization ³»¿ë Áß ¸Ê ¾À¿¡¼­ 
     public SayDialog[] dialogs;
     public Action<int> SetPlayerAnimLayer;
     public Action<string, bool> SetPlayerAnim;
-    public Action<bool> SetCanMove;
+    public Action<bool> SetCanMove, PlayerSetActive;
     public Action<float> SetFootstepVolume;
     public Action<Vector2, bool> movePlayerPos;
-    public Action StopPlayer, PlayerSetActiveOFF;
+    public Action StopPlayer;
     public Action<string, int> SetPlayerSortingLayer;
     public GameObject menuBackground;
 }

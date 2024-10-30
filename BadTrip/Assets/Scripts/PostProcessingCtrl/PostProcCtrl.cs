@@ -20,6 +20,8 @@ public class PostProcCtrl : MonoBehaviour
     private GameObject mask;
     [SerializeField]
     private SpriteRenderer maskSR;
+    [SerializeField]
+    private SpriteRenderer imageSR;
 
     // Start is called before the first frame update
     void Start()
@@ -45,13 +47,12 @@ public class PostProcCtrl : MonoBehaviour
         depthOfField.mode.overrideState = true;
         bloom.intensity.overrideState = true;
         agVolume.colorDrift.overrideState = true;
-        agVolume.scanLineJitter.overrideState = true;
 
         //StartCoroutine(LensDistortion());
         StartCoroutine(DepthOfField());
         StartCoroutine(OnChromaticAberration());
-        StartCoroutine(OnMask());
-        StartCoroutine(OnJitter());
+        //StartCoroutine(OnMask());
+        StartCoroutine(OnJitter(6, 3, 0.3f));
         //StartCoroutine(LensCenter());
     }
     public void OffHallucinationEffect() // 환각 효과 off
@@ -59,7 +60,7 @@ public class PostProcCtrl : MonoBehaviour
         isPostON = false;
 
         StartCoroutine(OffChromaticAberration());
-        StartCoroutine(OffMask());
+        //StartCoroutine(OffMask());
 
         //lensDistortion.intensity.value = 0;
 
@@ -222,28 +223,28 @@ public class PostProcCtrl : MonoBehaviour
         }
     }
 
-    public IEnumerator OnJitter()
+    public IEnumerator OnJitter(float wait, float term, float inte)
     {
 
-        yield return new WaitForSeconds(6.0f);
+        agVolume.scanLineJitter.overrideState = true;
+        yield return new WaitForSeconds(wait);
 
         while (isPostON)
         {
 
-            agVolume.scanLineJitter.value = 0.3f;
+            agVolume.scanLineJitter.value = inte;
 
-            yield return new WaitForSeconds(3.0f);
+            yield return new WaitForSeconds(term);
 
             agVolume.scanLineJitter.value = 0f;
 
-            yield return new WaitForSeconds(3.0f);
+            yield return new WaitForSeconds(term);
         }
     }
 
     public IEnumerator OnChromaticAberration()
     {
         float f = 0;
-        float jf = 0;
         
         while (f <= 0.6f)
         {
@@ -276,16 +277,11 @@ public class PostProcCtrl : MonoBehaviour
 
         float f = 0;
 
-        while (f <= 16f)
+        while (f < 1f)
         {
+            maskSR.color = new Color(1, 1, 1, f);
             f += 0.01f;
-
-            if (f <= 13f)
-            {
-               maskSR.material.SetFloat("_Scale", f);
-            }
-            maskSR.material.SetFloat("_Speed", f);
-            yield return null;
+            yield return new WaitForSecondsRealtime(0.1f);
         }
     }
 
@@ -373,6 +369,65 @@ public class PostProcCtrl : MonoBehaviour
 
         agVolume.verticalJump.overrideState = false;
         agVolume.verticalJump.value = 0;
+    }
+
+    public void OnRoomBloomEffect()
+    {
+        isPostON = true;
+
+        bloom.intensity.overrideState = true;
+
+        StartCoroutine(OnMask());
+        mask.SetActive(true);
+        maskSR.material.SetFloat("_Scale", 13);
+        maskSR.material.SetFloat("_Speed", 16);
+        StartCoroutine(OnImage());
+        StartCoroutine(HomeBloomEffect());
+    }
+
+    // 방에서 처음 마약할 때
+    public IEnumerator HomeBloomEffect()
+    {
+        float f = 0;
+
+        while (f <= 1.4f)
+        {
+            f += 0.001f;
+
+            bloom.intensity.value = f;
+            yield return null;
+        }
+    }
+
+    public void OffRoomBloomEffect()
+    {
+        isPostON = false;
+
+        StopAllCoroutines();
+        
+        bloom.intensity.overrideState = false;
+        bloom.intensity.value = 0;
+        maskSR.material.SetFloat("_Scale", 0);
+        maskSR.material.SetFloat("_Speed", 0);
+        mask.SetActive(false);
+    }
+
+    public IEnumerator OnImage()
+    {
+        float f = 0;
+
+        while (f <= 0.1f)
+        {
+            f += 0.005f;
+
+            imageSR.color = new Color(1, 1, 1, f);
+            yield return new WaitForSecondsRealtime(0.1f);
+        }
+    }
+
+    public void SetIsPostON(bool b)
+    {
+        isPostON=b;
     }
 
 }

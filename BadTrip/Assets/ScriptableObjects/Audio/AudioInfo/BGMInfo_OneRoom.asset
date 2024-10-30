@@ -15,10 +15,11 @@ MonoBehaviour:
   audioNum: 0
   clip: {fileID: 8300000, guid: 98cfeaec72f688846abf4b8d183c6d7a, type: 3}
   vol: 0.5
+  pch: 1
   isLoop: 1
   isOneShot: 0
-  spread: 50
+  spread: 0
   audioMixerGroup: {fileID: 570879748219307191, guid: a4eea5b62d0a0f642a69776341ae087a, type: 2}
-  spatialBlend: 0.6
-  minDistance: 104
-  maxDistance: 254
+  spatialBlend: 0
+  minDistance: 1
+  maxDistance: 500

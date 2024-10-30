@@ -89,9 +89,9 @@ public class ConversationEventManager : MonoBehaviour
         sayDialogSO.StopPlayer();
     }
 
-    public void PlayerSetActiveOFF()
+    public void PlayerSetActive(bool b)
     {
-        sayDialogSO.PlayerSetActiveOFF();
+        sayDialogSO.PlayerSetActive(b);
     }
     #endregion
 

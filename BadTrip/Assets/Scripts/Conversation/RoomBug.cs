@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class RoomBug : MonoBehaviour
 {
+    public bool isActive = true;
     public GameObject[] bugs;
-    public AudioCue audioCue;
+
+    public void setIsActive(bool b)
+    {
+        isActive = b;
+    }
 
     public void ActiveBugs()
     {
@@ -16,14 +21,14 @@ public class RoomBug : MonoBehaviour
     {
         for (int i = 0; i < bugs.Length; i++)
         {
-            audioCue.PlayAudio(3);
+            
             bugs[i].SetActive(true);
 
-            if (i < 3)
+            if (i < 1)
             {
                 yield return new WaitForSeconds(0.5f);
             }
-            else if (i < 6)
+            else if (i < 2)
             {
                 yield return new WaitForSeconds(0.3f);
             }
@@ -31,14 +36,6 @@ public class RoomBug : MonoBehaviour
             {
                 yield return new WaitForSeconds(0.1f);
             }
-        }
-    }
-
-    public void InactiveBugs()
-    {
-        foreach (GameObject bugs in bugs)
-        {
-            bugs.SetActive(false);
         }
     }
 }

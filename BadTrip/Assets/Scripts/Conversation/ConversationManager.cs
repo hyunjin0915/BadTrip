@@ -23,7 +23,7 @@ public class ConversationManager : MonoBehaviour // ¸Ê ¾À°ú Initialization ¾À ¿¬
         SayDialogSO.SetFootstepVolume += player.SetFootstepVolume;
         SayDialogSO.movePlayerPos += player.SetPlayerPos;
         SayDialogSO.StopPlayer += player.StopPlayer;
-        SayDialogSO.PlayerSetActiveOFF += player.PlayerSetActiveOFF;
+        SayDialogSO.PlayerSetActive += player.PlayerSetActive;
         SayDialogSO.SetPlayerSortingLayer += player.SetSortingLayer;
     }
 
@@ -35,7 +35,7 @@ public class ConversationManager : MonoBehaviour // ¸Ê ¾À°ú Initialization ¾À ¿¬
         SayDialogSO.SetFootstepVolume -= player.SetFootstepVolume;
         SayDialogSO.movePlayerPos -= player.SetPlayerPos;
         SayDialogSO.StopPlayer -= player.StopPlayer;
-        SayDialogSO.PlayerSetActiveOFF -= player.PlayerSetActiveOFF;
+        SayDialogSO.PlayerSetActive -= player.PlayerSetActive;
         SayDialogSO.SetPlayerSortingLayer -= player.SetSortingLayer;
     }
 }

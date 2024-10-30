@@ -2,6 +2,7 @@
 // It is released for free under the MIT open source license (https://github.com/snozbot/fungus/blob/master/LICENSE)
 
 using MoonSharp.Interpreter.Tree;
+using System.Collections;
 using UnityEngine;
 
 namespace Fungus
@@ -85,6 +86,61 @@ namespace Fungus
             audioSourceMusic.volume = volume;
             audioSourceMusic.loop = false;
             audioSourceMusic.Play();
+        }
+
+        public void PlayMusicLoop(AudioClip musicClip, float volume)
+        {
+            audioSourceMusic.clip = musicClip;
+            audioSourceMusic.volume = volume;
+            audioSourceMusic.loop = true;
+            audioSourceMusic.Play();
+        }
+
+        public void PlayMusicFade(AudioClip musicClip, float volume, float fade)
+        {
+            audioSourceMusic.clip = musicClip;
+            audioSourceMusic.volume = 0;
+            audioSourceMusic.loop = false;
+            audioSourceMusic.Play();
+
+            StartCoroutine(PlayFade(volume, fade));
+        }
+
+        public IEnumerator PlayFade(float volume, float fade)
+        {
+            float ff = fade / 0.1f;
+            float fv = volume / ff;
+            float f = 0;
+
+            while (f <= volume)
+            {
+                audioSourceMusic.volume = f;
+                f += fv;
+                yield return new WaitForSeconds(0.1f);
+            }
+        }
+
+        public void StopMusicFade(float fade)
+        {
+            StartCoroutine(StopFade(fade));
+        }
+
+        public IEnumerator StopFade(float fade)
+        {
+            float ff = fade / 0.1f;
+            float v = audioSourceMusic.volume;
+            float fv = v / ff;
+            float f = v;
+
+            while (f > 0)
+            {
+                audioSourceMusic.volume = f;
+                f -= fv;
+                yield return new WaitForSeconds(0.1f);
+            }
+
+            audioSourceMusic.Stop();
+            audioSourceMusic.clip = null;
         }
 
         /// <summary>

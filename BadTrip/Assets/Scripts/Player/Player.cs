@@ -129,9 +129,15 @@ public class Player : MonoBehaviour
         isStudent = FungusManager.Instance.GlobalVariables.GetVariable("isStudent");
     }*/
 
-    public void PlayerSetActiveOFF()
+    public void PlayerSetActive(bool b)
     {
-        gameObject.SetActive(false);
+        if (b)
+        {
+            playerSP.color = new Color(1, 1, 1, 1);
+        } else
+        {
+            playerSP.color = new Color(1, 1, 1, 0);
+        }
     }
 
     #region Animation

@@ -26,11 +26,11 @@ public class RoomBug : MonoBehaviour
 
             if (i < 1)
             {
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(0.4f);
             }
-            else if (i < 2)
+            else if (i < 3)
             {
-                yield return new WaitForSeconds(0.3f);
+                yield return new WaitForSeconds(0.25f);
             }
             else
             {

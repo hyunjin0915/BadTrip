@@ -16,7 +16,7 @@ public class ParallaxBackground : MonoBehaviour
     private Material[] materials;
     private float[] layerMoveSpeed;
 
-    [SerializeField][Range(0.01f, 1.0f)]
+    [SerializeField][Range(0.001f, 0.1f)]
     private float parallaxSpeed;
 
     private void Awake()

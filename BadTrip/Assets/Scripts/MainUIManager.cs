@@ -42,4 +42,9 @@ public class MainUIManager : MonoBehaviour
         playerDataSO.animLayer = 0;
         
     }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }

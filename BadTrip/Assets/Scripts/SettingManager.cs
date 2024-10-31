@@ -101,4 +101,5 @@ public class SettingManager : MonoBehaviour
         settingWindow.SetActive(b);
     }
 
+
 }

@@ -24,18 +24,24 @@ public class SettingManager : MonoBehaviour
 
     private bool isActive = false;
 
+    private bool isDialog = true;
+
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
+        if (isDialog)
         {
-            if (isActive)
+            if (Input.GetKeyUp(KeyCode.Escape))
             {
-                isActive = false;
-                OnOffSetting(isActive);
-            } else
-            {
-                isActive = true;
-                OnOffSetting(isActive);
+                if (isActive)
+                {
+                    isActive = false;
+                    OnOffSetting(isActive);
+                }
+                else
+                {
+                    isActive = true;
+                    OnOffSetting(isActive);
+                }
             }
         }
     }
@@ -101,5 +107,8 @@ public class SettingManager : MonoBehaviour
         settingWindow.SetActive(b);
     }
 
-
+    public void SetIsDialog(bool b)
+    {
+        isDialog = b;
+    }
 }

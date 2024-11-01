@@ -3,6 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Edge
+{
+    none,
+    up,
+    down,
+    left,
+    right
+}
+
 public class NLPManager : MonoBehaviour
 {
     private List<Vector2> offsetPos = new List<Vector2>()
@@ -13,8 +22,8 @@ public class NLPManager : MonoBehaviour
 
 
     public bool isDragging = false;
-    public Node sourceNode;
-    public Node preNode;
+    public Node sourceNode; // 시작 노드
+    public Node preNode; // 이전 노드
 
     public int nodeCount = 0;
 
@@ -44,6 +53,7 @@ public class NLPManager : MonoBehaviour
     {
         successCount++;
         nodeCount = 0;
+        Debug.Log ("하나 성공");
     }
     
     public void CheckSuccesse()
@@ -52,6 +62,14 @@ public class NLPManager : MonoBehaviour
         {
             // 완전 성공
             // 게임 클리어시 실행 부분 추가
+        }
+    }
+
+    public void Reset()
+    {
+        foreach (Node node in nodes) {
+            node.Init();
+            node.ClearConnectedNodes();
         }
     }
 }

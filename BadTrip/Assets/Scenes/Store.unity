@@ -1426,6 +1426,10 @@ GameObject:
   - component: {fileID: 148524206}
   - component: {fileID: 148524205}
   - component: {fileID: 148524208}
+  - component: {fileID: 148524212}
+  - component: {fileID: 148524211}
+  - component: {fileID: 148524210}
+  - component: {fileID: 148524209}
   m_Layer: 0
   m_Name: StreetFlowchart
   m_TagString: Untagged
@@ -1461,7 +1465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 119.15814, y: 74.30081}
+  scrollPos: {x: 271.15814, y: -101.69919}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 880
@@ -1472,10 +1476,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 148524179}
-  selectedCommands:
-  - {fileID: 148524203}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 148524050}
   description: 
@@ -1523,26 +1525,9 @@ MonoBehaviour:
     Culture=neutral, PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
   targetComponentText: ConversationEventManager
-  targetMethod: SetPlayerAnim
-  targetMethodText: 'SetPlayerAnim (String, Boolean): Void'
+  targetMethod: SetIsDialog
+  targetMethodText: 'SetIsDialog (Boolean): Void'
   methodParameters:
-  - objValue:
-      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.String
-      intValue: 0
-      boolValue: 0
-      floatValue: 0
-      stringValue: CanPMove
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
   - objValue:
       typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
@@ -1590,8 +1575,9 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 148524062}
   commandList:
-  - {fileID: 148524055}
   - {fileID: 148524079}
+  - {fileID: 148524055}
+  - {fileID: 148524212}
   - {fileID: 148524076}
   - {fileID: 148524073}
   - {fileID: 148524075}
@@ -1628,8 +1614,9 @@ MonoBehaviour:
   - {fileID: 148524087}
   - {fileID: 148524098}
   - {fileID: 148524078}
-  - {fileID: 148524052}
+  - {fileID: 148524211}
   - {fileID: 148524097}
+  - {fileID: 148524052}
   suppressAllAutoSelections: 0
 --- !u!114 &148524055
 MonoBehaviour:
@@ -2185,26 +2172,9 @@ MonoBehaviour:
     Culture=neutral, PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
   targetComponentText: ConversationEventManager
-  targetMethod: SetPlayerAnim
-  targetMethodText: 'SetPlayerAnim (String, Boolean): Void'
+  targetMethod: SetIsDialog
+  targetMethodText: 'SetIsDialog (Boolean): Void'
   methodParameters:
-  - objValue:
-      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.String
-      intValue: 0
-      boolValue: 0
-      floatValue: 0
-      stringValue: CanPMove
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
   - objValue:
       typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
@@ -3065,6 +3035,7 @@ MonoBehaviour:
   eventHandler: {fileID: 148524107}
   commandList:
   - {fileID: 148524196}
+  - {fileID: 148524210}
   - {fileID: 148524147}
   - {fileID: 148524152}
   - {fileID: 148524144}
@@ -3333,6 +3304,7 @@ MonoBehaviour:
   - {fileID: 148524164}
   - {fileID: 148524174}
   - {fileID: 148524208}
+  - {fileID: 148524209}
   suppressAllAutoSelections: 0
 --- !u!114 &148524160
 MonoBehaviour:
@@ -4733,26 +4705,9 @@ MonoBehaviour:
     Culture=neutral, PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
   targetComponentText: ConversationEventManager
-  targetMethod: SetPlayerAnim
-  targetMethodText: 'SetPlayerAnim (String, Boolean): Void'
+  targetMethod: SetIsDialog
+  targetMethodText: 'SetIsDialog (Boolean): Void'
   methodParameters:
-  - objValue:
-      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.String
-      intValue: 0
-      boolValue: 0
-      floatValue: 0
-      stringValue: CanPMove
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
   - objValue:
       typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
@@ -5044,6 +4999,237 @@ MonoBehaviour:
   targetMethod: UpdateQuest
   targetMethodText: 'UpdateQuest (): Void'
   methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &148524209
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148523951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 254
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1739570103}
+  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ConversationEventManager
+  targetMethod: SetIsDialog
+  targetMethodText: 'SetIsDialog (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 1
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &148524210
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148523951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 253
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1739570103}
+  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ConversationEventManager
+  targetMethod: SetPlayerAnim
+  targetMethodText: 'SetPlayerAnim (String, Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: CanPMove
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &148524211
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148523951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 252
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1739570103}
+  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ConversationEventManager
+  targetMethod: SetPlayerAnim
+  targetMethodText: 'SetPlayerAnim (String, Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: CanPMove
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 1
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &148524212
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148523951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 251
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1739570103}
+  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ConversationEventManager
+  targetMethod: SetPlayerAnim
+  targetMethodText: 'SetPlayerAnim (String, Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: CanPMove
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
   saveReturnValue: 0
   returnValueVariableKey: 
   returnValueType: System.Void
@@ -5680,8 +5866,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -1.5407, y: -4.77835, z: 0}
-    m_Extent: {x: 12.3178, y: 8.93905, z: 0}
+    m_Center: {x: -1.5383, y: -4.7755, z: 0}
+    m_Extent: {x: 12.321199, y: 8.944099, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6121,8 +6307,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.9116497, y: -4.6082, z: 0}
-    m_Extent: {x: 15.34935, y: 9.8238, z: 0}
+    m_Center: {x: 0.9122, y: -4.61145, z: 0}
+    m_Extent: {x: 15.3453, y: 9.82705, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6418,6 +6604,7 @@ GameObject:
   - component: {fileID: 806209541}
   - component: {fileID: 806209542}
   - component: {fileID: 806209543}
+  - component: {fileID: 806209544}
   m_Layer: 0
   m_Name: StreetDrugFlowchart
   m_TagString: Untagged
@@ -6610,8 +6797,8 @@ MonoBehaviour:
     Culture=neutral, PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
   targetComponentText: ConversationEventManager
-  targetMethod: SetCanMove
-  targetMethodText: 'SetCanMove (Boolean): Void'
+  targetMethod: SetIsDialog
+  targetMethodText: 'SetIsDialog (Boolean): Void'
   methodParameters:
   - objValue:
       typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
@@ -6679,6 +6866,7 @@ MonoBehaviour:
   eventHandler: {fileID: 806209532}
   commandList:
   - {fileID: 806209531}
+  - {fileID: 806209544}
   - {fileID: 806209530}
   - {fileID: 806209529}
   - {fileID: 806209528}
@@ -6778,8 +6966,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 806209533}
-  selectedCommands:
-  - {fileID: 806209543}
+  selectedCommands: []
   variables:
   - {fileID: 806209535}
   description: 
@@ -6961,7 +7148,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &806209543
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6982,6 +7169,51 @@ MonoBehaviour:
   targetMethod: ShutDown
   targetMethodText: 'ShutDown (): Void'
   methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &806209544
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806209524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 14
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1739570103}
+  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ConversationEventManager
+  targetMethod: SetCanMove
+  targetMethodText: 'SetCanMove (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
   saveReturnValue: 0
   returnValueVariableKey: 
   returnValueType: System.Void
@@ -7423,8 +7655,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.5829501, y: -1.0163503, z: 0}
-    m_Extent: {x: 14.470949, y: 11.501551, z: 0}
+    m_Center: {x: 0.57714987, y: -1.0221, z: 0}
+    m_Extent: {x: 14.464149, y: 11.504499, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7955,8 +8187,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.088199854, y: -2.06335, z: 0}
-    m_Extent: {x: 4.1577997, y: 5.0956497, z: 0}
+    m_Center: {x: 0.079050064, y: -2.0787, z: 0}
+    m_Extent: {x: 4.16985, y: 5.0957, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -8714,8 +8946,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.20515013, y: 0.7182503, z: 0}
-    m_Extent: {x: 6.42525, y: 19.30645, z: 0}
+    m_Center: {x: 0.20615005, y: 0.7144499, z: 0}
+    m_Extent: {x: 6.43095, y: 19.305649, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -8838,8 +9070,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.95790005, y: -0.049950123, z: 0}
-    m_Extent: {x: 15.1815, y: 4.97295, z: 0}
+    m_Center: {x: -0.9534998, y: -0.055400133, z: 0}
+    m_Extent: {x: 15.1778, y: 4.9744997, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -10452,8 +10684,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 2.5591507, y: 0.08160019, z: 0}
-    m_Extent: {x: 31.40295, y: 10.6585, z: 0}
+    m_Center: {x: 2.56005, y: 0.0788002, z: 0}
+    m_Extent: {x: 31.401249, y: 10.6635, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -10640,7 +10872,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 806209536}
+  selectedFlowchart: {fileID: 148523996}
 --- !u!4 &2143993491
 Transform:
   m_ObjectHideFlags: 1

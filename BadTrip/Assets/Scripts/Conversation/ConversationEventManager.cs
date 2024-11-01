@@ -133,4 +133,9 @@ public class ConversationEventManager : MonoBehaviour
     {
         sayDialogSO.menuBackground.SetActive(b);
     }
+
+    public void SetIsDialog(bool b)
+    {
+        sayDialogSO.SetIsDialog(b);
+    }
 }

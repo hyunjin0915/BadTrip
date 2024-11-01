@@ -13,6 +13,8 @@ public class ConversationManager : MonoBehaviour // ¸Ê ¾À°ú Initialization ¾À ¿¬
 
     [SerializeField] private GameObject menuBackground;
 
+    [SerializeField] private SettingManager settingManager;
+
     private void Awake()
     {
         SayDialogSO.dialogs = sayDialogs;
@@ -25,6 +27,8 @@ public class ConversationManager : MonoBehaviour // ¸Ê ¾À°ú Initialization ¾À ¿¬
         SayDialogSO.StopPlayer += player.StopPlayer;
         SayDialogSO.PlayerSetActive += player.PlayerSetActive;
         SayDialogSO.SetPlayerSortingLayer += player.SetSortingLayer;
+        SayDialogSO.SetIsDialog += settingManager.SetIsDialog;
+
     }
 
     private void OnDisable()
@@ -37,5 +41,6 @@ public class ConversationManager : MonoBehaviour // ¸Ê ¾À°ú Initialization ¾À ¿¬
         SayDialogSO.StopPlayer -= player.StopPlayer;
         SayDialogSO.PlayerSetActive -= player.PlayerSetActive;
         SayDialogSO.SetPlayerSortingLayer -= player.SetSortingLayer;
+        SayDialogSO.SetIsDialog -= settingManager.SetIsDialog;
     }
 }

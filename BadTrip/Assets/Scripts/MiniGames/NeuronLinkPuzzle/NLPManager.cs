@@ -62,6 +62,7 @@ public class NLPManager : MonoBehaviour
         {
             // 완전 성공
             // 게임 클리어시 실행 부분 추가
+            Debug.Log("완전 성공");
         }
     }
 

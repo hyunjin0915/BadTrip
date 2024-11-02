@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler, IPointerEnterHandler
+public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
 {
     public GameObject point;
     public GameObject[] horizonEdge; // 가로 이미지
@@ -76,18 +76,21 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
             nlpManager.preNode = this;
             nlpManager.sourceNode = this;
             isActive = true;
+            highlight[nlpManager.sourceNode.colorId].SetActive(true);
         }
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-
+        
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         if (nlpManager.isDragging)
         {
+            nlpManager.sourceNode.connectedNodes[nlpManager.nodeCount - 1].GetComponentInParent<Node>().highlight[nlpManager.sourceNode.colorId].SetActive(false);
+
             nlpManager.isDragging = false;
 
             if (!nlpManager.preNode.isPoint)
@@ -111,6 +114,8 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
 
             if (connectedEdges.ContainsKey(nlpManager.preNode))
             {
+                highlight[nlpManager.sourceNode.colorId].SetActive(true);
+
                 // 이전 노드 설정
                 if (nlpManager.preNode.pre != Edge.none)
                 {
@@ -128,9 +133,10 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
                 isActive = true;
             }
 
-            if (isPoint) // 성공
+            if (isPoint && nlpManager.sourceNode != this) // 성공
             {
                 nlpManager.isDragging = false;
+                highlight[nlpManager.sourceNode.colorId].SetActive(false);
 
                 nlpManager.addSuccessCount();
                 nlpManager.CheckSuccesse();
@@ -142,6 +148,8 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
         {
             if (connectedEdges.ContainsKey(nlpManager.preNode))
             {
+                highlight[nlpManager.sourceNode.colorId].SetActive(true);
+
                 if (nlpManager.nodeCount > 1)
                 {
                     if (nodeNum == nlpManager.sourceNode.connectedNodes[nlpManager.nodeCount - 2]?.GetComponentInParent<Node>().nodeNum)
@@ -173,13 +181,17 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
                     nlpManager.preNode = this;
                 }
             }
+            else if(nlpManager.preNode.Equals(this))
+            {
+                highlight[nlpManager.sourceNode.colorId].SetActive(true);
+            }
         }
     }
 
     public void Init()
     {
         point.SetActive(false);
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < 5; i++)
         {
             verticalEdge[i].SetActive(false);
             horizonEdge[i].SetActive(false);
@@ -280,6 +292,30 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
             default:
                 break;
 
+        }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (nlpManager.isDragging)
+        {
+            highlight[nlpManager.sourceNode.colorId].SetActive(false);
+        }
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        if (isPoint)
+        {
+            highlight[colorId].SetActive(true);
+        }
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        if (isPoint)
+        {
+            highlight[colorId].SetActive(false);
         }
     }
 }

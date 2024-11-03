@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae70fccd5fcef3b4d8da728523cf784f, type: 3}
   m_Name: SFXInfo_MainClick
   m_EditorClassIdentifier: 
-  audioNum: 1
+  audioNum: 3
   clip: {fileID: 8300000, guid: 354a2e5aa2ecbbf47ae59491a570b6f0, type: 3}
   vol: 0.5
+  pch: 1
   isLoop: 0
   isOneShot: 1
+  spread: 0
   audioMixerGroup: {fileID: -7570096524590141770, guid: a4eea5b62d0a0f642a69776341ae087a, type: 2}
   spatialBlend: 0
   minDistance: 1

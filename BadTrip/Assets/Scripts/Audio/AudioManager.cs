@@ -30,9 +30,11 @@ public class AudioManager : MonoBehaviour
     {
         sfxEventChannel.audioSourcePlay += PlayAudio;
         bgmEventChannel.audioSourcePlay += PlayAudio;
+        bgmEventChannel.audioSourcePlayFade += PlayMusicFade;
 
         sfxEventChannel.audioSourceStop += StopAudio;
         bgmEventChannel.audioSourceStop += StopAudio;
+        bgmEventChannel.audioSourceStopFade += StopMusicFade;
 
         bgmEventChannel.getAudioName += GetAudioClipName;
     }
@@ -64,5 +66,60 @@ public class AudioManager : MonoBehaviour
     public string GetAudioClipName(int num)
     {
         return audioSources[num].isPlaying ? audioSources[num].clip.name : "0";
+    }
+
+    public void PlayMusicFade(AudioInfoSO audioInfo, float fade)
+    {
+        audioSources[audioInfo.audioNum].clip = audioInfo.clip;
+        audioSources[audioInfo.audioNum].volume = 0;
+        audioSources[audioInfo.audioNum].loop = false;
+        audioSources[audioInfo.audioNum].Play();
+
+        StartCoroutine(PlayFade(audioInfo.vol, fade, audioInfo.audioNum));
+    }
+
+    public IEnumerator PlayFade(float volume, float fade, int audioNum)
+    {
+        float ff = fade / 0.1f;
+        float fv = volume / ff;
+        float f = 0;
+
+        while (f <= volume)
+        {
+            audioSources[audioNum].volume = f;
+            f += fv;
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
+
+    public void StopMusicFade(float fade)
+    {
+        int audioNum;
+        for (audioNum = 0; audioNum < 3; audioNum++)
+        {
+            if (audioSources[audioNum].isPlaying)
+            {
+                StartCoroutine(StopFade(fade, audioNum));
+                break;
+            }
+        }
+    }
+
+    public IEnumerator StopFade(float fade, int audioNum)
+    {
+        float ff = fade / 0.1f;
+        float v = audioSources[audioNum].volume;
+        float fv = v / ff;
+        float f = v;
+
+        while (f > 0)
+        {
+            audioSources[audioNum].volume = f;
+            f -= fv;
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        audioSources[audioNum].Stop();
+        audioSources[audioNum].clip = null;
     }
 }

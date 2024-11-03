@@ -5,14 +5,22 @@ using UnityEngine;
 public class BGMPlay : MonoBehaviour
 {
     [SerializeField] private AudioCue audioCue;
+    public int bgmNum;
 
     private void OnEnable()
     {
-        if (!audioCue.IsSameClip(0))
+        if (!audioCue.IsSameClip(bgmNum))
         {
-            audioCue.PlayAudio(0);
+            audioCue.StopAudioFade(1.5f);
+            audioCue.PlayAudioFade(bgmNum, 1.5f);
         }
 
+    }
+
+    public void PlayBGM(int num)
+    {
+        audioCue.StopAudioFade(1.5f);
+        audioCue.PlayAudioFade(num, 1.5f);
     }
 
 

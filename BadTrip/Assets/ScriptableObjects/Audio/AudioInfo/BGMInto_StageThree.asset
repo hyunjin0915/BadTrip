@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae70fccd5fcef3b4d8da728523cf784f, type: 3}
-  m_Name: SFXInfo_MainSelected
+  m_Name: BGMInto_StageThree
   m_EditorClassIdentifier: 
-  audioNum: 3
-  clip: {fileID: 8300000, guid: 474fd06aa892bf649991351d32526ff8, type: 3}
-  vol: 0.5
+  audioNum: 0
+  clip: {fileID: 8300000, guid: 2025315b9b276bc45bfe9a5792c3c7d6, type: 3}
+  vol: 0.4
   pch: 1
-  isLoop: 0
-  isOneShot: 1
+  isLoop: 1
+  isOneShot: 0
   spread: 0
-  audioMixerGroup: {fileID: -7570096524590141770, guid: a4eea5b62d0a0f642a69776341ae087a, type: 2}
+  audioMixerGroup: {fileID: 570879748219307191, guid: a4eea5b62d0a0f642a69776341ae087a, type: 2}
   spatialBlend: 0
   minDistance: 1
   maxDistance: 500

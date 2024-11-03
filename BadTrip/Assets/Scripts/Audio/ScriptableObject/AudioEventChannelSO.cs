@@ -11,6 +11,10 @@ public class AudioEventChannelSO : ScriptableObject
 
     public Action<AudioInfoSO> audioSourceStop; // 오디오 정지
 
+    public Action<AudioInfoSO, float> audioSourcePlayFade;
+
+    public Action<float> audioSourceStopFade;
+
     public Func<int, string> getAudioName; // 현재 같은 오디오가 출력되고 있는가
 
     public void RaisePlayEvent(AudioInfoSO audioInfo, Vector2 audioPos)
@@ -26,5 +30,15 @@ public class AudioEventChannelSO : ScriptableObject
     public string RaiseGetAudioName(int num)
     {
         return getAudioName.Invoke(num);
+    }
+
+    public void RaisePlayFadeEvent(AudioInfoSO audioInfo, float fade)
+    {
+        audioSourcePlayFade.Invoke(audioInfo, fade);
+    }
+
+    public void RaiseStopFadeEvent(float fade)
+    {
+        audioSourceStopFade.Invoke(fade);
     }
 }

@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae70fccd5fcef3b4d8da728523cf784f, type: 3}
   m_Name: SFXInfo_Door
   m_EditorClassIdentifier: 
-  audioNum: 1
+  audioNum: 3
   clip: {fileID: 8300000, guid: 5fe7178c80bf8da4aad22058b61c702a, type: 3}
-  vol: 0.6
+  vol: 1
+  pch: 1
   isLoop: 0
   isOneShot: 1
   spread: 0

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: BGMInto_StageOne
   m_EditorClassIdentifier: 
   audioNum: 0
-  clip: {fileID: 8300000, guid: 91626e514cb58f848afddadd043941ce, type: 3}
-  vol: 0.5
+  clip: {fileID: 8300000, guid: 1697a98af8647e64d87b9d4e66077137, type: 3}
+  vol: 0.4
   pch: 1
   isLoop: 1
   isOneShot: 0

@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae70fccd5fcef3b4d8da728523cf784f, type: 3}
   m_Name: SFXInfo_MethBug
   m_EditorClassIdentifier: 
-  audioNum: 1
+  audioNum: 3
   clip: {fileID: 8300000, guid: 6d4b6d9e2fb25cf49ac14b7c444de994, type: 3}
   vol: 0.5
+  pch: 1
   isLoop: 0
   isOneShot: 1
   spread: 0

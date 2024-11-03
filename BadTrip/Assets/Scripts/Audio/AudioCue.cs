@@ -17,6 +17,17 @@ public class AudioCue : MonoBehaviour
         audioEventChannel.RaiseStopEvent(audioInfos[num]);
     }
 
+    public void PlayAudioFade(int num, float fade)
+    {
+        audioEventChannel.RaisePlayFadeEvent(audioInfos[num], fade);
+    }
+
+    public void StopAudioFade(float fade)
+    {
+        audioEventChannel.RaiseStopFadeEvent(fade);
+    }
+
+
     public bool IsSameClip(int num)
     {
         return audioInfos[num].clip.name == audioEventChannel.getAudioName(audioInfos[num].audioNum);

@@ -17007,6 +17007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioCue: {fileID: 1645119219}
+  bgmNum: 0
 --- !u!114 &1645119219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17021,6 +17022,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioInfos:
   - {fileID: 11400000, guid: 17dffc5fa360c6345b61189596b46e20, type: 2}
+  - {fileID: 11400000, guid: 68e1c087e8a84cb43a21f1400aed4620, type: 2}
+  - {fileID: 11400000, guid: 526f82ddd46b1da47a7c01383499ac52, type: 2}
   audioEventChannel: {fileID: 11400000, guid: 5f1f11dc6a883c04fa42e19cea1a7c4b, type: 2}
 --- !u!1 &1657038076
 GameObject:

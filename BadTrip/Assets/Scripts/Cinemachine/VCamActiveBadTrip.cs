@@ -19,10 +19,6 @@ public class VCamActiveBadTrip : MonoBehaviour
             vCam.SetActive(true);
             camCtrlSO.ChangeVCam(vCam);
 
-            if(vCam.name.Equals("CamThreeVCam"))
-            {
-                backGround.SetActive(true);
-            }
             if(vCam.name.Equals("CamFiveVCam"))
             {
                 spawn.SetActive(true);
@@ -34,6 +30,10 @@ public class VCamActiveBadTrip : MonoBehaviour
         if(other.CompareTag("SOPlayer") && !other.isTrigger)
         {
             vCam.SetActive(false);
+        }
+        if(vCam.name.Equals("CamFiveVCam"))
+        {
+                spawn.SetActive(false);
         }
     }
 }

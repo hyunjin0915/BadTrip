@@ -19,9 +19,14 @@ public class MovingMon : MonoBehaviour
     [SerializeField]
     protected float velocity;	//속도.
 
-    void Start()
+    protected virtual void Start()
     {
+        currentPosition = transform.position; //현재 위치의 x값 저장.
+        currentScaleX = transform.localScale.x;	//현재 스케일의 x값 저장.
+        currentScaleY = transform.localScale.y;	//현재 스케일의 x값 저장.
         
+        rightMax_Apply = currentPosition.x+rightMax;
+        leftMax_Apply = currentPosition.x + leftMax;
     }
 
     void Update()

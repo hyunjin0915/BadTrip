@@ -2,37 +2,57 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mollusk : MovingMon
+public class BugFly : MovingMon
 {
     [SerializeField]
     private Rigidbody2D target;
     private Rigidbody2D rb;
+    
     [SerializeField]
-    float FollowingSpeed = 3.0f;
+    float FlyingSpeed;
     public bool isFollow = false;
 
     [SerializeField]
     float FindRange = 4f; 
-     protected override void Start()
+
+    [SerializeField]
+    float FollowingSpeed = 3.0f;
+
+    [SerializeField]
+    private float upMax;
+    [SerializeField]
+    private float downMax;
+    private float upMax_Apply;
+    private float downMax_Apply;
+
+    float perDirection = 1.0f;
+
+    // Start is called before the first frame update
+    protected override void Start()
     {
         base.Start();
-
         rb = GetComponent<Rigidbody2D>();
+
+        upMax_Apply = currentPosition.y+upMax;
+        downMax_Apply = currentPosition.y + downMax;
     }
-   void Update()
-   {
+
+    // Update is called once per frame
+    void Update()
+    {
         if(!isFollow)
         {
             Move();
+            Fly();
         } 
         FollowingPlayer();
-   }
-
+    }
     protected override void Move()
     {
         currentPosition = transform.position;
         base.Move();
     }
+    
     void FollowingPlayer()
     {
         Collider2D playerCollider = Physics2D.OverlapCircle(transform.position, FindRange,LayerMask.GetMask("Player"));
@@ -57,10 +77,27 @@ public class Mollusk : MovingMon
         }
         
     }
+
+    public void Fly()
+    {
+        currentPosition.y += Time.deltaTime * perDirection * FlyingSpeed;
+
+        if(currentPosition.y >= upMax_Apply)
+        {
+            currentPosition.y = upMax_Apply;
+            perDirection = -1f;
+        }
+        else if(currentPosition.y <= downMax_Apply)
+        {
+            currentPosition.y = downMax_Apply;
+            perDirection = 1f;
+        }
+        transform.position = currentPosition;
+    }
+
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, FindRange);
     }
-
 }

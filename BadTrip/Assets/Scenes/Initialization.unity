@@ -4022,8 +4022,12 @@ MonoBehaviour:
       value: {fileID: 11400000, guid: 9e4641d7c6dd9224c94ee007aad5ea87, type: 2}
     - key: BadTrip
       value: {fileID: 11400000, guid: 9aeb329f9e0d6fe4d849b35dc87eeec2, type: 2}
-    - key: SchoolRestroom
+    - key: School
       value: {fileID: 11400000, guid: 23f13c274277252479eb2b62aa5f2f66, type: 2}
+    - key: Hospital
+      value: {fileID: 11400000, guid: 58f309141da01f44f87290b1a461afed, type: 2}
+    - key: RehabilitationHome
+      value: {fileID: 11400000, guid: 09d6fcbf30b19614483198a48412f7bb, type: 2}
   loadPlayerPos:
     key_value:
     - key: OneRoomHome
@@ -4042,8 +4046,18 @@ MonoBehaviour:
       value: {x: 0, y: 0, z: 0}
     - key: BadTripHome
       value: {x: 169.73, y: -16.44, z: 0}
-    - key: HomeSchoolRestroom
+    - key: HomeSchool
       value: {x: -23.4, y: -19, z: 0}
+    - key: StoreSchool
+      value: {x: 97.2, y: -17.5, z: 0}
+    - key: SchoolStore
+      value: {x: -186.6, y: -12.4, z: 0}
+    - key: StoreHospital
+      value: {x: -17, y: -14.3, z: 0}
+    - key: HospitalStore
+      value: {x: -496, y: -12, z: 0}
+    - key: HospitalRehabilitationHome
+      value: {x: -496, y: -12, z: 0}
   curSceneName: Main
   sceneload_EventChannel: {fileID: 11400000, guid: 88353211a4d7054468d078bf3ab2ad81, type: 2}
   player: {fileID: 6858215238848761065}
@@ -4274,7 +4288,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 17.466427
+  orthographic size: 33.749
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4299,7 +4313,7 @@ Transform:
   m_GameObject: {fileID: 1363665731}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.294847, y: -0.4635002, z: -32.519344}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -28,6 +28,7 @@ public class ConversationManager : MonoBehaviour // ¸Ê ¾À°ú Initialization ¾À ¿¬
         SayDialogSO.PlayerSetActive += player.PlayerSetActive;
         SayDialogSO.SetPlayerSortingLayer += player.SetSortingLayer;
         SayDialogSO.SetIsDialog += settingManager.SetIsDialog;
+        SayDialogSO.SetPlayerFlip += player.SetPlayerFlip;
 
     }
 
@@ -42,5 +43,6 @@ public class ConversationManager : MonoBehaviour // ¸Ê ¾À°ú Initialization ¾À ¿¬
         SayDialogSO.PlayerSetActive -= player.PlayerSetActive;
         SayDialogSO.SetPlayerSortingLayer -= player.SetSortingLayer;
         SayDialogSO.SetIsDialog -= settingManager.SetIsDialog;
+        SayDialogSO.SetPlayerFlip -= player.SetPlayerFlip;
     }
 }

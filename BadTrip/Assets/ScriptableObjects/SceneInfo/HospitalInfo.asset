@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10411dad2169fbe4dbfd0cc4e9989478, type: 3}
-  m_Name: SchoolRestroomInfo
+  m_Name: HospitalInfo
   m_EditorClassIdentifier: 
   isPlayer: 1
   isDialog: 1
   playerRen: 1
-  sceneName: SchoolRestoom
+  sceneName: Hospital

@@ -198,6 +198,11 @@ public class Player : MonoBehaviour
         playerSP.flipX = isFlip; // true : 오른쪽 false : 왼쪽
 
     }
+
+    public void SetPlayerFlip(bool b)
+    {
+        playerSP.flipX = b;
+    }
     #endregion
 
     #region PlayerFootstepAudio

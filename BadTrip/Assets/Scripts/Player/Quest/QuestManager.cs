@@ -69,9 +69,9 @@ public class QuestManager : MonoBehaviour
         UpdateQuestScene();
     }
 
-    public void CompleteQuest()
+    public void CompleteQuest(int i = 1)
     {
-        curQuestId++;
+        curQuestId += 1;
         if (curQuestId < questSet.Count)
         {
             LoadQuest(curQuestId);

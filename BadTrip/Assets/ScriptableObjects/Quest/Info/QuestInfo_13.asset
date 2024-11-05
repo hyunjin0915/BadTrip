@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e19c0907e1eab48a0e2f2dff776234, type: 3}
   m_Name: QuestInfo_13
   m_EditorClassIdentifier: 
-  explain: "\uD559\uAD50 \uD654\uC7A5\uC2E4\uC5D0\uC11C \uB9C8\uC57D"
+  explain: "\uAC70\uB9AC\uC5D0\uC11C \uB9C8\uC57D \uCEF7\uC2E0"
   questId: 13
-  sceneName: SchoolRestroom
-  questCount: 1
+  sceneName: Store
+  questCount: 2
   clearCount: 0
   isLast: 0
   InterQuest: []
@@ -24,4 +24,4 @@ MonoBehaviour:
     isClear: 0
     interactionId: 0
     player: {fileID: 0}
-    message: 800_HyunjunDrug
+    message: 600_DrugScene

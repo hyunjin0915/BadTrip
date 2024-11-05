@@ -84,6 +84,11 @@ public class ConversationEventManager : MonoBehaviour
         sayDialogSO.movePlayerPos(pos, isFlip); 
     }
 
+    public void SetPlayerFlip(bool b)
+    {
+        sayDialogSO.SetPlayerFlip(b);
+    }
+
     public void StopPlayer()
     {
         sayDialogSO.StopPlayer();
@@ -108,9 +113,9 @@ public class ConversationEventManager : MonoBehaviour
     #endregion
 
     #region QuestComplete
-    public void CompleteQuest() // 퀘스트 종료(대화 끝에 사용)
+    public void CompleteQuest(int i = 1) // 퀘스트 종료(대화 끝에 사용)
     {
-        interactionObjectsSO.CompleteConQuest();
+        interactionObjectsSO.CompleteConQuest(i);
     }
 
     public void UpdateQuest()

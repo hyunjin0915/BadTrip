@@ -9,15 +9,15 @@ public class InteractionObjectsSO : ScriptableObject
     public Dictionary<int, GameObject> interactionObjs = new Dictionary<int, GameObject>();
 
     public event Action UpdateQuestScene;
-    public event Action CompleteQuest;
+    public event Action<int> CompleteQuest;
 
     public void RaiseEvent()
     {
         UpdateQuestScene?.Invoke();
     }
 
-    public void CompleteConQuest()
+    public void CompleteConQuest(int i = 1)
     {
-        CompleteQuest?.Invoke();
+        CompleteQuest?.Invoke(i);
     }
 }

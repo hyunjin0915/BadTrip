@@ -9,11 +9,9 @@ public class MudMonMove : MovingMon
     private Rigidbody2D rb;
     [SerializeField]
     float FollowingSpeed = 3.0f;
-    void Start()
+    protected override void  Start()
     {
-        currentPosition = transform.position; //현재 위치의 x값 저장.
-        currentScaleX = transform.localScale.x;	//현재 스케일의 x값 저장.
-        currentScaleY = transform.localScale.y;	//현재 스케일의 x값 저장.
+        base.Start();
         
         rb = GetComponent<Rigidbody2D>();
         GameObject targetObj = GameObject.FindGameObjectWithTag("SOPlayer");

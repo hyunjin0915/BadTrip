@@ -11,6 +11,15 @@ public class MovingMon : MonoBehaviour
     protected float rightMax_Apply;
     protected float leftMax_Apply;
 
+    [SerializeField]
+    protected float upMax;
+    [SerializeField]
+    protected float downMax;
+    protected float upMax_Apply;
+    protected float downMax_Apply;
+
+    float perDirection = 1.0f;
+
     protected Vector2 currentPosition;	//현재 위치(x)를 저장할 변수.
     protected float currentScaleX;		//현재 스케일(x)를 저장할 변수.
     protected float currentScaleY;
@@ -18,6 +27,9 @@ public class MovingMon : MonoBehaviour
     protected float direction = 1.0f;	//방향.
     [SerializeField]
     protected float velocity;	//속도.
+    [SerializeField]
+    float FlyingSpeed;
+
 
     protected virtual void Start()
     {
@@ -31,7 +43,7 @@ public class MovingMon : MonoBehaviour
 
     void Update()
     {
-        //Move();
+
     }
 
     protected virtual void Move()
@@ -64,5 +76,21 @@ public class MovingMon : MonoBehaviour
     {
         direction = 1f;					//방향을 오른쪽으로 설정(원래 방향과 동일).
         transform.localScale = new Vector2(currentScaleX, currentScaleY);
+    }
+    public void Fly()
+    {
+        currentPosition.y += Time.deltaTime * perDirection * FlyingSpeed;
+
+        if(currentPosition.y >= upMax_Apply)
+        {
+            currentPosition.y = upMax_Apply;
+            perDirection = -1f;
+        }
+        else if(currentPosition.y <= downMax_Apply)
+        {
+            currentPosition.y = downMax_Apply;
+            perDirection = 1f;
+        }
+        transform.position = currentPosition;
     }
 }

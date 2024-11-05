@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Rabbit_Jump
+  m_Name: Butterfly
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,13 +21,11 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 21300000, guid: cd07593c5b669bd4caf004bf82b23765, type: 3}
-    - time: 0.16666667
-      value: {fileID: 21300000, guid: 9066f2d70d66ce545bc0bca035876035, type: 3}
-    - time: 0.33333334
-      value: {fileID: 21300000, guid: a8b2b8ea729448445b8f2b0cb829f3e1, type: 3}
-    - time: 0.5
-      value: {fileID: 21300000, guid: 7fb74c6dd34def7469bea86fc6c1e41d, type: 3}
+      value: {fileID: 21300000, guid: 771918dbb40779447afa613364baea38, type: 3}
+    - time: 0.25
+      value: {fileID: 21300000, guid: 21e307489599a95468e3e92005b918b1, type: 3}
+    - time: 0.5833333
+      value: {fileID: 21300000, guid: 771918dbb40779447afa613364baea38, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -50,16 +48,15 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: cd07593c5b669bd4caf004bf82b23765, type: 3}
-    - {fileID: 21300000, guid: 9066f2d70d66ce545bc0bca035876035, type: 3}
-    - {fileID: 21300000, guid: a8b2b8ea729448445b8f2b0cb829f3e1, type: 3}
-    - {fileID: 21300000, guid: 7fb74c6dd34def7469bea86fc6c1e41d, type: 3}
+    - {fileID: 21300000, guid: 771918dbb40779447afa613364baea38, type: 3}
+    - {fileID: 21300000, guid: 21e307489599a95468e3e92005b918b1, type: 3}
+    - {fileID: 21300000, guid: 771918dbb40779447afa613364baea38, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.5833333
+    m_StopTime: 0.6666666
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

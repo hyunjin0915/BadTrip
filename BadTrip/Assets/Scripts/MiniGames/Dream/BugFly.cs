@@ -8,8 +8,6 @@ public class BugFly : MovingMon
     private Rigidbody2D target;
     private Rigidbody2D rb;
     
-    [SerializeField]
-    float FlyingSpeed;
     public bool isFollow = false;
 
     [SerializeField]
@@ -18,14 +16,7 @@ public class BugFly : MovingMon
     [SerializeField]
     float FollowingSpeed = 3.0f;
 
-    [SerializeField]
-    private float upMax;
-    [SerializeField]
-    private float downMax;
-    private float upMax_Apply;
-    private float downMax_Apply;
 
-    float perDirection = 1.0f;
 
     // Start is called before the first frame update
     protected override void Start()
@@ -78,22 +69,6 @@ public class BugFly : MovingMon
         
     }
 
-    public void Fly()
-    {
-        currentPosition.y += Time.deltaTime * perDirection * FlyingSpeed;
-
-        if(currentPosition.y >= upMax_Apply)
-        {
-            currentPosition.y = upMax_Apply;
-            perDirection = -1f;
-        }
-        else if(currentPosition.y <= downMax_Apply)
-        {
-            currentPosition.y = downMax_Apply;
-            perDirection = 1f;
-        }
-        transform.position = currentPosition;
-    }
 
     void OnDrawGizmos()
     {

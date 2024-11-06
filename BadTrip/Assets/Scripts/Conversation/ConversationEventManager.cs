@@ -110,6 +110,11 @@ public class ConversationEventManager : MonoBehaviour
     {
         audioCue.StopAudio(num);
     }
+
+    public void SetCanChangeBGM(bool b)
+    {
+        sayDialogSO.SetCanChangeBGM(b);
+    }
     #endregion
 
     #region QuestComplete

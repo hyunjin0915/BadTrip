@@ -2,6 +2,7 @@ using Fungus;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 namespace Fungus
 {
@@ -13,10 +14,7 @@ namespace Fungus
     {
 
         [Tooltip("Music sound clip to play")]
-        [SerializeField] protected AudioClip musicClip;
-
-        [Tooltip("º¼·ý")]
-        [SerializeField] protected float volume = 0.5f;
+        [SerializeField] protected AudioInfoSO audioInfoSO;
 
         [Tooltip("fade ±â°£")]
         [SerializeField] protected float fadeDuration = 1f;
@@ -25,19 +23,9 @@ namespace Fungus
         {
             var musicManager = FungusManager.Instance.MusicManager;
 
-            musicManager.PlayMusicFade(musicClip, volume, fadeDuration);
+            musicManager.PlayMusicFade(audioInfoSO.audioMixerGroup, audioInfoSO.clip, audioInfoSO.vol, fadeDuration);
 
             Continue();
-        }
-
-        public override string GetSummary()
-        {
-            if (musicClip == null)
-            {
-                return "Error: No music clip selected";
-            }
-
-            return musicClip.name;
         }
 
         public override Color GetButtonColor()

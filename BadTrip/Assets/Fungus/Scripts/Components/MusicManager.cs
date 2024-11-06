@@ -4,6 +4,7 @@
 using MoonSharp.Interpreter.Tree;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 
 namespace Fungus
 {
@@ -96,11 +97,12 @@ namespace Fungus
             audioSourceMusic.Play();
         }
 
-        public void PlayMusicFade(AudioClip musicClip, float volume, float fade)
+        public void PlayMusicFade(AudioMixerGroup group, AudioClip musicClip, float volume, float fade)
         {
             audioSourceMusic.clip = musicClip;
             audioSourceMusic.volume = 0;
             audioSourceMusic.loop = false;
+            audioSourceMusic.outputAudioMixerGroup = group;
             audioSourceMusic.Play();
 
             StartCoroutine(PlayFade(volume, fade));
@@ -148,6 +150,12 @@ namespace Fungus
         /// </summary>
         /// <param name="soundClip">The sound effect clip to play.</param>
         /// <param name="volume">The volume level of the sound effect.</param>
+        public virtual void PlaySound(AudioMixerGroup group, AudioClip soundClip, float volume)
+        {
+            audioSourceSoundEffect.outputAudioMixerGroup = group;
+            audioSourceSoundEffect.PlayOneShot(soundClip, volume);
+        }
+
         public virtual void PlaySound(AudioClip soundClip, float volume)
         {
             audioSourceSoundEffect.PlayOneShot(soundClip, volume);

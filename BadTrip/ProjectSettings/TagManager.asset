@@ -18,6 +18,7 @@ TagManager:
   - SaveManager
   - SOPlayer
   - BTPlayer
+  - AudioManager
   layers:
   - Default
   - TransparentFX

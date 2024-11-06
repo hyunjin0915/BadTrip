@@ -15,6 +15,8 @@ public class ConversationManager : MonoBehaviour // ¸Ê ¾À°ú Initialization ¾À ¿¬
 
     [SerializeField] private SettingManager settingManager;
 
+    [SerializeField] private AudioManager audioManager;
+
     private void Awake()
     {
         SayDialogSO.dialogs = sayDialogs;
@@ -29,6 +31,7 @@ public class ConversationManager : MonoBehaviour // ¸Ê ¾À°ú Initialization ¾À ¿¬
         SayDialogSO.SetPlayerSortingLayer += player.SetSortingLayer;
         SayDialogSO.SetIsDialog += settingManager.SetIsDialog;
         SayDialogSO.SetPlayerFlip += player.SetPlayerFlip;
+        SayDialogSO.SetCanChangeBGM += audioManager.SetCanChangeBGM;
 
     }
 
@@ -44,5 +47,6 @@ public class ConversationManager : MonoBehaviour // ¸Ê ¾À°ú Initialization ¾À ¿¬
         SayDialogSO.SetPlayerSortingLayer -= player.SetSortingLayer;
         SayDialogSO.SetIsDialog -= settingManager.SetIsDialog;
         SayDialogSO.SetPlayerFlip -= player.SetPlayerFlip;
+        SayDialogSO.SetCanChangeBGM -= audioManager.SetCanChangeBGM;
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -20,6 +21,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private float bgmVol = 1f;
     [Range(0f, 1f)]
     [SerializeField] private float sfxVol = 1f;
+
+    private bool canChangeBGM = true;
 
     public void SetGroupVolume(string parameterName, float volume)
     {
@@ -121,5 +124,14 @@ public class AudioManager : MonoBehaviour
 
         audioSources[audioNum].Stop();
         audioSources[audioNum].clip = null;
+    }
+
+    public void SetCanChangeBGM(bool b)
+    {
+        canChangeBGM = b;
+    }
+
+    public bool GetCanChangeBGM() { 
+        return canChangeBGM;
     }
 }

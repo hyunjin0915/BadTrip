@@ -3583,6 +3583,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioInfos:
   - {fileID: 11400000, guid: 1aa6ffb25b775a84da81f794075c0096, type: 2}
+  - {fileID: 11400000, guid: c481273c29926ee499b0b28036ee7f37, type: 2}
+  - {fileID: 11400000, guid: 611d229788f701f46a7d7b2fdaed7207, type: 2}
   audioEventChannel: {fileID: 11400000, guid: 5f1f11dc6a883c04fa42e19cea1a7c4b, type: 2}
 --- !u!1 &709860465
 GameObject:
@@ -9626,7 +9628,6 @@ GameObject:
   - component: {fileID: 1736044096}
   - component: {fileID: 1736044095}
   - component: {fileID: 1736044093}
-  - component: {fileID: 1736044092}
   - component: {fileID: 1736044091}
   - component: {fileID: 1736044090}
   - component: {fileID: 1736044089}
@@ -9656,38 +9657,8 @@ GameObject:
   - component: {fileID: 1736044145}
   - component: {fileID: 1736044147}
   - component: {fileID: 1736044149}
-  - component: {fileID: 1736044150}
-  - component: {fileID: 1736044177}
-  - component: {fileID: 1736044176}
-  - component: {fileID: 1736044175}
-  - component: {fileID: 1736044174}
-  - component: {fileID: 1736044173}
-  - component: {fileID: 1736044172}
-  - component: {fileID: 1736044171}
-  - component: {fileID: 1736044170}
-  - component: {fileID: 1736044169}
-  - component: {fileID: 1736044168}
-  - component: {fileID: 1736044167}
-  - component: {fileID: 1736044166}
-  - component: {fileID: 1736044165}
-  - component: {fileID: 1736044164}
-  - component: {fileID: 1736044163}
-  - component: {fileID: 1736044162}
-  - component: {fileID: 1736044161}
-  - component: {fileID: 1736044160}
-  - component: {fileID: 1736044159}
-  - component: {fileID: 1736044158}
-  - component: {fileID: 1736044157}
-  - component: {fileID: 1736044156}
-  - component: {fileID: 1736044155}
-  - component: {fileID: 1736044154}
-  - component: {fileID: 1736044153}
-  - component: {fileID: 1736044152}
-  - component: {fileID: 1736044151}
-  - component: {fileID: 1736044179}
   - component: {fileID: 1736044183}
   - component: {fileID: 1736044187}
-  - component: {fileID: 1736044192}
   - component: {fileID: 1736044205}
   - component: {fileID: 1736044204}
   - component: {fileID: 1736044203}
@@ -9696,7 +9667,6 @@ GameObject:
   - component: {fileID: 1736044200}
   - component: {fileID: 1736044199}
   - component: {fileID: 1736044198}
-  - component: {fileID: 1736044206}
   - component: {fileID: 1736044229}
   - component: {fileID: 1736044227}
   - component: {fileID: 1736044226}
@@ -9714,12 +9684,10 @@ GameObject:
   - component: {fileID: 1736044234}
   - component: {fileID: 1736044236}
   - component: {fileID: 1736044239}
-  - component: {fileID: 1736044238}
   - component: {fileID: 1736044240}
   - component: {fileID: 1736044241}
   - component: {fileID: 1736044247}
   - component: {fileID: 1736044246}
-  - component: {fileID: 1736044244}
   - component: {fileID: 1736044248}
   - component: {fileID: 1736044249}
   - component: {fileID: 1736044257}
@@ -9728,13 +9696,11 @@ GameObject:
   - component: {fileID: 1736044255}
   - component: {fileID: 1736044252}
   - component: {fileID: 1736044253}
-  - component: {fileID: 1736044250}
   - component: {fileID: 1736044262}
   - component: {fileID: 1736044260}
   - component: {fileID: 1736044261}
   - component: {fileID: 1736044259}
   - component: {fileID: 1736044258}
-  - component: {fileID: 1736044263}
   - component: {fileID: 1736044265}
   - component: {fileID: 1736044266}
   - component: {fileID: 1736044264}
@@ -9758,7 +9724,6 @@ GameObject:
   - component: {fileID: 1736044285}
   - component: {fileID: 1736044301}
   - component: {fileID: 1736044298}
-  - component: {fileID: 1736044297}
   - component: {fileID: 1736044296}
   - component: {fileID: 1736044295}
   - component: {fileID: 1736044294}
@@ -9937,6 +9902,16 @@ GameObject:
   - component: {fileID: 1736044426}
   - component: {fileID: 1736044425}
   - component: {fileID: 1736044423}
+  - component: {fileID: 1736044475}
+  - component: {fileID: 1736044474}
+  - component: {fileID: 1736044479}
+  - component: {fileID: 1736044478}
+  - component: {fileID: 1736044477}
+  - component: {fileID: 1736044476}
+  - component: {fileID: 1736044481}
+  - component: {fileID: 1736044480}
+  - component: {fileID: 1736044483}
+  - component: {fileID: 1736044482}
   m_Layer: 0
   m_Name: HomeFlowchart
   m_TagString: Untagged
@@ -10168,10 +10143,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -169.76349, y: -831.38464}
+  scrollPos: {x: -11.763489, y: -230.38464}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 280
+  blockViewHeight: 739
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
@@ -10180,9 +10155,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1736044424}
-  selectedCommands:
-  - {fileID: 1736044423}
+  - {fileID: 1736044305}
+  selectedCommands: []
   variables:
   - {fileID: 1736043910}
   description: 
@@ -11177,7 +11151,7 @@ MonoBehaviour:
   - {fileID: 1736044038}
   - {fileID: 1736044037}
   - {fileID: 1736044036}
-  - {fileID: 1736044263}
+  - {fileID: 1736044475}
   - {fileID: 1736044034}
   - {fileID: 1736044033}
   - {fileID: 1736044032}
@@ -11188,7 +11162,7 @@ MonoBehaviour:
   - {fileID: 1736044052}
   - {fileID: 1736044241}
   - {fileID: 1736044046}
-  - {fileID: 1736044192}
+  - {fileID: 1736044474}
   - {fileID: 1736044205}
   - {fileID: 1736044204}
   - {fileID: 1736044203}
@@ -11197,7 +11171,7 @@ MonoBehaviour:
   - {fileID: 1736044200}
   - {fileID: 1736044199}
   - {fileID: 1736044198}
-  - {fileID: 1736044206}
+  - {fileID: 1736044479}
   - {fileID: 1736044043}
   - {fileID: 1736044229}
   - {fileID: 1736044227}
@@ -12088,7 +12062,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 228.6269
-    y: 184.87909
+    y: 185.87909
     width: 104
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -12108,12 +12082,12 @@ MonoBehaviour:
   - {fileID: 1736044064}
   - {fileID: 1736044063}
   - {fileID: 1736044062}
-  - {fileID: 1736044238}
-  - {fileID: 1736044266}
+  - {fileID: 1736044477}
+  - {fileID: 1736044478}
   - {fileID: 1736044247}
   - {fileID: 1736044246}
   - {fileID: 1736044264}
-  - {fileID: 1736044244}
+  - {fileID: 1736044266}
   - {fileID: 1736044265}
   - {fileID: 1736044248}
   suppressAllAutoSelections: 0
@@ -12404,23 +12378,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &1736044092
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd2f6be51b3d7490ba5633ee095d0391, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 289
-  indentLevel: 0
-  soundClip: {fileID: 8300000, guid: dab5b865e9226d14193980b1e43e456e, type: 3}
-  volume: 0.5
-  waitUntilFinished: 1
 --- !u!114 &1736044093
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -12658,7 +12615,7 @@ MonoBehaviour:
   - {fileID: 1736044110}
   - {fileID: 1736044280}
   - {fileID: 1736044095}
-  - {fileID: 1736044092}
+  - {fileID: 1736044481}
   - {fileID: 1736044093}
   - {fileID: 1736044091}
   - {fileID: 1736044090}
@@ -13223,6 +13180,7 @@ MonoBehaviour:
   - {fileID: 1736044139}
   - {fileID: 1736044282}
   - {fileID: 1736044140}
+  - {fileID: 1736044480}
   - {fileID: 1736044269}
   - {fileID: 1736044142}
   suppressAllAutoSelections: 0
@@ -13542,971 +13500,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &1736044150
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 476.86102
-    y: 79.51865
-    width: 150
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 387
-  blockName: RoomDrug (Copy)
-  description: "\uD559\uAD50 \uD654\uC7A5\uC2E4\uC774 \uC544\uB2CC \uC9D1\uC5D0\uC11C
-    \uB9C8\uC57D\uD568"
-  eventHandler: {fileID: 0}
-  commandList:
-  - {fileID: 1736044177}
-  - {fileID: 1736044176}
-  - {fileID: 1736044175}
-  - {fileID: 1736044174}
-  - {fileID: 1736044173}
-  - {fileID: 1736044172}
-  - {fileID: 1736044171}
-  - {fileID: 1736044170}
-  - {fileID: 1736044169}
-  - {fileID: 1736044168}
-  - {fileID: 1736044167}
-  - {fileID: 1736044166}
-  - {fileID: 1736044165}
-  - {fileID: 1736044164}
-  - {fileID: 1736044163}
-  - {fileID: 1736044162}
-  - {fileID: 1736044179}
-  - {fileID: 1736044161}
-  - {fileID: 1736044160}
-  - {fileID: 1736044159}
-  - {fileID: 1736044158}
-  - {fileID: 1736044157}
-  - {fileID: 1736044156}
-  - {fileID: 1736044155}
-  - {fileID: 1736044154}
-  - {fileID: 1736044153}
-  - {fileID: 1736044152}
-  - {fileID: 1736044151}
-  suppressAllAutoSelections: 0
---- !u!114 &1736044151
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 386
-  indentLevel: 0
-  description: 
-  targetObject: {fileID: 1379682133}
-  targetComponentAssemblyName: MapInteractionSetting, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: MapInteractionSetting
-  targetMethod: GoScene
-  targetMethodText: 'GoScene (String): Void'
-  methodParameters:
-  - objValue:
-      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.String
-      intValue: 0
-      boolValue: 0
-      floatValue: 0
-      stringValue: StageOne
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
---- !u!114 &1736044152
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 385
-  indentLevel: 0
-  description: 
-  targetObject: {fileID: 821756700}
-  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: ConversationEventManager
-  targetMethod: CompleteQuest
-  targetMethodText: 'CompleteQuest (Int32): Void'
-  methodParameters:
-  - objValue:
-      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Int32
-      intValue: 1
-      boolValue: 0
-      floatValue: 0
-      stringValue: 
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
---- !u!114 &1736044153
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 384
-  indentLevel: 0
-  description: 
-  targetObject: {fileID: 821756700}
-  targetComponentAssemblyName: PostProcCtrl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: PostProcCtrl
-  targetMethod: ShutDown
-  targetMethodText: 'ShutDown (): Void'
-  methodParameters: []
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
---- !u!114 &1736044154
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 383
-  indentLevel: 0
-  description: 
-  targetObject: {fileID: 821756700}
-  targetComponentAssemblyName: PostProcCtrl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: PostProcCtrl
-  targetMethod: OffHallucinationEffect
-  targetMethodText: 'OffHallucinationEffect (): Void'
-  methodParameters: []
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
---- !u!114 &1736044155
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 382
-  indentLevel: 0
-  duration: 1
-  targetAlpha: 1
-  waitUntilFinished: 1
-  fadeColor: {r: 0, g: 0, b: 0, a: 1}
-  fadeTexture: {fileID: 0}
-  fadeTweenType: 4
---- !u!114 &1736044156
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 381
-  indentLevel: 0
-  _duration:
-    floatRef: {fileID: 0}
-    floatVal: 1.5
-  durationOLD: 0
---- !u!114 &1736044157
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 380
-  indentLevel: 0
-  description: 
-  targetObject: {fileID: 1026142046}
-  targetComponentAssemblyName: AudioCue, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: AudioCue
-  targetMethod: PlayAudio
-  targetMethodText: 'PlayAudio (Int32): Void'
-  methodParameters:
-  - objValue:
-      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Int32
-      intValue: 2
-      boolValue: 0
-      floatValue: 0
-      stringValue: 
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
---- !u!114 &1736044158
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 379
-  indentLevel: 0
-  description: 
-  targetObject: {fileID: 821756700}
-  targetComponentAssemblyName: PostProcCtrl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: PostProcCtrl
-  targetMethod: PastHallucinationEffect
-  targetMethodText: 'PastHallucinationEffect (): IEnumerator'
-  methodParameters: []
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Collections.IEnumerator
-  showInherited: 0
-  callMode: 0
---- !u!114 &1736044159
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 378
-  indentLevel: 0
-  _duration:
-    floatRef: {fileID: 0}
-    floatVal: 4
-  durationOLD: 0
---- !u!114 &1736044160
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 377
-  indentLevel: 0
-  description: 
-  targetObject: {fileID: 821756700}
-  targetComponentAssemblyName: PostProcCtrl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: PostProcCtrl
-  targetMethod: OnHallucinationEffect
-  targetMethodText: 'OnHallucinationEffect (): Void'
-  methodParameters: []
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
---- !u!114 &1736044161
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 376
-  indentLevel: 0
-  _targetGameObject:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 1523534561}
-  activeState:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  targetGameObjectOLD: {fileID: 0}
---- !u!114 &1736044162
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 374
-  indentLevel: 0
-  description: 
-  targetObject: {fileID: 1026142046}
-  targetComponentAssemblyName: AudioCue, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: AudioCue
-  targetMethod: PlayAudio
-  targetMethodText: 'PlayAudio (Int32): Void'
-  methodParameters:
-  - objValue:
-      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Int32
-      intValue: 1
-      boolValue: 0
-      floatValue: 0
-      stringValue: 
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
---- !u!114 &1736044163
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 373
-  indentLevel: 0
-  storyText: ...
-  description: 
-  character: {fileID: 1665108587}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &1736044164
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 372
-  indentLevel: 0
-  storyText: "\uC5ED\uC2DC, \uC774\uB7F0 \uAC8C \uB9C8\uC57D\uC77C\uB9AC\uAC00 \uC5C6\uC9C0."
-  description: 
-  character: {fileID: 1665108587}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &1736044165
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 371
-  indentLevel: 0
-  storyText: "\uBB50\uC57C. \uC544\uBB34\uB807\uC9C0\uB3C4 \uC54A\uC796\uC544."
-  description: 
-  character: {fileID: 1665108587}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &1736044166
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 370
-  indentLevel: 0
-  storyText: "...\uC73D, \uB9DB\uC5C6\uC5B4."
-  description: 
-  character: {fileID: 1665108587}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &1736044167
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 369
-  indentLevel: 0
-  storyText: "(\uC57D\uC744 \uBA39\uB294\uB2E4.)"
-  description: 
-  character: {fileID: 1665108587}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &1736044168
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd2f6be51b3d7490ba5633ee095d0391, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 368
-  indentLevel: 0
-  soundClip: {fileID: 8300000, guid: e2f5fbd61c438d3478cae9d36f2a45b1, type: 3}
-  volume: 0.5
-  waitUntilFinished: 0
---- !u!114 &1736044169
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 367
-  indentLevel: 0
-  storyText: "\uD55C \uBC88\uC774\uB2C8\uAE4C \uAD1C\uCC2E\uACA0\uC9C0. \uC544\uBB34\uB3C4
-    \uBAA8\uB97C\uAC70\uC57C..."
-  description: 
-  character: {fileID: 1665108587}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &1736044170
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 366
-  indentLevel: 0
-  storyText: "\uAE30\uBD84\uC774 \uC5BC\uB9C8\uB098 \uC88B\uC544\uC9C4\uB2E4\uB294
-    \uAC70\uC57C. \uAD81\uAE08\uD558\uAE34 \uD558\uB124"
-  description: 
-  character: {fileID: 1665108587}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &1736044171
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 365
-  indentLevel: 0
-  storyText: "\uADF8\uB0E5 \uC0AC\uD0D5\uAC19\uC740\uB370... \uC774\uAC8C \uC9C4\uC9DC
-    \uB9C8\uC57D\uC774\uB77C\uACE0?"
-  description: 
-  character: {fileID: 1665108587}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &1736044172
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 364
-  indentLevel: 0
-  description: 
-  targetObject: {fileID: 821756700}
-  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: ConversationEventManager
-  targetMethod: SetPlayerPos
-  targetMethodText: 'SetPlayerPos (Vector2, Boolean): Void'
-  methodParameters:
-  - objValue:
-      typeAssemblyname: UnityEngine.Vector2, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      typeFullname: UnityEngine.Vector2
-      intValue: 0
-      boolValue: 0
-      floatValue: 0
-      stringValue: 
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
-  - objValue:
-      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Boolean
-      intValue: 0
-      boolValue: 0
-      floatValue: 0
-      stringValue: 
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
---- !u!114 &1736044173
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 363
-  indentLevel: 0
-  description: 
-  targetObject: {fileID: 821756700}
-  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: ConversationEventManager
-  targetMethod: SetCanMove
-  targetMethodText: 'SetCanMove (Boolean): Void'
-  methodParameters:
-  - objValue:
-      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Boolean
-      intValue: 0
-      boolValue: 0
-      floatValue: 0
-      stringValue: 
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
---- !u!114 &1736044174
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 362
-  indentLevel: 0
-  description: 
-  targetObject: {fileID: 821756700}
-  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: ConversationEventManager
-  targetMethod: SetPlayerAnim
-  targetMethodText: 'SetPlayerAnim (String, Boolean): Void'
-  methodParameters:
-  - objValue:
-      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.String
-      intValue: 0
-      boolValue: 0
-      floatValue: 0
-      stringValue: CanPMove
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
-  - objValue:
-      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Boolean
-      intValue: 0
-      boolValue: 0
-      floatValue: 0
-      stringValue: 
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
---- !u!114 &1736044175
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 361
-  indentLevel: 0
-  description: 
-  targetObject: {fileID: 821756700}
-  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: ConversationEventManager
-  targetMethod: SetPlayerAnim
-  targetMethodText: 'SetPlayerAnim (String, Boolean): Void'
-  methodParameters:
-  - objValue:
-      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.String
-      intValue: 0
-      boolValue: 0
-      floatValue: 0
-      stringValue: IsSitting
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
-  - objValue:
-      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Boolean
-      intValue: 0
-      boolValue: 1
-      floatValue: 0
-      stringValue: 
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
---- !u!114 &1736044176
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 360
-  indentLevel: 0
-  description: 
-  targetObject: {fileID: 821756700}
-  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: ConversationEventManager
-  targetMethod: StopPlayer
-  targetMethodText: 'StopPlayer (): Void'
-  methodParameters: []
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
---- !u!114 &1736044177
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 359
-  indentLevel: 0
-  _duration:
-    floatRef: {fileID: 0}
-    floatVal: 2.3
-  durationOLD: 0
---- !u!114 &1736044179
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 388
-  indentLevel: 0
-  description: 
-  targetObject: {fileID: 821756700}
-  targetComponentAssemblyName: RoomMonster, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: RoomMonster
-  targetMethod: ActiveMons
-  targetMethodText: 'ActiveMons (): Void'
-  methodParameters: []
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
 --- !u!114 &1736044183
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -14549,23 +13542,6 @@ MonoBehaviour:
     booleanRef: {fileID: 0}
     booleanVal: 1
   targetGameObjectOLD: {fileID: 0}
---- !u!114 &1736044192
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e3c34242cfdc9d4d9313b4fbd270aba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 399
-  indentLevel: 0
-  musicClip: {fileID: 8300000, guid: ff293e157f96a9942839402be4501e6c, type: 3}
-  volume: 0.5
-  fadeDuration: 5
 --- !u!114 &1736044198
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -14782,21 +13758,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &1736044206
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84289fcbbe5a0d04caa13b89a3e876ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 408
-  indentLevel: 0
-  fadeDuration: 1
 --- !u!114 &1736044211
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -15142,7 +14103,7 @@ MonoBehaviour:
   - {fileID: 1736044279}
   - {fileID: 1736044278}
   - {fileID: 1736044277}
-  - {fileID: 1736044250}
+  - {fileID: 1736044476}
   - {fileID: 1736044211}
   - {fileID: 1736044276}
   - {fileID: 1736044267}
@@ -15300,22 +14261,6 @@ MonoBehaviour:
     floatRef: {fileID: 0}
     floatVal: 2
   durationOLD: 0
---- !u!114 &1736044238
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cadf88d528bc6204ca3e5c87bee40f7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 441
-  indentLevel: 0
-  musicClip: {fileID: 8300000, guid: f560e0857b7c25c438c65673b95c0792, type: 3}
-  volume: 0.5
 --- !u!114 &1736044239
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -15428,20 +14373,6 @@ MonoBehaviour:
   returnValueType: System.Void
   showInherited: 0
   callMode: 0
---- !u!114 &1736044244
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b359b09a7ba2e4af981f07c07f8af85a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 449
-  indentLevel: 0
 --- !u!114 &1736044246
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -15525,23 +14456,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &1736044250
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd2f6be51b3d7490ba5633ee095d0391, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 461
-  indentLevel: 0
-  soundClip: {fileID: 8300000, guid: 6201cd90f3bb45442966491556d85c69, type: 3}
-  volume: 0.8
-  waitUntilFinished: 1
 --- !u!114 &1736044252
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -15961,23 +14875,6 @@ MonoBehaviour:
   returnValueType: System.Void
   showInherited: 0
   callMode: 0
---- !u!114 &1736044263
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd2f6be51b3d7490ba5633ee095d0391, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 467
-  indentLevel: 0
-  soundClip: {fileID: 8300000, guid: dab5b865e9226d14193980b1e43e456e, type: 3}
-  volume: 0.5
-  waitUntilFinished: 1
 --- !u!114 &1736044264
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -16066,14 +14963,31 @@ MonoBehaviour:
   itemId: 469
   indentLevel: 0
   description: 
-  targetObject: {fileID: 821756700}
-  targetComponentAssemblyName: RoomBug, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+  targetObject: {fileID: 696864565}
+  targetComponentAssemblyName: BGMPlay, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: RoomBug
-  targetMethod: ActiveBugs
-  targetMethodText: 'ActiveBugs (): Void'
-  methodParameters: []
+  targetComponentText: BGMPlay
+  targetMethod: StopBGM
+  targetMethodText: 'StopBGM (Single): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Single
+      intValue: 0
+      boolValue: 0
+      floatValue: 1.5
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
   saveReturnValue: 0
   returnValueVariableKey: 
   returnValueType: System.Void
@@ -16774,7 +15688,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1.6257216
+    x: 0.6257216
     y: 433.61737
     width: 131
     height: 40
@@ -16793,10 +15707,11 @@ MonoBehaviour:
   - {fileID: 1736044356}
   - {fileID: 1736044294}
   - {fileID: 1736044298}
-  - {fileID: 1736044297}
+  - {fileID: 1736044483}
   - {fileID: 1736044296}
   - {fileID: 1736044295}
   - {fileID: 1736044304}
+  - {fileID: 1736044482}
   - {fileID: 1736044293}
   - {fileID: 1736044292}
   - {fileID: 1736044291}
@@ -17046,22 +15961,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &1736044297
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736043860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea6e8f632db87477eb750446b28d73a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 494
-  indentLevel: 0
-  commenterName: 
-  commentText: "\uD328\uCE58\uB97C \uB5BC\uB294 \uD6A8\uACFC\uC74C"
 --- !u!114 &1736044298
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -21320,7 +20219,7 @@ MonoBehaviour:
   durationOLD: 0
 --- !u!114 &1736044423
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -21378,7 +20277,7 @@ MonoBehaviour:
   suppressAllAutoSelections: 0
 --- !u!114 &1736044425
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -21405,7 +20304,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1736044426
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -21433,7 +20332,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1736044427
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -21461,7 +20360,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1736044428
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -23282,6 +22181,328 @@ MonoBehaviour:
   returnValueType: System.Void
   showInherited: 0
   callMode: 0
+--- !u!114 &1736044474
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736043860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 685
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 696864565}
+  targetComponentAssemblyName: BGMPlay, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: BGMPlay
+  targetMethod: PlayBGM
+  targetMethodText: 'PlayBGM (Int32, Single): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 1
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Single
+      intValue: 0
+      boolValue: 0
+      floatValue: 1.5
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1736044475
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736043860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e198ee78f8a659746ae4f9063895ae42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 684
+  indentLevel: 0
+  audioInfoSO: {fileID: 11400000, guid: d8a397eaab99b7f49a072a1dac8b599a, type: 2}
+  waitUntilFinished: 1
+--- !u!114 &1736044476
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736043860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e198ee78f8a659746ae4f9063895ae42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 689
+  indentLevel: 0
+  audioInfoSO: {fileID: 11400000, guid: 0c3eef50eddd69340a1f6813551302c8, type: 2}
+  waitUntilFinished: 1
+--- !u!114 &1736044477
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736043860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 688
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 696864565}
+  targetComponentAssemblyName: BGMPlay, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: BGMPlay
+  targetMethod: PlayBGM
+  targetMethodText: 'PlayBGM (Int32, Single): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 2
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Single
+      intValue: 0
+      boolValue: 0
+      floatValue: 1.5
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 1
+--- !u!114 &1736044478
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736043860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 687
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 821756700}
+  targetComponentAssemblyName: RoomBug, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: RoomBug
+  targetMethod: ActiveBugs
+  targetMethodText: 'ActiveBugs (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 1
+--- !u!114 &1736044479
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736043860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 686
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 696864565}
+  targetComponentAssemblyName: BGMPlay, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: BGMPlay
+  targetMethod: StopBGM
+  targetMethodText: 'StopBGM (Single): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Single
+      intValue: 0
+      boolValue: 0
+      floatValue: 1.5
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1736044480
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736043860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 691
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 821756700}
+  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ConversationEventManager
+  targetMethod: SetCanChangeBGM
+  targetMethodText: 'SetCanChangeBGM (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 1
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1736044481
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736043860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e198ee78f8a659746ae4f9063895ae42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 690
+  indentLevel: 0
+  audioInfoSO: {fileID: 11400000, guid: d8a397eaab99b7f49a072a1dac8b599a, type: 2}
+  waitUntilFinished: 1
+--- !u!114 &1736044482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736043860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6e8f632db87477eb750446b28d73a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 693
+  indentLevel: 0
+  commenterName: "\uC5EC\uAE30\uC5D0 \uD658\uAC01 \uD6A8\uACFC?"
+  commentText: 
+--- !u!114 &1736044483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736043860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e198ee78f8a659746ae4f9063895ae42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 692
+  indentLevel: 0
+  audioInfoSO: {fileID: 11400000, guid: 3deaa2b37a1a6bd46ababbefcacd74eb, type: 2}
+  waitUntilFinished: 1
 --- !u!1 &1790557736
 GameObject:
   m_ObjectHideFlags: 0

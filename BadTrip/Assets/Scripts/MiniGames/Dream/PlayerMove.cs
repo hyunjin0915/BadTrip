@@ -113,7 +113,7 @@ public class PlayerMove : MonoBehaviour
     }
     void Jump()
     {
-        if((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) && isGround)
+        if((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && isGround)
         {
             myRigid.velocity = Vector2.zero;
             myRigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);

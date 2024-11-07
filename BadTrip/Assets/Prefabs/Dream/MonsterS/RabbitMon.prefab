@@ -271,8 +271,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightMax: 5
   leftMax: -5
+  upMax: 0
+  downMax: 0
   velocity: 4
+  FlyingSpeed: 0
   target: {fileID: 0}
   FollowingSpeed: 6
   isFollow: 0
-  FindRange: 10
+  FindRange: 24

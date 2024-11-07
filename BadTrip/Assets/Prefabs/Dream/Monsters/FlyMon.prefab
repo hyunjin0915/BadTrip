@@ -104,11 +104,11 @@ MonoBehaviour:
   upMax: 3
   downMax: -3
   velocity: 3
-  FlyingSpeed: 5
+  FlyingSpeed: 10
   target: {fileID: 0}
   isFollow: 0
-  FindRange: 4
-  FollowingSpeed: 3
+  FindRange: 10
+  FollowingSpeed: 20
 --- !u!50 &8942385132427095639
 Rigidbody2D:
   serializedVersion: 4

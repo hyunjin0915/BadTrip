@@ -54,7 +54,8 @@ public class BugFly : MovingMon
 
             isFollow = true;
             Vector2 directionToPlayer = (target.position - rb.position).normalized;
-            rb.velocity = new Vector2(directionToPlayer.x * FollowingSpeed, rb.velocity.y);
+            //rb.velocity = new Vector2(directionToPlayer.x * FollowingSpeed, rb.velocity.y);
+            rb.velocity = new Vector2(directionToPlayer.x * FollowingSpeed, directionToPlayer.y * FollowingSpeed);
         }
         else
         {

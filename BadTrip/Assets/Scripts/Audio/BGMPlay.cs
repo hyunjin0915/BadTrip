@@ -11,16 +11,12 @@ public class BGMPlay : MonoBehaviour
     private void Start()
     {
         manager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
-    }
 
-    private void OnEnable()
-    {
         if (!audioCue.IsSameClip(bgmNum) && manager.GetCanChangeBGM())
         {
             audioCue.StopAudioFade(1.5f);
             audioCue.PlayAudioFade(bgmNum, 1.5f);
         }
-
     }
 
     public void PlayBGM(int num, float fade = 1.5f)
@@ -34,5 +30,8 @@ public class BGMPlay : MonoBehaviour
         audioCue.StopAudioFade(fade);
     }
 
-
+    public void OnlyPlayBGM(int num, float fade = 1.5f)
+    {
+        audioCue.PlayAudioFade(num, fade);
+    }
 }

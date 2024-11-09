@@ -2557,6 +2557,8 @@ MonoBehaviour:
   volumeSettings: {fileID: 1409806826}
   mask: {fileID: 1005824261}
   maskSR: {fileID: 1005824263}
+  imageSR: {fileID: 0}
+  volumeProfiles: []
 --- !u!4 &435059131
 Transform:
   m_ObjectHideFlags: 0
@@ -4212,6 +4214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioCue: {fileID: 1618806251}
+  bgmNum: 0
 --- !u!114 &1618806251
 MonoBehaviour:
   m_ObjectHideFlags: 0

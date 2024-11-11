@@ -10,6 +10,7 @@ public class InteractionObjectsSO : ScriptableObject
 
     public event Action UpdateQuestScene;
     public event Action<int> CompleteQuest;
+    public event Func<int> GetQuestId;
 
     public void RaiseEvent()
     {
@@ -19,5 +20,10 @@ public class InteractionObjectsSO : ScriptableObject
     public void CompleteConQuest(int i = 1)
     {
         CompleteQuest?.Invoke(i);
+    }
+
+    public int? GetConQuestId()
+    {
+        return GetQuestId?.Invoke();
     }
 }

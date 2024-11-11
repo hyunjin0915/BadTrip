@@ -30,7 +30,7 @@ public class QuestManager : MonoBehaviour
         interactionObjects.UpdateQuestScene += UpdateQuestState;
         interactionObjects.UpdateQuestScene += UpdateQuestScene;
         interactionObjects.CompleteQuest += CompleteQuest;
-        
+        interactionObjects.GetQuestId += GetQuestId;
     }
 
     private void OnDisable()
@@ -38,6 +38,7 @@ public class QuestManager : MonoBehaviour
         interactionObjects.UpdateQuestScene -= UpdateQuestState;
         interactionObjects.UpdateQuestScene -= UpdateQuestScene;
         interactionObjects.CompleteQuest -= CompleteQuest;
+        interactionObjects.GetQuestId -= GetQuestId;
     }
 
     private void LoadAllQuestData() // 게임 실행 시 처음 모든 퀘스트 데이터 사본을 만듦.
@@ -170,5 +171,10 @@ public class QuestManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    public int GetQuestId()
+    {
+        return curQuestId;
     }
 }

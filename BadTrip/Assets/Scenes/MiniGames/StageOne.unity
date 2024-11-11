@@ -5116,6 +5116,7 @@ GameObject:
   - component: {fileID: 491238113}
   - component: {fileID: 491238112}
   - component: {fileID: 491238125}
+  - component: {fileID: 491238126}
   m_Layer: 0
   m_Name: Stage1Flowchart
   m_TagString: Untagged
@@ -5183,7 +5184,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 491238124}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 491238126}
   variables:
   - {fileID: 491238079}
   description: 
@@ -5921,22 +5923,68 @@ MonoBehaviour:
   - {fileID: 491238114}
   - {fileID: 491238113}
   - {fileID: 491238112}
+  - {fileID: 491238126}
   suppressAllAutoSelections: 0
 --- !u!114 &491238125
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 491238071}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parentBlock: {fileID: 491238124}
   suppressBlockAutoSelect: 0
-  waitForFrames: 1
+  message: BadTripStart
+--- !u!114 &491238126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491238071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 32
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1441677018}
+  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ConversationEventManager
+  targetMethod: CompleteQuest
+  targetMethodText: 'CompleteQuest (Int32): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 1
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!4 &493230005 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5308524490096456526, guid: 1ea54e74cefd34e4391de8631368e348, type: 3}

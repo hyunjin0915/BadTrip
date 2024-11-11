@@ -117,7 +117,7 @@ public class ConversationEventManager : MonoBehaviour
     }
     #endregion
 
-    #region QuestComplete
+    #region Quest
     public void CompleteQuest(int i = 1) // 퀘스트 종료(대화 끝에 사용)
     {
         interactionObjectsSO.CompleteConQuest(i);
@@ -126,6 +126,11 @@ public class ConversationEventManager : MonoBehaviour
     public void UpdateQuest()
     {
         interactionObjectsSO.RaiseEvent();
+    }
+
+    public int? GetCurQuestNum()
+    {
+        return interactionObjectsSO.GetConQuestId();
     }
     #endregion
 

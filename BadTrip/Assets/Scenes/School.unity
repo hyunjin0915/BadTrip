@@ -508,7 +508,7 @@ Transform:
   m_GameObject: {fileID: 422841441}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 97.379776, y: 0, z: 0}
+  m_LocalPosition: {x: 114.542694, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -624,7 +624,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 13.52533, y: 37.447876}
+  m_Size: {x: 32.616966, y: 37.447876}
   m_EdgeRadius: 0
 --- !u!1 &513517421
 GameObject:
@@ -3266,7 +3266,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c948ab6e6e9e8ad478f550c5a875a056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionObjs: []
+  interactionObjs:
+  - {fileID: 159980342}
+  - {fileID: 653077204}
+  - {fileID: 422841441}
   sceneNum: 800
   interactionObjectsSO: {fileID: 11400000, guid: 2775824826291714696efc8e5cd6e7ae, type: 2}
   sceneload_EventChannel: {fileID: 11400000, guid: 88353211a4d7054468d078bf3ab2ad81, type: 2}
@@ -3648,7 +3651,7 @@ Transform:
   m_GameObject: {fileID: 1483637020}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.3797793, y: 17.1, z: 0}
+  m_LocalPosition: {x: -0.5426974, y: 17.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4003,7 +4006,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 239.25, y: 67.5}
-    newSize: {x: 120, y: 67.5}
+    newSize: {x: 239.25, y: 67.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -4069,12 +4072,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c850099c11bc6e84bbc8f483246abddc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 02987916d39267643b87df97db749b9c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 120, y: 67.5}
+  m_Size: {x: 239.25, y: 67.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -7291,7 +7294,7 @@ MonoBehaviour:
   message: 800_ChooseDrug
 --- !u!114 &1736044033
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -7336,7 +7339,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1736044034
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

@@ -12,16 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e19c0907e1eab48a0e2f2dff776234, type: 3}
   m_Name: QuestInfo_31
   m_EditorClassIdentifier: 
-  explain: "\uBCD1\uC6D0 \uB3C4\uCC29"
+  explain: "\uB450 \uBC88\uC9F8 \uACC4\uC57D \uD6C4 \uD654\uC7A5\uC2E4\uC5D0\uC11C
+    \uB9C8\uC57D \uC548\uD558\uACE0 \uBCD1\uC6D0\uC73C\uB85C \uAC10"
   questId: 31
-  sceneName: Hospital
-  questCount: 2
+  sceneName: Store
+  questCount: 1
   clearCount: 0
   isLast: 0
-  InterQuest: []
-  moveQuests:
-  - questType: 1
+  InterQuest:
+  - questType: 0
     isClear: 0
-    interactionId: 0
+    interactionId: 603
     player: {fileID: 0}
-    message: 900_SeeDoctor
+    message: 
+  moveQuests: []

@@ -2844,7 +2844,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1064279771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3470,8 +3470,41 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4776fe65902773b4cad233f7b88d114c, type: 2}
   - {fileID: 11400000, guid: f470dc37312d7614196a08db6c142326, type: 2}
   - {fileID: 11400000, guid: 76bd65490bcb38848ba8cf0f1473727f, type: 2}
+  - {fileID: 11400000, guid: a66b853aac1028640a5eef445e64c3e2, type: 2}
   - {fileID: 11400000, guid: 5923e48060ddeca40aa9c48be74c72a9, type: 2}
   - {fileID: 11400000, guid: 33f0e25e4217c4943923df8d4f0338d1, type: 2}
+  - {fileID: 11400000, guid: 13940b382e195184ca5598cdead794ff, type: 2}
+  - {fileID: 11400000, guid: 58a84d4e72935bc4f8e372d0173a8b11, type: 2}
+  - {fileID: 11400000, guid: a5eeb46dc73f2b240942dc4791234035, type: 2}
+  - {fileID: 11400000, guid: a9acc0a2b7c04924ca0f21c7ca47ee94, type: 2}
+  - {fileID: 11400000, guid: aee7efc2dfa65cb42957bf75db6b9c92, type: 2}
+  - {fileID: 11400000, guid: 39bdc591ef467f447a8b1215debcfcf0, type: 2}
+  - {fileID: 11400000, guid: ec140408bd2122541b5f03f4db7649d9, type: 2}
+  - {fileID: 11400000, guid: 5fdcb0794b8dcff45942538372c65ce1, type: 2}
+  - {fileID: 11400000, guid: 04d2d77b8f00a844da8f21cca847def8, type: 2}
+  - {fileID: 11400000, guid: 8e71d4517a46a9f4eb91d0b42f4a4480, type: 2}
+  - {fileID: 11400000, guid: be943c5035b69b3448ff5f8cc50a2cc8, type: 2}
+  - {fileID: 11400000, guid: a9359665f5304854590138f0f1008554, type: 2}
+  - {fileID: 11400000, guid: ea38d295e1610d84193675705fe626a2, type: 2}
+  - {fileID: 11400000, guid: 0eb97fa363ffdb943b25396ee18ac8e8, type: 2}
+  - {fileID: 11400000, guid: 7ce7c0eca6532c04ba7fd73c898cf5e8, type: 2}
+  - {fileID: 11400000, guid: cef3a8c6eb535084aa0e7f107b41a38d, type: 2}
+  - {fileID: 11400000, guid: 822303a106c9fdd4ca686b85318f4680, type: 2}
+  - {fileID: 11400000, guid: 57507ff6e92d37e47b27e8bb120dac8d, type: 2}
+  - {fileID: 11400000, guid: 741bfa82c5d537242b2b718e8579c9a9, type: 2}
+  - {fileID: 11400000, guid: f4cd1f2e9812b7646aa7dac6f5c13f22, type: 2}
+  - {fileID: 11400000, guid: ee36558a1d841514ea8dae2dd0b7af37, type: 2}
+  - {fileID: 11400000, guid: 7cc0944829bbddf4d8f0dfd0735a15f2, type: 2}
+  - {fileID: 11400000, guid: b1e25c646943da140bcb63b648a5073a, type: 2}
+  - {fileID: 11400000, guid: b6413b6f11daa6b48bc9324bf78ebbf6, type: 2}
+  - {fileID: 11400000, guid: 2006b3916b7537642a9dc094fd6cb218, type: 2}
+  - {fileID: 11400000, guid: ab86f8556cf795140973aa02e6772db1, type: 2}
+  - {fileID: 11400000, guid: 838f444baecc1674a99c94d27f2fc9fc, type: 2}
+  - {fileID: 11400000, guid: 82d503c2a6588dd41a433a555ef12682, type: 2}
+  - {fileID: 11400000, guid: de58a594797345649a939295cfde3052, type: 2}
+  - {fileID: 11400000, guid: 277b6a6d04365b8468349936a06d41ad, type: 2}
+  - {fileID: 11400000, guid: 46dc5f10873c7334b9209174e19e2cfc, type: 2}
+  - {fileID: 11400000, guid: 2bf74c8d819530747bee27f82e7a3639, type: 2}
   curQuestId: 0
   info: {fileID: 0}
   interactionObjects: {fileID: 11400000, guid: 2775824826291714696efc8e5cd6e7ae, type: 2}

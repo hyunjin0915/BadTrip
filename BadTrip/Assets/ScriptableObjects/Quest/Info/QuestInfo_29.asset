@@ -12,22 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e19c0907e1eab48a0e2f2dff776234, type: 3}
   m_Name: QuestInfo_29
   m_EditorClassIdentifier: 
-  explain: "\uB450 \uBC88\uC9F8 \uACC4\uC57D \uD6C4 \uD654\uC7A5\uC2E4\uC5D0\uC11C
-    \uB9C8\uC57D \uC548\uD568"
+  explain: "\uBCD1\uC6D0 \uB3C4\uCC29(\uC758\uC0AC \uC774\uBCA4\uD2B8\uB85C \uC774\uB3D9)"
   questId: 29
-  sceneName: School
-  questCount: 1
+  sceneName: Hospital
+  questCount: 2
   clearCount: 0
   isLast: 0
-  InterQuest:
+  InterQuest: []
+  moveQuests:
   - questType: 0
     isClear: 0
-    interactionId: 801
+    interactionId: 0
     player: {fileID: 0}
-    message: 
-  - questType: 0
-    isClear: 0
-    interactionId: 802
-    player: {fileID: 0}
-    message: 
-  moveQuests: []
+    message: 900_MoveDoctor29

@@ -1406,7 +1406,6 @@ GameObject:
   - component: {fileID: 148524189}
   - component: {fileID: 148524191}
   - component: {fileID: 148524192}
-  - component: {fileID: 148524195}
   - component: {fileID: 148524194}
   - component: {fileID: 148524193}
   - component: {fileID: 148524196}
@@ -1465,14 +1464,16 @@ GameObject:
   - component: {fileID: 148524275}
   - component: {fileID: 148524287}
   - component: {fileID: 148524290}
-  - component: {fileID: 148524289}
   - component: {fileID: 148524288}
-  - component: {fileID: 148524291}
   - component: {fileID: 148524294}
   - component: {fileID: 148524293}
   - component: {fileID: 148524292}
   - component: {fileID: 148524296}
   - component: {fileID: 148524295}
+  - component: {fileID: 148524297}
+  - component: {fileID: 148524300}
+  - component: {fileID: 148524301}
+  - component: {fileID: 148524302}
   m_Layer: 0
   m_Name: StreetFlowchart
   m_TagString: Untagged
@@ -1508,11 +1509,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 157.98358, y: -118.89059}
+  scrollPos: {x: 227.48225, y: 189.1467}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 620
-  zoom: 0.85000014
+  zoom: 0.7600002
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -1520,7 +1521,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 148524159}
+  - {fileID: 148524103}
   selectedCommands: []
   variables:
   - {fileID: 148524050}
@@ -1611,7 +1612,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -138.34023
     y: 81.17523
-    width: 125.294106
+    width: 121.05261
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2704,11 +2705,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1739570104}
         m_TargetAssemblyTypeName: ConversationEventManager, Assembly-CSharp
         m_MethodName: CompleteQuest
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
@@ -2807,7 +2808,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -138.84586
     y: -1.3707733
-    width: 161.76468
+    width: 156.57892
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3018,7 +3019,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -134.0224
     y: 373.4829
-    width: 113.5294
+    width: 111.84209
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3038,7 +3039,6 @@ MonoBehaviour:
   - {fileID: 148524149}
   - {fileID: 148524111}
   - {fileID: 148524162}
-  - {fileID: 148524195}
   - {fileID: 148524290}
   - {fileID: 148524160}
   - {fileID: 148524158}
@@ -3206,7 +3206,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -138.25766
     y: 237.74664
-    width: 149.99998
+    width: 147.3684
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3280,7 +3280,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 141.1362
     y: 333.10968
-    width: 122.94116
+    width: 121.05261
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3290,7 +3290,6 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 148524165}
-  - {fileID: 148524291}
   - {fileID: 148524175}
   - {fileID: 148524193}
   - {fileID: 148524164}
@@ -3337,9 +3336,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 146.07242
-    y: 240.10985
-    width: 104.11764
+    x: 144.8066
+    y: 241.37567
+    width: 102.63156
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3349,7 +3348,6 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 148524194}
-  - {fileID: 148524289}
   - {fileID: 148524173}
   - {fileID: 148524288}
   - {fileID: 148524170}
@@ -3362,6 +3360,10 @@ MonoBehaviour:
   - {fileID: 148524293}
   - {fileID: 148524292}
   - {fileID: 148524213}
+  - {fileID: 148524297}
+  - {fileID: 148524301}
+  - {fileID: 148524302}
+  - {fileID: 148524300}
   suppressAllAutoSelections: 0
 --- !u!114 &148524162
 MonoBehaviour:
@@ -3831,7 +3833,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 144.65923
     y: 88.41585
-    width: 113.5294
+    width: 110.5263
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4606,68 +4608,6 @@ MonoBehaviour:
   returnValueType: System.Void
   showInherited: 0
   callMode: 0
---- !u!114 &148524195
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148523951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 236
-  indentLevel: 0
-  description: 
-  targetObject: {fileID: 751037855}
-  targetComponentAssemblyName: BGMPlay, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: BGMPlay
-  targetMethod: PlayBGM
-  targetMethodText: 'PlayBGM (Int32, Single): Void'
-  methodParameters:
-  - objValue:
-      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Int32
-      intValue: 1
-      boolValue: 0
-      floatValue: 0
-      stringValue: 
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
-  - objValue:
-      typeAssemblyname: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Single
-      intValue: 0
-      boolValue: 0
-      floatValue: 1.5
-      stringValue: 
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
 --- !u!114 &148524196
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4796,8 +4736,25 @@ MonoBehaviour:
   targetComponentFullname: UnityEngine.Component[]
   targetComponentText: ConversationEventManager
   targetMethod: CompleteQuest
-  targetMethodText: 'CompleteQuest (): Void'
-  methodParameters: []
+  targetMethodText: 'CompleteQuest (Int32): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 1
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
   saveReturnValue: 0
   returnValueVariableKey: 
   returnValueType: System.Void
@@ -4855,7 +4812,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -127.15814
     y: 492.965
-    width: 112.352936
+    width: 111.84209
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5183,7 +5140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scope: 2
-  key: DrugRestroom
+  key: IsCarEnding
   value: 0
 --- !u!114 &148524246
 MonoBehaviour:
@@ -5296,7 +5253,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 63.38702
     y: 741.91235
-    width: 70
+    width: 69.73683
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5336,7 +5293,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 61.723125
     y: 668.97174
-    width: 149.99998
+    width: 144.73682
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5716,7 +5673,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -126.31876
     y: 699.5593
-    width: 112.352936
+    width: 109.21051
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5996,7 +5953,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 295.51974
     y: 670.3484
-    width: 151.17645
+    width: 144.73682
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6471,51 +6428,6 @@ MonoBehaviour:
   indentLevel: 0
   audioInfoSO: {fileID: 11400000, guid: d8a397eaab99b7f49a072a1dac8b599a, type: 2}
   waitUntilFinished: 1
---- !u!114 &148524289
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148523951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 328
-  indentLevel: 0
-  description: 
-  targetObject: {fileID: 751037855}
-  targetComponentAssemblyName: BGMPlay, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: BGMPlay
-  targetMethod: PlayBGM
-  targetMethodText: 'PlayBGM (Int32): Void'
-  methodParameters:
-  - objValue:
-      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Int32
-      intValue: 0
-      boolValue: 0
-      floatValue: 0
-      stringValue: 
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
 --- !u!114 &148524290
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6545,51 +6457,6 @@ MonoBehaviour:
       typeFullname: System.Boolean
       intValue: 0
       boolValue: 1
-      floatValue: 0
-      stringValue: 
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
---- !u!114 &148524291
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148523951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 331
-  indentLevel: 0
-  description: 
-  targetObject: {fileID: 751037855}
-  targetComponentAssemblyName: BGMPlay, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: BGMPlay
-  targetMethod: PlayBGM
-  targetMethodText: 'PlayBGM (Int32): Void'
-  methodParameters:
-  - objValue:
-      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Int32
-      intValue: 0
-      boolValue: 0
       floatValue: 0
       stringValue: 
       colorValue: {r: 0, g: 0, b: 0, a: 0}
@@ -6764,6 +6631,117 @@ MonoBehaviour:
   parentBlock: {fileID: 148524261}
   suppressBlockAutoSelect: 0
   message: 600_Noraebang
+--- !u!114 &148524297
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148523951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 336
+  indentLevel: 0
+  duration: 1
+  targetAlpha: 0
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
+--- !u!114 &148524300
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148523951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 339
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1739570103}
+  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ConversationEventManager
+  targetMethod: BackToMain
+  targetMethodText: 'BackToMain (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &148524301
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148523951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 340
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 5
+  durationOLD: 0
+--- !u!114 &148524302
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148523951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 341
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1739570103}
+  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ConversationEventManager
+  targetMethod: SetIsDialog
+  targetMethodText: 'SetIsDialog (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 1
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!4 &175662392 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2025460521602075083, guid: a31707eb5f1481d46a674b9d8c795ce9, type: 3}
@@ -7774,8 +7752,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -1.5436001, y: -4.77645, z: 0}
-    m_Extent: {x: 12.3251, y: 8.93735, z: 0}
+    m_Center: {x: -1.5345001, y: -4.7697, z: 0}
+    m_Extent: {x: 12.3217, y: 8.9477, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -8246,8 +8224,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.9123001, y: -4.6138, z: 0}
-    m_Extent: {x: 15.3552, y: 9.8212, z: 0}
+    m_Center: {x: 0.9151001, y: -4.61025, z: 0}
+    m_Extent: {x: 15.3526, y: 9.82715, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -10312,8 +10290,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.58224964, y: -1.0187001, z: 0}
-    m_Extent: {x: 14.47365, y: 11.5089, z: 0}
+    m_Center: {x: 0.58425, y: -1.0184498, z: 0}
+    m_Extent: {x: 14.46505, y: 11.51095, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -10582,7 +10560,19 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Hospital
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2028087014}
+        m_TargetAssemblyTypeName: AudioCue, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Hospital
           m_BoolArgument: 0
         m_CallState: 2
   bang: {fileID: 1787976922}
@@ -11025,8 +11015,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.08929992, y: -2.0707002, z: 0}
-    m_Extent: {x: 4.1677, y: 5.0881, z: 0}
+    m_Center: {x: 0.08695006, y: -2.0761, z: 0}
+    m_Extent: {x: 4.1712503, y: 5.0936003, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -11297,7 +11287,7 @@ MonoBehaviour:
   alleySP: {fileID: 1373041102}
   day: {fileID: 21300000, guid: 949c7e729778919409104bf0f962c69f, type: 3}
   night: {fileID: 21300000, guid: 1434d2356b5620e4e97d2299712b931b, type: 3}
-  lights: {fileID: 0}
+  lights: {fileID: 719732318}
 --- !u!1 &1380823173
 GameObject:
   m_ObjectHideFlags: 0
@@ -12085,8 +12075,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.2112, y: 0.72079945, z: 0}
-    m_Extent: {x: 6.4353, y: 19.3054, z: 0}
+    m_Center: {x: 0.20214987, y: 0.7119999, z: 0}
+    m_Extent: {x: 6.42735, y: 19.3059, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -12197,8 +12187,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -37.460403, y: 1.7067995, z: 0}
-    m_Extent: {x: 53.1772, y: 19.306099, z: 0}
+    m_Center: {x: -37.46015, y: 1.7031002, z: 0}
+    m_Extent: {x: 53.18225, y: 19.3029, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -12453,8 +12443,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.9539499, y: -0.050899982, z: 0}
-    m_Extent: {x: 15.17945, y: 4.9708, z: 0}
+    m_Center: {x: -0.94924974, y: -0.0464499, z: 0}
+    m_Extent: {x: 15.17695, y: 4.97495, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -13655,6 +13645,18 @@ MonoBehaviour:
           m_StringArgument: Home
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2028087014}
+        m_TargetAssemblyTypeName: AudioCue, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Home
+          m_BoolArgument: 0
+        m_CallState: 2
   bang: {fileID: 822127035}
 --- !u!1 &1872574295
 GameObject:
@@ -14452,6 +14454,18 @@ MonoBehaviour:
           m_StringArgument: School
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2028087014}
+        m_TargetAssemblyTypeName: AudioCue, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: School
+          m_BoolArgument: 0
+        m_CallState: 2
   bang: {fileID: 874678978}
 --- !u!1 &2020081712
 GameObject:
@@ -14737,8 +14751,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 2.5613499, y: 0.080200195, z: 0}
-    m_Extent: {x: 31.40685, y: 10.6581, z: 0}
+    m_Center: {x: 2.561449, y: 0.07820034, z: 0}
+    m_Extent: {x: 31.39815, y: 10.6629, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

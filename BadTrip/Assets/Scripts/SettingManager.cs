@@ -26,6 +26,8 @@ public class SettingManager : MonoBehaviour
 
     private bool isDialog = true;
 
+    public Animator transition;
+
     private void Update()
     {
         if (isDialog)
@@ -92,15 +94,27 @@ public class SettingManager : MonoBehaviour
     {
         if (!sceneMove.curSceneName.Equals("Main"))
         {
-            SceneManager.LoadSceneAsync("Main", LoadSceneMode.Additive);
-            SceneManager.UnloadSceneAsync(sceneMove.curSceneName);
-            sceneMove.curSceneName = "Main";
-            GameObject.FindGameObjectWithTag("SceneSetting").GetComponent<SceneSetting>().SetScene(loadSceneInfo);
-            player.transform.position = new Vector2(31.6f, -9.2f);
-            player.GetComponent<Player>().SetAnimLayer(0);
-            OnOffSetting(false);
+            StartCoroutine(GoMain());
         }
     }
+
+    IEnumerator GoMain()
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(2.0f);
+        SceneManager.LoadSceneAsync("Main", LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync(sceneMove.curSceneName);
+        sceneMove.curSceneName = "Main";
+        GameObject.FindGameObjectWithTag("SceneSetting").GetComponent<SceneSetting>().SetScene(loadSceneInfo);
+        player.transform.position = new Vector2(31.6f, -9.2f);
+        player.GetComponent<Player>().SetAnimLayer(0);
+        player.GetComponent<Player>().PlayerInit();
+        OnOffSetting(false);
+        yield return new WaitForSeconds(1.0f);
+        transition.SetTrigger("End");
+    }
+
+
 
     public void OnOffSetting(bool b)
     {

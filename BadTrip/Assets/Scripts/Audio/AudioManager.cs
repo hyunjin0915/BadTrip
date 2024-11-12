@@ -75,7 +75,7 @@ public class AudioManager : MonoBehaviour
     {
         audioSources[audioInfo.audioNum].clip = audioInfo.clip;
         audioSources[audioInfo.audioNum].volume = 0;
-        audioSources[audioInfo.audioNum].loop = false;
+        audioSources[audioInfo.audioNum].loop = audioInfo.isLoop;
         audioSources[audioInfo.audioNum].Play();
 
         StartCoroutine(PlayFade(audioInfo.vol, fade, audioInfo.audioNum));
@@ -98,7 +98,7 @@ public class AudioManager : MonoBehaviour
     public void StopMusicFade(float fade)
     {
         int audioNum;
-        for (audioNum = 0; audioNum < 3; audioNum++)
+        for (audioNum = 0; audioNum < 4; audioNum++)
         {
             if (audioSources[audioNum].isPlaying)
             {

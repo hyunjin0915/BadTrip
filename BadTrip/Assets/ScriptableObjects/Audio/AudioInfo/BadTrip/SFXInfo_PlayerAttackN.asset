@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae70fccd5fcef3b4d8da728523cf784f, type: 3}
   m_Name: SFXInfo_PlayerAttackN
   m_EditorClassIdentifier: 
-  audioNum: 1
+  audioNum: 4
   clip: {fileID: 8300000, guid: ea98e6f0b29c87d419a8714b72771f3d, type: 3}
   vol: 0.5
+  pch: 1
   isLoop: 0
   isOneShot: 1
   spread: 0

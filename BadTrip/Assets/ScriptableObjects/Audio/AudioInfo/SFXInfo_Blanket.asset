@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae70fccd5fcef3b4d8da728523cf784f, type: 3}
   m_Name: SFXInfo_Blanket
   m_EditorClassIdentifier: 
-  audioNum: 3
+  audioNum: 4
   clip: {fileID: 8300000, guid: 59f6dbc193d64b2429614cc32adf4358, type: 3}
   vol: 1
   pch: 1

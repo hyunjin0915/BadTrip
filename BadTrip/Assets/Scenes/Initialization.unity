@@ -2144,6 +2144,7 @@ MonoBehaviour:
   settingWindow: {fileID: 2036318949}
   player: {fileID: 6858215238848761065}
   sceneMove: {fileID: 1311770915}
+  transition: {fileID: 1105300911}
 --- !u!1 &1014880127
 GameObject:
   m_ObjectHideFlags: 0
@@ -4085,7 +4086,7 @@ MonoBehaviour:
     - key: StoreSchool
       value: {x: 97.2, y: -17.5, z: 0}
     - key: SchoolStore
-      value: {x: -186.6, y: -12.4, z: 0}
+      value: {x: -187.4, y: -12.4, z: 0}
     - key: StoreHospital
       value: {x: -17, y: -14.3, z: 0}
     - key: HospitalStore

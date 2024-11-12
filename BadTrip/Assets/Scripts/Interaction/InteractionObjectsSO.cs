@@ -9,7 +9,7 @@ public class InteractionObjectsSO : ScriptableObject
     public Dictionary<int, GameObject> interactionObjs = new Dictionary<int, GameObject>();
 
     public event Action UpdateQuestScene;
-    public event Action<int> CompleteQuest;
+    public event Action<int> CompleteQuest, LoadQuestInit;
     public event Func<int> GetQuestId;
 
     public void RaiseEvent()

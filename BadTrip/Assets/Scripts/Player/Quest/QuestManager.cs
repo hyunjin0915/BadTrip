@@ -48,11 +48,11 @@ public class QuestManager : MonoBehaviour
             QuestInfoSO questinfoCopy = Instantiate(questInfo);
 
             List<QuestBase> allQuests = new List<QuestBase>();
-            foreach (QuestBase questBase in questinfoCopy.moveQuests)
+            foreach (QuestBase questBase in questinfoCopy.InterQuest)
             {
                 allQuests.Add(questBase);
             }
-            foreach (QuestBase questBase in questinfoCopy.InterQuest)
+            foreach (QuestBase questBase in questinfoCopy.moveQuests)
             {
                 allQuests.Add(questBase);
             }
@@ -109,9 +109,10 @@ public class QuestManager : MonoBehaviour
         }
 
 
-        if (info.sceneName == sceneMove.curSceneName && info.allQuests[0].questType == 1 && !info.allQuests[0].isClear)
+        int questcount = info.allQuests.Length;
+        if (info.sceneName == sceneMove.curSceneName && info.allQuests[questcount-1].questType == 1 && !info.allQuests[questcount-1].isClear)
         {
-            info.allQuests[0].QuestFunction();
+            info.allQuests[questcount - 1].QuestFunction();
             info.clearCount++;
         }
 
@@ -159,7 +160,8 @@ public class QuestManager : MonoBehaviour
     public void SetQuestPro(bool[] pro)
     {
         info = questDic[curQuestId];
-        
+        info.clearCount = 0;
+
         for (int i = 0; i < pro.Length; i++)
         {
             if (info.allQuests[i].questType != 1)
@@ -176,5 +178,15 @@ public class QuestManager : MonoBehaviour
     public int GetQuestId()
     {
         return curQuestId;
+    }
+
+    public void LoadQuestInit(int i)
+    {
+        foreach (QuestBase quest in questDic[i].allQuests)
+        {
+            quest.isClear = false;
+        }
+
+        questDic[i].clearCount = 0;
     }
 }

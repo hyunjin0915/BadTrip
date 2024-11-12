@@ -153,4 +153,9 @@ public class ConversationEventManager : MonoBehaviour
     {
         sayDialogSO.SetIsDialog(b);
     }
+
+    public void BackToMain()
+    {
+        sayDialogSO.BackToMain();
+    }
 }

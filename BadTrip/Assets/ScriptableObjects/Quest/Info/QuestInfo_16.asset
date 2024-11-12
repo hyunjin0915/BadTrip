@@ -15,7 +15,7 @@ MonoBehaviour:
   explain: "\uC9D1\uC73C\uB85C \uC774\uB3D9_\uD559\uAD50"
   questId: 16
   sceneName: School
-  questCount: 2
+  questCount: 3
   clearCount: 0
   isLast: 0
   InterQuest:
@@ -29,4 +29,9 @@ MonoBehaviour:
     interactionId: 802
     player: {fileID: 0}
     message: 
-  moveQuests: []
+  moveQuests:
+  - questType: 1
+    isClear: 0
+    interactionId: 0
+    player: {fileID: 0}
+    message: 800_AfterHyunjunDrug

@@ -34,6 +34,7 @@ public class MainUIManager : MonoBehaviour
     public void GoScene()
     {
         mapInteractionSetting.GoScene(data.sceneName);
+        
     }
 
     public void NewGame()

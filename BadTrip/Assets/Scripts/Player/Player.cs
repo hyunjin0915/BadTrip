@@ -224,4 +224,10 @@ public class Player : MonoBehaviour
         playerSP.sortingOrder = order;
     }
 
+    public void PlayerInit()
+    {
+        canMove = true;
+        playerAnimator.SetBool("CanPMove", true);
+    }
+
 }

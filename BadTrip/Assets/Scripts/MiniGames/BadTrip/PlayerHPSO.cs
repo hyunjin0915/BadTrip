@@ -8,14 +8,17 @@ public class PlayerHPSO : ScriptableObject
 
     public float PlayerHealth = 100f;
     public float PlayerMaxHealth = 100f;
+    public bool isAttackable = true;
     
     public static event Action OnPlayerDamaged;
 
     public void PlayerDecreaseHealth(float amount)
     {
-        PlayerHealth -= amount;
-        OnPlayerDamaged?.Invoke();
-
+        if(isAttackable)
+        {
+            PlayerHealth -= amount;
+            OnPlayerDamaged?.Invoke();
+        }
         if(PlayerHealth<=0) //플레이어 죽음
         {
             

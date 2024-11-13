@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: dfg
   animLayer: 2
+  isFlip: 0
+  getDC: 0

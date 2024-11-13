@@ -3,7 +3,9 @@ using UnityEngine;
 
 public class FireBullet : MonoBehaviour
 {
-    public GameObject Bullet;
+    public GameObject Cocktail;
+    public GameObject HolyWater;
+    private GameObject Bullet;
     public Transform FirePos;
 
     [SerializeField] private AudioCue audioCue;
@@ -11,6 +13,17 @@ public class FireBullet : MonoBehaviour
 
     public bool gameStart = false;
 
+    void Start()
+    {
+        if(playerDataSO.getDC)
+        {
+            Bullet = HolyWater;
+        }
+        else
+        {
+            Bullet = Cocktail;
+        }
+    }
     // Update is called once per frame
     void Update()
     {

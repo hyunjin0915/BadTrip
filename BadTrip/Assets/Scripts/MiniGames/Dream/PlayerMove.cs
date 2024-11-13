@@ -6,9 +6,9 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField]
-    private float walkSpeed;
+    public float walkSpeed;
     [SerializeField]
-    private float runSpeed;
+    public float runSpeed;
     [SerializeField]
     private float jumpForce = 5f;
 

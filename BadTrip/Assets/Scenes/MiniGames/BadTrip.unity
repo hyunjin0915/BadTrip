@@ -4429,10 +4429,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 816c248023929d34283844e7ee393d9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bullet: {fileID: 7570155020928645223, guid: 78afa8a61b6a6494a8bce79ce1656c21, type: 3}
+  Cocktail: {fileID: 7570155020928645223, guid: 78afa8a61b6a6494a8bce79ce1656c21, type: 3}
+  HolyWater: {fileID: 7570155020928645223, guid: 8843d05161ae26f4ebf2117f26531da7, type: 3}
   FirePos: {fileID: 1475700980}
   audioCue: {fileID: 1624328144}
-  playerDataSO: {fileID: 0}
+  playerDataSO: {fileID: 11400000, guid: 6dc9d063a98fe0340bfc447550d25e4e, type: 2}
   gameStart: 0
 --- !u!114 &1624328142
 MonoBehaviour:

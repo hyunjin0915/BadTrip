@@ -34,5 +34,20 @@ EditorBuildSettings:
     guid: 480b95061ae07534f9ec34c586031ee1
   - enabled: 1
     path: Assets/Scenes/School.unity
-    guid: 23518972944fa4f4eba01bcf7c3b1627
+    guid: a30d83fc8d0d3704e8c6d5f98b326df5
+  - enabled: 1
+    path: Assets/Scenes/Hospital.unity
+    guid: 8a0d8cb9ebbecad4bb8df9e037fa57d8
+  - enabled: 1
+    path: Assets/Scenes/RehabilitationHome.unity
+    guid: 8a52b9f9acbb32e44a4987f68f8dd65b
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/NeuronOrdering.unity
+    guid: d8baac12ee0d8924094d26055a646404
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/NeuronLinkPuzzle.unity
+    guid: 18133dbae39172b499c5cd2546b20829
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/JigsawPuzzle.unity
+    guid: 7a0bd549a4db047439b989008c686481
   m_configObjects: {}

@@ -72,7 +72,7 @@ public class QuestManager : MonoBehaviour
 
     public void CompleteQuest(int i = 1)
     {
-        curQuestId += 1;
+        curQuestId += i;
         if (curQuestId < questSet.Count)
         {
             LoadQuest(curQuestId);

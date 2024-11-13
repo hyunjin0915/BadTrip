@@ -29,4 +29,9 @@ MonoBehaviour:
     interactionId: 603
     player: {fileID: 0}
     message: 
-  moveQuests: []
+  moveQuests:
+  - questType: 1
+    isClear: 0
+    interactionId: 0
+    player: {fileID: 0}
+    message: 600_BeforeNoraebang

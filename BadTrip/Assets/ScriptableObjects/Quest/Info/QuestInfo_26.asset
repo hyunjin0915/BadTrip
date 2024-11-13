@@ -20,7 +20,7 @@ MonoBehaviour:
   isLast: 0
   InterQuest: []
   moveQuests:
-  - questType: 0
+  - questType: 1
     isClear: 0
     interactionId: 0
     player: {fileID: 0}

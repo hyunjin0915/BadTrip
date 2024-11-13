@@ -12,17 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e19c0907e1eab48a0e2f2dff776234, type: 3}
   m_Name: QuestInfo_33
   m_EditorClassIdentifier: 
-  explain: "\uC6D0\uB0B4 \uC7AC\uD65C\uC13C\uD130 \uC120\uD0DD \uC9C4\uB8CC\uC2E4
-    \uB098\uAC10"
+  explain: "\uBBF8\uB2C8\uAC8C\uC784 \uC774\uD6C4"
   questId: 33
   sceneName: Hospital
-  questCount: 1
+  questCount: 2
   clearCount: 0
   isLast: 0
-  InterQuest:
-  - questType: 0
+  InterQuest: []
+  moveQuests:
+  - questType: 1
     isClear: 0
-    interactionId: 904
+    interactionId: 0
     player: {fileID: 0}
-    message: 900_NurseCall
-  moveQuests: []
+    message: 900_AfterMiniGame

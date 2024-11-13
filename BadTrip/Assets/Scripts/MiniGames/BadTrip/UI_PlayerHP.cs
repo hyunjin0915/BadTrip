@@ -28,7 +28,7 @@ public class UI_PlayerHP : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Vector3 _hpBarPos = 
             Camera.main.WorldToScreenPoint(new Vector3(transform.position.x, transform.position.y+height,0));

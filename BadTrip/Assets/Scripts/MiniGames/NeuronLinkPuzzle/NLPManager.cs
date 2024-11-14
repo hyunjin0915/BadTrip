@@ -68,6 +68,7 @@ public class NLPManager : MonoBehaviour
 
     public void Reset()
     {
+        successCount = 0;
         foreach (Node node in nodes) {
             node.Init();
             node.ClearConnectedNodes();

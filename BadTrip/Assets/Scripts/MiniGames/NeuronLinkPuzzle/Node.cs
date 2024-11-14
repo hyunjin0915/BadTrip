@@ -190,7 +190,7 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
 
     public void Init()
     {
-        point.SetActive(false);
+        //point.SetActive(false);
         for (int i = 0; i < 5; i++)
         {
             verticalEdge[i].SetActive(false);

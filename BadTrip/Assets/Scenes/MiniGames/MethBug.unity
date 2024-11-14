@@ -679,6 +679,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 759998748}
     - target: {fileID: -4343706508275548938, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
+      propertyPath: endMethBug
+      value: 
+      objectReference: {fileID: 759998747}
+    - target: {fileID: -4343706508275548938, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1209004595}
@@ -1099,6 +1103,10 @@ PrefabInstance:
       propertyPath: audioCue
       value: 
       objectReference: {fileID: 759998748}
+    - target: {fileID: -4343706508275548938, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
+      propertyPath: endMethBug
+      value: 
+      objectReference: {fileID: 759998747}
     - target: {fileID: -4343706508275548938, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
       propertyPath: gameManager
       value: 
@@ -3471,6 +3479,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 759998748}
     - target: {fileID: -4343706508275548938, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
+      propertyPath: endMethBug
+      value: 
+      objectReference: {fileID: 759998747}
+    - target: {fileID: -4343706508275548938, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1209004595}
@@ -3799,6 +3811,10 @@ PrefabInstance:
       propertyPath: audioCue
       value: 
       objectReference: {fileID: 759998748}
+    - target: {fileID: -4343706508275548938, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
+      propertyPath: endMethBug
+      value: 
+      objectReference: {fileID: 759998747}
     - target: {fileID: -4343706508275548938, guid: 54c9c188af9aa0a47bd7cff9adf01a3c, type: 3}
       propertyPath: gameManager
       value: 

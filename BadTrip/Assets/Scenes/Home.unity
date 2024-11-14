@@ -10000,7 +10000,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 226
     y: 87
-    width: 95.242386
+    width: 96.02738
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -10055,19 +10055,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 43.280678, y: -130.06696}
+  scrollPos: {x: 25.350471, y: 17.1852}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 740
-  zoom: 0.9283329
+  zoom: 0.73000026
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1736043912}
+  selectedBlocks: []
   selectedCommands: []
   variables:
   - {fileID: 1736043910}
@@ -10253,7 +10252,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -13.474437
     y: 85.75329
-    width: 124.32678
+    width: 125.61641
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -11044,8 +11043,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -1.1466451
-    y: 184.73434
-    width: 135.09879
+    y: 183.65715
+    width: 136.57532
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -11731,7 +11730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 243
   indentLevel: 0
-  storyText: "\uBB50\uC57C. \uC544\uBB34\uB807\uC9C0\uB3C4 \uC796\uC544."
+  storyText: "\uBB50\uC57C. \uC544\uBB34\uB807\uC9C0\uB3C4 \uC54A\uC796\uC544."
   description: 
   character: {fileID: 1665108587}
   portrait: {fileID: 0}
@@ -11958,7 +11957,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 228.6269
     y: 185.87909
-    width: 102.78279
+    width: 103.69861
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -12495,7 +12494,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 4.5558357
     y: 306.67307
-    width: 118.94078
+    width: 120.13696
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -13075,7 +13074,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 231.45996
     y: 303.84216
-    width: 153.41118
+    width: 155.20544
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -13988,7 +13987,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 424.79102
     y: 185.84134
-    width: 106.01439
+    width: 105.890396
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -15604,7 +15603,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0.6257216
     y: 433.61737
-    width: 127.55838
+    width: 128.90408
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -16185,7 +16184,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 242.17241
     y: 435.85034
-    width: 118.94078
+    width: 120.13696
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -16280,7 +16279,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1.7134651
     y: 547.8684
-    width: 137.25317
+    width: 138.76709
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -17201,7 +17200,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 208.43373
     y: 616.1656
-    width: 124.32678
+    width: 124.52052
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -17564,7 +17563,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 212.33115
     y: 729.8898
-    width: 74.7756
+    width: 75.205475
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -17964,7 +17963,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -2.2589355
     y: 666.97626
-    width: 120.01798
+    width: 121.23285
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -18707,7 +18706,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0.9458771
     y: 910.246
-    width: 82.315994
+    width: 82.8767
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -18777,7 +18776,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 380.7635
     y: 1009.38464
-    width: 113.55479
+    width: 114.65751
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -19349,7 +19348,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 227.78648
     y: 1010.5842
-    width: 108.168785
+    width: 109.17806
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -20046,7 +20045,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -0.21351624
     y: 1009.5204
-    width: 151.25677
+    width: 153.01367
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0

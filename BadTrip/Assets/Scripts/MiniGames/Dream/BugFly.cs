@@ -16,7 +16,7 @@ public class BugFly : MovingMon
     [SerializeField]
     float FollowingSpeed = 3.0f;
 
-
+    public Animator animator;
 
     // Start is called before the first frame update
     protected override void Start()
@@ -56,15 +56,20 @@ public class BugFly : MovingMon
             Vector2 directionToPlayer = (target.position - rb.position).normalized;
             //rb.velocity = new Vector2(directionToPlayer.x * FollowingSpeed, rb.velocity.y);
             rb.velocity = new Vector2(directionToPlayer.x * FollowingSpeed, directionToPlayer.y * FollowingSpeed);
+            animator.SetTrigger("Attack");
         }
         else
         {
             if(isFollow)
             {
                 isFollow = false;
+                currentPosition = transform.position;
                 rightMax_Apply = transform.position.x + rightMax;
                 leftMax_Apply = transform.position.x + leftMax;
+                upMax_Apply = currentPosition.y+upMax;
+                downMax_Apply = currentPosition.y + downMax;
             }
+            animator.SetTrigger("StopAttack");
             rb.velocity = Vector2.zero;
         }
         

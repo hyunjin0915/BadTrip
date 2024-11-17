@@ -13,6 +13,8 @@ public class Mollusk : MovingMon
 
     [SerializeField]
     float FindRange = 4f; 
+
+    public Animator animator;
      protected override void Start()
     {
         base.Start();
@@ -44,6 +46,7 @@ public class Mollusk : MovingMon
             isFollow = true;
             Vector2 directionToPlayer = (target.position - rb.position).normalized;
             rb.velocity = new Vector2(directionToPlayer.x * FollowingSpeed, rb.velocity.y);
+            animator.SetTrigger("Attack");
         }
         else
         {
@@ -53,6 +56,7 @@ public class Mollusk : MovingMon
                 rightMax_Apply = transform.position.x + rightMax;
                 leftMax_Apply = transform.position.x + leftMax;
             }
+            animator.SetTrigger("StopAttack");
             rb.velocity = Vector2.zero;
         }
         

@@ -11,6 +11,10 @@ public class PlayerHDTrigger : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     [SerializeField]
+    private Animator animator;
+
+    public GameObject poping;
+    [SerializeField]
     private PlayerHPSO Player_healthManager;
     void Start()
     {
@@ -24,13 +28,13 @@ public class PlayerHDTrigger : MonoBehaviour
         {
             if(collision.rigidbody.velocity.y<0 && transform.position.y < collision.transform.position.y)
             {
-                collision.rigidbody.AddForce(Vector2.up*100, ForceMode2D.Impulse);
+                collision.rigidbody.AddForce(Vector2.up*150, ForceMode2D.Impulse);
                 OnDamaged();
-                //Debug.Log("밟기!");
-                //transform.gameObject.SetActive(false);
+                poping.SetActive(true);
             }
             else
             {
+                //animator.SetTrigger("Attack");
                 Player_healthManager.PlayerDecreaseHealth(PlayerDamage);
             }
             

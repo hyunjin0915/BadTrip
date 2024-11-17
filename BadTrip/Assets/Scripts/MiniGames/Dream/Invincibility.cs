@@ -11,6 +11,8 @@ public class Invincibility : MonoBehaviour
     GameObject player;
     [SerializeField]
     private float invincibilitytime;
+    [SerializeField]
+    private GameObject itemLight;
 
     SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
@@ -28,6 +30,7 @@ public class Invincibility : MonoBehaviour
     {
         if(other.CompareTag("SOPlayer"))
         {
+            itemLight.SetActive(false);
             StartCoroutine(GetInvincibility());
             spriteRenderer.material.color = new Color (1, 1, 1, 0);
             GetComponent<BoxCollider2D>().enabled = false;

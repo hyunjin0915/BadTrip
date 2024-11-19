@@ -15,7 +15,7 @@ MonoBehaviour:
   explain: "\uC7AC\uD65C \uD6C4 \uC9D1 \uBC29\n"
   questId: 39
   sceneName: RehabilitationHome
-  questCount: 2
+  questCount: 3
   clearCount: 0
   isLast: 0
   InterQuest:

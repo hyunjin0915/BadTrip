@@ -23,5 +23,5 @@ MonoBehaviour:
     isClear: 0
     interactionId: 901
     player: {fileID: 0}
-    message: 
+    message: 900_GoToCenter
   moveQuests: []

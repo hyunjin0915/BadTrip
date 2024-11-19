@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explain: "\uBC29\uBB38\uC7AC\uD65C \uC120\uD0DD"
   questId: 40
-  sceneName: RehabilitationHome
+  sceneName: Hospital
   questCount: 2
   clearCount: 0
   isLast: 0

@@ -21,7 +21,7 @@ MonoBehaviour:
   InterQuest:
   - questType: 0
     isClear: 0
-    interactionId: 0
+    interactionId: 902
     player: {fileID: 0}
     message: 
   moveQuests:

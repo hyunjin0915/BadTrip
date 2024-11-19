@@ -141,9 +141,9 @@ public class Player : MonoBehaviour
     }
 
     #region Animation
-    public void SetAnimLayer(int num)
+    public void SetAnimLayer(int layerIndex)
     {
-        if (num == 0)
+        /*if (num == 0)
         {
             ActivateLayer(0);
         } else if (num == 1)
@@ -155,12 +155,20 @@ public class Player : MonoBehaviour
         } else if(num == 3)
         {
             ActivateLayer(3);
+        }*/
+
+        for (int i = 0; i < 6; i++)
+        {
+            playerAnimator.SetLayerWeight(i, 0);
         }
+
+        playerAnimator.SetLayerWeight(layerIndex, 1);
+        playerDataSO.animLayer = layerIndex;
     }
 
     public void ActivateLayer(int layerIndex)
     {
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 5; i++)
         {
             playerAnimator.SetLayerWeight(i, 0);
         }

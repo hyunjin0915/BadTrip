@@ -2927,7 +2927,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1064279771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4182,7 +4182,7 @@ MonoBehaviour:
     - key: HospitalStore
       value: {x: -496, y: -12, z: 0}
     - key: HospitalRehabilitationHome
-      value: {x: -496, y: -12, z: 0}
+      value: {x: 32.2, y: -12.5, z: 0}
     - key: HospitalNeuronOrdering
       value: {x: 0, y: 0, z: 0}
     - key: NeuronOrderingNeuronLinkPuzzle
@@ -4421,7 +4421,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 33.75
+  orthographic size: 33.749
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

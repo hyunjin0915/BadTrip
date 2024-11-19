@@ -19,7 +19,7 @@ public class MonsterHPSO : ScriptableObject
 
         if(MonsterHealth<=0)//몬스터 죽음
         {
-            
+            Fungus.Flowchart.BroadcastFungusMessage("DevilDead");
         }
     }
 }

@@ -89,7 +89,7 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
     {
         if (nlpManager.isDragging)
         {
-            nlpManager.sourceNode.connectedNodes[nlpManager.nodeCount - 1].GetComponentInParent<Node>().highlight[nlpManager.sourceNode.colorId].SetActive(false);
+            nlpManager.sourceNode.connectedNodes[nlpManager.nodeCount - 1]?.GetComponentInParent<Node>().highlight[nlpManager.sourceNode.colorId]?.SetActive(false);
 
             nlpManager.isDragging = false;
 
@@ -225,43 +225,43 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
 
         string edges = preEdge.ToString() + curEdge.ToString();
 
-        nlpManager.sourceNode.connectedNodes[nlpManager.nodeCount - 1].SetActive(false);
+        nlpManager.sourceNode.connectedNodes[nlpManager.nodeCount - 1]?.SetActive(false);
 
         switch (edges)
         {
             case "updown":
             case "downup":
-                nlpManager.preNode.verticalEdge[i].SetActive(true);
+                nlpManager.preNode.verticalEdge[i]?.SetActive(true);
                 nlpManager.sourceNode.connectedNodes[nlpManager.nodeCount - 1] = nlpManager.preNode.verticalEdge[i];
                 // 세로 이미지 active
                 break;
             case "leftright":
             case "rightleft":
-                nlpManager.preNode.horizonEdge[i].SetActive(true);
+                nlpManager.preNode.horizonEdge[i]?.SetActive(true);
                 nlpManager.sourceNode.connectedNodes[nlpManager.nodeCount - 1] = nlpManager.preNode.horizonEdge[i];
                 // 가로 이미지 active
                 break;
             case "upleft":
             case "leftup":
-                nlpManager.preNode.upleftEdge[i].SetActive(true);
+                nlpManager.preNode.upleftEdge[i]?.SetActive(true);
                 nlpManager.sourceNode.connectedNodes[nlpManager.nodeCount - 1] = nlpManager.preNode.upleftEdge[i];
                 // 위왼쪽 이미지 active
                 break;
             case "upright":
             case "rightup":
-                nlpManager.preNode.uprightEdge[i].SetActive(true);
+                nlpManager.preNode.uprightEdge[i]?.SetActive(true);
                 nlpManager.sourceNode.connectedNodes[nlpManager.nodeCount - 1] = nlpManager.preNode.uprightEdge[i];
                 // 위오른쪽 이미지 active
                 break;
             case "downleft":
             case "leftdown":
-                nlpManager.preNode.bottomleftEdge[i].SetActive(true);
+                nlpManager.preNode.bottomleftEdge[i]?.SetActive(true);
                 nlpManager.sourceNode.connectedNodes[nlpManager.nodeCount - 1] = nlpManager.preNode.bottomleftEdge[i];
                 // 왼쪽아래 이미지 active
                 break;
             case "downright":
             case "rightdown":
-                nlpManager.preNode.bottomrightEdge[i].SetActive(true);
+                nlpManager.preNode.bottomrightEdge[i]?.SetActive(true);
                 nlpManager.sourceNode.connectedNodes[nlpManager.nodeCount - 1] = nlpManager.preNode.bottomrightEdge[i];
                 // 오른쪽 아래 이미지 active
                 break;

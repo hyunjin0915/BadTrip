@@ -79,6 +79,11 @@ public class Central : MonoBehaviour
     void EndDrag(Transform Neuron)
     {
         SwapNeuronsInHierachy(InvisibleNeuron, Neuron); //끝나면 순서 바꿔주고 정답 정렬인지 체크 
-        if(arrangers[0].CheckOrder()) Debug.Log("순서 맞추기 성공");
+        if (arrangers[0].CheckOrder())
+        {
+            Fungus.Flowchart.BroadcastFungusMessage("FinishGame");
+            Debug.Log("순서 맞추기 성공");
+        }
+
     }
 }

@@ -78,6 +78,7 @@ public class JigsawPuzzle : MonoBehaviour
             if(answer==25) 
             {
                 Debug.Log("게임 클리어 이벤트 발생");
+                Fungus.Flowchart.BroadcastFungusMessage("FinishGame");
             }
         }
     }

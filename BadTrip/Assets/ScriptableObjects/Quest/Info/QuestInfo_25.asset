@@ -15,7 +15,7 @@ MonoBehaviour:
   explain: "\uBCD1\uC6D0\uC73C\uB85C \uAC10"
   questId: 25
   sceneName: Store
-  questCount: 2
+  questCount: 3
   clearCount: 0
   isLast: 0
   InterQuest:

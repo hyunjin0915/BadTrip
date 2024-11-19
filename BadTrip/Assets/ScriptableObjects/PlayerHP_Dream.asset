@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerHealth: 100
   PlayerMaxHealth: 100
-  isAttackable: 1
+  isAttackable: 0

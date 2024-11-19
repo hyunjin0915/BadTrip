@@ -10,6 +10,9 @@ public class DashItem : MonoBehaviour
     private float dashTime;
     [SerializeField]
     private float dashSpeed;
+    [SerializeField]
+    private GameObject itemLight;
+
 
     SpriteRenderer spriteRenderer;
     void Start()
@@ -20,6 +23,7 @@ public class DashItem : MonoBehaviour
     {
         if(other.CompareTag("SOPlayer"))
         {
+            itemLight.SetActive(false);
             StartCoroutine(SetDashSpeed());
             spriteRenderer.material.color = new Color (1, 1, 1, 0);
             GetComponent<BoxCollider2D>().enabled = false;

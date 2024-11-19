@@ -41,11 +41,6 @@ public class MovingMon : MonoBehaviour
         leftMax_Apply = currentPosition.x + leftMax;
     }
 
-    void Update()
-    {
-
-    }
-
     protected virtual void Move()
     {
         currentPosition.x += Time.deltaTime * direction * velocity;
@@ -77,7 +72,7 @@ public class MovingMon : MonoBehaviour
         direction = 1f;					//방향을 오른쪽으로 설정(원래 방향과 동일).
         transform.localScale = new Vector2(currentScaleX, currentScaleY);
     }
-    public void Fly()
+    protected void Fly()
     {
         currentPosition.y += Time.deltaTime * perDirection * FlyingSpeed;
 

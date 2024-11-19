@@ -3,17 +3,17 @@ using UnityEngine;
 public class MainUIManager : MonoBehaviour
 {
     [SerializeField] private AudioCue audioCue;
-    [SerializeField] private MapInteractionSetting mapInteractionSetting;
     [SerializeField] private PlayerDataSO playerDataSO;
 
     private QuestManager questManager;
     private SaveManager saveManager;
     private JsonData data;
 
+    public GameObject loadWindow;
+
     private void Start()
     {
         questManager = GameObject.FindGameObjectWithTag("QuestManager").GetComponent<QuestManager>();
-        saveManager = GameObject.FindGameObjectWithTag("SaveManager").GetComponent<SaveManager>();
     }
 
     public void SelectBtn()
@@ -26,15 +26,9 @@ public class MainUIManager : MonoBehaviour
         audioCue.PlayAudio(0);
     }
 
-    public void LoadData()
+    public void ShowLoadWindow()
     {
-        data = saveManager.LoadData();
-    }
-
-    public void GoScene()
-    {
-        mapInteractionSetting.GoScene(data.sceneName);
-        
+        loadWindow.SetActive(true);
     }
 
     public void NewGame()

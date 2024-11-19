@@ -23,7 +23,7 @@ namespace Fungus
         {
             var musicManager = FungusManager.Instance.MusicManager;
 
-            musicManager.PlayMusicFade(audioInfoSO.audioMixerGroup, audioInfoSO.clip, audioInfoSO.vol, fadeDuration);
+            musicManager.PlayMusicFade(audioInfoSO.audioMixerGroup, audioInfoSO.clip, audioInfoSO.vol, fadeDuration, audioInfoSO.isLoop);
 
             Continue();
         }

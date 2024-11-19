@@ -2221,9 +2221,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioInfos:
-  - {fileID: 11400000, guid: 240aeaad87ca3a64fa5cc4c10b075ca3, type: 2}
-  - {fileID: 11400000, guid: a9ab2d76506f14a4fa42d8940d5a47d5, type: 2}
-  - {fileID: 11400000, guid: 9e1828bcdfac58846b24c895b8844722, type: 2}
+  - {fileID: 11400000, guid: f589bb3ec0eb99b41a40ff928393df16, type: 2}
+  - {fileID: 11400000, guid: 547d8b4f8cf0d6048bd8cf52924289f1, type: 2}
   audioEventChannel: {fileID: 11400000, guid: 5f1f11dc6a883c04fa42e19cea1a7c4b, type: 2}
 --- !u!4 &821756419
 Transform:
@@ -5224,8 +5223,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 8738169567203090041}
+  selectedCommands:
+  - {fileID: 8738169567203090056}
   variables:
   - {fileID: 184252191652599404}
   - {fileID: 1293176261644672755}
@@ -5437,6 +5438,7 @@ GameObject:
   - component: {fileID: 8738169567203090054}
   - component: {fileID: 8738169567203090053}
   - component: {fileID: 8738169567203090055}
+  - component: {fileID: 8738169567203090056}
   m_Layer: 0
   m_Name: OneRoomFlowchart
   m_TagString: Untagged
@@ -6167,6 +6169,7 @@ MonoBehaviour:
   - {fileID: 8738169567203090031}
   - {fileID: 8738169567203090052}
   - {fileID: 8738169567203090050}
+  - {fileID: 8738169567203090056}
   - {fileID: 8738169567203090051}
   - {fileID: 8738169567203090029}
   - {fileID: 8738169567203090028}
@@ -6519,6 +6522,51 @@ MonoBehaviour:
   targetComponentText: ConversationEventManager
   targetMethod: CompleteQuest
   targetMethodText: 'CompleteQuest (Int32): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 1
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &8738169567203090056
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050051285376147212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 35
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 696800758}
+  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ConversationEventManager
+  targetMethod: ShowCutscene
+  targetMethodText: 'ShowCutscene (Int32): Void'
   methodParameters:
   - objValue:
       typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,

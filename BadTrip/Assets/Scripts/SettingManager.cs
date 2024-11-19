@@ -20,6 +20,9 @@ public class SettingManager : MonoBehaviour
     private GameObject player;
 
     [SerializeField]
+    private GameObject saveWindow;
+
+    [SerializeField]
     private SceneMove sceneMove;
 
     private bool isActive = false;
@@ -112,6 +115,11 @@ public class SettingManager : MonoBehaviour
         OnOffSetting(false);
         yield return new WaitForSeconds(1.0f);
         transition.SetTrigger("End");
+    }
+
+    public void ShowSaveWindow()
+    {
+        saveWindow.SetActive(true);
     }
 
 

@@ -97,11 +97,11 @@ namespace Fungus
             audioSourceMusic.Play();
         }
 
-        public void PlayMusicFade(AudioMixerGroup group, AudioClip musicClip, float volume, float fade)
+        public void PlayMusicFade(AudioMixerGroup group, AudioClip musicClip, float volume, float fade, bool loop)
         {
             audioSourceMusic.clip = musicClip;
             audioSourceMusic.volume = 0;
-            audioSourceMusic.loop = false;
+            audioSourceMusic.loop = loop;
             audioSourceMusic.outputAudioMixerGroup = group;
             audioSourceMusic.Play();
 

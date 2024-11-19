@@ -21,17 +21,17 @@ public class SaveManager : MonoBehaviour
         path = Application.dataPath + "/Scripts/JsonFile/";
     }
 
-    public void SaveData(bool pretty = false) // 저장하기
+    public void SaveData(int num, bool pretty = false) // 저장하기
     {
         SetJsonData();
         string data = JsonUtility.ToJson(jsonData, pretty);
-        File.WriteAllText(path + fileName, data);
+        File.WriteAllText(path + fileName + num, data);
     }
 
-    public JsonData LoadData() // 불러오기
+    public JsonData LoadData(int num) // 불러오기
     {
         // 후에 수정 가능
-        string loadData = File.ReadAllText(path + fileName);
+        string loadData = File.ReadAllText(path + fileName + num);
         jsonData = JsonUtility.FromJson<JsonData>(loadData);
         GetJsonData();
         return jsonData;

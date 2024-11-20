@@ -30,4 +30,9 @@ MonoBehaviour:
     interactionId: 204
     player: {fileID: 0}
     message: 200_DadTalk
-  moveQuests: []
+  moveQuests:
+  - questType: 1
+    isClear: 0
+    interactionId: 0
+    player: {fileID: 0}
+    message: 200_ActiveDad

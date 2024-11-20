@@ -103,7 +103,6 @@ public class AudioManager : MonoBehaviour
             if (audioSources[audioNum].isPlaying)
             {
                 StartCoroutine(StopFade(fade, audioNum));
-                break;
             }
         }
     }

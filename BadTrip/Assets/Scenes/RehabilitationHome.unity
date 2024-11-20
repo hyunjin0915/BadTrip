@@ -5224,9 +5224,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 8738169567203090041}
-  selectedCommands:
-  - {fileID: 8738169567203090056}
+  - {fileID: 8738169567203090025}
+  selectedCommands: []
   variables:
   - {fileID: 184252191652599404}
   - {fileID: 1293176261644672755}
@@ -5409,7 +5408,6 @@ GameObject:
   - component: {fileID: 184252191652599404}
   - component: {fileID: 1293176261644672755}
   - component: {fileID: 8738169567203090025}
-  - component: {fileID: 8738169567203090022}
   - component: {fileID: 8738169567203090021}
   - component: {fileID: 8738169567203090020}
   - component: {fileID: 8738169567203090019}
@@ -5439,6 +5437,7 @@ GameObject:
   - component: {fileID: 8738169567203090053}
   - component: {fileID: 8738169567203090055}
   - component: {fileID: 8738169567203090056}
+  - component: {fileID: 8738169567203090057}
   m_Layer: 0
   m_Name: OneRoomFlowchart
   m_TagString: Untagged
@@ -5653,22 +5652,6 @@ MonoBehaviour:
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
   fadeTexture: {fileID: 0}
   fadeTweenType: 4
---- !u!114 &8738169567203090022
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2050051285376147212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea6e8f632db87477eb750446b28d73a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 3
-  indentLevel: 0
-  commenterName: "\uC54C\uB78C\uC18C\uB9AC \uD6A8\uACFC\uC74C"
-  commentText: 
 --- !u!114 &8738169567203090025
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5694,7 +5677,7 @@ MonoBehaviour:
   description: "\uAC80\uC740 \uD654\uBA74 \uB3C5\uBC31 \uD6C4"
   eventHandler: {fileID: 8738169567203090048}
   commandList:
-  - {fileID: 8738169567203090022}
+  - {fileID: 8738169567203090057}
   - {fileID: 8738169567203090021}
   - {fileID: 8738169567203090020}
   - {fileID: 8738169567203090019}
@@ -6590,6 +6573,22 @@ MonoBehaviour:
   returnValueType: System.Void
   showInherited: 0
   callMode: 0
+--- !u!114 &8738169567203090057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050051285376147212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e198ee78f8a659746ae4f9063895ae42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 36
+  indentLevel: 0
+  audioInfoSO: {fileID: 11400000, guid: fdbea0c9621c185428cb48901b7c1fcc, type: 2}
+  waitUntilFinished: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

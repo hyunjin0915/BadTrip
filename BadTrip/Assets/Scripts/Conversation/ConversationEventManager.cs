@@ -158,4 +158,9 @@ public class ConversationEventManager : MonoBehaviour
     {
         sayDialogSO.BackToMain();
     }
+
+    public void BackToMainWhite()
+    {
+        sayDialogSO.BackToMainWhite();
+    }
 }

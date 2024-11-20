@@ -9,27 +9,30 @@ public class SettingManager : MonoBehaviour
     public AudioManager audioMng;
 
     [SerializeField]
-    /*private LoadSceneSO backToMainSL_EventChannel;
-    [SerializeField]*/
     private SceneInfoSO loadSceneInfo;
 
     public GameObject settingWindow;
-    //public Slider bgmSlider;
 
     [SerializeField]
     private GameObject player;
 
     [SerializeField]
     private GameObject saveWindow;
+    [SerializeField]
+    private GameObject checkHome;
+    [SerializeField]
+    private GameObject checkSave;
 
     [SerializeField]
     private SceneMove sceneMove;
+
 
     private bool isActive = false;
 
     private bool isDialog = true;
 
     public Animator transition;
+    public Animator transition_White;
 
     private void Update()
     {
@@ -101,6 +104,12 @@ public class SettingManager : MonoBehaviour
         }
     }
 
+    public void BackToMainWhite()
+    {
+        transition_White.gameObject.SetActive(true);
+        StartCoroutine(GoMainWhite());
+    }
+
     IEnumerator GoMain()
     {
         transition.SetTrigger("Start");
@@ -117,9 +126,45 @@ public class SettingManager : MonoBehaviour
         transition.SetTrigger("End");
     }
 
+    IEnumerator GoMainWhite()
+    {
+        transition_White.SetTrigger("Start");
+        yield return new WaitForSeconds(2.0f);
+        SceneManager.LoadSceneAsync("Main", LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync(sceneMove.curSceneName);
+        sceneMove.curSceneName = "Main";
+        GameObject.FindGameObjectWithTag("SceneSetting").GetComponent<SceneSetting>().SetScene(loadSceneInfo);
+        player.transform.position = new Vector2(31.6f, -9.2f);
+        player.GetComponent<Player>().SetAnimLayer(0);
+        player.GetComponent<Player>().PlayerInit();
+        OnOffSetting(false);
+        yield return new WaitForSeconds(1.0f);
+        transition_White.SetTrigger("End");
+        yield return new WaitForSeconds(1.0f);
+        transition_White.SetTrigger("false");
+    }
+
     public void ShowSaveWindow()
     {
-        saveWindow.SetActive(true);
+        if (!sceneMove.curSceneName.Equals("Main"))
+        {
+            saveWindow.SetActive(true);
+        }
+    }
+
+    public void ExitSaveWindow()
+    {
+        saveWindow.SetActive(false);
+    }
+
+    public void ActiveCheckHome(bool b)
+    {
+        checkHome.SetActive(b);
+    }
+
+    public void InactiveCheckSave()
+    {
+        checkSave.SetActive(false);
     }
 
 

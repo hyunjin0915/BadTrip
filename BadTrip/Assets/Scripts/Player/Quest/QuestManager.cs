@@ -173,6 +173,15 @@ public class QuestManager : MonoBehaviour
                 }
             }
         }
+
+        for (int j = curQuestId + 1; j < questDic.Count; j++)
+        {
+            questDic[j].clearCount = 0;
+            foreach (QuestBase quest in questDic[j].allQuests)
+            {
+                quest.isClear = false;
+            }
+        }
     }
 
     public int GetQuestId()

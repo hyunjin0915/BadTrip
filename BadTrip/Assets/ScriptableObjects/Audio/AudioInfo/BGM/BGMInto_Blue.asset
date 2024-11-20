@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BGMInto_Blue
   m_EditorClassIdentifier: 
   audioNum: 0
-  clip: {fileID: 8300000, guid: f560e0857b7c25c438c65673b95c0792, type: 3}
+  clip: {fileID: 8300000, guid: 0fdeda8e58d562448900348ad5be19d7, type: 3}
   vol: 0.5
   pch: 1
   isLoop: 1

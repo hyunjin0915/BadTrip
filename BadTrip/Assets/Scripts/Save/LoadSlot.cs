@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class LoadSlot : MonoBehaviour, IPointerClickHandler
+public class LoadSlot : Slot, IPointerClickHandler
 {
-    public int slotNum;
-    
     private SaveManager saveManager;
     [SerializeField] private MapInteractionSetting mapInteractionSetting;
     [SerializeField] private MainUIManager mainUIManager;
@@ -17,6 +15,13 @@ public class LoadSlot : MonoBehaviour, IPointerClickHandler
     void Start()
     {
         saveManager = GameObject.FindGameObjectWithTag("SaveManager").GetComponent<SaveManager>();
+
+        string name = saveManager.GetPlayerName(slotNum);
+
+        if (name != null)
+        {
+            SetPlayerName(name);
+        }
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -33,6 +38,9 @@ public class LoadSlot : MonoBehaviour, IPointerClickHandler
 
     public void GoScene()
     {
-        mapInteractionSetting.GoScene(data.sceneName);
+        if (data != null)
+        {
+            mapInteractionSetting.GoScene(data.sceneName);
+        }
     }
 }

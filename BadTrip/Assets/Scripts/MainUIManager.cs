@@ -31,6 +31,11 @@ public class MainUIManager : MonoBehaviour
         loadWindow.SetActive(true);
     }
 
+    public void ExitLoadWindow()
+    {
+        loadWindow.SetActive(false);
+    }
+
     public void NewGame()
     {
         playerDataSO.playerName = "³ª";

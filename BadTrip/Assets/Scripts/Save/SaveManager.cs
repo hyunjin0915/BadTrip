@@ -30,11 +30,15 @@ public class SaveManager : MonoBehaviour
 
     public JsonData LoadData(int num) // 불러오기
     {
-        // 후에 수정 가능
-        string loadData = File.ReadAllText(path + fileName + num);
-        jsonData = JsonUtility.FromJson<JsonData>(loadData);
-        GetJsonData();
-        return jsonData;
+        bool b = LoadJson(num);
+        if (b)
+        {
+            LoadJson(num);
+            GetJsonData();
+            return jsonData;
+        }
+
+        return null;
     }
 
     public void SetJsonData()
@@ -60,5 +64,27 @@ public class SaveManager : MonoBehaviour
         playerDataSO.animLayer = jsonData.animLayer;
         player.GetComponent<SpriteRenderer>().flipX = jsonData.isflip;
         playerDataSO.getDC = jsonData.getDreamcatcher;
+    }
+
+    public bool LoadJson(int num)
+    {
+        if (File.Exists(path + fileName + num))
+        {
+            string loadData = File.ReadAllText(path + fileName + num);
+            jsonData = JsonUtility.FromJson<JsonData>(loadData);
+            return true;
+        }
+
+        return false;
+    }
+
+    public string GetPlayerName(int num)
+    {
+        bool b = LoadJson(num);
+        if (b)
+        {
+            return jsonData.playerName;
+        }
+        return null;
     }
 }

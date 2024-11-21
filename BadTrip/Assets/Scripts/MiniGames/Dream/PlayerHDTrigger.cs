@@ -13,8 +13,6 @@ public class PlayerHDTrigger : MonoBehaviour
     private PolygonCollider2D myCollider;
     SpriteRenderer spriteRenderer;
 
-    [SerializeField]
-    private Animator animator;
 
     public GameObject poping;
     [SerializeField]

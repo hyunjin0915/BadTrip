@@ -129,7 +129,7 @@ public class PlayerMove : MonoBehaviour
     }
     void DrawingRay()
     {
-        Debug.DrawRay(transform.position,Vector2.down * 7, new Color(0, 1, 0));
+        Debug.DrawRay(transform.position,Vector2.down * 10, new Color(0, 1, 0));
         RaycastHit2D rayHitBorder = Physics2D.Raycast(transform.position,Vector2.down,7, LayerMask.GetMask("Ground"));
         if(rayHitBorder.collider!=null)
         {

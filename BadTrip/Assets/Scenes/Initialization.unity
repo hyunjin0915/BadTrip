@@ -2876,7 +2876,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1455327753}
+  - {fileID: 1575618976}
   m_Father: {fileID: 1447976169}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3670,7 +3672,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1064279771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4773,7 +4775,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1264219497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5386,7 +5388,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 33.749
+  orthographic size: 17.466427
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5411,7 +5413,7 @@ Transform:
   m_GameObject: {fileID: 1363665731}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: -2.294847, y: -0.4635002, z: -32.519344}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5656,8 +5658,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 916840647}
-  - {fileID: 1455327753}
-  - {fileID: 1575618976}
   - {fileID: 1866365096}
   m_Father: {fileID: 1264219500}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5735,11 +5735,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1447976169}
+  m_Father: {fileID: 916840647}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -751, y: 382.5}
+  m_AnchoredPosition: {x: -175, y: 65}
   m_SizeDelta: {x: 156, y: 48}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1455327754
@@ -6575,11 +6575,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1447976169}
+  m_Father: {fileID: 916840647}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 751, y: 382.5}
+  m_AnchoredPosition: {x: 175, y: 65}
   m_SizeDelta: {x: 156, y: 48}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1575618977
@@ -9960,7 +9960,7 @@ MonoBehaviour:
   footstepAS: {fileID: 8168485374627576415}
   footstepClip: {fileID: 8300000, guid: b4579a645c475234b8e7a69619c02a4a, type: 3}
   canMove: 1
-  speed: 900
+  speed: 1200
 --- !u!212 &8168485374627576410
 SpriteRenderer:
   m_ObjectHideFlags: 0

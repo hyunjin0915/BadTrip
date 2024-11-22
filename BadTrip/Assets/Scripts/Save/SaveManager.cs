@@ -18,7 +18,7 @@ public class SaveManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        path = Application.dataPath + "/Scripts/JsonFile/";
+        path = Application.dataPath + "/Resources/";
     }
 
     public void SaveData(int num, bool pretty = false) // 저장하기
@@ -72,6 +72,14 @@ public class SaveManager : MonoBehaviour
         {
             string loadData = File.ReadAllText(path + fileName + num);
             jsonData = JsonUtility.FromJson<JsonData>(loadData);
+
+            // TextAsset file = Resources.Load<TextAsset>(fileName + num.ToString());
+
+
+            // if(file == null){
+            //     Debug.Log(fileName + num.ToString());
+            // }
+            // jsonData = JsonUtility.FromJson<JsonData>(file.ToString());
             return true;
         }
 

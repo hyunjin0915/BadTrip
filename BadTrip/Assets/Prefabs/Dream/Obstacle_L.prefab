@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6494814329246623753}
   - component: {fileID: 861323794384326663}
-  - component: {fileID: 4255605687822289243}
   - component: {fileID: 3966045905076877824}
+  - component: {fileID: 7762297737505504379}
   m_Layer: 0
   m_Name: Obstacle_L
   m_TagString: Untagged
@@ -86,20 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4255605687822289243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1222020154517041485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f062a743807ac3488ecc79efb50687c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerDamage: 5
-  Player_healthManager: {fileID: 11400000, guid: 01a49623ec8b9bd47808588899721851, type: 2}
 --- !u!60 &3966045905076877824
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -157,3 +143,20 @@ PolygonCollider2D:
       - {x: -1.4545898, y: 4.6920776}
       - {x: -0.8005371, y: 7.0811768}
   m_UseDelaunayMesh: 0
+--- !u!114 &7762297737505504379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222020154517041485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b73ddd2fc0e96a4b9a591e0790f9bd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player_healthManager: {fileID: 11400000, guid: 01a49623ec8b9bd47808588899721851, type: 2}
+  PlayerDamage: 5
+  invincibilitytime: 3
+  flickerTime: 0.5
+  player: {fileID: 0}

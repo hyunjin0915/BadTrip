@@ -8,8 +8,6 @@ public class Invincibility : MonoBehaviour
     private PlayerHPSO Player_healthManager;
 
     [SerializeField]
-    GameObject player;
-    [SerializeField]
     private float invincibilitytime;
     [SerializeField]
     private GameObject itemLight;

@@ -6,7 +6,6 @@ public class MainUIManager : MonoBehaviour
     [SerializeField] private PlayerDataSO playerDataSO;
 
     private QuestManager questManager;
-    private SaveManager saveManager;
     private JsonData data;
 
     public GameObject loadWindow;
@@ -40,7 +39,10 @@ public class MainUIManager : MonoBehaviour
     {
         playerDataSO.playerName = "³ª";
         playerDataSO.animLayer = 0;
-        
+        playerDataSO.isFlip = false;
+        playerDataSO.getDC = false;
+        questManager.QuestInit();
+        audioCue.SetCurBGMNum(-1);
     }
 
     public void Exit()

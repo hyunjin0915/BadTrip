@@ -15,4 +15,5 @@ public class JsonData
     public int animLayer;
     public bool isflip;
     public bool getDreamcatcher;
+    public int bgmNum;
 }

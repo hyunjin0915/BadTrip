@@ -11,6 +11,7 @@ public class SaveManager : MonoBehaviour
     private string fileName = "SaveDataFile";
     [SerializeField] private PlayerDataSO playerDataSO;
     [SerializeField] private QuestManager questManager;
+    [SerializeField] private AudioManager audioManager;
     [SerializeField] private SceneMove sceneMove;
     [SerializeField] private GameObject player;
     private JsonData jsonData;
@@ -52,6 +53,7 @@ public class SaveManager : MonoBehaviour
         jsonData.animLayer = playerDataSO.animLayer;
         jsonData.isflip = playerDataSO.isFlip;
         jsonData.getDreamcatcher = playerDataSO.getDC;
+        jsonData.bgmNum = audioManager.GetCurBGMNum();
     }
 
     public void GetJsonData()
@@ -64,6 +66,7 @@ public class SaveManager : MonoBehaviour
         playerDataSO.animLayer = jsonData.animLayer;
         player.GetComponent<SpriteRenderer>().flipX = jsonData.isflip;
         playerDataSO.getDC = jsonData.getDreamcatcher;
+        audioManager.SetCurBGMNum(jsonData.bgmNum + 200);
     }
 
     public bool LoadJson(int num)

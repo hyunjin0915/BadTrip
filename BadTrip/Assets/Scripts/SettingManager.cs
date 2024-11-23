@@ -98,7 +98,7 @@ public class SettingManager : MonoBehaviour
 
     public void BackToMain()
     {
-        if (!sceneMove.curSceneName.Equals("Main"))
+        if (!sceneMove.curSceneName.Equals("Main") || !sceneMove.curSceneName.Equals("StageOne"))
         {
             StartCoroutine(GoMain());
         }
@@ -112,6 +112,7 @@ public class SettingManager : MonoBehaviour
 
     IEnumerator GoMain()
     {
+        Time.timeScale = 1;
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(2.0f);
         SceneManager.LoadSceneAsync("Main", LoadSceneMode.Additive);
@@ -122,12 +123,14 @@ public class SettingManager : MonoBehaviour
         player.GetComponent<Player>().SetAnimLayer(0);
         player.GetComponent<Player>().PlayerInit();
         OnOffSetting(false);
+        ActiveCheckHome(false);
         yield return new WaitForSeconds(1.0f);
         transition.SetTrigger("End");
     }
 
     IEnumerator GoMainWhite()
     {
+        Time.timeScale = 1;
         transition_White.SetTrigger("Start");
         yield return new WaitForSeconds(2.0f);
         SceneManager.LoadSceneAsync("Main", LoadSceneMode.Additive);
@@ -137,7 +140,6 @@ public class SettingManager : MonoBehaviour
         player.transform.position = new Vector2(31.6f, -9.2f);
         player.GetComponent<Player>().SetAnimLayer(0);
         player.GetComponent<Player>().PlayerInit();
-        OnOffSetting(false);
         yield return new WaitForSeconds(1.0f);
         transition_White.SetTrigger("End");
         yield return new WaitForSeconds(1.0f);
@@ -171,6 +173,13 @@ public class SettingManager : MonoBehaviour
 
     public void OnOffSetting(bool b)
     {
+        if (b)
+        {
+            Time.timeScale = 0;
+        } else
+        {
+            Time.timeScale = 1;
+        }
         settingWindow.SetActive(b);
     }
 

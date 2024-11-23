@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae70fccd5fcef3b4d8da728523cf784f, type: 3}
   m_Name: BGMInfo_SideEffect_Home
   m_EditorClassIdentifier: 
-  audioNum: 2
+  bgmNum: 13
+  audioNum: 1
   clip: {fileID: 8300000, guid: beaf852fb2674f94e86541e4680fb992, type: 3}
   vol: 0.5
   pch: 1

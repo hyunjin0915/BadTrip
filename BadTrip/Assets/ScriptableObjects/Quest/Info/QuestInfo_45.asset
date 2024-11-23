@@ -15,7 +15,7 @@ MonoBehaviour:
   explain: "\uCC45\uC0C1\uC11C\uB78D"
   questId: 45
   sceneName: Home
-  questCount: 1
+  questCount: 2
   clearCount: 0
   isLast: 0
   InterQuest:

@@ -168,10 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioInfos:
-  - {fileID: 11400000, guid: a9ab2d76506f14a4fa42d8940d5a47d5, type: 2}
-  - {fileID: 11400000, guid: 23d1d674a6e95014eb3d7efd6297f08b, type: 2}
-  - {fileID: 11400000, guid: 32e50d83dc043414597843e85a5e09e5, type: 2}
-  - {fileID: 11400000, guid: 558916f69f2338747ad30ad8d60f4580, type: 2}
+  - {fileID: 11400000, guid: cd4d1bc385760a34b8ff423bdb2963d4, type: 2}
   audioEventChannel: {fileID: 11400000, guid: 9a1eb40afe0f2fd4da69258d085cf8f0, type: 2}
 --- !u!1 &272144150
 GameObject:
@@ -343,6 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c64c548666e8c94d8391c01a8d1ab83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioCue: {fileID: 0}
 --- !u!114 &339999311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -561,6 +559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c64c548666e8c94d8391c01a8d1ab83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioCue: {fileID: 172434807}
 --- !u!114 &682705625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -649,6 +648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c64c548666e8c94d8391c01a8d1ab83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioCue: {fileID: 0}
 --- !u!114 &683616224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -815,6 +815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c64c548666e8c94d8391c01a8d1ab83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioCue: {fileID: 172434807}
 --- !u!114 &800589087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -903,6 +904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c64c548666e8c94d8391c01a8d1ab83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioCue: {fileID: 172434807}
 --- !u!114 &844689376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1098,6 +1100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c64c548666e8c94d8391c01a8d1ab83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioCue: {fileID: 0}
 --- !u!114 &1010492276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1449,6 +1452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c64c548666e8c94d8391c01a8d1ab83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioCue: {fileID: 172434807}
 --- !u!114 &1202252797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1537,6 +1541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c64c548666e8c94d8391c01a8d1ab83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioCue: {fileID: 0}
 --- !u!114 &1241218133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1625,6 +1630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c64c548666e8c94d8391c01a8d1ab83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioCue: {fileID: 172434807}
 --- !u!114 &1346772392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1797,6 +1803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c64c548666e8c94d8391c01a8d1ab83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioCue: {fileID: 0}
 --- !u!114 &1594945425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1957,6 +1964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c64c548666e8c94d8391c01a8d1ab83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioCue: {fileID: 0}
 --- !u!114 &1844095719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2008,7 +2016,6 @@ GameObject:
   - component: {fileID: 2139211133}
   - component: {fileID: 2139211132}
   - component: {fileID: 2139211131}
-  - component: {fileID: 2139211130}
   - component: {fileID: 2139211129}
   - component: {fileID: 2139211136}
   m_Layer: 0
@@ -2063,24 +2070,6 @@ MonoBehaviour:
   returnValueType: System.Void
   showInherited: 0
   callMode: 0
---- !u!114 &2139211130
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2139211128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 1
-  indentLevel: 0
-  _duration:
-    floatRef: {fileID: 0}
-    floatVal: 0.5
-  durationOLD: 0
 --- !u!114 &2139211131
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2122,7 +2111,6 @@ MonoBehaviour:
   eventHandler: {fileID: 2139211131}
   commandList:
   - {fileID: 2139211136}
-  - {fileID: 2139211130}
   - {fileID: 2139211129}
   suppressAllAutoSelections: 0
 --- !u!114 &2139211133
@@ -2167,7 +2155,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 2139211132}
   selectedCommands:
-  - {fileID: 2139211136}
+  - {fileID: 2139211129}
   variables:
   - {fileID: 2139211133}
   description: 
@@ -2197,7 +2185,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2139211136
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

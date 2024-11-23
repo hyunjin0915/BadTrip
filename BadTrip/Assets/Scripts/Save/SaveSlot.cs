@@ -9,6 +9,7 @@ public class SaveSlot : Slot, IPointerClickHandler
     [SerializeField] private SaveManager saveManager;
     [SerializeField] private GameObject checkSave;
     [SerializeField] private Button saveBtn;
+    [SerializeField] private AudioCue audioCue;
     
     void Start()
     {
@@ -28,8 +29,10 @@ public class SaveSlot : Slot, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        audioCue.PlayAudio(0);
         saveBtn.onClick.RemoveAllListeners();
         saveBtn.onClick.AddListener(SaveData);
+        saveBtn.onClick.AddListener(InactiveCheckSave);
         
         checkSave.SetActive(true);
     }
@@ -38,5 +41,10 @@ public class SaveSlot : Slot, IPointerClickHandler
     {
         saveManager.SaveData(slotNum);
         SetPlayerName(saveManager.GetPlayerName(slotNum));
+    }
+
+    public void InactiveCheckSave()
+    {
+        checkSave.SetActive(false);
     }
 }

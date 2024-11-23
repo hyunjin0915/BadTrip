@@ -35,6 +35,8 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
 
     [SerializeField] private NLPManager nlpManager;
 
+    [SerializeField] private AudioCue audioCue;
+
     
     public void SetConnectedEdges(Vector2 offset, int index)
     {
@@ -72,6 +74,7 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
     {
         if (isPoint && !isActive)
         {
+            audioCue.PlayAudio(0);
             nlpManager.isDragging = true;
             nlpManager.preNode = this;
             nlpManager.sourceNode = this;
@@ -89,16 +92,24 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
     {
         if (nlpManager.isDragging)
         {
-            nlpManager.sourceNode.connectedNodes[nlpManager.nodeCount - 1]?.GetComponentInParent<Node>().highlight[nlpManager.sourceNode.colorId]?.SetActive(false);
+            if (nlpManager.nodeCount > 0)
+            {
+                nlpManager.sourceNode.connectedNodes[nlpManager.nodeCount - 1]?.GetComponentInParent<Node>().highlight[nlpManager.sourceNode.colorId]?.SetActive(false);
+            }
 
             nlpManager.isDragging = false;
 
             if (!nlpManager.preNode.isPoint)
             {
+                audioCue.PlayAudio(0);
                 nlpManager.sourceNode.ClearConnectedNodes();
+
+                return;
             }
 
+            nlpManager.preNode.isActive = false;
             nlpManager.preNode = null;
+            audioCue.PlayAudio(0);
         }
     }
 

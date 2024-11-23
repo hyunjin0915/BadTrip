@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae70fccd5fcef3b4d8da728523cf784f, type: 3}
   m_Name: BGMInto_StageOne
   m_EditorClassIdentifier: 
+  bgmNum: -1
   audioNum: 0
   clip: {fileID: 8300000, guid: 1697a98af8647e64d87b9d4e66077137, type: 3}
   vol: 0.4

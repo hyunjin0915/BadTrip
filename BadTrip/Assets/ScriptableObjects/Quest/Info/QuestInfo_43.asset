@@ -23,5 +23,5 @@ MonoBehaviour:
     isClear: 0
     interactionId: 206
     player: {fileID: 0}
-    message: 
+    message: 200_FindBed
   moveQuests: []

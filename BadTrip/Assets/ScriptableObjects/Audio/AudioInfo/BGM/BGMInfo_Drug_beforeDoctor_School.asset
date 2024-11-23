@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae70fccd5fcef3b4d8da728523cf784f, type: 3}
   m_Name: BGMInfo_Drug_beforeDoctor_School
   m_EditorClassIdentifier: 
+  bgmNum: 4
   audioNum: 0
   clip: {fileID: 8300000, guid: 5c22a912e101f994ab3eefbec6a6b7d8, type: 3}
   vol: 0.5

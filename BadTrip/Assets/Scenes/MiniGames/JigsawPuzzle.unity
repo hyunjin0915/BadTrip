@@ -3381,6 +3381,7 @@ GameObject:
   - component: {fileID: 897730145}
   - component: {fileID: 897730144}
   - component: {fileID: 897730146}
+  - component: {fileID: 897730147}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3403,29 +3404,6 @@ MonoBehaviour:
   puzzles:
   - {fileID: 1135563955}
   - {fileID: 1469098076}
-  - {fileID: 308475709}
-  - {fileID: 981875186}
-  - {fileID: 790087226}
-  - {fileID: 37580044}
-  - {fileID: 884838621}
-  - {fileID: 500537017}
-  - {fileID: 816885345}
-  - {fileID: 1054355917}
-  - {fileID: 1666833055}
-  - {fileID: 1099116727}
-  - {fileID: 341648843}
-  - {fileID: 1595049841}
-  - {fileID: 1991823181}
-  - {fileID: 1458703070}
-  - {fileID: 970020267}
-  - {fileID: 212282419}
-  - {fileID: 63188188}
-  - {fileID: 1311366306}
-  - {fileID: 628312491}
-  - {fileID: 385878668}
-  - {fileID: 1549817248}
-  - {fileID: 1960762942}
-  - {fileID: 1573984020}
   audioCue: {fileID: 462862213}
 --- !u!4 &897730145
 Transform:
@@ -3450,6 +3428,42 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897730143}
   m_Enabled: 1
+--- !u!114 &897730147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897730143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17836cd5e5606f4429c47a8bff3ae9fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzles:
+  - {fileID: 308475709}
+  - {fileID: 981875186}
+  - {fileID: 790087226}
+  - {fileID: 37580044}
+  - {fileID: 884838621}
+  - {fileID: 500537017}
+  - {fileID: 816885345}
+  - {fileID: 1054355917}
+  - {fileID: 1666833055}
+  - {fileID: 1099116727}
+  - {fileID: 341648843}
+  - {fileID: 1595049841}
+  - {fileID: 1991823181}
+  - {fileID: 1458703070}
+  - {fileID: 970020267}
+  - {fileID: 212282419}
+  - {fileID: 63188188}
+  - {fileID: 1311366306}
+  - {fileID: 628312491}
+  - {fileID: 385878668}
+  - {fileID: 1549817248}
+  - {fileID: 1960762942}
+  - {fileID: 1573984020}
 --- !u!1 &970020263
 GameObject:
   m_ObjectHideFlags: 0
@@ -4334,7 +4348,7 @@ Transform:
   m_GameObject: {fileID: 1135563953}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48.6, y: 33.5, z: 0}
+  m_LocalPosition: {x: -48.1, y: 33.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7010,7 +7024,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2132916793}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &2132916795
 Camera:
   m_ObjectHideFlags: 0

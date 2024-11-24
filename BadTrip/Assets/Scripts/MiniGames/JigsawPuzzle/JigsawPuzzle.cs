@@ -80,7 +80,7 @@ public class JigsawPuzzle : MonoBehaviour
             //Debug.Log(targetPosition.position);
             draggingPiece.GetComponent<BoxCollider2D>().enabled = false;
             answer++;
-            if(answer==25) 
+            if(answer==puzzles.Count) 
             {
                 Debug.Log("게임 클리어 이벤트 발생");
                 Fungus.Flowchart.BroadcastFungusMessage("FinishGame");

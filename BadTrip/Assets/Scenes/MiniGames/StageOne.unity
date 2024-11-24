@@ -3531,6 +3531,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9193165843274519205, guid: 4d4635fdef8f7b341a84567456d117ef, type: 3}
+      propertyPath: bounceForce
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11215,6 +11219,10 @@ PrefabInstance:
     - target: {fileID: 8437249711966736038, guid: 4618daa3f3c2c8246b744fa73809b6d7, type: 3}
       propertyPath: m_Name
       value: NewMudMon
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555659029643256640, guid: 4618daa3f3c2c8246b744fa73809b6d7, type: 3}
+      propertyPath: bounceForce
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20325,7 +20333,7 @@ Transform:
   m_GameObject: {fileID: 1898860421}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2329.9, y: -404.4, z: 0}
+  m_LocalPosition: {x: 2455.75, y: -404.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24286,6 +24294,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 190769343}
     m_Modifications:
+    - target: {fileID: 1324080945788551726, guid: 1ea54e74cefd34e4391de8631368e348, type: 3}
+      propertyPath: bounceForce
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3046775533992122658, guid: 1ea54e74cefd34e4391de8631368e348, type: 3}
       propertyPath: m_Name
       value: BossMon
@@ -26390,6 +26402,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9193165843274519205, guid: 4d4635fdef8f7b341a84567456d117ef, type: 3}
+      propertyPath: bounceForce
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26740,6 +26756,10 @@ PrefabInstance:
     - target: {fileID: 8437249711966736038, guid: 4618daa3f3c2c8246b744fa73809b6d7, type: 3}
       propertyPath: m_Name
       value: mon1_idle_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555659029643256640, guid: 4618daa3f3c2c8246b744fa73809b6d7, type: 3}
+      propertyPath: bounceForce
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

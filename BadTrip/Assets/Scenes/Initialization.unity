@@ -295,6 +295,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7262438425153102415, guid: 431b80452da72fd42bdc5f38b7a76988, type: 3}
+      propertyPath: audioCue
+      value: 
+      objectReference: {fileID: 889023846}
+    - target: {fileID: 7262438425153102415, guid: 431b80452da72fd42bdc5f38b7a76988, type: 3}
       propertyPath: checkSave
       value: 
       objectReference: {fileID: 1447976168}
@@ -338,12 +342,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59340225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 693050118}
+  m_Father: {fileID: 1224629704}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1097,16 +1101,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269805315}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 693050118}
+  m_Father: {fileID: 1224629704}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -59.799988, y: -60.600006}
+  m_AnchoredPosition: {x: -60, y: -60}
   m_SizeDelta: {x: 48, y: 48}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &269805317
@@ -1520,6 +1524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerDataSO: {fileID: 11400000, guid: 6dc9d063a98fe0340bfc447550d25e4e, type: 2}
   questManager: {fileID: 1192241925}
+  audioManager: {fileID: 1093252712}
   sceneMove: {fileID: 1311770915}
   player: {fileID: 6858215238848761065}
 --- !u!1 &435264365
@@ -2279,9 +2284,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1224629704}
-  - {fileID: 1794741767}
-  - {fileID: 59340226}
-  - {fileID: 269805316}
   m_Father: {fileID: 2036318950}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2846,6 +2848,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioInfos:
   - {fileID: 11400000, guid: d79d9e9cf5863c74d97ecc1c24104845, type: 2}
+  - {fileID: 11400000, guid: 23d1d674a6e95014eb3d7efd6297f08b, type: 2}
+  - {fileID: 11400000, guid: 3bf6034ae639d8a4e8de243a10d64ad2, type: 2}
   audioEventChannel: {fileID: 11400000, guid: 9a1eb40afe0f2fd4da69258d085cf8f0, type: 2}
 --- !u!1 &916840646
 GameObject:
@@ -2879,6 +2883,7 @@ RectTransform:
   m_Children:
   - {fileID: 1455327753}
   - {fileID: 1575618976}
+  - {fileID: 1866365096}
   m_Father: {fileID: 1447976169}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -4322,6 +4327,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 889023846}
+        m_TargetAssemblyTypeName: AudioCue, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 889023845}
         m_TargetAssemblyTypeName: SettingManager, Assembly-CSharp
         m_MethodName: ExitSaveWindow
@@ -4468,7 +4485,6 @@ MonoBehaviour:
   curQuestId: 0
   info: {fileID: 0}
   interactionObjects: {fileID: 11400000, guid: 2775824826291714696efc8e5cd6e7ae, type: 2}
-  playerDataSO: {fileID: 11400000, guid: 6dc9d063a98fe0340bfc447550d25e4e, type: 2}
 --- !u!1 &1195944486
 GameObject:
   m_ObjectHideFlags: 0
@@ -4609,7 +4625,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1794741767}
+  - {fileID: 59340226}
+  - {fileID: 269805316}
   m_Father: {fileID: 693050118}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4805,7 +4824,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 16
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
@@ -5388,7 +5407,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 17.466427
+  orthographic size: 33.75
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5413,7 +5432,7 @@ Transform:
   m_GameObject: {fileID: 1363665731}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.294847, y: -0.4635002, z: -32.519344}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5610,6 +5629,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1455327754}
     - target: {fileID: 7262438425153102415, guid: 431b80452da72fd42bdc5f38b7a76988, type: 3}
+      propertyPath: audioCue
+      value: 
+      objectReference: {fileID: 889023846}
+    - target: {fileID: 7262438425153102415, guid: 431b80452da72fd42bdc5f38b7a76988, type: 3}
       propertyPath: checkSave
       value: 
       objectReference: {fileID: 1447976168}
@@ -5658,7 +5681,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 916840647}
-  - {fileID: 1866365096}
   m_Father: {fileID: 1264219500}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5793,7 +5815,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6286,7 +6308,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1512784863}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 889023846}
+        m_TargetAssemblyTypeName: AudioCue, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1512784863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6505,7 +6539,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1571846165}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 889023846}
+        m_TargetAssemblyTypeName: AudioCue, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1571846165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7447,12 +7493,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1794741766}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 693050118}
+  m_Father: {fileID: 1224629704}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -7510,7 +7556,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -8296,6 +8342,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7262438425153102415, guid: 431b80452da72fd42bdc5f38b7a76988, type: 3}
+      propertyPath: audioCue
+      value: 
+      objectReference: {fileID: 889023846}
+    - target: {fileID: 7262438425153102415, guid: 431b80452da72fd42bdc5f38b7a76988, type: 3}
       propertyPath: checkSave
       value: 
       objectReference: {fileID: 1447976168}
@@ -8423,11 +8473,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1447976169}
+  m_Father: {fileID: 916840647}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -636.4, y: -377.8}
+  m_AnchoredPosition: {x: -60, y: -60}
   m_SizeDelta: {x: 48, y: 48}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1866365097
@@ -9854,6 +9904,10 @@ PrefabInstance:
       propertyPath: slotNum
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7262438425153102415, guid: 431b80452da72fd42bdc5f38b7a76988, type: 3}
+      propertyPath: audioCue
+      value: 
+      objectReference: {fileID: 889023846}
     - target: {fileID: 7262438425153102415, guid: 431b80452da72fd42bdc5f38b7a76988, type: 3}
       propertyPath: checkSave
       value: 

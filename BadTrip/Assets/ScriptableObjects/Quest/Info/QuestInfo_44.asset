@@ -23,5 +23,5 @@ MonoBehaviour:
     isClear: 0
     interactionId: 207
     player: {fileID: 0}
-    message: 
+    message: 200_FindCloset
   moveQuests: []

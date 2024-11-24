@@ -14,6 +14,8 @@ public class JigsawPuzzle : MonoBehaviour
     [SerializeField]
     List<Transform> puzzles = new List<Transform>();
     private List <SpriteRenderer> puzzleSpriteRenderers = new List<SpriteRenderer>();
+
+    [SerializeField] private AudioCue audioCue;
     
     // Start is called before the first frame update
     void Start()
@@ -34,6 +36,8 @@ public class JigsawPuzzle : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             if(hit)
             {
+                audioCue.PlayAudio(0);
+
                 draggingPiece = hit.transform;
                   
                 offset = draggingPiece.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -71,6 +75,7 @@ public class JigsawPuzzle : MonoBehaviour
         
         if(targetPosition!=null && Vector2.Distance(draggingPiece.position, targetPosition.position) < 1f)
         {
+            audioCue.PlayAudio(0);
             draggingPiece.position = targetPosition.position;
             //Debug.Log(targetPosition.position);
             draggingPiece.GetComponent<BoxCollider2D>().enabled = false;

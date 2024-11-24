@@ -27,6 +27,16 @@ public class AudioCue : MonoBehaviour
         audioEventChannel.RaiseStopFadeEvent(fade);
     }
 
+    public int GetCurBGMNum()
+    {
+        return audioEventChannel.RaiseGetBGMNum();
+    }
+
+    public void SetCurBGMNum(int num)
+    {
+        audioEventChannel.RaiseSetBGMNum(num);
+    }
+
 
     public bool IsSameClip(int num)
     {

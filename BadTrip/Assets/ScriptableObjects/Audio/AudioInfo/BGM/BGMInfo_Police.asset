@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae70fccd5fcef3b4d8da728523cf784f, type: 3}
   m_Name: BGMInfo_Police
   m_EditorClassIdentifier: 
+  bgmNum: 11
   audioNum: 1
   clip: {fileID: 8300000, guid: e79d7fb6b07432849b3a0ea4ac8e90d3, type: 3}
   vol: 0.5

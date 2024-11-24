@@ -17,6 +17,10 @@ public class AudioEventChannelSO : ScriptableObject
 
     public Func<int, string> getAudioName; // 현재 같은 오디오가 출력되고 있는가
 
+    public Func<int> getCurBGMNum;
+
+    public Action<int> setCurBGMNum;
+
     public void RaisePlayEvent(AudioInfoSO audioInfo, Vector2 audioPos)
     {
         audioSourcePlay.Invoke(audioInfo, audioPos);
@@ -40,5 +44,15 @@ public class AudioEventChannelSO : ScriptableObject
     public void RaiseStopFadeEvent(float fade)
     {
         audioSourceStopFade.Invoke(fade);
+    }
+
+    public int RaiseGetBGMNum()
+    {
+        return getCurBGMNum.Invoke();
+    }
+
+    public void RaiseSetBGMNum(int num)
+    {
+        setCurBGMNum.Invoke(num);
     }
 }

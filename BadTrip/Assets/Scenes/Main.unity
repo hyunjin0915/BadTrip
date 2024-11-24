@@ -245,7 +245,6 @@ GameObject:
   - component: {fileID: 129969591}
   - component: {fileID: 129969590}
   - component: {fileID: 129969589}
-  - component: {fileID: 129969592}
   m_Layer: 5
   m_Name: ContinueBtn
   m_TagString: Untagged
@@ -318,6 +317,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 362420366}
         m_TargetAssemblyTypeName: MainUIManager, Assembly-CSharp
+        m_MethodName: SelectBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 362420366}
+        m_TargetAssemblyTypeName: MainUIManager, Assembly-CSharp
         m_MethodName: ShowLoadWindow
         m_Mode: 1
         m_Arguments:
@@ -366,35 +377,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129969587}
   m_CullTransparentMesh: 1
---- !u!114 &129969592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129969587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 362420366}
-          m_TargetAssemblyTypeName: MainUIManager, Assembly-CSharp
-          m_MethodName: SelectBtn
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &247297082
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,6 +579,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 362420366}
         m_TargetAssemblyTypeName: MainUIManager, Assembly-CSharp
+        m_MethodName: SelectBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 362420366}
+        m_TargetAssemblyTypeName: MainUIManager, Assembly-CSharp
         m_MethodName: PlayClickBtn
         m_Mode: 1
         m_Arguments:
@@ -685,19 +679,7 @@ MonoBehaviour:
   - eventID: 0
     callback:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 362420366}
-          m_TargetAssemblyTypeName: MainUIManager, Assembly-CSharp
-          m_MethodName: SelectBtn
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
 --- !u!1 &339721792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1605,7 +1587,6 @@ GameObject:
   - component: {fileID: 1307048131}
   - component: {fileID: 1307048130}
   - component: {fileID: 1307048129}
-  - component: {fileID: 1307048132}
   m_Layer: 5
   m_Name: ExitBtn
   m_TagString: Untagged
@@ -1678,6 +1659,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 362420366}
         m_TargetAssemblyTypeName: MainUIManager, Assembly-CSharp
+        m_MethodName: SelectBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 362420366}
+        m_TargetAssemblyTypeName: MainUIManager, Assembly-CSharp
         m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
@@ -1726,35 +1719,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1307048127}
   m_CullTransparentMesh: 1
---- !u!114 &1307048132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1307048127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 362420366}
-          m_TargetAssemblyTypeName: MainUIManager, Assembly-CSharp
-          m_MethodName: SelectBtn
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1459185192
 GameObject:
   m_ObjectHideFlags: 0
@@ -2119,6 +2083,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 362420366}
+        m_TargetAssemblyTypeName: MainUIManager, Assembly-CSharp
+        m_MethodName: SelectBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 362420366}
         m_TargetAssemblyTypeName: MainUIManager, Assembly-CSharp
         m_MethodName: ExitLoadWindow
@@ -2612,6 +2588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioCue: {fileID: 1939673935}
   bgmNum: 0
+  audioListSO: {fileID: 11400000, guid: acf59255b7cce3d4985aac88e1be8dc3, type: 2}
 --- !u!1 &1945712548
 GameObject:
   m_ObjectHideFlags: 0

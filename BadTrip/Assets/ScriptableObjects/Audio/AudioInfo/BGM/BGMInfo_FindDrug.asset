@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae70fccd5fcef3b4d8da728523cf784f, type: 3}
   m_Name: BGMInfo_FindDrug
   m_EditorClassIdentifier: 
-  audioNum: 0
+  bgmNum: 7
+  audioNum: 2
   clip: {fileID: 8300000, guid: 843dc98462406ec439a335618ce0a55d, type: 3}
   vol: 0.5
   pch: 1

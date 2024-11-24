@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae70fccd5fcef3b4d8da728523cf784f, type: 3}
   m_Name: BGMInto_Hallucination
   m_EditorClassIdentifier: 
+  bgmNum: 19
   audioNum: 1
   clip: {fileID: 8300000, guid: 2a8c74d8e6161d641824845ac564accc, type: 3}
-  vol: 0.3
+  vol: 0.5
   pch: 1
   isLoop: 1
   isOneShot: 0

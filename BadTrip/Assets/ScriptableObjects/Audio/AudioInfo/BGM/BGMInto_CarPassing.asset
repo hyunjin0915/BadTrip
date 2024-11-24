@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae70fccd5fcef3b4d8da728523cf784f, type: 3}
   m_Name: BGMInto_CarPassing
   m_EditorClassIdentifier: 
+  bgmNum: 15
   audioNum: 2
   clip: {fileID: 8300000, guid: 69608c5eab7ef014891515bb70538ee0, type: 3}
   vol: 0.5

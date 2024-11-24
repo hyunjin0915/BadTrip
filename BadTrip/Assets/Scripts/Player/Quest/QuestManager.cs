@@ -16,9 +16,6 @@ public class QuestManager : MonoBehaviour
     [SerializeField]
     private InteractionObjectsSO interactionObjects;
 
-    [SerializeField]
-    private PlayerDataSO playerDataSO;
-
     private void Start()
     {
         LoadAllQuestData();
@@ -39,6 +36,17 @@ public class QuestManager : MonoBehaviour
         interactionObjects.UpdateQuestScene -= UpdateQuestScene;
         interactionObjects.CompleteQuest -= CompleteQuest;
         interactionObjects.GetQuestId -= GetQuestId;
+    }
+
+    public void QuestInit()
+    {
+        
+        curQuestId = 0;
+        for (int i = 0; i < questDic.Count; i++)
+        {
+            LoadQuestInit(i);
+        }
+        info = questDic[curQuestId];
     }
 
     private void LoadAllQuestData() // 게임 실행 시 처음 모든 퀘스트 데이터 사본을 만듦.

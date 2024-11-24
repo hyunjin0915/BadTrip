@@ -24,6 +24,8 @@ public class AudioManager : MonoBehaviour
 
     private bool canChangeBGM = true;
 
+    private int curBGM = -1;
+
     public void SetGroupVolume(string parameterName, float volume)
     {
         audioMixer.SetFloat(parameterName, volume);
@@ -40,6 +42,10 @@ public class AudioManager : MonoBehaviour
         bgmEventChannel.audioSourceStopFade += StopMusicFade;
 
         bgmEventChannel.getAudioName += GetAudioClipName;
+        sfxEventChannel.getCurBGMNum += GetCurBGMNum;
+        bgmEventChannel.getCurBGMNum += GetCurBGMNum;
+        sfxEventChannel.setCurBGMNum += SetCurBGMNum;
+        bgmEventChannel.setCurBGMNum += SetCurBGMNum;
     }
 
     public void PlayAudio(AudioInfoSO audioInfo, Vector2 audioPos)
@@ -132,5 +138,15 @@ public class AudioManager : MonoBehaviour
 
     public bool GetCanChangeBGM() { 
         return canChangeBGM;
+    }
+
+    public int GetCurBGMNum()
+    {
+        return curBGM;
+    }
+
+    public void SetCurBGMNum(int num)
+    {
+        curBGM = num;
     }
 }

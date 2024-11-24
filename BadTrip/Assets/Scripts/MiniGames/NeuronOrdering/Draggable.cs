@@ -7,6 +7,8 @@ public class Draggable : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHa
 {
     Transform root; //canvas를 넣어줌 - 부모에게 자신이 드래그 되고 있음을 알려줌
     // Start is called before the first frame update
+
+    [SerializeField] private AudioCue audioCue;
     void Start()
     {
         root = transform.root;
@@ -19,6 +21,7 @@ public class Draggable : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHa
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
+        audioCue.PlayAudio(0);
         root.BroadcastMessage("BeginDrag", transform, SendMessageOptions.DontRequireReceiver); //자식 객체들에게 함수 실행 메세지 전송
     }
 
@@ -32,6 +35,7 @@ public class Draggable : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHa
     public void OnEndDrag(PointerEventData eventData)
     {
         root.BroadcastMessage("EndDrag",transform,SendMessageOptions.DontRequireReceiver);
+        audioCue.PlayAudio(0);
     }
 
     

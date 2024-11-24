@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae70fccd5fcef3b4d8da728523cf784f, type: 3}
   m_Name: BGMInfo_Hospital
   m_EditorClassIdentifier: 
+  bgmNum: -1
   audioNum: 1
   clip: {fileID: 8300000, guid: 29d1270dd7379424e8956018ec491139, type: 3}
-  vol: 0.25
+  vol: 0.1
   pch: 1
   isLoop: 1
   isOneShot: 0

@@ -15,7 +15,7 @@ namespace Fungus
     public class PlayMusicOnce : Command
     {
         [Tooltip("Music sound clip to play")]
-        [SerializeField] protected AudioClip musicClip;
+        [SerializeField] protected AudioInfoSO audioInfoSO;
 
 
         [Tooltip("º¼·ý")]
@@ -27,19 +27,19 @@ namespace Fungus
         {
             var musicManager = FungusManager.Instance.MusicManager;
 
-            musicManager.PlayMusicOnce(musicClip, volume);
+            musicManager.PlayMusicOnce(audioInfoSO.clip, volume);
 
             Continue();
         }
 
         public override string GetSummary()
         {
-            if (musicClip == null)
+            if (audioInfoSO == null)
             {
                 return "Error: No music clip selected";
             }
 
-            return musicClip.name;
+            return audioInfoSO.name;
         }
 
         public override Color GetButtonColor()

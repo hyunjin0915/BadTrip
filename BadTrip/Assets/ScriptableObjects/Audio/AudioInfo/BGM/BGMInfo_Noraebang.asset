@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae70fccd5fcef3b4d8da728523cf784f, type: 3}
   m_Name: BGMInfo_Noraebang
   m_EditorClassIdentifier: 
-  audioNum: 0
+  bgmNum: 10
+  audioNum: 2
   clip: {fileID: 8300000, guid: 8de26bbf38146524eaa6829fe547c894, type: 3}
-  vol: 0.5
+  vol: 0.3
   pch: 1
   isLoop: 1
   isOneShot: 0

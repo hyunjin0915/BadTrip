@@ -50,7 +50,6 @@ public class Obstacle : MonoBehaviour
     {
         while(!Player_healthManager.isAttackable)
         {
-            Debug.Log("flicker");
             spriteRenderer.material.color = new Color (1, 1, 1, 0.2f);
             yield return new WaitForSeconds(flickerTime);
             spriteRenderer.material.color = new Color (1, 1, 1, 1);

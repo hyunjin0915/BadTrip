@@ -31,9 +31,5 @@ public class VCamActiveBadTrip : MonoBehaviour
         {
             vCam.SetActive(false);
         }
-        if(vCam.name.Equals("CamFiveVCam"))
-        {
-            if(spawn!=null) spawn.SetActive(false);
-        }
     }
 }

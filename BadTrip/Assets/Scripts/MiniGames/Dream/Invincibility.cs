@@ -13,6 +13,10 @@ public class Invincibility : MonoBehaviour
     private GameObject itemLight;
 
     SpriteRenderer spriteRenderer;
+
+    [SerializeField]
+    private AudioCue audioCue;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +32,7 @@ public class Invincibility : MonoBehaviour
     {
         if(other.CompareTag("SOPlayer"))
         {
+            audioCue.PlayAudio(0);
             itemLight.SetActive(false);
             StartCoroutine(GetInvincibility());
             spriteRenderer.material.color = new Color (1, 1, 1, 0);

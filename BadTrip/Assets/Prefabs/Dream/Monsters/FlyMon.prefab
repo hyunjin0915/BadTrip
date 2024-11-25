@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4951584962457723072}
   - component: {fileID: 8123379926666709616}
   - component: {fileID: 8413848500056752}
+  - component: {fileID: 6418666381045485336}
   m_Layer: 0
   m_Name: FlyMon
   m_TagString: Untagged
@@ -174,9 +175,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerDamage: 10
-  animator: {fileID: 0}
   poping: {fileID: 409479800636289468}
   Player_healthManager: {fileID: 11400000, guid: 01a49623ec8b9bd47808588899721851, type: 2}
+  audioCue: {fileID: 6418666381045485336}
 --- !u!70 &8413848500056752
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -212,6 +213,22 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 6.5, y: 7.25}
   m_Direction: 0
+--- !u!114 &6418666381045485336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6226042562926534871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc165211933fc2b49bc7b4c046b040d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioInfos:
+  - {fileID: 11400000, guid: a2d12d59e7cb1274e8bbb97100d10a17, type: 2}
+  - {fileID: 11400000, guid: 3155fd2ec7e2b3b47a1f2954467e9f7c, type: 2}
+  audioEventChannel: {fileID: 11400000, guid: 9a1eb40afe0f2fd4da69258d085cf8f0, type: 2}
 --- !u!1001 &7751211383307999871
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7751838764647453564}
   - component: {fileID: 904006676287860310}
   - component: {fileID: 9009426871441980865}
+  - component: {fileID: 4416585462139725077}
   m_Layer: 0
   m_Name: RabbitMon
   m_TagString: Monster
@@ -236,9 +237,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerDamage: 10
-  animator: {fileID: 904006676287860310}
   poping: {fileID: 0}
   Player_healthManager: {fileID: 11400000, guid: 01a49623ec8b9bd47808588899721851, type: 2}
+  audioCue: {fileID: 4416585462139725077}
 --- !u!95 &904006676287860310
 Animator:
   serializedVersion: 5
@@ -283,6 +284,22 @@ MonoBehaviour:
   isFollow: 0
   FindRange: 24
   animator: {fileID: 904006676287860310}
+--- !u!114 &4416585462139725077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327511800121348170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc165211933fc2b49bc7b4c046b040d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioInfos:
+  - {fileID: 11400000, guid: a2d12d59e7cb1274e8bbb97100d10a17, type: 2}
+  - {fileID: 11400000, guid: 3155fd2ec7e2b3b47a1f2954467e9f7c, type: 2}
+  audioEventChannel: {fileID: 11400000, guid: 9a1eb40afe0f2fd4da69258d085cf8f0, type: 2}
 --- !u!1001 &3387687428038432874
 PrefabInstance:
   m_ObjectHideFlags: 0

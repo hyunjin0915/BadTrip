@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1245292657722639572}
   - component: {fileID: 2087036022306017495}
   - component: {fileID: 2857059022750851396}
+  - component: {fileID: 8252244094698762305}
   m_Layer: 0
   m_Name: SnakeMon
   m_TagString: Monster
@@ -214,9 +215,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerDamage: 10
-  animator: {fileID: 0}
   poping: {fileID: 1267238107266048780}
   Player_healthManager: {fileID: 11400000, guid: 01a49623ec8b9bd47808588899721851, type: 2}
+  audioCue: {fileID: 8252244094698762305}
 --- !u!95 &2087036022306017495
 Animator:
   serializedVersion: 5
@@ -261,6 +262,22 @@ MonoBehaviour:
   isFollow: 0
   FindRange: 11.4
   animator: {fileID: 2087036022306017495}
+--- !u!114 &8252244094698762305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5200748158730733864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc165211933fc2b49bc7b4c046b040d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioInfos:
+  - {fileID: 11400000, guid: a2d12d59e7cb1274e8bbb97100d10a17, type: 2}
+  - {fileID: 11400000, guid: 3155fd2ec7e2b3b47a1f2954467e9f7c, type: 2}
+  audioEventChannel: {fileID: 11400000, guid: 9a1eb40afe0f2fd4da69258d085cf8f0, type: 2}
 --- !u!1001 &9198941175711025359
 PrefabInstance:
   m_ObjectHideFlags: 0

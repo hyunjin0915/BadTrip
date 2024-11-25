@@ -18,9 +18,10 @@ public class PlayerMove : MonoBehaviour
     private Animator myAnimator;
     private SpriteRenderer mySpriteRenderer;
 
-    // 발소리
+    // 사운드
     [SerializeField] private AudioSource footstepAS;
     public AudioClip footstepClip;
+    [SerializeField] private AudioCue audioCue;
 
     // 상호작용
     private RaycastHit2D hit;
@@ -115,6 +116,7 @@ public class PlayerMove : MonoBehaviour
         if((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && isGround)
         {
             myRigid.velocity = Vector2.zero;
+            audioCue.PlayAudio(0);
             myRigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             GetComponent<CapsuleCollider2D>().isTrigger=true;
         }
@@ -162,7 +164,6 @@ public class PlayerMove : MonoBehaviour
                     mapInteractionObject?.OnInteraction();
                     //questManager.UpdateQuestState(mapInteractionObject?.interactionId);
 
-                    // if 상호작용한 오브젝트가 드림캐쳐면 ~~
                 }
             }
         }

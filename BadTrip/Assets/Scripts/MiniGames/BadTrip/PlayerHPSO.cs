@@ -27,5 +27,10 @@ public class PlayerHPSO : ScriptableObject
             Fungus.Flowchart.BroadcastFungusMessage("PlayerDead");
         }
     }
+
+    public void PlayerHPInit()
+    {
+        PlayerHealth = PlayerMaxHealth;
+    }
     
 }

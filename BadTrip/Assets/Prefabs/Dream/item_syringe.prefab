@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1656365676034955533}
   - component: {fileID: 7240427113500326250}
   - component: {fileID: 8517452804096584953}
+  - component: {fileID: 6292936761113298250}
   m_Layer: 0
   m_Name: item_syringe
   m_TagString: Untagged
@@ -148,6 +149,22 @@ MonoBehaviour:
   dashTime: 3
   dashSpeed: 40
   itemLight: {fileID: 5819219370503381154}
+  audioCue: {fileID: 6292936761113298250}
+--- !u!114 &6292936761113298250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091002160689126070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc165211933fc2b49bc7b4c046b040d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioInfos:
+  - {fileID: 11400000, guid: 739e8d2e9f2a6d0458be59785b31092d, type: 2}
+  audioEventChannel: {fileID: 11400000, guid: 9a1eb40afe0f2fd4da69258d085cf8f0, type: 2}
 --- !u!1 &5819219370503381154
 GameObject:
   m_ObjectHideFlags: 0

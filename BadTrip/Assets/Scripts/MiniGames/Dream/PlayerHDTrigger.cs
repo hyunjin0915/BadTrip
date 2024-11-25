@@ -17,6 +17,9 @@ public class PlayerHDTrigger : MonoBehaviour
     public GameObject poping;
     [SerializeField]
     private PlayerHPSO Player_healthManager;
+
+    [SerializeField]
+    private AudioCue audioCue;
     void Start()
     {
         myRigid = GetComponent<Rigidbody2D>();
@@ -51,6 +54,7 @@ public class PlayerHDTrigger : MonoBehaviour
             myCollider.isTrigger = true;
         //spriteRenderer.flipY = true;
         myRigid.AddForce(Vector2.up * 20, ForceMode2D.Impulse);
+        audioCue.PlayAudio(1);
         StartCoroutine(MonsterFadeOut());
         //Invoke("DeActive", 0.5f);
     }

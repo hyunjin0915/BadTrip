@@ -15,6 +15,10 @@ public class DashItem : MonoBehaviour
 
 
     SpriteRenderer spriteRenderer;
+
+    [SerializeField]
+    private AudioCue audioCue;
+
     void Start()
     {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
@@ -23,6 +27,7 @@ public class DashItem : MonoBehaviour
     {
         if(other.CompareTag("SOPlayer"))
         {
+            audioCue.PlayAudio(0);
             itemLight.SetActive(false);
             StartCoroutine(SetDashSpeed());
             spriteRenderer.material.color = new Color (1, 1, 1, 0);

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae70fccd5fcef3b4d8da728523cf784f, type: 3}
+  m_Name: SFXInto_BigMonsterFoot01
+  m_EditorClassIdentifier: 
+  audioNum: 4
+  clip: {fileID: 8300000, guid: 6654b5db449e48647b24556ca184786c, type: 3}
+  vol: 0.5
+  pch: 1
+  isLoop: 0
+  isOneShot: 1
+  spread: 0
+  audioMixerGroup: {fileID: -7570096524590141770, guid: a4eea5b62d0a0f642a69776341ae087a, type: 2}
+  spatialBlend: 0
+  minDistance: 1
+  maxDistance: 500

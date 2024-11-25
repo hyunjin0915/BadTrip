@@ -1223,8 +1223,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.34369993, y: -0.27445006, z: 0}
-    m_Extent: {x: 4.2321, y: 3.79615, z: 0}
+    m_Center: {x: -0.3421501, y: -0.2728001, z: 0}
+    m_Extent: {x: 4.24395, y: 3.7965002, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4007,8 +4007,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.25679994, y: -0.15895009, z: 0}
-    m_Extent: {x: 2.7779, y: 6.89845, z: 0}
+    m_Center: {x: -0.2552501, y: -0.15444994, z: 0}
+    m_Extent: {x: 2.7818499, y: 6.90415, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4860,8 +4860,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.25590003, y: -0.16295004, z: 0}
-    m_Extent: {x: 2.7838001, y: 6.90225, z: 0}
+    m_Center: {x: -0.25854993, y: -0.16105008, z: 0}
+    m_Extent: {x: 2.78055, y: 6.9024496, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5191,8 +5191,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.25384998, y: -0.15370011, z: 0}
-    m_Extent: {x: 2.78775, y: 6.9079, z: 0}
+    m_Center: {x: -0.26355004, y: -0.15855002, z: 0}
+    m_Extent: {x: 2.78165, y: 6.90845, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -11031,8 +11031,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.26339996, y: -0.16059995, z: 0}
-    m_Extent: {x: 2.7833, y: 6.9049997, z: 0}
+    m_Center: {x: -0.25535, y: -0.15964985, z: 0}
+    m_Extent: {x: 2.78655, y: 6.90555, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -11211,11 +11211,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -149.36456, y: 372.93735}
+  scrollPos: {x: -200.35284, y: 123.55305}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 556
-  zoom: 0.8200002
+  zoom: 0.85000014
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -11223,8 +11223,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 8738169567203090207}
-  selectedCommands: []
+  - {fileID: 8738169567203090099}
+  selectedCommands:
+  - {fileID: 8738169567203090082}
   variables:
   - {fileID: 184252191652599404}
   - {fileID: 1293176261644672755}
@@ -11432,7 +11433,6 @@ GameObject:
   - component: {fileID: 8738169567203090229}
   - component: {fileID: 8738169567203090236}
   - component: {fileID: 8738169567203090235}
-  - component: {fileID: 8738169567203090237}
   - component: {fileID: 8738169567203090239}
   - component: {fileID: 8738169567203090238}
   - component: {fileID: 8738169567203090242}
@@ -11454,6 +11454,8 @@ GameObject:
   - component: {fileID: 8738169567203090256}
   - component: {fileID: 8738169567203090257}
   - component: {fileID: 8738169567203090258}
+  - component: {fileID: 8738169567203090259}
+  - component: {fileID: 8738169567203090260}
   m_Layer: 0
   m_Name: HospitalFlowchart
   m_TagString: Untagged
@@ -11492,7 +11494,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 201.05388
     y: -38.77587
-    width: 132.92682
+    width: 134.70587
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -12068,7 +12070,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 202.23035
     y: -143.6896
-    width: 110.9756
+    width: 109.999985
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -12090,7 +12092,6 @@ MonoBehaviour:
   - {fileID: 8738169567203090032}
   - {fileID: 8738169567203090031}
   - {fileID: 8738169567203090041}
-  - {fileID: 8738169567203090237}
   - {fileID: 8738169567203090224}
   suppressAllAutoSelections: 0
 --- !u!114 &8738169567203090050
@@ -12986,7 +12987,7 @@ MonoBehaviour:
   itemId: 56
   indentLevel: 0
   storyText: "\uCC28\uB77C\uB9AC \uC8FD\uB294 \uAC8C \uB0AB\uACA0\uB2E4 \uC2F6\uC744\uB9CC\uD07C
-    \uD798\uB4E4\uC5C8\uC5B4\uC694. \u3147\u3147\uB2D8\uB3C4 \uC798 \uC544\uC2E4
+    \uD798\uB4E4\uC5C8\uC5B4\uC694. {$playerName}\uB2D8\uB3C4 \uC798 \uC544\uC2E4
     \uAC70\uC608\uC694. \uB9C8\uC57D\uC774 \uC8FC\uB294 \uACE0\uD1B5\uC774 \uC5B4\uB290
     \uC815\uB3C4\uC778\uC9C0..."
   description: 
@@ -13491,7 +13492,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 385.30215
     y: 71.2378
-    width: 91.46341
+    width: 91.17647
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -13858,7 +13859,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 201.16652
     y: 68.66462
-    width: 119.512184
+    width: 119.41175
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -13903,7 +13904,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 537.7814
     y: 62.355186
-    width: 140.24388
+    width: 144.11763
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14703,7 +14704,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 537.0947
     y: -9.068488
-    width: 152.439
+    width: 157.0588
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -15592,7 +15593,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 535.80054
     y: -84.95584
-    width: 103.65852
+    width: 106.47058
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -15738,7 +15739,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 387.74188
     y: -13.485261
-    width: 92.68292
+    width: 94.70587
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -15747,9 +15748,11 @@ MonoBehaviour:
   description: "\uBC29\uBB38 \uC7AC\uD65C"
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 8738169567203090259}
   - {fileID: 8738169567203090177}
   - {fileID: 8738169567203090176}
   - {fileID: 8738169567203090175}
+  - {fileID: 8738169567203090260}
   - {fileID: 8738169567203090174}
   - {fileID: 8738169567203090172}
   suppressAllAutoSelections: 0
@@ -15769,7 +15772,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 385.1694
     y: -84.26575
-    width: 104.87804
+    width: 107.64705
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -15933,7 +15936,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 207.5196
     y: -244.16061
-    width: 135.36584
+    width: 133.52939
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -16035,7 +16038,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 379.22302
     y: -243.28117
-    width: 135.36584
+    width: 133.52939
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -16128,7 +16131,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 211.83769
     y: 172.47864
-    width: 121.9512
+    width: 120.58823
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -16814,51 +16817,6 @@ MonoBehaviour:
     floatRef: {fileID: 0}
     floatVal: 3
   durationOLD: 0
---- !u!114 &8738169567203090237
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2050051285376147212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 757
-  indentLevel: 0
-  description: 
-  targetObject: {fileID: 696800758}
-  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: ConversationEventManager
-  targetMethod: CompleteQuest
-  targetMethodText: 'CompleteQuest (Int32): Void'
-  methodParameters:
-  - objValue:
-      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Int32
-      intValue: 1
-      boolValue: 0
-      floatValue: 0
-      stringValue: 
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
 --- !u!114 &8738169567203090238
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -17593,6 +17551,96 @@ MonoBehaviour:
       typeFullname: System.Boolean
       intValue: 0
       boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &8738169567203090259
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050051285376147212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 781
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 696800758}
+  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ConversationEventManager
+  targetMethod: SetActiveMenuBg
+  targetMethodText: 'SetActiveMenuBg (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &8738169567203090260
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050051285376147212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 782
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 696800758}
+  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ConversationEventManager
+  targetMethod: SetActiveMenuBg
+  targetMethodText: 'SetActiveMenuBg (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 1
       floatValue: 0
       stringValue: 
       colorValue: {r: 0, g: 0, b: 0, a: 0}

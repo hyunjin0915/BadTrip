@@ -22,4 +22,9 @@ public class MonsterHPSO : ScriptableObject
             Fungus.Flowchart.BroadcastFungusMessage("DevilDead");
         }
     }
+
+    public void MonsterHPInit()
+    {
+        MonsterHealth = MonsterMaxHealth;
+    }
 }

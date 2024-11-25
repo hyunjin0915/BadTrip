@@ -28,7 +28,6 @@ public class RunningMon : MonoBehaviour
         currentPosition = transform.position;
         velocity_Apply = velocity;
         rb = GetComponent<Rigidbody2D>();
-
         StartCoroutine(RandomDash());
     }
 

@@ -5406,7 +5406,7 @@ Transform:
   m_GameObject: {fileID: 491238071}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 398, y: -27.3, z: 0}
+  m_LocalPosition: {x: 405.2, y: -27.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9585,6 +9585,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3252633701631039734, guid: 75a5022521009704c80f6b282908fb53, type: 3}
   m_PrefabInstance: {fileID: 821373436103631518}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &816970792 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7458059122987571577, guid: 1ea54e74cefd34e4391de8631368e348, type: 3}
+  m_PrefabInstance: {fileID: 1598570519320005172}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc165211933fc2b49bc7b4c046b040d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &825997676
 GameObject:
   m_ObjectHideFlags: 0
@@ -15289,7 +15300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 141708907}
+  selectedFlowchart: {fileID: 1380398302}
 --- !u!4 &1314472887
 Transform:
   m_ObjectHideFlags: 1
@@ -15742,7 +15753,7 @@ Transform:
   m_GameObject: {fileID: 1380398290}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2972.5, y: -404.6, z: 0}
+  m_LocalPosition: {x: 3213.8, y: -404.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21391,6 +21402,7 @@ GameObject:
   - component: {fileID: 1898860431}
   - component: {fileID: 1898860432}
   - component: {fileID: 1898860433}
+  - component: {fileID: 1898860434}
   m_Layer: 7
   m_Name: Player
   m_TagString: SOPlayer
@@ -21510,6 +21522,7 @@ MonoBehaviour:
   jumpForce: 190
   footstepAS: {fileID: 1898860432}
   footstepClip: {fileID: 8300000, guid: b4579a645c475234b8e7a69619c02a4a, type: 3}
+  audioCue: {fileID: 1898860434}
   rayLength: 10
   playerDataSO: {fileID: 11400000, guid: 6dc9d063a98fe0340bfc447550d25e4e, type: 2}
   canMove: 1
@@ -21735,6 +21748,21 @@ MonoBehaviour:
   canvas: {fileID: 2019596348}
   PlayerHPBar: {fileID: 0}
   height: 9
+--- !u!114 &1898860434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898860421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc165211933fc2b49bc7b4c046b040d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioInfos:
+  - {fileID: 11400000, guid: 78b320e72a24c2740827e6477a8be446, type: 2}
+  audioEventChannel: {fileID: 11400000, guid: 9a1eb40afe0f2fd4da69258d085cf8f0, type: 2}
 --- !u!1 &1915261827
 GameObject:
   m_ObjectHideFlags: 3
@@ -22273,7 +22301,7 @@ Transform:
   m_GameObject: {fileID: 1988475783}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1908.1, y: -236.6, z: 0}
+  m_LocalPosition: {x: 1911.8, y: -236.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25418,6 +25446,10 @@ PrefabInstance:
       propertyPath: RRange
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 5016018357084440214, guid: 1ea54e74cefd34e4391de8631368e348, type: 3}
+      propertyPath: audioCue
+      value: 
+      objectReference: {fileID: 816970792}
     - target: {fileID: 5016018357084440214, guid: 1ea54e74cefd34e4391de8631368e348, type: 3}
       propertyPath: dashTime
       value: 1

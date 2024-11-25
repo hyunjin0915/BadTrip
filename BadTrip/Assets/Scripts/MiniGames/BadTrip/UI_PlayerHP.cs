@@ -25,6 +25,7 @@ public class UI_PlayerHP : MonoBehaviour
     {
         hpBar = Instantiate(prfHPBar, canvas.transform).GetComponent<RectTransform>();
         PlayerHPBar = hpBar.GetChild(0).GetComponent<Image>();
+        Player_healthManager.PlayerHPInit();
     }
 
     // Update is called once per frame

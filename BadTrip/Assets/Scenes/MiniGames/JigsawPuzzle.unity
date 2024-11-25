@@ -1428,6 +1428,62 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &344604832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 344604834}
+  - component: {fileID: 344604833}
+  m_Layer: 0
+  m_Name: ConversationSceneManager (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &344604833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344604832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dacdea88e99e9114587187827c583558, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characters:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  sayDialogSO: {fileID: 11400000, guid: 4e511c939ccd79141a9d6a15776f5bc4, type: 2}
+  viewTrs:
+  - {fileID: 0}
+  - {fileID: 0}
+  conVCam: {fileID: 0}
+  interactionObjectsSO: {fileID: 11400000, guid: 2775824826291714696efc8e5cd6e7ae, type: 2}
+  audioCue: {fileID: 0}
+--- !u!4 &344604834
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344604832}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &363669769
 GameObject:
   m_ObjectHideFlags: 0
@@ -4801,6 +4857,7 @@ GameObject:
   - component: {fileID: 1428941300}
   - component: {fileID: 1428941297}
   - component: {fileID: 1428941302}
+  - component: {fileID: 1428941303}
   m_Layer: 0
   m_Name: GameFlowchart
   m_TagString: Untagged
@@ -4835,7 +4892,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1428941298}
   selectedCommands:
-  - {fileID: 1428941297}
+  - {fileID: 1428941303}
   variables:
   - {fileID: 1428941296}
   description: 
@@ -4923,7 +4980,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 49.66707
-    y: 17.157562
+    y: 16.157562
     width: 116
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -4934,6 +4991,7 @@ MonoBehaviour:
   eventHandler: {fileID: 1428941300}
   commandList:
   - {fileID: 1428941302}
+  - {fileID: 1428941303}
   - {fileID: 1428941297}
   suppressAllAutoSelections: 0
 --- !u!114 &1428941300
@@ -4982,6 +5040,51 @@ MonoBehaviour:
   indentLevel: 0
   audioInfoSO: {fileID: 11400000, guid: b7f3396626f75e94eb84cad09219e770, type: 2}
   waitUntilFinished: 1
+--- !u!114 &1428941303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428941294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 4
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 344604832}
+  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ConversationEventManager
+  targetMethod: CompleteQuest
+  targetMethodText: 'CompleteQuest (Int32): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 1
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!1 &1458703066
 GameObject:
   m_ObjectHideFlags: 0
@@ -7199,3 +7302,4 @@ SceneRoots:
   - {fileID: 181856129}
   - {fileID: 48918931}
   - {fileID: 678368852}
+  - {fileID: 344604834}

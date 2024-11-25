@@ -739,11 +739,11 @@ GameObject:
   - component: {fileID: 241434849}
   - component: {fileID: 241434857}
   - component: {fileID: 241434860}
-  - component: {fileID: 241434859}
   - component: {fileID: 241434858}
   - component: {fileID: 241434861}
   - component: {fileID: 241434863}
   - component: {fileID: 241434862}
+  - component: {fileID: 241434864}
   m_Layer: 0
   m_Name: BadTripFlowchart
   m_TagString: Untagged
@@ -1011,8 +1011,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 241434807}
-  selectedCommands:
-  - {fileID: 241434862}
+  selectedCommands: []
   variables:
   - {fileID: 241434751}
   description: 
@@ -2572,7 +2571,7 @@ MonoBehaviour:
   itemId: 72
   blockName: DevilDead
   description: 
-  eventHandler: {fileID: 241434859}
+  eventHandler: {fileID: 241434864}
   commandList:
   - {fileID: 241434852}
   - {fileID: 241434851}
@@ -3571,21 +3570,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentBlock: {fileID: 241434748}
   suppressBlockAutoSelect: 0
---- !u!114 &241434859
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 241434740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentBlock: {fileID: 241434807}
-  suppressBlockAutoSelect: 0
-  message: DevilDead
 --- !u!114 &241434860
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3661,6 +3645,21 @@ MonoBehaviour:
   indentLevel: 0
   audioInfoSO: {fileID: 11400000, guid: bb8e0e85d82b65044be97df9258eb4d4, type: 2}
   volume: 0.3
+--- !u!114 &241434864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241434740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 241434807}
+  suppressBlockAutoSelect: 0
+  message: DevilDead
 --- !u!1 &415706328
 GameObject:
   m_ObjectHideFlags: 0
@@ -5376,6 +5375,10 @@ PrefabInstance:
       value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: 7962e04b22d36f9429877c0b7564ee3b, type: 3}
+      propertyPath: ShapeModule.m_Position.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 7962e04b22d36f9429877c0b7564ee3b, type: 3}
       propertyPath: InitialModule.gravitySource
       value: 1
       objectReference: {fileID: 0}
@@ -5402,6 +5405,18 @@ PrefabInstance:
     - target: {fileID: 19800000, guid: 7962e04b22d36f9429877c0b7564ee3b, type: 3}
       propertyPath: InitialModule.startLifetime.minScalar
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900000, guid: 7962e04b22d36f9429877c0b7564ee3b, type: 3}
+      propertyPath: m_SortingLayer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900000, guid: 7962e04b22d36f9429877c0b7564ee3b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900000, guid: 7962e04b22d36f9429877c0b7564ee3b, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1990344887
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5890,8 +5905,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1990344887
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 680106f9db91342419a2aeebc0ba0182, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7278,6 +7293,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1893782769
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1893782771}
+  - component: {fileID: 1893782770}
+  m_Layer: 0
+  m_Name: Init
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1893782770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893782769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85570c4637a6e8f409b8cff481b07411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Monster_healthManager: {fileID: 11400000, guid: 48f57964b7443ae44be8be08a7139fe1, type: 2}
+--- !u!4 &1893782771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893782769}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3154.3977, y: -53.765907, z: -11.054828}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2085561589
 GameObject:
   m_ObjectHideFlags: 0
@@ -7484,3 +7544,4 @@ SceneRoots:
   - {fileID: 451054019}
   - {fileID: 54580672}
   - {fileID: 2085561593}
+  - {fileID: 1893782771}

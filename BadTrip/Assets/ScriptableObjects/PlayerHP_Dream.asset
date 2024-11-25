@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0da7b126037b2245bae895e966e2f5d, type: 3}
   m_Name: PlayerHP_Dream
   m_EditorClassIdentifier: 
-  PlayerHealth: 190
+  PlayerHealth: -5
   PlayerMaxHealth: 100
   isAttackable: 1

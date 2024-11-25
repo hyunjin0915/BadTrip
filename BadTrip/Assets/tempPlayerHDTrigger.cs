@@ -19,9 +19,13 @@ public class tempPlayerHDTrigger : MonoBehaviour
 
     [SerializeField]
     private GameObject spawnPosition;
+    Vector3 spawnPos;
+    bool isSpawn = false;
     void Start()
     {
         myRigid = GetComponent<Rigidbody2D>();
+        spawnPos.y = transform.position.y;
+        spawnPos.z = transform.position.z;
         //Debug.Log(Vector2.right + Vector2.up);
     }
     void OnCollisionEnter2D(Collision2D collision)
@@ -39,12 +43,15 @@ public class tempPlayerHDTrigger : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("SOPlayer"))
         {
-            StartCoroutine(MonsterSpawnDelay());
+            if(!isSpawn)
+                StartCoroutine(MonsterSpawnDelay());
         }
     }
     IEnumerator MonsterSpawnDelay()
     {
+        isSpawn = true;
         yield return new WaitForSeconds(7f);
-        Instantiate(gameObject,spawnPosition.transform.position,quaternion.identity, transform.parent);
+        spawnPos.x = spawnPosition.transform.position.x;
+        Instantiate(this.gameObject,spawnPos,quaternion.identity, transform.parent);
     }
 }

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3220343441215737124}
   - component: {fileID: 8555659029643256640}
   - component: {fileID: 3037444621574111082}
+  - component: {fileID: 5337706329935408231}
   m_Layer: 11
   m_Name: NewMudMon
   m_TagString: Monster
@@ -146,6 +147,7 @@ MonoBehaviour:
   PlayerDamage: 10
   bounceForce: 100
   Player_healthManager: {fileID: 11400000, guid: 01a49623ec8b9bd47808588899721851, type: 2}
+  spawnPosition: {fileID: 0}
 --- !u!70 &3037444621574111082
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -181,3 +183,24 @@ CapsuleCollider2D:
   m_Offset: {x: 0.34399414, y: 0}
   m_Size: {x: 7.0620117, y: 19.75}
   m_Direction: 0
+--- !u!95 &5337706329935408231
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8437249711966736038}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7fffb83352a660941aea04c4e4cf246e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -11,11 +11,12 @@ public class RemoveSpawnMon : MonoBehaviour
     {
         if(other.CompareTag("Monster"))
         {
-            other.gameObject.SetActive(false);
+            Destroy(other.gameObject);
         }
         else if(other.CompareTag("SOPlayer"))
         {
-            spawnMonsters.SetActive(false);
+            if(spawnMonsters!=null)
+                spawnMonsters.SetActive(false);
         }
     }
 }

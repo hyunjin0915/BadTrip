@@ -8,6 +8,8 @@ public class PlayerHDTrigger_BT : MonoBehaviour
 
     [SerializeField]
     private PlayerHPSO Player_healthManager;
+
+
     void Start()
     {
         myRigid = GetComponent<Rigidbody2D>();

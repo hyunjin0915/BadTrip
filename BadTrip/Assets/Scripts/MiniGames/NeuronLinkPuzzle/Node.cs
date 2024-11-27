@@ -146,6 +146,9 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
 
             if (isPoint && nlpManager.sourceNode != this) // ¼º°ø
             {
+
+                audioCue.PlayAudio(0);
+
                 nlpManager.isDragging = false;
                 highlight[nlpManager.sourceNode.colorId].SetActive(false);
 

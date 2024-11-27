@@ -39,6 +39,7 @@ public class MovingMon : MonoBehaviour
         
         rightMax_Apply = currentPosition.x+rightMax;
         leftMax_Apply = currentPosition.x + leftMax;
+
     }
 
     protected virtual void Move()

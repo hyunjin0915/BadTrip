@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8555659029643256640}
   - component: {fileID: 3037444621574111082}
   - component: {fileID: 5337706329935408231}
+  - component: {fileID: 5863143714060952273}
   m_Layer: 11
   m_Name: NewMudMon
   m_TagString: Monster
@@ -148,6 +149,7 @@ MonoBehaviour:
   bounceForce: 100
   Player_healthManager: {fileID: 11400000, guid: 01a49623ec8b9bd47808588899721851, type: 2}
   spawnPosition: {fileID: 0}
+  audioCue: {fileID: 5863143714060952273}
 --- !u!70 &3037444621574111082
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -204,3 +206,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5863143714060952273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8437249711966736038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc165211933fc2b49bc7b4c046b040d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioInfos:
+  - {fileID: 11400000, guid: 0d32d35bb582b7c4eac5de10dc4742b9, type: 2}
+  audioEventChannel: {fileID: 11400000, guid: 9a1eb40afe0f2fd4da69258d085cf8f0, type: 2}

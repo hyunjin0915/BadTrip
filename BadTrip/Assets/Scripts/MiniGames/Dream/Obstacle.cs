@@ -15,6 +15,10 @@ public class Obstacle : MonoBehaviour
     [SerializeField]
     private GameObject player;
     SpriteRenderer spriteRenderer;
+
+    [SerializeField]
+    private AudioCue audioCue;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +34,7 @@ public class Obstacle : MonoBehaviour
     {
         if(other.gameObject.CompareTag("SOPlayer"))
         {
+            audioCue.PlayAudio(0);
             Player_healthManager.PlayerDecreaseHealth(PlayerDamage);
             StartCoroutine(GetInvincibility());
             StartCoroutine(GetFlicker());

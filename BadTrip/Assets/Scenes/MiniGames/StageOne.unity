@@ -1726,6 +1726,7 @@ MonoBehaviour:
   backGround: {fileID: 0}
   spawn: {fileID: 0}
   camCtrlSO: {fileID: 11400000, guid: c6425dae5ce77254ea1a4e18f2356ef9, type: 2}
+  bms: {fileID: 0}
 --- !u!1001 &128575022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2170,10 +2171,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 141708906}
-  selectedCommands:
-  - {fileID: 141708922}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 141708904}
   - {fileID: 141708921}
@@ -2864,6 +2863,7 @@ MonoBehaviour:
   backGround: {fileID: 1564681303}
   spawn: {fileID: 0}
   camCtrlSO: {fileID: 11400000, guid: c6425dae5ce77254ea1a4e18f2356ef9, type: 2}
+  bms: {fileID: 0}
 --- !u!1 &176323171
 GameObject:
   m_ObjectHideFlags: 0
@@ -5613,6 +5613,7 @@ MonoBehaviour:
   backGround: {fileID: 0}
   spawn: {fileID: 0}
   camCtrlSO: {fileID: 11400000, guid: c6425dae5ce77254ea1a4e18f2356ef9, type: 2}
+  bms: {fileID: 0}
 --- !u!1001 &480191171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7264,6 +7265,7 @@ MonoBehaviour:
   backGround: {fileID: 0}
   spawn: {fileID: 0}
   camCtrlSO: {fileID: 11400000, guid: c6425dae5ce77254ea1a4e18f2356ef9, type: 2}
+  bms: {fileID: 0}
 --- !u!1 &517094681
 GameObject:
   m_ObjectHideFlags: 0
@@ -9546,6 +9548,7 @@ MonoBehaviour:
   backGround: {fileID: 0}
   spawn: {fileID: 0}
   camCtrlSO: {fileID: 11400000, guid: c6425dae5ce77254ea1a4e18f2356ef9, type: 2}
+  bms: {fileID: 0}
 --- !u!1 &700586195
 GameObject:
   m_ObjectHideFlags: 0
@@ -9812,6 +9815,7 @@ MonoBehaviour:
   backGround: {fileID: 0}
   spawn: {fileID: 0}
   camCtrlSO: {fileID: 11400000, guid: c6425dae5ce77254ea1a4e18f2356ef9, type: 2}
+  bms: {fileID: 0}
 --- !u!4 &707311104 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5445198715525691223, guid: 88c532563cfa19d4c815eccbba738af3, type: 3}
@@ -11061,6 +11065,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioInfos:
   - {fileID: 11400000, guid: 23d1d674a6e95014eb3d7efd6297f08b, type: 2}
+  - {fileID: 11400000, guid: c4592522941e701429895c5cce8bf4ea, type: 2}
+  - {fileID: 11400000, guid: 893a813c7e5eae740bb8f0c0e00be336, type: 2}
   audioEventChannel: {fileID: 11400000, guid: 9a1eb40afe0f2fd4da69258d085cf8f0, type: 2}
 --- !u!1 &835594989
 GameObject:
@@ -14697,6 +14703,7 @@ MonoBehaviour:
   backGround: {fileID: 0}
   spawn: {fileID: 0}
   camCtrlSO: {fileID: 11400000, guid: c6425dae5ce77254ea1a4e18f2356ef9, type: 2}
+  bms: {fileID: 0}
 --- !u!1001 &1159779108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17244,6 +17251,7 @@ MonoBehaviour:
   backGround: {fileID: 0}
   spawn: {fileID: 0}
   camCtrlSO: {fileID: 11400000, guid: c6425dae5ce77254ea1a4e18f2356ef9, type: 2}
+  bms: {fileID: 0}
 --- !u!1001 &1374037998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20853,6 +20861,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 17dffc5fa360c6345b61189596b46e20, type: 2}
   - {fileID: 11400000, guid: 68e1c087e8a84cb43a21f1400aed4620, type: 2}
   - {fileID: 11400000, guid: 526f82ddd46b1da47a7c01383499ac52, type: 2}
+  - {fileID: 11400000, guid: 417ddd0ac0fc58440ae90c31e60cb59e, type: 2}
+  - {fileID: 11400000, guid: 3072300ef2d22854792370a144570b81, type: 2}
   audioEventChannel: {fileID: 11400000, guid: 5f1f11dc6a883c04fa42e19cea1a7c4b, type: 2}
 --- !u!1 &1657038076
 GameObject:
@@ -22517,6 +22527,52 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88c532563cfa19d4c815eccbba738af3, type: 3}
+--- !u!1 &1762193486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1762193488}
+  - component: {fileID: 1762193487}
+  m_Layer: 0
+  m_Name: BossMonster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1762193487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762193486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbab2e17cb5b4a94186e0aee9ebd0a4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxAudioCue: {fileID: 831484499}
+  bgmAudioCue: {fileID: 1645119219}
+--- !u!4 &1762193488
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762193486}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961931967}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1769792903 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5251112276180965193, guid: b6d7311886db17c4d92b78e5478df08e, type: 3}
@@ -23233,6 +23289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnMonsters: {fileID: 190769342}
+  bms: {fileID: 0}
 --- !u!61 &1845258604
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23690,7 +23747,7 @@ Transform:
   m_GameObject: {fileID: 1898860421}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3342, y: -397, z: 0}
+  m_LocalPosition: {x: 2269, y: -393, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -24443,6 +24500,7 @@ Transform:
   - {fileID: 1645119217}
   - {fileID: 831484498}
   - {fileID: 987766003}
+  - {fileID: 1762193488}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1964829789 stripped
@@ -26166,12 +26224,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -6, y: 15}
-      - {x: -9.531867, y: 15}
+    - - {x: -6.2890625, y: 22.127594}
+      - {x: -10.109748, y: 22.223907}
       - {x: -9.531867, y: -0.5}
       - {x: 12, y: -0.5}
-      - {x: 12, y: 15}
-      - {x: 9, y: 15}
+      - {x: 12.963135, y: 22.127594}
+      - {x: 9.481689, y: 22.03125}
       - {x: 9, y: 2}
       - {x: -6, y: 2}
   m_UseDelaunayMesh: 0
@@ -27110,6 +27168,7 @@ MonoBehaviour:
   backGround: {fileID: 0}
   spawn: {fileID: 190769342}
   camCtrlSO: {fileID: 11400000, guid: c6425dae5ce77254ea1a4e18f2356ef9, type: 2}
+  bms: {fileID: 1762193487}
 --- !u!4 &2111957994 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5039811532615164374, guid: f576059954ee5ab46a5eff5a581824df, type: 3}

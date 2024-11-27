@@ -681,7 +681,6 @@ GameObject:
   - component: {fileID: 241434774}
   - component: {fileID: 241434773}
   - component: {fileID: 241434786}
-  - component: {fileID: 241434785}
   - component: {fileID: 241434784}
   - component: {fileID: 241434783}
   - component: {fileID: 241434792}
@@ -744,6 +743,9 @@ GameObject:
   - component: {fileID: 241434863}
   - component: {fileID: 241434862}
   - component: {fileID: 241434864}
+  - component: {fileID: 241434865}
+  - component: {fileID: 241434867}
+  - component: {fileID: 241434866}
   m_Layer: 0
   m_Name: BadTripFlowchart
   m_TagString: Untagged
@@ -1009,8 +1011,7 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 241434807}
+  selectedBlocks: []
   selectedCommands: []
   variables:
   - {fileID: 241434751}
@@ -1615,21 +1616,6 @@ MonoBehaviour:
   returnValueType: System.Void
   showInherited: 0
   callMode: 0
---- !u!114 &241434785
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 241434740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentBlock: {fileID: 241434786}
-  suppressBlockAutoSelect: 0
-  message: PlayerDead
 --- !u!114 &241434786
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1645,7 +1631,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 246.433
-    y: 98.44328
+    y: 97.379456
     width: 119.14893
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1653,7 +1639,7 @@ MonoBehaviour:
   itemId: 51
   blockName: PlayerDead
   description: 
-  eventHandler: {fileID: 241434785}
+  eventHandler: {fileID: 241434865}
   commandList:
   - {fileID: 241434801}
   - {fileID: 241434804}
@@ -1667,6 +1653,8 @@ MonoBehaviour:
   - {fileID: 241434800}
   - {fileID: 241434798}
   - {fileID: 241434797}
+  - {fileID: 241434867}
+  - {fileID: 241434866}
   - {fileID: 241434792}
   - {fileID: 241434791}
   - {fileID: 241434790}
@@ -2267,7 +2255,7 @@ MonoBehaviour:
       typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       typeFullname: System.Int32
-      intValue: 1
+      intValue: 3
       boolValue: 0
       floatValue: 0
       stringValue: 
@@ -2346,7 +2334,7 @@ MonoBehaviour:
       typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       typeFullname: System.Int32
-      intValue: 2
+      intValue: 4
       boolValue: 0
       floatValue: 0
       stringValue: 
@@ -3617,7 +3605,7 @@ MonoBehaviour:
   targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &241434862
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3631,7 +3619,7 @@ MonoBehaviour:
   indentLevel: 0
 --- !u!114 &241434863
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3647,7 +3635,7 @@ MonoBehaviour:
   volume: 0.3
 --- !u!114 &241434864
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3660,6 +3648,184 @@ MonoBehaviour:
   parentBlock: {fileID: 241434807}
   suppressBlockAutoSelect: 0
   message: DevilDead
+--- !u!114 &241434865
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241434740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 241434786}
+  suppressBlockAutoSelect: 0
+  message: PlayerDead
+--- !u!114 &241434866
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241434740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 282
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 435059128}
+  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ConversationEventManager
+  targetMethod: SetSortingLayer
+  targetMethodText: 'SetSortingLayer (SpriteRenderer, String, Int32): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: UnityEngine.SpriteRenderer, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      typeFullname: UnityEngine.SpriteRenderer
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 378833844}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: Default
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 2
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &241434867
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241434740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 281
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 435059128}
+  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ConversationEventManager
+  targetMethod: SetSortingLayer
+  targetMethodText: 'SetSortingLayer (SpriteRenderer, String, Int32): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: UnityEngine.SpriteRenderer, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      typeFullname: UnityEngine.SpriteRenderer
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 2068766778}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: Default
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 2
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!212 &378833844 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3980666412580046644, guid: 46bb3212a33d06745af9efa22b18d940, type: 3}
+  m_PrefabInstance: {fileID: 137279923}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &415706328
 GameObject:
   m_ObjectHideFlags: 0
@@ -7338,6 +7504,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &2068766778 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7131466517829185368, guid: 4f7b05455de2e7f46bb31c35d9d23f8a, type: 3}
+  m_PrefabInstance: {fileID: 1861500563}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2085561589
 GameObject:
   m_ObjectHideFlags: 0

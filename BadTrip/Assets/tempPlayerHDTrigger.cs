@@ -21,6 +21,10 @@ public class tempPlayerHDTrigger : MonoBehaviour
     private GameObject spawnPosition;
     Vector3 spawnPos;
     bool isSpawn = false;
+
+    [SerializeField]
+    private AudioCue audioCue;
+
     void Start()
     {
         myRigid = GetComponent<Rigidbody2D>();
@@ -32,6 +36,7 @@ public class tempPlayerHDTrigger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("SOPlayer"))
         {
+            audioCue.PlayAudio(0);
             Player_healthManager.PlayerDecreaseHealth(PlayerDamage);
             /*Vector2 direction = collision.gameObject.transform.position - transform.position;
             Debug.Log(direction);

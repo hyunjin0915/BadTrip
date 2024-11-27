@@ -228,6 +228,7 @@ MonoBehaviour:
   audioInfos:
   - {fileID: 11400000, guid: a2d12d59e7cb1274e8bbb97100d10a17, type: 2}
   - {fileID: 11400000, guid: 3155fd2ec7e2b3b47a1f2954467e9f7c, type: 2}
+  - {fileID: 11400000, guid: 0d32d35bb582b7c4eac5de10dc4742b9, type: 2}
   audioEventChannel: {fileID: 11400000, guid: 9a1eb40afe0f2fd4da69258d085cf8f0, type: 2}
 --- !u!1001 &7751211383307999871
 PrefabInstance:

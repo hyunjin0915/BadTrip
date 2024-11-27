@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 861323794384326663}
   - component: {fileID: 3966045905076877824}
   - component: {fileID: 7762297737505504379}
+  - component: {fileID: 5668395681980726898}
   m_Layer: 0
   m_Name: Obstacle_L
   m_TagString: Untagged
@@ -160,3 +161,19 @@ MonoBehaviour:
   invincibilitytime: 3
   flickerTime: 0.5
   player: {fileID: 0}
+  audioCue: {fileID: 5668395681980726898}
+--- !u!114 &5668395681980726898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222020154517041485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc165211933fc2b49bc7b4c046b040d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioInfos:
+  - {fileID: 11400000, guid: 0d32d35bb582b7c4eac5de10dc4742b9, type: 2}
+  audioEventChannel: {fileID: 11400000, guid: 9a1eb40afe0f2fd4da69258d085cf8f0, type: 2}

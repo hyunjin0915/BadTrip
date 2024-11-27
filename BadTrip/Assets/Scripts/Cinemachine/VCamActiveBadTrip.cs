@@ -12,6 +12,8 @@ public class VCamActiveBadTrip : MonoBehaviour
     
     public  CamCtrlSO camCtrlSO;
 
+    [SerializeField] private BossMonsterSound bms;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("SOPlayer") && !other.isTrigger)
@@ -21,7 +23,11 @@ public class VCamActiveBadTrip : MonoBehaviour
 
             if(vCam.name.Equals("CamFiveVCam"))
             {
-                if(spawn!=null) spawn.SetActive(true);
+                if(spawn!=null)
+                {
+                    bms.Play();
+                    spawn.SetActive(true);
+                }
             }
         }
     }

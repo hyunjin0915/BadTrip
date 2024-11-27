@@ -7,6 +7,10 @@ public class RemoveSpawnMon : MonoBehaviour
 {
     [SerializeField]
     GameObject spawnMonsters;
+
+    [SerializeField]
+    private BossMonsterSound bms;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Monster"))
@@ -15,8 +19,10 @@ public class RemoveSpawnMon : MonoBehaviour
         }
         else if(other.CompareTag("SOPlayer"))
         {
-            if(spawnMonsters!=null)
+            if (spawnMonsters != null) {
+                bms.StopPlay();
                 spawnMonsters.SetActive(false);
+            }
         }
     }
 }

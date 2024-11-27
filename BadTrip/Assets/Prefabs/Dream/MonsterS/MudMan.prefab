@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5797981630897472262}
   - component: {fileID: -901002898630727150}
   - component: {fileID: 1960313995821762835}
+  - component: {fileID: -5360062504545684655}
   m_Layer: 0
   m_Name: MudMan
   m_TagString: Monster
@@ -123,7 +124,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerDamage: 10
+  bounceForce: 100
   Player_healthManager: {fileID: 11400000, guid: 01a49623ec8b9bd47808588899721851, type: 2}
+  spawnPosition: {fileID: 0}
+  audioCue: {fileID: -5360062504545684655}
 --- !u!114 &5797981630897472262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,7 +142,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightMax: 0
   leftMax: 0
+  upMax: 0
+  downMax: 0
   velocity: 0
+  FlyingSpeed: 0
   target: {fileID: 0}
   FollowingSpeed: 6
 --- !u!50 &-901002898630727150
@@ -203,3 +210,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 9.25, y: 18.25}
   m_Direction: 0
+--- !u!114 &-5360062504545684655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7149073597846684655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc165211933fc2b49bc7b4c046b040d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioInfos:
+  - {fileID: 11400000, guid: 0d32d35bb582b7c4eac5de10dc4742b9, type: 2}
+  audioEventChannel: {fileID: 11400000, guid: 9a1eb40afe0f2fd4da69258d085cf8f0, type: 2}

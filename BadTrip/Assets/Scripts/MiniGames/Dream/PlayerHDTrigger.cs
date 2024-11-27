@@ -41,6 +41,7 @@ public class PlayerHDTrigger : MonoBehaviour
             }
             else
             {
+                audioCue.PlayAudio(2);
                 //animator.SetTrigger("Attack");
                 Player_healthManager.PlayerDecreaseHealth(PlayerDamage);
             }

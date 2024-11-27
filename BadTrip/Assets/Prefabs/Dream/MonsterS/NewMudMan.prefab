@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 9193165843274519205}
   - component: {fileID: 1056152101809236318}
   - component: {fileID: 8772036761205405917}
+  - component: {fileID: 629673899967345591}
   m_Layer: 11
   m_Name: NewMudMan
   m_TagString: Monster
@@ -148,6 +149,7 @@ MonoBehaviour:
   bounceForce: 100
   Player_healthManager: {fileID: 11400000, guid: 01a49623ec8b9bd47808588899721851, type: 2}
   spawnPosition: {fileID: 0}
+  audioCue: {fileID: 629673899967345591}
 --- !u!70 &1056152101809236318
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -204,3 +206,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &629673899967345591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457590735646860073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc165211933fc2b49bc7b4c046b040d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioInfos:
+  - {fileID: 11400000, guid: 0d32d35bb582b7c4eac5de10dc4742b9, type: 2}
+  audioEventChannel: {fileID: 11400000, guid: 9a1eb40afe0f2fd4da69258d085cf8f0, type: 2}

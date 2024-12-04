@@ -69,7 +69,7 @@ public class BugsCtrl : MonoBehaviour
     public IEnumerator MoveAgainBug()
     {
         yield return new WaitForSeconds(5.0f);
-        speed = 5;
+        speed = 10;
     }
     private void OnMouseDown()
     {

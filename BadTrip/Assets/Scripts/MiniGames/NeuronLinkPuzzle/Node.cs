@@ -142,18 +142,18 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
                 nlpManager.nodeCount++;
                 nlpManager.preNode = this;
                 isActive = true;
-            }
 
-            if (isPoint && nlpManager.sourceNode != this) // 성공
-            {
+                if (isPoint && nlpManager.sourceNode != this) // 성공
+                {
 
-                audioCue.PlayAudio(0);
+                    audioCue.PlayAudio(0);
 
-                nlpManager.isDragging = false;
-                highlight[nlpManager.sourceNode.colorId].SetActive(false);
+                    nlpManager.isDragging = false;
+                    highlight[nlpManager.sourceNode.colorId].SetActive(false);
 
-                nlpManager.addSuccessCount();
-                nlpManager.CheckSuccesse();
+                    nlpManager.addSuccessCount();
+                    nlpManager.CheckSuccesse();
+                }
             }
 
         }

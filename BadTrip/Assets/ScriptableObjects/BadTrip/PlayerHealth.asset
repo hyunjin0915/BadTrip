@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0da7b126037b2245bae895e966e2f5d, type: 3}
   m_Name: PlayerHealth
   m_EditorClassIdentifier: 
-  BadTripSL_EventChannel: {fileID: 11400000, guid: 69e76e9cb3eff72479907566d9acff16, type: 2}
   PlayerHealth: 100
+  PlayerMaxHealth: 100
+  isAttackable: 1

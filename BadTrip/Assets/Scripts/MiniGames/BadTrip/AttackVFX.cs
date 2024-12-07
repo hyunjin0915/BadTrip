@@ -14,4 +14,14 @@ public class AttackVFX : MonoBehaviour
             Instantiate(vfxPrefab, collision.transform.position,Quaternion.identity);
         }
     }
+    /*private void OnCollisionEnter2D(Collision2D other)
+    {
+        Debug.Log("Fd");
+        if(other.gameObject.CompareTag("Hand"))
+        {
+            audioCue.PlayAudio(0);
+
+            Instantiate(vfxPrefab, other.transform.position,Quaternion.identity);
+        }
+    }*/
 }

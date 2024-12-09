@@ -81,7 +81,7 @@ namespace Fungus
             }
         }
 
-        public void PlayMusicOnce(AudioClip musicClip, float volume)
+        public void PlayMusicOnce(AudioMixerGroup group, AudioClip musicClip, float volume)
         {
             audioSourceMusic.clip = musicClip;
             audioSourceMusic.volume = volume;

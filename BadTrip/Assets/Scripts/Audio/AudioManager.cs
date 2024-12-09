@@ -79,9 +79,9 @@ public class AudioManager : MonoBehaviour
 
     public void PlayMusicFade(AudioInfoSO audioInfo, float fade)
     {
-        audioSources[audioInfo.audioNum].clip = audioInfo.clip;
+        audioInfo.ApplyTo(audioSources[audioInfo.audioNum]);
         audioSources[audioInfo.audioNum].volume = 0;
-        audioSources[audioInfo.audioNum].loop = audioInfo.isLoop;
+        
         audioSources[audioInfo.audioNum].Play();
 
         StartCoroutine(PlayFade(audioInfo.vol, fade, audioInfo.audioNum));

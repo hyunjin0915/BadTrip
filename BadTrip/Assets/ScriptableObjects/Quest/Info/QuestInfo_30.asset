@@ -16,7 +16,7 @@ MonoBehaviour:
     \uB9C8\uC57D \uC548\uD568"
   questId: 30
   sceneName: School
-  questCount: 1
+  questCount: 3
   clearCount: 0
   isLast: 0
   InterQuest:

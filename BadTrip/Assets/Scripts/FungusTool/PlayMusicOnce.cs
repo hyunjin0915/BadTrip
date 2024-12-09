@@ -27,7 +27,7 @@ namespace Fungus
         {
             var musicManager = FungusManager.Instance.MusicManager;
 
-            musicManager.PlayMusicOnce(audioInfoSO.clip, volume);
+            musicManager.PlayMusicOnce(audioInfoSO.audioMixerGroup, audioInfoSO.clip, volume);
 
             Continue();
         }

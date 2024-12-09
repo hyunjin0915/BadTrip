@@ -40,16 +40,7 @@ public class SettingManager : MonoBehaviour
         {
             if (Input.GetKeyUp(KeyCode.Escape))
             {
-                if (isActive)
-                {
-                    isActive = false;
-                    OnOffSetting(isActive);
-                }
-                else
-                {
-                    isActive = true;
-                    OnOffSetting(isActive);
-                }
+                OnOffSetting(!isActive);
             }
         }
     }
@@ -173,6 +164,8 @@ public class SettingManager : MonoBehaviour
 
     public void OnOffSetting(bool b)
     {
+        isActive = b;
+        
         if (b)
         {
             Time.timeScale = 0;

@@ -15,11 +15,13 @@ public class Mollusk : MovingMon
     float FindRange = 4f; 
 
     public Animator animator;
-     protected override void Start()
+    protected override void Start()
     {
         base.Start();
 
         rb = GetComponent<Rigidbody2D>();
+
+        target = GameObject.FindGameObjectWithTag("SOPlayer").GetComponent<Rigidbody2D>();
     }
    void Update()
    {

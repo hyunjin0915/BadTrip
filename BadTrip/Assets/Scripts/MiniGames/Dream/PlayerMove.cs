@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.ShaderGraph.Serialization;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
@@ -193,5 +194,18 @@ public class PlayerMove : MonoBehaviour
     public void SetDreamcatcher(bool b)
     {
         playerDataSO.getDC = b;
+    }
+
+    public void SetPlayerPos(Vector3 pos)
+    {
+        transform.position = new Vector3(pos.x, pos.y, 0);
+
+        if (pos.z >= 1)
+        {
+            mySpriteRenderer.flipX = true;
+        } else
+        {
+            mySpriteRenderer.flipX = false;
+        }
     }
 }

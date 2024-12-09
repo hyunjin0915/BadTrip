@@ -88,7 +88,7 @@ public class ConversationEventManager : MonoBehaviour
     {
         sayDialogSO.SetPlayerFlip(b);
     }
-
+    
     public void StopPlayer()
     {
         sayDialogSO.StopPlayer();

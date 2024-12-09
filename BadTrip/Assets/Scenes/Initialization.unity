@@ -5177,6 +5177,8 @@ MonoBehaviour:
       value: {x: 0, y: 0, z: 0}
     - key: JigsawPuzzleHospital
       value: {x: 185.5, y: -15.47, z: 1}
+    - key: StageOneStageOne
+      value: {x: 0, y: 0, z: 0}
   curSceneName: Main
   sceneload_EventChannel: {fileID: 11400000, guid: 88353211a4d7054468d078bf3ab2ad81, type: 2}
   player: {fileID: 6858215238848761065}

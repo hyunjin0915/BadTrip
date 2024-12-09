@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae70fccd5fcef3b4d8da728523cf784f, type: 3}
   m_Name: BGMInto_BadTrip
   m_EditorClassIdentifier: 
-  audioNum: 2
+  audioNum: 0
   clip: {fileID: 8300000, guid: 70de2bf6b436a884a8d825210a39e83a, type: 3}
   vol: 0.6
   pch: 1

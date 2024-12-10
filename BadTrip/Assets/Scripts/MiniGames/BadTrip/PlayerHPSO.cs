@@ -24,7 +24,6 @@ public class PlayerHPSO : ScriptableObject
         {
             isAttackable = false;
             Fungus.Flowchart.BroadcastFungusMessage("PlayerDead");
-            PlayerHPInit();
         }
     }
     public void PlayerHPInit()

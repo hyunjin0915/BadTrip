@@ -41,5 +41,10 @@ public class UI_PlayerHP : MonoBehaviour
     {
         PlayerHPBar.fillAmount = Player_healthManager.PlayerHealth/Player_healthManager.PlayerMaxHealth;
     }
+
+    public void PlayerInit()
+    {
+        Player_healthManager.PlayerHPInit();
+    }
     
 }

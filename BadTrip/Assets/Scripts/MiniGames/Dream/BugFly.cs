@@ -23,6 +23,7 @@ public class BugFly : MovingMon
     {
         base.Start();
         rb = GetComponent<Rigidbody2D>();
+        target = GameObject.FindGameObjectWithTag("SOPlayer").GetComponent<Rigidbody2D>();
 
         upMax_Apply = currentPosition.y+upMax;
         downMax_Apply = currentPosition.y + downMax;

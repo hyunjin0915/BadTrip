@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class DashItem : MonoBehaviour
 {
-    [SerializeField]
-    GameObject player;
+    private GameObject player;
     [SerializeField]
     private float dashTime;
     [SerializeField]
@@ -22,6 +21,7 @@ public class DashItem : MonoBehaviour
     void Start()
     {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        player = GameObject.FindGameObjectWithTag("SOPlayer");
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

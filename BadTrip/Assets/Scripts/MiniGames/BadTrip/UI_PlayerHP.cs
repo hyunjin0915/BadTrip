@@ -15,10 +15,12 @@ public class UI_PlayerHP : MonoBehaviour
     private void OnEnable()
     {
         PlayerHPSO.OnPlayerDamaged +=ChangeHPBar;
+        PlayerHPSO.OnReStartGame +=ChangeHPBar;
     }
     private void OnDisable()
     {
         PlayerHPSO.OnPlayerDamaged -=ChangeHPBar;
+        PlayerHPSO.OnReStartGame -=ChangeHPBar;
     }
     // Start is called before the first frame update
     void Start()
@@ -39,4 +41,5 @@ public class UI_PlayerHP : MonoBehaviour
     {
         PlayerHPBar.fillAmount = Player_healthManager.PlayerHealth/Player_healthManager.PlayerMaxHealth;
     }
+    
 }

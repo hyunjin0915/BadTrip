@@ -1,5 +1,6 @@
 using System.Collections;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -16,9 +17,10 @@ public class tempPlayerHDTrigger : MonoBehaviour
 
     [SerializeField]
     private PlayerHPSO Player_healthManager;
-
-    [SerializeField]
+    
+    private GameObject player;
     private GameObject spawnPosition;
+
     Vector3 spawnPos;
     bool isSpawn = false;
 
@@ -30,7 +32,11 @@ public class tempPlayerHDTrigger : MonoBehaviour
         myRigid = GetComponent<Rigidbody2D>();
         spawnPos.y = transform.position.y;
         spawnPos.z = transform.position.z;
-        //Debug.Log(Vector2.right + Vector2.up);
+
+        player = GameObject.FindGameObjectWithTag("SOPlayer");
+        spawnPosition = player.transform.GetChild(0).gameObject;
+        //Debug.Log(spawnPosition.name);
+                //Debug.Log(Vector2.right + Vector2.up);
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -55,7 +61,7 @@ public class tempPlayerHDTrigger : MonoBehaviour
     IEnumerator MonsterSpawnDelay()
     {
         isSpawn = true;
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(5f);
         spawnPos.x = spawnPosition.transform.position.x;
         Instantiate(this.gameObject,spawnPos,quaternion.identity, transform.parent);
     }

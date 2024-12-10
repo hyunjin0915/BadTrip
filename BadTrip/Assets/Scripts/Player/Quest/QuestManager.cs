@@ -97,12 +97,19 @@ public class QuestManager : MonoBehaviour
                 // 상호작용 행동.
                 info.allQuests[i].QuestFunction();
                 info.clearCount++;
+                Debug.Log("------------------------");
+                Debug.Log(info.questId);
+                Debug.Log(info.clearCount);
             }
         }
 
         // 모든 미니퀘스트가 클리어되면
-        if ((info.isLast && info.allQuests[--info.questCount].isClear) || info.clearCount == info.questCount)
+        if ((info.isLast && info.allQuests[info.questCount-1].isClear) || info.clearCount == info.questCount)
         {
+            Debug.Log("------------------------");
+            Debug.Log(info.questId);
+            Debug.Log(info.clearCount);
+
             CompleteQuest();
         }
     }

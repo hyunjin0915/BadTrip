@@ -1457,11 +1457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dacdea88e99e9114587187827c583558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characters:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  characters: []
   sayDialogSO: {fileID: 11400000, guid: 4e511c939ccd79141a9d6a15776f5bc4, type: 2}
   viewTrs:
   - {fileID: 0}
@@ -4880,7 +4876,6 @@ GameObject:
   - component: {fileID: 1428941300}
   - component: {fileID: 1428941297}
   - component: {fileID: 1428941302}
-  - component: {fileID: 1428941303}
   m_Layer: 0
   m_Name: GameFlowchart
   m_TagString: Untagged
@@ -4915,7 +4910,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1428941298}
   selectedCommands:
-  - {fileID: 1428941303}
+  - {fileID: 1428941297}
   variables:
   - {fileID: 1428941296}
   description: 
@@ -5014,7 +5009,6 @@ MonoBehaviour:
   eventHandler: {fileID: 1428941300}
   commandList:
   - {fileID: 1428941302}
-  - {fileID: 1428941303}
   - {fileID: 1428941297}
   suppressAllAutoSelections: 0
 --- !u!114 &1428941300
@@ -5063,51 +5057,6 @@ MonoBehaviour:
   indentLevel: 0
   audioInfoSO: {fileID: 11400000, guid: b7f3396626f75e94eb84cad09219e770, type: 2}
   waitUntilFinished: 1
---- !u!114 &1428941303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1428941294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 4
-  indentLevel: 0
-  description: 
-  targetObject: {fileID: 344604832}
-  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: ConversationEventManager
-  targetMethod: CompleteQuest
-  targetMethodText: 'CompleteQuest (Int32): Void'
-  methodParameters:
-  - objValue:
-      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Int32
-      intValue: 1
-      boolValue: 0
-      floatValue: 0
-      stringValue: 
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
 --- !u!1 &1458703066
 GameObject:
   m_ObjectHideFlags: 0

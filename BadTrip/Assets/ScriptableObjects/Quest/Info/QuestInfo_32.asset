@@ -15,7 +15,7 @@ MonoBehaviour:
   explain: "\uBCD1\uC6D0 \uB3C4\uCC29"
   questId: 32
   sceneName: Hospital
-  questCount: 2
+  questCount: 5
   clearCount: 0
   isLast: 0
   InterQuest:

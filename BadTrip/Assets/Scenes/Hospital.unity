@@ -1309,8 +1309,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.33714986, y: -0.28094995, z: 0}
-    m_Extent: {x: 4.23715, y: 3.8028498, z: 0}
+    m_Center: {x: -0.3486501, y: -0.27324986, z: 0}
+    m_Extent: {x: 4.24025, y: 3.81195, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4182,8 +4182,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.25805008, y: -0.15509987, z: 0}
-    m_Extent: {x: 2.79065, y: 6.8992, z: 0}
+    m_Center: {x: -0.26314998, y: -0.15109992, z: 0}
+    m_Extent: {x: 2.78155, y: 6.9065, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5035,8 +5035,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.25749993, y: -0.15454984, z: 0}
-    m_Extent: {x: 2.79, y: 6.9015503, z: 0}
+    m_Center: {x: -0.2545501, y: -0.15135002, z: 0}
+    m_Extent: {x: 2.78905, y: 6.90205, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5366,8 +5366,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.26030004, y: -0.15709996, z: 0}
-    m_Extent: {x: 2.782, y: 6.8999996, z: 0}
+    m_Center: {x: -0.25565004, y: -0.16035008, z: 0}
+    m_Extent: {x: 2.77595, y: 6.9078503, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -8550,7 +8550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -119.51373, y: 48.993183}
+  scrollPos: {x: -113.83193, y: 187.62952}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 805
@@ -8562,7 +8562,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1808082634}
+  - {fileID: 1808082674}
   selectedCommands: []
   variables:
   - {fileID: 1808082626}
@@ -11288,8 +11288,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.2571, y: -0.14829993, z: 0}
-    m_Extent: {x: 2.791, y: 6.9037, z: 0}
+    m_Center: {x: -0.25259995, y: -0.15380001, z: 0}
+    m_Extent: {x: 2.779, y: 6.9042, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -11468,11 +11468,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -105.2214, y: 298.6734}
+  scrollPos: {x: -131.45338, y: 356.65878}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 556
-  zoom: 0.94000006
+  zoom: 0.85000014
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -11480,8 +11480,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 8738169567203090211}
-  selectedCommands: []
+  - {fileID: 8738169567203090043}
+  selectedCommands:
+  - {fileID: 8738169567203090041}
   variables:
   - {fileID: 184252191652599404}
   - {fileID: 1293176261644672755}
@@ -11715,6 +11716,9 @@ GameObject:
   - component: {fileID: 8738169567203090263}
   - component: {fileID: 8738169567203090262}
   - component: {fileID: 8738169567203090261}
+  - component: {fileID: 8738169567203090264}
+  - component: {fileID: 8738169567203090265}
+  - component: {fileID: 8738169567203090266}
   m_Layer: 0
   m_Name: HospitalFlowchart
   m_TagString: Untagged
@@ -11753,7 +11757,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 202.23035
     y: -38.77587
-    width: 136.1702
+    width: 134.70587
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -12260,15 +12264,15 @@ MonoBehaviour:
     Culture=neutral, PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
   targetComponentText: ConversationEventManager
-  targetMethod: SetIsDialog
-  targetMethodText: 'SetIsDialog (Boolean): Void'
+  targetMethod: CompleteQuest
+  targetMethodText: 'CompleteQuest (Int32): Void'
   methodParameters:
   - objValue:
-      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Boolean
-      intValue: 0
-      boolValue: 1
+      typeFullname: System.Int32
+      intValue: 1
+      boolValue: 0
       floatValue: 0
       stringValue: 
       colorValue: {r: 0, g: 0, b: 0, a: 0}
@@ -12329,7 +12333,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 202.23035
     y: -144.86607
-    width: 112.76595
+    width: 109.999985
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -12350,6 +12354,7 @@ MonoBehaviour:
   - {fileID: 8738169567203090033}
   - {fileID: 8738169567203090032}
   - {fileID: 8738169567203090031}
+  - {fileID: 8738169567203090266}
   - {fileID: 8738169567203090041}
   - {fileID: 8738169567203090224}
   suppressAllAutoSelections: 0
@@ -13751,7 +13756,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 385.30215
     y: 71.2378
-    width: 93.61702
+    width: 91.17647
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14118,7 +14123,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 201.16652
     y: 68.66462
-    width: 121.27659
+    width: 119.41175
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14163,7 +14168,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 537.7814
     y: 62.355186
-    width: 142.55319
+    width: 144.11763
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14964,7 +14969,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 537.0947
     y: -7.8920174
-    width: 157.44681
+    width: 157.0588
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -15854,7 +15859,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 535.80054
     y: -84.95584
-    width: 106.38298
+    width: 106.47058
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -16000,7 +16005,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 387.74188
     y: -13.485261
-    width: 93.61702
+    width: 94.70587
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -16033,7 +16038,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 385.1694
     y: -84.26575
-    width: 108.510635
+    width: 107.64705
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -16196,9 +16201,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 207.5196
-    y: -244.16061
-    width: 137.23404
+    x: 206.45578
+    y: -243.09679
+    width: 133.52939
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -16208,6 +16213,7 @@ MonoBehaviour:
   eventHandler: {fileID: 8738169567203090208}
   commandList:
   - {fileID: 8738169567203090206}
+  - {fileID: 8738169567203090264}
   suppressAllAutoSelections: 0
 --- !u!114 &8738169567203090208
 MonoBehaviour:
@@ -16300,7 +16306,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 379.22302
     y: -243.28117
-    width: 137.23404
+    width: 133.52939
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -16310,6 +16316,7 @@ MonoBehaviour:
   eventHandler: {fileID: 8738169567203090209}
   commandList:
   - {fileID: 8738169567203090210}
+  - {fileID: 8738169567203090265}
   suppressAllAutoSelections: 0
 --- !u!114 &8738169567203090212
 MonoBehaviour:
@@ -16393,7 +16400,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 211.83769
     y: 172.47864
-    width: 124.46808
+    width: 120.58823
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -18038,6 +18045,107 @@ MonoBehaviour:
       typeFullname: System.Boolean
       intValue: 0
       boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &8738169567203090264
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050051285376147212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 786
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 696800758}
+  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ConversationEventManager
+  targetMethod: UpdateQuest
+  targetMethodText: 'UpdateQuest (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &8738169567203090265
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050051285376147212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 787
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 696800758}
+  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ConversationEventManager
+  targetMethod: UpdateQuest
+  targetMethodText: 'UpdateQuest (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &8738169567203090266
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050051285376147212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 788
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 696800758}
+  targetComponentAssemblyName: ConversationEventManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ConversationEventManager
+  targetMethod: SetIsDialog
+  targetMethodText: 'SetIsDialog (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 1
       floatValue: 0
       stringValue: 
       colorValue: {r: 0, g: 0, b: 0, a: 0}

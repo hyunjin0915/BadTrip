@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioNum: 4
   clip: {fileID: 8300000, guid: 4bb0ee71605544f429b7384d0e9243c2, type: 3}
-  vol: 0.4
+  vol: 0.7
   pch: 1
   isLoop: 0
   isOneShot: 1

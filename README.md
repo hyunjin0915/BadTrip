@@ -34,7 +34,7 @@
 <img width="693" alt="Image" src="https://github.com/user-attachments/assets/ca9c4136-724a-4d1e-ab73-045fdc9640ee" />
 
 #### 2️⃣ BadTrip 
-![Image](https://github.com/user-attachments/assets/dabca823-40af-4e1b-bfcd-29666b49a60d)
+![Image](https://github.com/user-attachments/assets/2f9eb3da-2cd7-4b2b-8b4e-33b1b5d31b1b)
 - 구조도
 <img width="806" alt="Image" src="https://github.com/user-attachments/assets/9458d8bf-7ea6-4903-9f55-0d1396b1ca65" />
 

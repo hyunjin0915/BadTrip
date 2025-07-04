@@ -1,6 +1,6 @@
 <img width="242" alt="Image" src="https://github.com/user-attachments/assets/a82c884a-c40c-4572-b05c-745460edbc58" />
 
-🔗Check out our project at    [<img src="https://img.shields.io/badge/Notion-000000?style=flat-round&logo=Notion&logoColor=white"/>](https://www.notion.so/BadTrip-348552c31b654c77a426a877ab597763)
+🔗Check out our project at    [<img src="https://img.shields.io/badge/Notion-000000?style=flat-round&logo=Notion&logoColor=white"/>]([https://www.notion.so/BadTrip-348552c31b654c77a426a877ab597763](https://accessible-octagon-962.notion.site/BadTrip-2259103cc1eb81d2a127cbea2cf0b87a?source=copy_link))
 
 
 ### 🎓서울여자대학교 디지털미디어학과 졸업작품 [2024.04 ~ 2024.11]  
